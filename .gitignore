@@ -1,0 +1,16 @@
+/target/
+**/node_modules/
+/apps/desktop/dist/
+/apps/desktop/src-tauri/target/
+/test-results/
+/playwright-report/
+/artifacts/
+*.db
+*.db-shm
+*.db-wal
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
