@@ -1,0 +1,1 @@
+[["calculate","twice"],["doubled","value"],["report","value"],["report","doubled"],["pipeline","calculate"],["pipeline","floor"],["pipeline","identity"],["pipeline","add"],["factorial","factorial"],["aggregate","add"],["aggregate","twice"],["recover","fallback"]]
