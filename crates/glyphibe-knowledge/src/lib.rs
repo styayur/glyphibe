@@ -724,7 +724,9 @@ mod tests {
 
     #[test]
     fn imported_catalog_is_searchable_without_trusting_remote_claims() {
-        let directory = tempfile::tempdir().unwrap();
+        // macOS exposes its temporary directory through /var -> /private/var.
+        // Resolve that trusted system alias before exercising catalog boundaries.
+        let directory = tempfile::tempdir_in(std::env::temp_dir().canonicalize().unwrap()).unwrap();
         let report = ImportReport {
             schema_version: 1,
             repository: "https://github.com/example/knowledge".into(),
@@ -765,7 +767,7 @@ mod tests {
     #[test]
     #[ignore = "requires explicit public GitHub network access"]
     fn real_github_import_is_pinned_local_only_and_incremental() {
-        let destination = tempfile::tempdir().unwrap();
+        let destination = tempfile::tempdir_in(std::env::temp_dir().canonicalize().unwrap()).unwrap();
         let first = import_github(
             "https://github.com/tree-sitter/tree-sitter-python",
             destination.path(),

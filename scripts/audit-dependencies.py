@@ -599,7 +599,7 @@ def main() -> int:
         notices += [record["id"], f"  Declared: {record['license_declared']}; selected: {record['license_selected'] or 'UNRESOLVED'}", "  Source: " + record["source"], "  Scope: " + ", ".join(record["scopes"])]
         notices += [f"  Notice: {notice['file']} (upstream {notice['source_file']})" for notice in record["notices"]]
         notices.append("")
-    (root / "THIRD_PARTY_NOTICES").write_text("\n".join(notices) + "\n", encoding="utf-8")
+    (root / "THIRD_PARTY_NOTICES").write_text("\n".join(notices).rstrip() + "\n", encoding="utf-8")
     print(json.dumps({"packages": len(inventory), "unique_notice_texts": len(files), "failures": failures}, indent=2))
     return 1 if failures else 0
 
