@@ -589,7 +589,9 @@ export default function App() {
             onMouseLeave={() => {
               if (!view.pinned) setCollapsed(true);
             }}
-            onMouseEnter={() => setCollapsed(false)}
+            onMouseEnter={() => {
+              if (!view.pinned) setCollapsed(false);
+            }}
           >
             <div className="panel-heading">
               <strong>{text("Explore", "探索")}</strong>
@@ -602,6 +604,7 @@ export default function App() {
               </button>
               <button
                 aria-label="Collapse tools"
+                aria-expanded={!collapsed}
                 onClick={() => setCollapsed(!collapsed)}
               >
                 {collapsed ? "+" : "−"}

@@ -323,7 +323,21 @@ test("plane mappings, hierarchy and all floating islands are operable", async ({
   }
   await page.getByLabel("Collapse tools", { exact: true }).click();
   await expect(page.getByRole("searchbox")).toBeHidden();
+  await page.mouse.move(700, 500);
+  await page.getByLabel("Collapse tools", { exact: true }).hover();
+  await expect(page.getByRole("searchbox")).toBeHidden();
+  await expect(
+    page.getByLabel("Collapse tools", { exact: true }),
+  ).toHaveAttribute("aria-expanded", "false");
   await page.getByLabel("Collapse tools", { exact: true }).click();
+  await expect(page.getByRole("searchbox")).toBeVisible();
+  await page.getByLabel("Pin tools", { exact: true }).click();
+  await page.mouse.move(700, 500);
+  await expect(page.getByRole("searchbox")).toBeHidden();
+  await page.getByLabel("Collapse tools", { exact: true }).hover();
+  await expect(page.getByRole("searchbox")).toBeVisible();
+  await page.getByLabel("Pin tools", { exact: true }).click();
+  await page.mouse.move(700, 500);
   await expect(page.getByRole("searchbox")).toBeVisible();
 });
 test("real exported graph renders in all modes with synchronized selection and controls", async ({
