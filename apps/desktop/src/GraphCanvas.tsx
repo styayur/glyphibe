@@ -13,7 +13,7 @@ import { MultiDirectedGraph } from "graphology";
 import Sigma from "sigma";
 import { clusterPositions, colour, escapeMarkup, positions } from "./model";
 import type { CodeEdge, CodeNode, ViewState } from "./model";
-const ForceGraph3D = lazy(() => import("react-force-graph-3d"));
+const ForceGraph3D = lazy(() => import("./GalaxyCanvas"));
 class GraphicsBoundary extends Component<
   { children: ReactNode },
   { failed: boolean }
@@ -53,6 +53,7 @@ export default function GraphCanvas({
 }: Props) {
   const host = useRef<HTMLDivElement>(null);
   const galaxy = useRef<ForceGraphMethods | undefined>(undefined);
+  const [galaxyReady, setGalaxyReady] = useState(false);
   const pickSphere = useRef<((x: number, y: number) => string | null) | null>(
     null,
   );
@@ -150,7 +151,7 @@ export default function GraphCanvas({
     selectHandler.current = onSelect;
   }, [onSelect]);
   useEffect(() => {
-    if (!isGalaxy) return;
+    if (!isGalaxy || !galaxyReady) return;
     const position = state.selected ? layout.get(state.selected) : null;
     if (position)
       galaxy.current?.cameraPosition(
@@ -158,7 +159,8 @@ export default function GraphCanvas({
         position,
         0,
       );
-  }, [state.selected, isGalaxy, layout]);
+    else galaxy.current?.zoomToFit(0, 70);
+  }, [state.selected, isGalaxy, galaxyReady, layout]);
   useEffect(() => {
     if (!isGalaxy) return;
     let frame = 0,
@@ -377,7 +379,8 @@ export default function GraphCanvas({
             fallback={<p className="canvas-note">Loading 3D renderer…</p>}
           >
             <ForceGraph3D
-              ref={galaxy}
+              graphRef={galaxy}
+              onReady={setGalaxyReady}
               width={size.width}
               height={size.height}
               graphData={data3D}

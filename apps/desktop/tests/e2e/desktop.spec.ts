@@ -14,7 +14,23 @@ test("Galaxy sphere clicks select a canonical node without a preselected entity"
   page,
 }) => {
   await page.goto("/");
-  await page.getByLabel("Import graph JSON").setInputFiles(graphPath);
+  const fixture = JSON.parse(await readFile(graphPath, "utf8")) as CodeGraph;
+  const nodes = Object.fromEntries(
+    Object.entries(fixture.nodes)
+      .filter(([, n]) => n.kind === "function" && n.plane === "architecture")
+      .slice(0, 17),
+  );
+  await page.getByLabel("Import graph JSON").setInputFiles({
+    name: "source-derived-17.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(
+      JSON.stringify({
+        ...fixture,
+        nodes,
+        edges: fixture.edges.filter((e) => nodes[e.source] && nodes[e.target]),
+      }),
+    ),
+  });
   await page.getByRole("button", { name: "Galaxy", exact: true }).click();
   await expect(
     page.getByTestId("graph-canvas").locator("canvas").first(),
@@ -29,6 +45,12 @@ test("Galaxy sphere clicks select a canonical node without a preselected entity"
         const [r, g, b] = png.data.subarray(i, i + 3);
         return g > 65 && b > 65 && g > r * 1.2 && b > r * 1.2;
       };
+      let tealPixels = 0;
+      for (let y = 0; y < png.height; y += 2)
+        for (let x = 0; x < png.width; x += 2) if (teal(x, y)) tealPixels++;
+      // An initial camera inside a sphere can still produce a clickable canvas.
+      // Require a genuinely fitted sparse graph, not a viewport-filling sphere.
+      if (tealPixels * 4 > png.width * png.height * 0.1) return false;
       for (let y = 80; y < png.height - 80; y += 2)
         for (let x = 80; x < png.width - 80; x += 2)
           if (
