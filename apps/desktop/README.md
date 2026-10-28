@@ -32,6 +32,10 @@ Frontier, Dense and Cluster project a shared canonical graph into Sigma 3.0.2/Gr
 
 Selection and impact highlighting reuse the 2D WebGL context. Presentation changes are batched with Sigma reducers; full renderer construction is reserved for a changed visible topology/label set or a 2D/3D transition. Source parsing is not triggered by view controls.
 
+New 2D projections fit between the measured floating islands. Focus Mode uses the
+larger available area; highlighting preserves a user pan and zoom. Small graphs
+keep their labels visible. See [the framing regression](../../docs/development/2d-framing.md).
+
 The native impact panel uses `glyphibe_core::Graph::impact` through a restricted command. The browser uses traversal of the imported graph because no Rust session is present. Native source reads accept a registered node ID, enforce repository containment, reject historical source ranges, and check the current file's content fingerprint. Explanations and guided lessons come from the shared Rust engine. Concept text is imported from the same original bilingual knowledge registry as Rust.
 
 ## Rendering limits

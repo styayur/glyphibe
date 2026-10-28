@@ -113,6 +113,9 @@ def verify(directory, version, source_commit, source_root, trusted_sums_sha256):
     if sums[cli_name] != payloads["glyphibe.exe"]:
         raise ValueError("CLI payload identity differs")
     provenance = json.loads((directory / "build-provenance.json").read_text(encoding="utf-8-sig"))
+    products = provenance.get("visual_studio_products", [])
+    if not products or any(p.get("isPrerelease") is not False or not re.fullmatch(r"VisualStudio\.\d+\.Release", p.get("channelId", "")) for p in products):
+        raise ValueError("build provenance does not establish a stable Visual Studio release channel")
     if provenance["source_commit"] != source_commit or {p["file"]: p["sha256"] for p in provenance["payloads"]} != payloads or any(p["private_build_path_scan"] != "passed" for p in provenance["payloads"]):
         raise ValueError("Build provenance differs from the reviewed source or payloads")
     installer_name = f"Glyphibe_{version}_x64-setup.exe"

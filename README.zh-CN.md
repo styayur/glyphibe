@@ -14,6 +14,8 @@
 截图来自实际安装运行的 Windows 应用，展示本项目原创公开测试夹具的源码。
 各项验证状态见发布门禁记录。
 
+![实际安装应用中的三维 Galaxy、选中函数及其源码](docs/images/native-galaxy.png)
+
 ## 已实现的能力
 
 - 使用 Tree-sitter 在本地解析 Python、Rust、JavaScript 和 TypeScript/TSX，

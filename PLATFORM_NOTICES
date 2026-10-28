@@ -106,41 +106,54 @@ Microsoft documents static linking as a deployment option. Runtime fixes then
 require rebuilding and redistributing the application. This servicing guidance
 does not amount to a general prohibition on static runtime linkage.
 
-Official references:
-https://visualstudio.microsoft.com/license-terms/vs2022-ga-diagnosticbuildtools/
-https://visualstudio.microsoft.com/license-terms/vs2022-cruntime/
-https://visualstudio.microsoft.com/license-terms/vs2022-ga-community/
-https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution
+The reviewed CI candidate records runner_image=win25-vs2026,
+image version 20261021.278.1, Visual Studio Enterprise 2026,
+productId=Microsoft.VisualStudio.Product.Enterprise and
+installationVersion=18.11.12315.225. This is the hosted candidate's environment,
+distinct from the earlier local Build Tools 2022 inspection.
+
+Current candidate references, reviewed 2026-10-28:
+https://visualstudio.microsoft.com/license-terms/vs2026-ga-pro-enterprise/
+https://visualstudio.microsoft.com/license-terms/vs2026-ga-visualcpp-v14-redist-runtime/
+https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution
 https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
 https://learn.microsoft.com/en-us/cpp/windows/deployment-in-visual-cpp
 
-The official Build Tools, Runtime and Community 2022 license documents were read
-on 2026-10-28. Build Tools is a supplement to a valid Visual Studio product
-license, with a limited exception for compiling required third-party OSI-licensed
-C++ dependencies. That exception alone does not establish permission to develop
-all of a newly authored application. The Runtime's installation/use agreement
-does not itself grant redistribution rights.
+The Enterprise 2026 Distributable Code section conditionally permits listed
+object-code redistribution. It requires significant application functionality,
+protective terms for distributors and external users, and the stated
+indemnification obligation. Restrictions cover Unreleased Components, software
+developed with Insiders Channel Software, misleading Microsoft branding, and
+placing Microsoft Distributable Code source under an Excluded License.
+Glyphibe's MPL-2.0 applies to its own covered files; it does not relicense
+Microsoft component source or binaries. The V14 Runtime 2026 installation/use
+agreement does not itself grant redistribution rights. Microsoft's current v14
+download guidance expressly covers Visual Studio 2017-2026; a dynamic runtime
+must match the target architecture and be at least as recent as the build tools.
 
-Community 2022 section 4 conditionally permits object-code redistribution of
-listed Distributable Code. Conditions include significant application
-functionality and terms protecting that code for distributors and external end
-users. Its restriction on placing Microsoft Distributable Code source under an
-Excluded License must also be respected. Glyphibe's MPL-2.0 applies to its own
-covered files; it does not relicense Microsoft component source or binaries.
+Historical local audit: on 2026-10-28, product enumeration listed only
+Microsoft.VisualStudio.Product.BuildTools (Build Tools 2022); no Community,
+Professional or Enterprise installation was listed. The 2022 Build Tools,
+Runtime and Community documents were read for that local environment. Its
+limited third-party C++ dependency exception was not treated as a general
+application-development grant. Neither this historical review nor 2022 terms
+certify the 2026 candidate's license conditions or the publisher's entitlement.
+https://visualstudio.microsoft.com/license-terms/vs2022-ga-diagnosticbuildtools/
+https://visualstudio.microsoft.com/license-terms/vs2022-cruntime/
+https://visualstudio.microsoft.com/license-terms/vs2022-ga-community/
 
-The local product enumeration identified Microsoft.VisualStudio.Product.BuildTools
-(Visual Studio Build Tools 2022); no Community, Professional or Enterprise
-installation was listed. This records installed products, not the publisher's
-license entitlement. Source-license review and successful compilation cannot
-certify that entitlement or fulfillment of redistribution conditions.
-
-The existing GitHub-hosted Windows workflow offers a separate release-build
-path. Record its actual runner image, Visual Studio product/compiler versions,
+The GitHub-hosted Windows workflow supplies the candidate release-build path.
+Record each actual runner image, Visual Studio product/compiler versions,
 toolchain notices and output hashes. Hosted runner availability and installed
 software are not a certification of an individual's Microsoft license rights;
 the applicable service and software terms still govern.
+Microsoft's license directory states that subscription purchases are governed
+by Microsoft Product Terms. The public Enterprise EULA review does not identify
+or certify the hosting provider's particular licensing agreement.
+https://visualstudio.microsoft.com/license-terms/
+https://www.microsoft.com/licensing/terms/productoffering/VisualStudioSubscriptions/all
 https://docs.github.com/en/actions/reference/runners/github-hosted-runners
-https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md
+https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md
 https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features
 
 Evidence boundary

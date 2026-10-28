@@ -15,6 +15,8 @@ remaining work and performance limits. [中文说明](README.zh-CN.md).
 Captured from the actual installed Windows application; this is source from the
 project's original public test fixture. See the release gates for validation status.
 
+![Actual installed 3D Galaxy with a selected function and its source](docs/images/native-galaxy.png)
+
 ## Capabilities
 
 - Local Python, Rust, JavaScript and TypeScript/TSX Tree-sitter parsing, with

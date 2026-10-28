@@ -96,11 +96,11 @@ desktop. Static linkage does not change Microsoft's terms for those components.
 The project does not add a separate Microsoft runtime DLL or installer to its
 release assets.
 
-Retain links to the applicable [Build Tools
-terms](https://visualstudio.microsoft.com/license-terms/vs2022-ga-diagnosticbuildtools/),
-[C++ Runtime terms](https://visualstudio.microsoft.com/license-terms/vs2022-cruntime/),
-[Community 2022 terms](https://visualstudio.microsoft.com/license-terms/vs2022-ga-community/),
-[Visual Studio redistribution list](https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution),
+For the hosted 2026 candidate, retain the applicable [Enterprise/Professional
+2026 terms](https://visualstudio.microsoft.com/license-terms/vs2026-ga-pro-enterprise/),
+[V14 Redistributable and Runtime 2026
+terms](https://visualstudio.microsoft.com/license-terms/vs2026-ga-visualcpp-v14-redist-runtime/),
+[Visual Studio 2026 redistribution list](https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution),
 and [supported runtime
 downloads](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist).
 Microsoft's permitted redistribution depends on its license terms and the
@@ -114,41 +114,64 @@ for dynamic libraries concerns servicing: static-runtime fixes require rebuildin
 and redistributing the application. We found no general static-linking prohibition
 in that guidance; the applicable license conditions and entitlement still govern.
 
-### Terms read and entitlement boundary
+### 2026 terms read and entitlement boundary
 
-The official English documents embedded in the Microsoft license pages were
-read on 2026-10-28: [Build Tools, March 2024
+The official English [Enterprise/Professional 2026
+document](https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual_Studio_2026-License-Enterprise_Professional_ENU.docx)
+and [V14 Redistributable and Runtime
+document](https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual-C-V14-License-Redistributable_and_Runtime_ENU.docx)
+were read on 2026-10-28. Both identify their last update as October 1, 2025.
+The Enterprise Distributable Code section permits listed object-code
+redistribution subject to significant application functionality, protective
+terms for distributors/external users, and its indemnification condition. It
+restricts Unreleased Components, distribution of software developed using
+Insiders Channel Software, misleading Microsoft branding, and making Microsoft
+Distributable Code source subject to an Excluded License. Keeping Glyphibe's own
+MPL-covered files separate does not place Microsoft component source under MPL.
+
+The 2026 [permitted list](https://aka.ms/vs/18/redistribution) resolves to
+Microsoft's 2026 redistribution page. It conditions redistribution on a validly
+licensed product and excludes preview and debug/nonredistributable components.
+The Runtime document grants installation/use; its scope restrictions do not
+provide a separate redistribution grant. Microsoft's current v14 download
+guidance explicitly covers VS 2017-2026 and requires a suitable architecture and
+a runtime version at least as recent as the build tools. No runtime installer
+or DLL is added to Glyphibe's release assets by this policy.
+
+The document review records these conditions rather than certifying the
+publisher's entitlement or asserting that all contractual obligations have been
+independently verified. The final build record must identify the actual product
+and channel; an Enterprise display name alone does not establish that the build
+used the Stable channel or only released components.
+The [Microsoft license directory](https://visualstudio.microsoft.com/license-terms/)
+states that subscription purchases are governed by [Microsoft Product
+Terms](https://www.microsoft.com/licensing/terms/productoffering/VisualStudioSubscriptions/all).
+Reviewing the public Enterprise EULA does not identify or certify the hosting
+provider's particular licensing agreement.
+
+### Historical local 2022 audit
+
+The earlier local audit on 2026-10-28 read the official [Build Tools, March 2024
 update](https://visualstudio.microsoft.com/wp-content/uploads/2024/03/Visual-Studio-2022-Diagnostic-Build-Tools-Agent-License_Update-March-2024_EN.docx),
 [Runtime 2015-2022](https://visualstudio.microsoft.com/wp-content/uploads/2021/09/Visual-C-Runtime-2015-2022-License-1.docx)
 and [Community
 2022](https://visualstudio.microsoft.com/wp-content/uploads/2021/11/Visual-Studio-2022-Community-License-EN.docx).
-These are three different grants and must not be interchanged:
+Build Tools' exception for required third-party OSI C++ dependencies was not
+treated as a grant to develop all newly authored application code. The Runtime
+installation/use terms were not treated as a redistribution grant.
 
-- Build Tools is supplemental to a valid Visual Studio product license. Without
-  one, its exception covers compiling required third-party OSI-licensed C++
-  dependencies, with limited compilation fixes. The exception does not establish
-  permission to develop all newly authored application code.
-- The Runtime document grants installation and use. Its sharing restrictions
-  mean it is not a standalone redistribution grant; relevant Visual Studio
-  Distributable Code terms and the permitted list must be considered instead.
-- Community 2022 section 4 conditionally grants object-code redistribution of
-  listed Distributable Code. It requires significant application functionality
-  and protective terms for distributors and external end users. Its restrictions
-  include preview components, misleading Microsoft branding, and making
-  Microsoft Distributable Code source subject to an Excluded License. Keeping
-  Glyphibe's own MPL-covered files separate from Microsoft component terms does
-  not place Microsoft's component source under MPL.
-
-Read-only `vswhere` enumeration listed only
+Read-only local `vswhere` enumeration listed only
 `Microsoft.VisualStudio.Product.BuildTools` (Visual Studio Build Tools 2022).
 It did not list Community, Professional or Enterprise. Local installed Redist
 documentation was also inspected and points to Microsoft's official permitted
 list. These technical observations cannot establish whether the publisher has
 some other valid entitlement, or certify fulfillment of the applicable grant's
 conditions. The audit distinguishes reviewed source licenses from locally
-unverified compiler-use and redistribution entitlement. It identifies no general
-ban on publishing this MPL application with a static runtime, and makes no
-unconditional permission claim.
+unverified compiler-use and redistribution entitlement. This 2022 evidence is a
+historical local observation, not an assessment or authorization of the actual
+2026 hosted candidate. Neither reviewed environment identifies a general ban on
+this MPL application using a static runtime; no unconditional permission is
+claimed.
 
 ### Hosted release-build path
 
@@ -156,10 +179,22 @@ The existing `desktop` job in [ci.yml](../../.github/workflows/ci.yml)
 uses a GitHub-hosted Windows runner and builds the NSIS package; the Rust jobs
 also build the CLI. [GitHub's runner
 reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners)
-documents this supported build environment. The published
-[Windows 2025 image
-manifest](https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md)
-examined on 2026-10-28 lists Visual Studio Enterprise 2022 17.14.37806.7.
+documents this supported build environment. The reviewed CI candidate at
+`a34bd0669a0ad72fc5f1621c9842423b1d79dcd4` records:
+
+| Candidate build field | Observed value |
+| --- | --- |
+| Runner image | `win25-vs2026` |
+| Image version | `20261021.278.1` |
+| Visual Studio product | Visual Studio Enterprise 2026 |
+| Product ID | `Microsoft.VisualStudio.Product.Enterprise` |
+| Installation version | `18.11.12315.225` |
+
+The official [Windows 2025 with VS 2026 image
+manifest](https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-VS2026-Readme.md)
+examined on 2026-10-28 corroborates that image and installed product version.
+The older Windows 2025 manifest describing VS 2022 is not evidence of this
+candidate's build inputs. Subsequent candidates require their own provenance.
 
 Producing final tag assets through that existing workflow avoids treating an
 unverified local compiler entitlement as release-build evidence. Record the

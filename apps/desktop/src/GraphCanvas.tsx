@@ -20,6 +20,12 @@ import {
   fitGalaxyCamera,
 } from "./model";
 import type { CodeEdge, CodeNode, ViewState } from "./model";
+import {
+  availableGraphRect,
+  displayNodeLabel,
+  fitGraphCamera,
+} from "./framing2d";
+import type { DockedPanel } from "./framing2d";
 const ForceGraph3D = lazy(() => import("./GalaxyCanvas"));
 class GraphicsBoundary extends Component<
   { children: ReactNode },
@@ -75,6 +81,7 @@ export default function GraphCanvas({
   const graph2D = useRef<MultiDirectedGraph | null>(null);
   const selectHandler = useRef(onSelect);
   const previousGraphKey = useRef("");
+  const fitted2D = useRef<{ projection: string; area: string } | null>(null);
   const appliedPresentation = useRef<{
     renderer: Sigma;
     selected: string | null;
@@ -216,7 +223,7 @@ export default function GraphCanvas({
     const graph = new MultiDirectedGraph();
     for (const n of nodes)
       graph.addNode(n.id, {
-        label: n.label,
+        label: displayNodeLabel(n.label),
         ...layout.get(n.id),
         size: n.id === state.selected ? 10 : n.kind === "cluster" ? 8 : 5,
         color:
@@ -225,7 +232,7 @@ export default function GraphCanvas({
             : impact.has(n.id)
               ? "#df9b6c"
               : colour(n, state.theme),
-        forceLabel: n.id === state.selected,
+        forceLabel: n.id === state.selected || nodes.length <= 24,
       });
     for (const e of edges)
       graph.addDirectedEdgeWithKey(e.id, e.source, e.target, {
@@ -241,9 +248,11 @@ export default function GraphCanvas({
     try {
       renderer = new Sigma(graph, host.current, {
         renderEdgeLabels: false,
-        labelDensity: state.density < 500 ? 1 : 0.15,
+        labelDensity: nodes.length <= 24 || state.density < 500 ? 1 : 0.15,
+        labelRenderedSizeThreshold: nodes.length <= 24 ? 0 : 6,
         labelColor: { color: state.theme === "dark" ? "#e4edf4" : "#1c3142" },
         labelSize: 12,
+        labelFont: "Segoe UI",
         allowInvalidContainer: true,
       });
       renderer.on("clickNode", ({ node }) => selectHandler.current(node));
@@ -281,6 +290,109 @@ export default function GraphCanvas({
     };
   }, [nodeKey, edgeKey, isGalaxy, layoutKey]);
   useEffect(() => {
+    if (isGalaxy || !host.current) return;
+    const element = host.current,
+      main = element.closest("main");
+    if (!main) return;
+    let frame = 0,
+      disposed = false;
+    const observed = new WeakSet<Element>();
+    const docks: [string, DockedPanel["dock"]][] = [
+      [".left-island", "left"],
+      [".detail", "right"],
+      [".titlebar", "top"],
+      [".modes", "top"],
+      [".controls", "bottom"],
+      [".restore", "top"],
+    ];
+    const projectionKey = `${nodeKey}|${edgeKey}|${layoutKey}`;
+    const fit = () => {
+      frame = 0;
+      if (disposed) return;
+      const renderer = renderer2D.current;
+      if (!renderer) return;
+      const bounds = element.getBoundingClientRect(),
+        panels: DockedPanel[] = [];
+      for (const [selector, dock] of docks)
+        for (const panel of main.querySelectorAll(selector)) {
+          if (!observed.has(panel)) {
+            resize.observe(panel);
+            observed.add(panel);
+          }
+          const r = panel.getBoundingClientRect();
+          if (r.width && r.height)
+            panels.push({
+              dock,
+              rect: {
+                left: r.left - bounds.left,
+                top: r.top - bounds.top,
+                right: r.right - bounds.left,
+                bottom: r.bottom - bounds.top,
+              },
+            });
+        }
+      const rect = availableGraphRect(bounds.width, bounds.height, panels);
+      if (!rect) return;
+      const area = JSON.stringify(rect);
+      if (
+        fitted2D.current?.projection === projectionKey &&
+        fitted2D.current.area === area
+      )
+        return;
+      renderer.resize();
+      const camera = renderer.getCamera(),
+        state = camera.getState();
+      const text = document.createElement("canvas").getContext("2d");
+      if (text) text.font = "normal 12px Segoe UI";
+      const labelWidth =
+        nodes.length <= 24
+          ? Math.max(
+              0,
+              ...nodes.map(
+                (node) =>
+                  text?.measureText(displayNodeLabel(node.label)).width ??
+                  Array.from(displayNodeLabel(node.label)).length * 12,
+              ),
+            )
+          : 0;
+      const fitted = fitGraphCamera(
+        layout.values(),
+        rect,
+        state,
+        {
+          project: (point, current) =>
+            renderer.graphToViewport(point, { cameraState: current }),
+          framed: (point, current) =>
+            renderer.viewportToFramedGraph(point, { cameraState: current }),
+        },
+        labelWidth,
+      );
+      if (fitted) {
+        camera.setState(fitted);
+        fitted2D.current = { projection: projectionKey, area };
+      }
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(fit);
+    };
+    const resize = new ResizeObserver(schedule);
+    resize.observe(element);
+    const mutations = new MutationObserver(schedule);
+    mutations.observe(main, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      attributeFilter: ["class", "style", "hidden"],
+    });
+    schedule();
+    return () => {
+      disposed = true;
+      cancelAnimationFrame(frame);
+      resize.disconnect();
+      mutations.disconnect();
+    };
+  }, [nodeKey, edgeKey, layoutKey, isGalaxy, layout]);
+  useEffect(() => {
     const renderer = renderer2D.current,
       graph = graph2D.current;
     if (!renderer || !graph) return;
@@ -302,7 +414,7 @@ export default function GraphCanvas({
         const node = byId.get(id)!;
         return {
           ...attributes,
-          label: node.label,
+          label: displayNodeLabel(node.label),
           size: id === state.selected ? 10 : node.kind === "cluster" ? 8 : 5,
           color:
             id === state.selected
@@ -310,13 +422,14 @@ export default function GraphCanvas({
               : impact.has(id)
                 ? "#df9b6c"
                 : colour(node, state.theme),
-          forceLabel: id === state.selected,
+          forceLabel: id === state.selected || nodes.length <= 24,
         };
       },
       labelColor: {
         color: state.theme === "dark" ? "#e4edf4" : "#1c3142",
       },
-      labelDensity: state.density < 500 ? 1 : 0.15,
+      labelDensity: nodes.length <= 24 || state.density < 500 ? 1 : 0.15,
+      labelRenderedSizeThreshold: nodes.length <= 24 ? 0 : 6,
       edgeReducer: (id, attributes) => ({
         ...attributes,
         color:

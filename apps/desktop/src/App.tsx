@@ -1161,8 +1161,17 @@ export default function App() {
                   <h3>{text("Connections & mappings", "关系与映射")}</h3>
                   <div className="relations">
                     {relationships.map(({ edge, node: n }) => (
-                      <button key={edge.id} onClick={() => select(n.id)}>
+                      <button
+                        key={edge.id}
+                        onClick={() => select(n.id)}
+                        title={
+                          edge.source === node.id
+                            ? `${node.label} ${edge.relation} ${n.label}`
+                            : `${n.label} ${edge.relation} ${node.label}`
+                        }
+                      >
                         <span>
+                          {edge.source === node.id ? "→ " : "← "}
                           {edge.relation}
                           {edge.stale ? " (stale)" : ""}
                         </span>
@@ -1203,14 +1212,19 @@ export default function App() {
                   {explanation ? (
                     <>
                       <h3>{explanation.title}</h3>
-                      {explanation.facts.map((f, i) => (
-                        <p key={i}>{f}</p>
-                      ))}
-                      {explanation.uncertainty.map((u, i) => (
-                        <p className="uncertain" key={i}>
-                          {u}
-                        </p>
-                      ))}
+                      <details>
+                        <summary>
+                          {text("Source facts and limits", "源码事实与限制")}
+                        </summary>
+                        {explanation.facts.map((f, i) => (
+                          <p key={i}>{f}</p>
+                        ))}
+                        {explanation.uncertainty.map((u, i) => (
+                          <p className="uncertain" key={i}>
+                            {u}
+                          </p>
+                        ))}
+                      </details>
                       {lesson && (
                         <section className="lesson">
                           <p>

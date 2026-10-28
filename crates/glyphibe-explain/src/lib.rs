@@ -354,7 +354,23 @@ pub fn explain(graph: &Graph, id: &str, depth: u8, language: &str) -> Result<Exp
         .filter(|d| d.path.is_none() || d.path.as_ref() == node.source.as_ref().map(|s| &s.path))
         .take(8)
     {
-        uncertainty.push(format!("{}: {}", diagnostic.code, diagnostic.message));
+        let scope = if diagnostic.path.is_none() {
+            tr(
+                zh,
+                "Repository diagnostic, not specific to this node",
+                "仓库级诊断，并非特指此节点",
+            )
+        } else {
+            tr(
+                zh,
+                "File diagnostic, possibly outside this source range",
+                "文件级诊断，可能位于此源码范围之外",
+            )
+        };
+        uncertainty.push(format!(
+            "{scope} [{}]: {}",
+            diagnostic.code, diagnostic.message
+        ));
     }
     if active_edges
         .iter()

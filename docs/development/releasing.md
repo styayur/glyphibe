@@ -25,6 +25,7 @@ results. Never replace historical releases or force-push Git history.
    teaching, synchronized controls, window close/reopen, uninstall and reinstall.
    Record executable/installer hashes, actual outcomes and genuine screenshots.
    Check bundled original legal-file hashes. Do not modify analyzed projects.
+   `scripts/verify-installed.py --assets ASSETS --installed INSTALL_ROOT --version 1.0.0 --output EXTERNAL_REPORT` checks installed payload/notice bytes, including Tauri's documented NSIS marker patch; it does not replace actual GUI interaction.
 4. Finish the documentation and evidence, pass all required checks and merge
    through the protected branch. Verify main is synchronized and clean, and
    its final CI results pass. Source versions must agree before packaging.

@@ -66,6 +66,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
                         archive.writestr("glyphibe-desktop.exe", desktop)
             (downloads / "dependencies.spdx.json").write_text("{}", encoding="utf-8")
             provenance = {"source_commit": commit, "payloads": [{"file": name, "sha256": checksum, "private_build_path_scan": "passed"} for name, checksum in payloads.items()], "installer": {"file": installer.name, "sha256": verifier.digest(installer), "bytes": installer.stat().st_size, "private_build_path_scan": "passed"}}
+            provenance["visual_studio_products"] = [{"channelId": "VisualStudio.18.Release", "isPrerelease": False}]
             (downloads / "build-provenance.json").write_text(json.dumps(provenance), encoding="utf-8")
             def seal():
                 assets = [{"file": path.name, "bytes": path.stat().st_size, "sha256": verifier.digest(path)} for path in downloads.iterdir() if path.name not in ("asset-manifest.json", "SHA256SUMS")]
@@ -74,6 +75,13 @@ class ReleaseBoundaryTests(unittest.TestCase):
                 sums.write_text("".join(f"{verifier.digest(path)}  {path.name}\n" for path in sorted(downloads.iterdir()) if path.name != "SHA256SUMS"), encoding="ascii")
                 return verifier.digest(sums)
             self.assertEqual(verifier.verify(downloads, version, commit, source, seal())["installer"]["sha256"], provenance["installer"]["sha256"])
+            for channel, prerelease in (("VisualStudio.18.Insiders", False), ("VisualStudio.18.Release", True)):
+                provenance["visual_studio_products"] = [{"channelId": channel, "isPrerelease": prerelease}]
+                (downloads / "build-provenance.json").write_text(json.dumps(provenance), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "stable Visual Studio"):
+                    verifier.verify(downloads, version, commit, source, seal())
+            provenance["visual_studio_products"] = [{"channelId": "VisualStudio.18.Release", "isPrerelease": False}]
+            (downloads / "build-provenance.json").write_text(json.dumps(provenance), encoding="utf-8")
             installer.write_bytes(b"replaced installer after build")
             with self.assertRaisesRegex(ValueError, "installer differs"):
                 verifier.verify(downloads, version, commit, source, seal())

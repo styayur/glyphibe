@@ -42,6 +42,9 @@
   "microsoft_platform": {
     "vc_runtime": "CLI imports VCRUNTIME140.dll; install the Microsoft v14 x64 Runtime separately. Desktop links runtime code through Tauri's static_vcruntime build support.",
     "terms": [
+      "https://visualstudio.microsoft.com/license-terms/vs2026-ga-pro-enterprise/",
+      "https://visualstudio.microsoft.com/license-terms/vs2026-ga-visualcpp-v14-redist-runtime/",
+      "https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution",
       "https://visualstudio.microsoft.com/license-terms/vs2022-ga-diagnosticbuildtools/",
       "https://visualstudio.microsoft.com/license-terms/vs2022-cruntime/",
       "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"

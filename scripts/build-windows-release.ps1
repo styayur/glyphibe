@@ -12,6 +12,16 @@ foreach($privateRoot in @($profileRoot,$project,$target)){
 $sourceCommit=(& git -C $project rev-parse HEAD | Out-String).Trim()
 if($LASTEXITCODE -ne 0 -or $sourceCommit -notmatch '^[a-f0-9]{40,64}$'){throw 'Reviewed source identity is unavailable'}
 if((& git -C $project status --porcelain | Out-String).Trim()){throw 'Release builds require committed source'}
+$vswhere=Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio/Installer/vswhere.exe'
+if(-not(Test-Path -LiteralPath $vswhere)){throw 'Visual Studio build provenance is unavailable'}
+$instances=@(& $vswhere -all -products '*' -format json | Out-String | ConvertFrom-Json)
+if($instances.Count -eq 0){throw 'A stable Microsoft build-tool installation is required'}
+$products=@()
+foreach($instance in $instances){
+  if($instance.isPrerelease -ne $false -or $instance.channelId -notmatch '^VisualStudio\.\d+\.Release$'){throw 'Official candidates require a Release channel; Insiders and prerelease tools are excluded'}
+  $toolsetFile=Join-Path $instance.installationPath 'VC/Auxiliary/Build/Microsoft.VCToolsVersion.default.txt'
+  $products+=[ordered]@{displayName=$instance.displayName;productId=$instance.productId;installationVersion=$instance.installationVersion;channelId=$instance.channelId;isPrerelease=$instance.isPrerelease;installed_default_msvc_toolset=$(if(Test-Path -LiteralPath $toolsetFile){(Get-Content -LiteralPath $toolsetFile -Raw).Trim()}else{$null})}
+}
 if($env:RUSTFLAGS -and -not $env:CARGO_ENCODED_RUSTFLAGS){throw 'Use CARGO_ENCODED_RUSTFLAGS for additional flags so path arguments retain their boundaries'}
 $previousTarget=$env:CARGO_TARGET_DIR
 $previousFlags=$env:CARGO_ENCODED_RUSTFLAGS
@@ -53,9 +63,6 @@ try {
   }
   $payloads=@('glyphibe.exe','glyphibe-desktop.exe') | ForEach-Object { Get-ValidatedBuildRecord (Join-Path $target "release/$_") }
   $installer=Get-ValidatedBuildRecord (Join-Path $target "release/bundle/nsis/Glyphibe_${version}_x64-setup.exe")
-  $vswhere=Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio/Installer/vswhere.exe'
-  $products=@()
-  if(Test-Path -LiteralPath $vswhere){$products=@((& $vswhere -all -products '*' -format json | Out-String | ConvertFrom-Json) | Select-Object displayName,productId,installationVersion)}
   $report=[ordered]@{source_commit=$sourceCommit;built_at=[DateTimeOffset]::UtcNow.ToString('o');provider=$(if($env:GITHUB_ACTIONS -eq 'true'){'GitHub-hosted Actions'}else{'Local build'});run_id=$env:GITHUB_RUN_ID;runner_image=$env:ImageOS;runner_image_version=$env:ImageVersion;rust=(& rustc -vV | Out-String).Trim();cargo=(& cargo --version | Out-String).Trim();node=(& node --version | Out-String).Trim();visual_studio_products=$products;path_remapping=@('/glyphibe-build/home','/glyphibe/source','/glyphibe-build/target');payloads=@($payloads);installer=$installer;scope='Build provenance and private-path checks, not a reproducible-build or personal license entitlement certification.'}
   $report | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $target 'glyphibe-build-provenance.json') -Encoding utf8
 }
