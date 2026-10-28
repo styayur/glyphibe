@@ -587,6 +587,64 @@ export function positions(
       }),
   );
 }
+/** Frame the owned fixed layout without depending on asynchronous scene bounds. */
+export function fitGalaxyCamera(
+  points: Iterable<{ x: number; y: number; z: number }>,
+  aspect: number,
+  fovDegrees: number,
+  nodeRadius = 5,
+) {
+  const values = [...points];
+  if (
+    !values.length ||
+    !Number.isFinite(aspect) ||
+    aspect <= 0 ||
+    !Number.isFinite(fovDegrees) ||
+    fovDegrees <= 0 ||
+    fovDegrees >= 179 ||
+    !Number.isFinite(nodeRadius) ||
+    nodeRadius <= 0
+  )
+    return null;
+  let minX = Infinity,
+    minY = Infinity,
+    minZ = Infinity;
+  let maxX = -Infinity,
+    maxY = -Infinity,
+    maxZ = -Infinity;
+  for (const point of values) {
+    if (![point.x, point.y, point.z].every(Number.isFinite)) return null;
+    minX = Math.min(minX, point.x);
+    maxX = Math.max(maxX, point.x);
+    minY = Math.min(minY, point.y);
+    maxY = Math.max(maxY, point.y);
+    minZ = Math.min(minZ, point.z);
+    maxZ = Math.max(maxZ, point.z);
+  }
+  const target = {
+    x: (minX + maxX) / 2,
+    y: (minY + maxY) / 2,
+    z: (minZ + maxZ) / 2,
+  };
+  let radius = nodeRadius;
+  for (const point of values)
+    radius = Math.max(
+      radius,
+      Math.hypot(point.x - target.x, point.y - target.y, point.z - target.z) +
+        nodeRadius,
+    );
+  const vertical = (fovDegrees * Math.PI) / 360;
+  const horizontal = Math.atan(Math.tan(vertical) * aspect);
+  const distance = Math.max(
+    nodeRadius * 3,
+    (radius / Math.sin(Math.min(vertical, horizontal))) * 1.15,
+  );
+  return {
+    position: { x: target.x, y: target.y, z: target.z + distance },
+    target,
+  };
+}
+
 /** Display placement only. Multiple memberships remain in GraphIndex; the
  * lexicographically first equally-near community is a stable visual anchor. */
 export function clusterPositions(

@@ -38,3 +38,19 @@ that it is fitted rather than dominated by a viewport-sized sphere. This browser
 check also passed before the explicit readiness repair and therefore does not
 reproduce or prove the native timing fix. All eight E2E and 15 unit tests passed
 after that repair; the final installer must still be checked on Windows.
+
+The native debug recheck showed that renderer readiness alone was insufficient:
+the first viewport still showed an oversized sphere. The current implementation
+therefore frames the bounding sphere of Glyphibe's own fixed layout, including
+node radius, using the camera's vertical field of view and viewport aspect.
+This uses ordinary perspective geometry rather than the renderer's transient
+object bounding box. It runs after readiness, engine updates and viewport size
+changes. An independent frustum test checks sphere extents in narrow/square/wide
+viewports and invalid inputs; the frontend unit suite now contains 16 tests.
+Native validation of this additional change remains necessary.
+
+The subsequent native debug run did show all 17 initial entities within the
+viewport, selected `doubled` by clicking its sphere, and returned to a correctly
+fitted graph after choosing the public Python directory in the actual Windows
+folder dialog and rescanning it. This confirms the owned-layout camera change
+in the native host. Optimized installer lifecycle verification remains separate.

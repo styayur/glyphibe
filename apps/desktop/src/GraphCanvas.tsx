@@ -3,6 +3,7 @@ import {
   lazy,
   Suspense,
   useEffect,
+  useCallback,
   useMemo,
   useRef,
   useState,
@@ -11,7 +12,13 @@ import type { ReactNode } from "react";
 import type { ForceGraphMethods } from "react-force-graph-3d";
 import { MultiDirectedGraph } from "graphology";
 import Sigma from "sigma";
-import { clusterPositions, colour, escapeMarkup, positions } from "./model";
+import {
+  clusterPositions,
+  colour,
+  escapeMarkup,
+  positions,
+  fitGalaxyCamera,
+} from "./model";
 import type { CodeEdge, CodeNode, ViewState } from "./model";
 const ForceGraph3D = lazy(() => import("./GalaxyCanvas"));
 class GraphicsBoundary extends Component<
@@ -150,17 +157,33 @@ export default function GraphCanvas({
   useEffect(() => {
     selectHandler.current = onSelect;
   }, [onSelect]);
-  useEffect(() => {
-    if (!isGalaxy || !galaxyReady) return;
+  const frameGalaxy = useCallback(() => {
+    const current = galaxy.current;
+    if (!current) return;
     const position = state.selected ? layout.get(state.selected) : null;
     if (position)
-      galaxy.current?.cameraPosition(
+      current.cameraPosition(
         { x: position.x + 80, y: position.y + 40, z: position.z + 140 },
         position,
         0,
       );
-    else galaxy.current?.zoomToFit(0, 70);
-  }, [state.selected, isGalaxy, galaxyReady, layout]);
+    else {
+      const camera = current.camera();
+      const fov =
+        "fov" in camera && typeof camera.fov === "number" ? camera.fov : 50;
+      const fitted = fitGalaxyCamera(
+        layout.values(),
+        size.width / size.height,
+        fov,
+      );
+      if (fitted) current.cameraPosition(fitted.position, fitted.target, 0);
+    }
+  }, [state.selected, layout, size.width, size.height]);
+  useEffect(() => {
+    if (!isGalaxy || !galaxyReady) return;
+    const frame = requestAnimationFrame(frameGalaxy);
+    return () => cancelAnimationFrame(frame);
+  }, [isGalaxy, galaxyReady, frameGalaxy]);
   useEffect(() => {
     if (!isGalaxy) return;
     let frame = 0,
@@ -403,26 +426,7 @@ export default function GraphCanvas({
               showNavInfo={false}
               enableNodeDrag={false}
               cooldownTicks={0}
-              onEngineStop={() => {
-                const selected = data3D.nodes.find(
-                  (n) => n.id === state.selected,
-                );
-                if (selected)
-                  galaxy.current?.cameraPosition(
-                    {
-                      x: (selected.x ?? 0) + 80,
-                      y: (selected.y ?? 0) + 40,
-                      z: (selected.z ?? 0) + 140,
-                    },
-                    {
-                      x: selected.x ?? 0,
-                      y: selected.y ?? 0,
-                      z: selected.z ?? 0,
-                    },
-                    0,
-                  );
-                else galaxy.current?.zoomToFit(0, 70);
-              }}
+              onEngineStop={frameGalaxy}
               onNodeClick={(node, event) => {
                 if (event.timeStamp !== handledPointer.current)
                   selectHandler.current(String(node.id));

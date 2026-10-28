@@ -9,10 +9,40 @@ import {
   initialView,
   parseGraph,
   positions,
+  fitGalaxyCamera,
   project,
   reachable,
 } from "./model";
 import type { CodeGraph, CodeNode, CodeEdge } from "./model";
+
+it("frames actual sphere extents inside wide and narrow perspective viewports", () => {
+  const points = [
+    ...positions(
+      Array.from({ length: 17 }, (_, i) => n(`camera-${i}`)),
+    ).values(),
+  ];
+  for (const aspect of [0.5, 1, 2]) {
+    const frame = fitGalaxyCamera(points, aspect, 50)!;
+    const vertical = Math.tan((25 * Math.PI) / 180);
+    for (const point of points)
+      for (const axis of ["x", "y", "z"] as const)
+        for (const offset of [-5, 5]) {
+          const surface = { ...point, [axis]: point[axis] + offset };
+          const depth = frame.position.z - surface.z;
+          expect(depth).toBeGreaterThan(0);
+          expect(Math.abs(surface.x - frame.target.x) / depth).toBeLessThan(
+            vertical * aspect,
+          );
+          expect(Math.abs(surface.y - frame.target.y) / depth).toBeLessThan(
+            vertical,
+          );
+        }
+  }
+  expect(fitGalaxyCamera([], 1, 50)).toBeNull();
+  expect(fitGalaxyCamera(points, 0, 50)).toBeNull();
+  expect(fitGalaxyCamera([{ x: NaN, y: 0, z: 0 }], 1, 50)).toBeNull();
+});
+
 const evidence = {
   kind: "observed" as const,
   method: "manual test annotation",
