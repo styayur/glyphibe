@@ -33,7 +33,10 @@ empty/single-node projections and a narrow region with a long label.
 
 These tests run in Chromium with SwiftShader at a 1440 × 960 viewport. They prove
 rendered placement and interaction in that environment; they do not establish
-native GPU frame rate. The newly packaged Windows application still needs the
-maintainer's native viewport recheck before release. See the separate
+native GPU frame rate. The installed `0f1e4b6` hosted candidate was subsequently
+checked at 1435 × 900: Dense's 17 nodes and both Frontier functions were visibly
+between the actual islands. The first teaching question and Next action were
+also exercised; see the [native record](native-validation.md) and its genuine
+Frontier screenshot. See the separate
 [rendering measurements](../benchmarks/rendering.md) for retained performance
 limits.

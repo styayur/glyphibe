@@ -1,0 +1,139 @@
+{
+  "measured_at": "2026-10-28T20:53:16.722619+08:00",
+  "binary_version": "glyphibe 1.0.0",
+  "binary_sha256": "c85d4b38a785cdf885f5610ea18d40c3573ed80215974b5e285d1ff18fd55386",
+  "build_profile": "release; optimization 3, thin LTO, stripped",
+  "hardware_reference": "release-candidate-analysis.json; same Windows workstation",
+  "conditions": "No intentionally concurrent build, rendering benchmark or native Glyphibe window; OS background activity not isolated and OS file cache not flushed. Cases run serially with fresh external indices. No controlled comparison claim.",
+  "method": "Full checkout, bounded read-only analyze; external fresh SQLite; 180 seconds and 2 GiB per CLI process. All tracked regular file hashes and clean Git status checked before/after.",
+  "cases": [
+    {
+      "case": 1,
+      "mode": "read-only source analysis; project code and dependencies never executed",
+      "elapsed_ms": 41064.529,
+      "peak_working_set_bytes": 483659776,
+      "nodes": 47279,
+      "edges": 159534,
+      "stats": {
+        "cached_files": 0,
+        "discovered_files": 91,
+        "elapsed_ms": 10468,
+        "parsed_files": 91,
+        "skipped_files": 0,
+        "source_bytes": 1003633
+      },
+      "diagnostic_counts": {
+        "unresolved_import": 492,
+        "unresolved_call": 6416,
+        "unresolved_type_relation": 120,
+        "dependency_cycle": 2
+      },
+      "index_bytes": 187699200,
+      "privacy": "Source names, labels, paths and diagnostic messages intentionally omitted",
+      "repository": "pallets/click",
+      "revision": "2247b35ea1c47c727d7a06e51fa280e12a863ff6",
+      "license": "BSD-3-Clause",
+      "license_source": "https://github.com/pallets/click/blob/2247b35ea1c47c727d7a06e51fa280e12a863ff6/LICENSE.txt",
+      "license_sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+      "tracked_regular_files": 178,
+      "source_unchanged": true
+    },
+    {
+      "case": 2,
+      "mode": "read-only source analysis; project code and dependencies never executed",
+      "elapsed_ms": 64500.725,
+      "peak_working_set_bytes": 675971072,
+      "nodes": 63753,
+      "edges": 222844,
+      "stats": {
+        "cached_files": 0,
+        "discovered_files": 102,
+        "elapsed_ms": 17950,
+        "parsed_files": 102,
+        "skipped_files": 0,
+        "source_bytes": 1879988
+      },
+      "diagnostic_counts": {
+        "unresolved_import": 783,
+        "unresolved_call": 11945,
+        "unresolved_type_relation": 242,
+        "dependency_cycle": 48
+      },
+      "index_bytes": 268206080,
+      "privacy": "Source names, labels, paths and diagnostic messages intentionally omitted",
+      "repository": "BurntSushi/ripgrep",
+      "revision": "91f5d22ef48bde459d90a8c7dbeab416e97d0f2b",
+      "license": "Unlicense OR MIT",
+      "license_source": "https://github.com/BurntSushi/ripgrep/blob/91f5d22ef48bde459d90a8c7dbeab416e97d0f2b/COPYING",
+      "license_sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f",
+      "tracked_regular_files": 226,
+      "source_unchanged": true
+    },
+    {
+      "case": 3,
+      "mode": "read-only source analysis; project code and dependencies never executed",
+      "elapsed_ms": 66725.364,
+      "peak_working_set_bytes": 678375424,
+      "nodes": 63557,
+      "edges": 214947,
+      "stats": {
+        "cached_files": 0,
+        "discovered_files": 257,
+        "elapsed_ms": 20730,
+        "parsed_files": 257,
+        "skipped_files": 0,
+        "source_bytes": 1598447
+      },
+      "diagnostic_counts": {
+        "unresolved_import": 394,
+        "unresolved_call": 9245,
+        "unresolved_type_relation": 23,
+        "dependency_cycle": 7
+      },
+      "index_bytes": 299819008,
+      "privacy": "Source names, labels, paths and diagnostic messages intentionally omitted",
+      "repository": "jacomyal/sigma.js",
+      "revision": "1db338580abb10c75144b3131ba8718550cb177a",
+      "license": "MIT",
+      "license_source": "https://github.com/jacomyal/sigma.js/blob/1db338580abb10c75144b3131ba8718550cb177a/LICENSE.txt",
+      "license_sha256": "7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1",
+      "tracked_regular_files": 579,
+      "source_unchanged": true
+    }
+  ],
+  "failures": [],
+  "accuracy": {
+    "python": {
+      "true_positive": 11,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "rust": {
+      "true_positive": 11,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "javascript": {
+      "true_positive": 12,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "typescript": {
+      "true_positive": 13,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "total": {
+      "true_positive": 47,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "limitation": "47 distinct caller/callee pairs manually annotated in small authored fixtures. Not an estimate of real-world precision or recall. Dynamic callback calls are deliberately unresolved."
+  },
+  "source_commit": "0f1e4b64acf46752349029bbba4bf265efb13c6f",
+  "artifact_scope": "GitHub-hosted CI release-profile candidate for the named source commit; not an assertion about a final tag, main build, or published Release assets.",
+  "metadata_note": "The harness default conditions and hardware reference describe an older run; replaced here with the observed conditions and hardware record for this invocation. Numerical measurements are unchanged.",
+  "completed_at": "2026-10-28T13:01:17.885598+00:00"
+}

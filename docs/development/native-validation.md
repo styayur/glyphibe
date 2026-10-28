@@ -52,3 +52,43 @@ browser E2E separately exercises orbit and pan.
 
 These repairs and the final source/installer hashes require fresh CI and native
 validation. No Stable approval or remote Release verification is asserted here.
+
+## Corrected hosted candidate, 2026-10-28
+
+Source: `0f1e4b64acf46752349029bbba4bf265efb13c6f`.
+[All six fresh CI jobs passed](https://github.com/styayur/glyphibe/actions/runs/40683111999).
+The downloaded Actions artifact matched its independently recorded SHA-256
+`d09a18a267ae0c07b31b5fdd0498c966ac8223b4a24c05936f66df7e45186cc8`.
+All eight checksummed assets, archive members, original notices, provenance and
+the actual offline CLI version/help/doctor/analyze/search checks passed again.
+
+| Item | Actual result |
+|---|---|
+| Unsigned NSIS installer | 6,221,417 bytes; SHA-256 `709e458e0e29d2b538ac2b1315798246d87b121e99b848140a080ab9a88c08b3` |
+| Portable desktop | SHA-256 `711beffd3a3b15c541f06a20901499c358a9a79d3bcd4cfb2e691154dbf44873` |
+| Installed desktop | SHA-256 `0af1da556f0d4bbbbf7487b20168acc61e6c6dafd2ac6c0ae9f9d151a91ba152`; exactly the three-byte NSIS marker difference |
+| Installation | Installer exit 0; all 471 original legal files matched again |
+| Build host | GitHub-hosted Windows image `20261021.278.1`, Visual Studio Enterprise 2026 `18.11.12315.225`, channel `VisualStudio.18.Release`, `isPrerelease: false`, MSVC toolset `14.51.36231` |
+| Dense | The 17-node public Python graph fitted between the floating islands, with readable persistent labels |
+| Frontier | Selecting `floor` in search produced its two-node neighborhood; both `floor` and `pipeline` were visibly clear of the left and right islands |
+| Teaching | The first question and progressive buttons were visible with facts/limits collapsed; Next advanced from step 1/4 to step 2/4 |
+| Actual Agent | The candidate CLI completed all eight read tools in a real client; [record](agent-interoperability-release-candidate.json) |
+| Close | Alt+F4 closed the native window and the desktop process exited before the larger candidate benchmarks |
+
+[Frontier screenshot](../images/native-frontier.png) is an unmodified capture
+of this installed candidate, with the selected public fixture function. The
+earlier Galaxy/source screenshots and full lifecycle record retain their
+original candidate scope. No native GPU frame-rate claim follows from these
+visual checks. The final main-commit package must still pass its own installation
+and remote-asset acceptance, recorded in the published Release notes.
+
+After all timed benchmarks had finished, the same installed candidate opened
+the actual generated 1,000-function Python source workload (ten files), rather
+than a fabricated graph. Dense displayed 1,000/1,000 L5 nodes and 1,998 call plus
+reference relations. Galaxy drew the graph, then its slow-device policy reduced
+the displayed subset to 500/1,000 nodes; the internal callback-cadence heuristic
+reported 12 Hz. This is a fallback observation, not GPU-presented FPS or proof
+of a fluid 1,000-node experience. The automation helper rejected a native orbit
+drag before sending input because it selected Tauri's 13-pixel auxiliary surface;
+browser E2E remains the direct orbit-interaction evidence. No native orbit
+success is inferred from that rejected action.

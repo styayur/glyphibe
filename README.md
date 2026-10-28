@@ -10,7 +10,7 @@ their approval status are listed in [GitHub Releases](https://github.com/styayur
 The [release gates](docs/development/release-gates.md) distinguish completed checks,
 remaining work and performance limits. [中文说明](README.zh-CN.md).
 
-![Installed Windows application reading an original public Python fixture](docs/images/native-source.png)
+![Installed Windows Frontier showing a real two-function calling neighborhood](docs/images/native-frontier.png)
 
 Captured from the actual installed Windows application; this is source from the
 project's original public test fixture. See the release gates for validation status.

@@ -1,5 +1,9 @@
 # MCP stdio latency
 
+> **Latest candidate:** see [hosted candidate MCP measurements](release-candidate-mcp.md).
+> The numbers below describe an earlier local binary, not the current candidate
+> or final tagged Release assets.
+
 Measured on 2026-10-28 on the Windows 11 / Ryzen 7 H 255 environment described
 in [analysis.md](analysis.md). The server was the optimized `glyphibe 1.0.0`
 CLI, SHA-256 `d1538a0bb77aeb9bef7244d03851b17d8a600d63f777406f4e10517695fd20c1`.

@@ -21,6 +21,14 @@ timeout. Timed-out runs terminate only their own started process tree.
 Per-run raw JSONL/stderr remain in an external private cache; they are not
 published with the repository.
 
+A second check used the actual hosted `0f1e4b6` release candidate at 20:10
+Asia/Singapore on the same date. Its CLI SHA-256 was
+`c85d4b38a785cdf885f5610ea18d40c3573ed80215974b5e285d1ff18fd55386`.
+All eight distinct read tools again completed without errors or forbidden
+operations, and the original fixture remained unchanged. The
+[candidate record](agent-interoperability-release-candidate.json) preserves the
+binary identity and client result separately from the earlier development run.
+
 The server configuration follows the
 [official OpenAI MCP documentation](https://learn.chatgpt.com/docs/extend/mcp?surface=cli).
 The same server also passes the real Rust SDK stdio integration test, including

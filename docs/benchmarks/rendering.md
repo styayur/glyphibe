@@ -1,5 +1,9 @@
 # Rendering and interaction measurements
 
+Latest frozen candidate: [0f1e4b6 software-rendering report](rendering-release-candidate-0f1e4b6.md),
+using new candidate-generated inputs and actual opaque panels. It retains all
+six scenarios and short-window timing anomalies; it does not establish native FPS.
+
 The measurements below use the real production frontend and source-derived graph exports. They do **not** measure GPU-presented frames or prove the installed WebView2 application's native frame rate. A 30 FPS native performance target remains distinct from these browser measurements.
 
 ## Environment and inputs

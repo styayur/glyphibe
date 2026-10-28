@@ -1,7 +1,12 @@
 # Analysis benchmark report
 
+> **Latest candidate:** see [release-candidate measurements](release-candidate-analysis.md)
+> for the GitHub-hosted binary from source `0f1e4b6`. The tables below remain
+> historical development-build measurements and must not be used as performance
+> results for that candidate or final tagged assets.
+
 Status: **measured development build; not a v1.0.0 release claim**.
-The final `glyphibe 1.0.0` executable was additionally checked on
+An earlier local `glyphibe 1.0.0` executable was additionally checked on
 [three pinned public projects](public-projects.md) and against the same 47
 annotated call pairs. [MCP latency](mcp.md) is measured separately.
 Recorded 2026-10-27 on Windows 11 build 26200, AMD Ryzen 7 H 255 with 16 logical

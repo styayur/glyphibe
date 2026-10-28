@@ -1,0 +1,439 @@
+{
+  "measured_at": "2026-10-28T20:31:50.925478+08:00",
+  "binary_version": "glyphibe 1.0.0",
+  "binary_sha256": "c85d4b38a785cdf885f5610ea18d40c3573ed80215974b5e285d1ff18fd55386",
+  "build_profile": "release; opt-level 3 default, thin LTO, stripped, codegen-units 1; reviewed Cargo profile and hosted build provenance",
+  "hardware": {
+    "cpu": "AMD Ryzen 7 H 255 w/ Radeon 780M Graphics",
+    "logical_processors": 16,
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.7",
+    "system_memory_bytes": 24445165568
+  },
+  "method": {
+    "cold": "New external SQLite index; OS filesystem cache not flushed",
+    "hot": "Five fresh CLI processes; unchanged file cache; relationships, clusters and mappings rebuilt",
+    "incremental": "One source file literal edited, parse cache retained; whole relation/derived graph rebuilt",
+    "peak_memory": "Windows GetProcessMemoryInfo PeakWorkingSetSize polled; excludes harness and short-lived Git metadata subprocess",
+    "query": "Five CLI subprocess searches including startup, SQLite graph deserialization and query",
+    "safety": "180 seconds and 2GiB maximum per measured subprocess"
+  },
+  "synthetic": [
+    {
+      "functions": 1000,
+      "source_bytes": 50868,
+      "source_files": 10,
+      "cold": {
+        "elapsed_ms": 7007.085,
+        "peak_working_set_bytes": 97308672,
+        "stats": {
+          "cached_files": 0,
+          "discovered_files": 10,
+          "elapsed_ms": 2090,
+          "parsed_files": 10,
+          "skipped_files": 0,
+          "source_bytes": 50868
+        }
+      },
+      "hot": [
+        {
+          "elapsed_ms": 10510.344,
+          "peak_working_set_bytes": 100601856,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 1705,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        },
+        {
+          "elapsed_ms": 9680.245,
+          "peak_working_set_bytes": 100773888,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 1678,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        },
+        {
+          "elapsed_ms": 9420.099,
+          "peak_working_set_bytes": 101097472,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 1670,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        },
+        {
+          "elapsed_ms": 9716.063,
+          "peak_working_set_bytes": 100872192,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 1706,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        },
+        {
+          "elapsed_ms": 9663.33,
+          "peak_working_set_bytes": 100175872,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 1664,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        }
+      ],
+      "hot_node_counts": [
+        8099,
+        8099,
+        8099,
+        8099,
+        8099,
+        8099
+      ],
+      "hot_graph_size_stable": true,
+      "incremental": {
+        "elapsed_ms": 9453.332,
+        "peak_working_set_bytes": 101097472,
+        "stats": {
+          "cached_files": 9,
+          "discovered_files": 10,
+          "elapsed_ms": 1789,
+          "parsed_files": 1,
+          "skipped_files": 0,
+          "source_bytes": 50872
+        }
+      },
+      "index_bytes": 48750592,
+      "query": {
+        "samples_ms": [
+          1221.067,
+          1226.197,
+          1224.683,
+          1168.234,
+          1255.504
+        ],
+        "median_ms": 1224.683,
+        "includes_process_start_and_graph_load": true
+      },
+      "ui_export": {
+        "file": "graph-1000.json",
+        "functions": 1000,
+        "calls": 999,
+        "bytes": 1413227,
+        "sha256": "da29b4febdea4105d2d060520214f92aab0af3a5172cd21aa549d59c66496cf5",
+        "export_ms": 1405.533
+      }
+    },
+    {
+      "functions": 5000,
+      "source_bytes": 263426,
+      "source_files": 50,
+      "cold": {
+        "elapsed_ms": 32223.645,
+        "peak_working_set_bytes": 420528128,
+        "stats": {
+          "cached_files": 0,
+          "discovered_files": 50,
+          "elapsed_ms": 7825,
+          "parsed_files": 50,
+          "skipped_files": 0,
+          "source_bytes": 263426
+        }
+      },
+      "hot": [
+        {
+          "elapsed_ms": 51627.188,
+          "peak_working_set_bytes": 443207680,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 6817,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        },
+        {
+          "elapsed_ms": 51152.77,
+          "peak_working_set_bytes": 443064320,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 6295,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        },
+        {
+          "elapsed_ms": 52286.407,
+          "peak_working_set_bytes": 443650048,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 6913,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        },
+        {
+          "elapsed_ms": 53630.352,
+          "peak_working_set_bytes": 443113472,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 7254,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        },
+        {
+          "elapsed_ms": 53078.234,
+          "peak_working_set_bytes": 443731968,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 6952,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        }
+      ],
+      "hot_node_counts": [
+        40261,
+        40261,
+        40261,
+        40261,
+        40261,
+        40261
+      ],
+      "hot_graph_size_stable": true,
+      "incremental": {
+        "elapsed_ms": 53252.106,
+        "peak_working_set_bytes": 443981824,
+        "stats": {
+          "cached_files": 49,
+          "discovered_files": 50,
+          "elapsed_ms": 7894,
+          "parsed_files": 1,
+          "skipped_files": 0,
+          "source_bytes": 263430
+        }
+      },
+      "index_bytes": 242950144,
+      "query": {
+        "samples_ms": [
+          5623.67,
+          5510.443,
+          5666.093,
+          5364.398,
+          5571.036
+        ],
+        "median_ms": 5571.036,
+        "includes_process_start_and_graph_load": true
+      },
+      "ui_export": {
+        "file": "graph-5000.json",
+        "functions": 5000,
+        "calls": 4999,
+        "bytes": 7080908,
+        "sha256": "393293d6bd53e5d9f417a254a41a4af6eed9dd9bd373a1df71af12ce71fe0616",
+        "export_ms": 7607.069
+      }
+    },
+    {
+      "functions": 10000,
+      "source_bytes": 529126,
+      "source_files": 100,
+      "cold": {
+        "elapsed_ms": 71198.514,
+        "peak_working_set_bytes": 826347520,
+        "stats": {
+          "cached_files": 0,
+          "discovered_files": 100,
+          "elapsed_ms": 14585,
+          "parsed_files": 100,
+          "skipped_files": 0,
+          "source_bytes": 529126
+        }
+      },
+      "hot": [
+        {
+          "elapsed_ms": 108336.971,
+          "peak_working_set_bytes": 876953600,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 15229,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        },
+        {
+          "elapsed_ms": 106895.922,
+          "peak_working_set_bytes": 876519424,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 14216,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        },
+        {
+          "elapsed_ms": 101439.79,
+          "peak_working_set_bytes": 877289472,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 14751,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        },
+        {
+          "elapsed_ms": 103120.795,
+          "peak_working_set_bytes": 876949504,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 15757,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        },
+        {
+          "elapsed_ms": 99371.077,
+          "peak_working_set_bytes": 876802048,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 12822,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        }
+      ],
+      "hot_node_counts": [
+        80407,
+        80407,
+        80407,
+        80407,
+        80407,
+        80407
+      ],
+      "hot_graph_size_stable": true,
+      "incremental": {
+        "elapsed_ms": 98757.572,
+        "peak_working_set_bytes": 878579712,
+        "stats": {
+          "cached_files": 99,
+          "discovered_files": 100,
+          "elapsed_ms": 12703,
+          "parsed_files": 1,
+          "skipped_files": 0,
+          "source_bytes": 529130
+        }
+      },
+      "index_bytes": 484151296,
+      "query": {
+        "samples_ms": [
+          13735.904,
+          15197.855,
+          13263.854,
+          14275.131,
+          11968.753
+        ],
+        "median_ms": 13735.904,
+        "includes_process_start_and_graph_load": true
+      },
+      "ui_export": {
+        "file": "graph-10000.json",
+        "functions": 10000,
+        "calls": 9999,
+        "bytes": 14165510,
+        "sha256": "62f3ed3883642cdbf3bee0646d5b929999069c7bd126cadd62b5dc00a6edbda9",
+        "export_ms": 18982.691
+      }
+    }
+  ],
+  "real": [],
+  "failures": [],
+  "accuracy": {
+    "python": {
+      "true_positive": 11,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "rust": {
+      "true_positive": 11,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "javascript": {
+      "true_positive": 12,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "typescript": {
+      "true_positive": 13,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "total": {
+      "true_positive": 47,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "limitation": "47 distinct caller/callee pairs manually annotated in small authored fixtures. Not an estimate of real-world precision or recall. Dynamic callback calls are deliberately unresolved."
+  },
+  "source_commit": "0f1e4b64acf46752349029bbba4bf265efb13c6f",
+  "artifact_scope": "GitHub-hosted CI release-profile candidate for the named source commit; not an assertion about a final tag, main build, or published Release assets.",
+  "build_provenance": {
+    "provider": "GitHub-hosted Actions",
+    "run_id": "40683111999",
+    "runner_image": "win25-vs2026",
+    "runner_image_version": "20261021.278.1",
+    "rust": "rustc 1.98.1 (48a229cea 2026-09-01)\r\nbinary: rustc\r\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\r\ncommit-date: 2026-09-01\r\nhost: x86_64-pc-windows-msvc\r\nrelease: 1.98.1\r\nLLVM version: 22.1.8",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "node": "v24.22.1",
+    "visual_studio_products": [
+      {
+        "displayName": "Visual Studio Enterprise 2026",
+        "productId": "Microsoft.VisualStudio.Product.Enterprise",
+        "installationVersion": "18.11.12315.225",
+        "channelId": "VisualStudio.18.Release",
+        "isPrerelease": false,
+        "installed_default_msvc_toolset": "14.51.36231"
+      }
+    ],
+    "asset_sha256": "8097275bf5167ba80dc58b2f79481ef4e146ba690a5700d89e5048e724b1ebb1"
+  },
+  "conditions": "No intentionally concurrent compilation or rendering benchmark. An idle native desktop window was present initially and closed after the 1000-function case. Background OS activity was not isolated; OS file cache was not flushed.",
+  "completed_at": "2026-10-28T12:55:16.067707+00:00"
+}

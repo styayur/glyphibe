@@ -19,11 +19,13 @@ glyphibe doctor
 
 Use the exact node `id` returned by search/graph. Levels are 1..6, depth is 1..4,
 and hops are 0..32. `graph` pages node arrays; `export` emits the full versioned
-graph with a node map. `--format dot` exports Graphviz. Existing files require
-explicit `--force`. Success exits 0, invalid arguments 2, operation errors 1.
-JSON queries use stdout; JSON errors and scan progress use stderr. `--json`
-is accepted globally; JSON is already the default. Paths are repository-relative,
-lines one-based, and columns are UTF-8 byte columns.
+graph with a node map. `export --format dot` exports Graphviz. Existing files
+require explicit `--force`. Success exits 0. Clap syntax/value-parsing errors
+exit 2 and use Clap's text diagnostics; operation and semantic-validation errors
+exit 1 as JSON on stderr. Query JSON uses stdout; scan progress uses stderr.
+`--json` is accepted globally; JSON is already the default. Source paths in
+results are repository-relative, lines one-based, and columns are UTF-8 byte
+columns.
 
 ## Agent configuration
 

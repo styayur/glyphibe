@@ -9,7 +9,7 @@
 [发布门禁](docs/development/release-gates.md)区分已验证、待验项目及性能边界。
 [English](README.md)。
 
-![已安装 Windows 应用读取原创公开 Python 夹具](docs/images/native-source.png)
+![已安装 Windows Frontier 展示真实的双函数调用邻域](docs/images/native-frontier.png)
 
 截图来自实际安装运行的 Windows 应用，展示本项目原创公开测试夹具的源码。
 各项验证状态见发布门禁记录。

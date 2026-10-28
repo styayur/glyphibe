@@ -1,6 +1,10 @@
 # Public project validation
 
-On 2026-10-28, the optimized **glyphibe 1.0.0** CLI analyzed three complete,
+> **Latest candidate:** see [release-candidate public-project validation](release-candidate-public-projects.md)
+> for the GitHub-hosted binary from source `0f1e4b6`. The results below are
+> historical measurements of an earlier local binary, not final tagged assets.
+
+On 2026-10-28, an earlier optimized local **glyphibe 1.0.0** CLI analyzed three complete,
 separately cloned public checkouts without installing dependencies or executing
 project code. All tracked regular files were hashed before and after analysis;
 each checkout also retained a clean Git status. No sources from these projects
@@ -27,7 +31,7 @@ meaning to communities. Unsupported imports/calls/types remain diagnostics.
 Large graph snapshots and full derived-graph rebuilds are known storage and
 latency limitations, visible in the measured index sizes and scan times above.
 
-The final executable was also rechecked against the 47 annotated basic call
+That historical executable was also rechecked against the 47 annotated basic call
 pairs: 47 true positives, zero false positives and zero false negatives. This
 100% precision/recall result applies only to that authored, finite fixture set;
 it is not a real-project accuracy estimate.
