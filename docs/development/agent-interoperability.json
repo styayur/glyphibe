@@ -1,0 +1,94 @@
+{
+  "required_tools": [
+    "architecture",
+    "search",
+    "node",
+    "trace",
+    "impact",
+    "mappings",
+    "explain",
+    "knowledge"
+  ],
+  "passed": true,
+  "blocked_reason": null,
+  "exit_code": 0,
+  "client": "codex-cli 0.159.2",
+  "official_configuration_reference": "https://learn.chatgpt.com/docs/extend/mcp?surface=cli",
+  "successful_tools": [
+    "architecture",
+    "explain",
+    "impact",
+    "knowledge",
+    "mappings",
+    "node",
+    "search",
+    "trace"
+  ],
+  "fixture": "tests/fixtures/python (original public source)",
+  "missing_tools": [],
+  "binary_sha256": "61b9186f88bd90f67df403cba7d15114e94b2b8c91aaf421dc1e6457d45f25a8",
+  "forbidden_operation_types": [],
+  "method": "Ephemeral Codex CLI stdio MCP configuration; existing auth; read-only sandbox; MCP tools only requested",
+  "timed_out": false,
+  "fixture_unchanged": true,
+  "limitation": "External Agent may require online account access; Glyphibe analysis and SDK protocol tests work independently of this client.",
+  "measured_at": "2026-10-28T08:22:11.5160152+08:00",
+  "calls": [
+    {
+      "has_result": true,
+      "status": "completed",
+      "tool": "architecture",
+      "server": "glyphibe",
+      "is_error": false
+    },
+    {
+      "has_result": true,
+      "status": "completed",
+      "tool": "search",
+      "server": "glyphibe",
+      "is_error": false
+    },
+    {
+      "has_result": true,
+      "status": "completed",
+      "tool": "node",
+      "server": "glyphibe",
+      "is_error": false
+    },
+    {
+      "has_result": true,
+      "status": "completed",
+      "tool": "trace",
+      "server": "glyphibe",
+      "is_error": false
+    },
+    {
+      "has_result": true,
+      "status": "completed",
+      "tool": "impact",
+      "server": "glyphibe",
+      "is_error": false
+    },
+    {
+      "has_result": true,
+      "status": "completed",
+      "tool": "mappings",
+      "server": "glyphibe",
+      "is_error": false
+    },
+    {
+      "has_result": true,
+      "status": "completed",
+      "tool": "explain",
+      "server": "glyphibe",
+      "is_error": false
+    },
+    {
+      "has_result": true,
+      "status": "completed",
+      "tool": "knowledge",
+      "server": "glyphibe",
+      "is_error": false
+    }
+  ]
+}

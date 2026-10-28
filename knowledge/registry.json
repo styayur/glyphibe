@@ -1,0 +1,1252 @@
+{
+  "schema_version": 1,
+  "concepts": [
+    {
+      "id": "variable",
+      "label": {
+        "en": "Variable",
+        "zh": "变量"
+      },
+      "description": {
+        "en": "A name refers to a value. Assignment can change which value that name refers to; its exact rules depend on the language.",
+        "zh": "名称指向一个值。赋值可以改变名称所指的值；具体规则由语言决定。"
+      },
+      "terms": [
+        "binding",
+        "变量",
+        "赋值"
+      ],
+      "prerequisites": [],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Glossary/Variable"
+        ]
+      }
+    },
+    {
+      "id": "type",
+      "label": {
+        "en": "Type",
+        "zh": "类型"
+      },
+      "description": {
+        "en": "A type describes permitted values and operations. A parser can show an annotation without proving every value matches it.",
+        "zh": "类型描述允许的值与操作。解析器能显示类型标注，但这不等于已证明所有值都符合标注。"
+      },
+      "terms": [
+        "类型",
+        "annotation"
+      ],
+      "prerequisites": [
+        "variable"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/book/ch03-02-data-types.html"
+        ]
+      }
+    },
+    {
+      "id": "scope",
+      "label": {
+        "en": "Scope",
+        "zh": "作用域"
+      },
+      "description": {
+        "en": "Scope determines where a name can be used. A nearby declaration can hide a name from an outer scope.",
+        "zh": "作用域决定名称在哪些位置可用。内部声明可能遮蔽外部同名名称。"
+      },
+      "terms": [
+        "作用域",
+        "binding"
+      ],
+      "prerequisites": [
+        "variable"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/reference/executionmodel.html"
+        ]
+      }
+    },
+    {
+      "id": "function",
+      "label": {
+        "en": "Function",
+        "zh": "函数"
+      },
+      "description": {
+        "en": "A function groups operations that can be invoked by name or value. Its declaration is evidence of structure, not of its business purpose.",
+        "zh": "函数把可调用的操作组织在一起。函数声明提供结构证据，但不能单独证明业务目的。"
+      },
+      "terms": [
+        "函数",
+        "def",
+        "fn",
+        "function"
+      ],
+      "prerequisites": [
+        "scope"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/tutorial/controlflow.html"
+        ]
+      }
+    },
+    {
+      "id": "parameter",
+      "label": {
+        "en": "Parameter",
+        "zh": "参数"
+      },
+      "description": {
+        "en": "A parameter names an input accepted by a function. An argument is the expression supplied at a particular call.",
+        "zh": "形参命名函数接收的输入；实参是某次调用传入的表达式。"
+      },
+      "terms": [
+        "参数",
+        "argument"
+      ],
+      "prerequisites": [
+        "function"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Glossary/Parameter"
+        ]
+      }
+    },
+    {
+      "id": "return",
+      "label": {
+        "en": "Return value",
+        "zh": "返回值"
+      },
+      "description": {
+        "en": "A return statement can end a function and provide a result. A missing explicit return has language-specific meaning.",
+        "zh": "返回语句可以结束函数并提供结果。没有显式返回语句时的行为取决于语言。"
+      },
+      "terms": [
+        "return",
+        "返回值",
+        "output"
+      ],
+      "prerequisites": [
+        "function"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/reference/simple_stmts.html"
+        ]
+      }
+    },
+    {
+      "id": "expression",
+      "label": {
+        "en": "Expression",
+        "zh": "表达式"
+      },
+      "description": {
+        "en": "An expression computes or denotes a value. Static syntax identifies its parts; the resulting value may require runtime inputs.",
+        "zh": "表达式计算或表示一个值。静态语法能识别组成部分；最终值可能依赖运行时输入。"
+      },
+      "terms": [
+        "表达式",
+        "operand"
+      ],
+      "prerequisites": [
+        "variable"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/reference/expressions.html"
+        ]
+      }
+    },
+    {
+      "id": "condition",
+      "label": {
+        "en": "Condition",
+        "zh": "条件"
+      },
+      "description": {
+        "en": "A condition selects a path according to a test. Both paths can appear in a static graph even when only one runs.",
+        "zh": "条件根据判断选择执行路径。静态图中可能同时存在两条路径，尽管某次运行只经过其中一条。"
+      },
+      "terms": [
+        "条件",
+        "if",
+        "else",
+        "branch"
+      ],
+      "prerequisites": [
+        "expression"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else"
+        ]
+      }
+    },
+    {
+      "id": "loop",
+      "label": {
+        "en": "Loop",
+        "zh": "循环"
+      },
+      "description": {
+        "en": "A loop repeats a region according to an iterator or condition. Its number of iterations is not generally known from syntax alone.",
+        "zh": "循环根据迭代器或条件重复一段代码。仅靠语法通常无法知道循环次数。"
+      },
+      "terms": [
+        "循环",
+        "for",
+        "while",
+        "iteration"
+      ],
+      "prerequisites": [
+        "condition"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/tutorial/controlflow.html"
+        ]
+      }
+    },
+    {
+      "id": "class",
+      "label": {
+        "en": "Class and object",
+        "zh": "类与对象"
+      },
+      "description": {
+        "en": "A class organizes members and can describe objects. Member syntax does not by itself resolve which runtime object receives a call.",
+        "zh": "类组织成员，也可描述对象。成员语法本身不能确定运行时哪个对象接收调用。"
+      },
+      "terms": [
+        "类",
+        "对象",
+        "object",
+        "class"
+      ],
+      "prerequisites": [
+        "function",
+        "type"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/tutorial/classes.html"
+        ]
+      }
+    },
+    {
+      "id": "interface",
+      "label": {
+        "en": "Interface",
+        "zh": "接口"
+      },
+      "description": {
+        "en": "An interface describes a contract that implementations satisfy. A declared contract differs from evidence that behavior was tested.",
+        "zh": "接口描述实现需要满足的约定。声明约定与测试验证行为属于不同证据。"
+      },
+      "terms": [
+        "接口",
+        "trait",
+        "contract"
+      ],
+      "prerequisites": [
+        "type",
+        "function"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://www.typescriptlang.org/docs/handbook/2/objects.html"
+        ]
+      }
+    },
+    {
+      "id": "inheritance",
+      "label": {
+        "en": "Inheritance",
+        "zh": "继承"
+      },
+      "description": {
+        "en": "Inheritance relates a derived type to a base type. Dynamic method selection may need information beyond the syntax tree.",
+        "zh": "继承关联派生类型与基类型。动态方法选择可能需要语法树之外的信息。"
+      },
+      "terms": [
+        "继承",
+        "extends"
+      ],
+      "prerequisites": [
+        "class"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/tutorial/classes.html"
+        ]
+      }
+    },
+    {
+      "id": "error",
+      "label": {
+        "en": "Error handling",
+        "zh": "错误处理"
+      },
+      "description": {
+        "en": "Error handling provides an explicit path for unsuccessful operations. Languages may use exceptions, result values or both.",
+        "zh": "错误处理为未成功操作提供明确路径。语言可能使用异常、结果值，或同时使用两者。"
+      },
+      "terms": [
+        "错误",
+        "异常",
+        "exception",
+        "try",
+        "catch",
+        "Result"
+      ],
+      "prerequisites": [
+        "condition",
+        "return"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/book/ch09-00-error-handling.html"
+        ]
+      }
+    },
+    {
+      "id": "collection",
+      "label": {
+        "en": "Collection",
+        "zh": "集合"
+      },
+      "description": {
+        "en": "A collection stores multiple values. Its ordering, lookup cost and mutation rules depend on the particular data structure.",
+        "zh": "集合存储多个值。顺序、查找成本与修改规则取决于具体数据结构。"
+      },
+      "terms": [
+        "集合",
+        "array",
+        "list",
+        "map",
+        "dictionary"
+      ],
+      "prerequisites": [
+        "type"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/tutorial/datastructures.html"
+        ]
+      }
+    },
+    {
+      "id": "algorithm",
+      "label": {
+        "en": "Algorithm",
+        "zh": "算法"
+      },
+      "description": {
+        "en": "An algorithm is a finite description of steps for a task. Identifying a familiar code shape suggests a pattern, not a proof of correctness.",
+        "zh": "算法是完成任务的一组有限步骤描述。识别熟悉的代码形状可以提示模式，但不能证明正确性。"
+      },
+      "terms": [
+        "算法",
+        "procedure"
+      ],
+      "prerequisites": [
+        "loop",
+        "collection"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://www.nist.gov/dads"
+        ]
+      }
+    },
+    {
+      "id": "complexity",
+      "label": {
+        "en": "Computational complexity",
+        "zh": "计算复杂度"
+      },
+      "description": {
+        "en": "Complexity describes how resource use grows with input size. A loop's presence alone does not establish a complete cost bound.",
+        "zh": "复杂度描述资源使用随输入规模增长的方式。仅看到循环不能得出完整成本上界。"
+      },
+      "terms": [
+        "复杂度",
+        "big o"
+      ],
+      "prerequisites": [
+        "algorithm"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://www.nist.gov/dads"
+        ]
+      }
+    },
+    {
+      "id": "module",
+      "label": {
+        "en": "Module",
+        "zh": "模块"
+      },
+      "description": {
+        "en": "A module groups declarations under a boundary. Imports expose relationships between modules without running imported code during analysis.",
+        "zh": "模块在边界内组织声明。导入展示模块关系；分析时无需运行被导入代码。"
+      },
+      "terms": [
+        "模块",
+        "import",
+        "export",
+        "use",
+        "mod"
+      ],
+      "prerequisites": [
+        "scope",
+        "function"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/tutorial/modules.html"
+        ]
+      }
+    },
+    {
+      "id": "dependency",
+      "label": {
+        "en": "Dependency",
+        "zh": "依赖"
+      },
+      "description": {
+        "en": "A dependency records that one element relies on another. An edge's kind and direction explain what kind of reliance was observed or inferred.",
+        "zh": "依赖记录一个元素对另一个元素的依靠。边的类型与方向说明依靠关系的观察或推断方式。"
+      },
+      "terms": [
+        "依赖",
+        "depends on"
+      ],
+      "prerequisites": [
+        "module"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html"
+        ]
+      }
+    },
+    {
+      "id": "call-chain",
+      "label": {
+        "en": "Call chain",
+        "zh": "调用链"
+      },
+      "description": {
+        "en": "A call chain follows resolved calls from one callable to another. It describes a possible static relationship, not an execution recording.",
+        "zh": "调用链沿已解析调用连接多个可调用对象。它表示可能的静态关系，并非执行记录。"
+      },
+      "terms": [
+        "调用链",
+        "calls",
+        "trace"
+      ],
+      "prerequisites": [
+        "function",
+        "dependency"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/reference/expressions.html"
+        ]
+      }
+    },
+    {
+      "id": "api",
+      "label": {
+        "en": "API",
+        "zh": "应用程序接口"
+      },
+      "description": {
+        "en": "An API defines how software elements interact. A function signature may be one part of an API; access rules and behavior also matter.",
+        "zh": "API 定义软件元素如何交互。函数签名可能是其中一部分；访问规则与行为同样重要。"
+      },
+      "terms": [
+        "API",
+        "应用程序接口"
+      ],
+      "prerequisites": [
+        "interface"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Glossary/API"
+        ]
+      }
+    },
+    {
+      "id": "http",
+      "label": {
+        "en": "HTTP",
+        "zh": "HTTP 请求与响应"
+      },
+      "description": {
+        "en": "HTTP exchanges requests and responses between participants. Syntax may reveal a route or method without proving deployment behavior.",
+        "zh": "HTTP 在参与方之间交换请求与响应。语法可能揭示路由或方法，但不能证明部署行为。"
+      },
+      "terms": [
+        "http",
+        "request",
+        "response",
+        "请求",
+        "响应"
+      ],
+      "prerequisites": [
+        "api"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+        ]
+      }
+    },
+    {
+      "id": "database",
+      "label": {
+        "en": "Database",
+        "zh": "数据库"
+      },
+      "description": {
+        "en": "A database stores organized data for querying and updates. A database-related name alone does not prove storage semantics or transaction safety.",
+        "zh": "数据库存储可查询、可更新的结构化数据。仅有数据库相关名称不能证明存储语义或事务安全。"
+      },
+      "terms": [
+        "数据库",
+        "query",
+        "SQL"
+      ],
+      "prerequisites": [
+        "collection",
+        "api"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://www.sqlite.org/lang.html"
+        ]
+      }
+    },
+    {
+      "id": "async",
+      "label": {
+        "en": "Asynchronous work",
+        "zh": "异步"
+      },
+      "description": {
+        "en": "Asynchronous code can suspend work while awaiting a result. An await expression does not by itself imply that tasks run in parallel.",
+        "zh": "异步代码能在等待结果时暂停当前工作。await 表达式本身不代表任务并行执行。"
+      },
+      "terms": [
+        "异步",
+        "async",
+        "await",
+        "future"
+      ],
+      "prerequisites": [
+        "function",
+        "return"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS"
+        ]
+      }
+    },
+    {
+      "id": "concurrency",
+      "label": {
+        "en": "Concurrency",
+        "zh": "并发"
+      },
+      "description": {
+        "en": "Concurrency permits multiple tasks to make progress over overlapping periods. Shared mutable state requires coordination whose correctness is not established by a call graph.",
+        "zh": "并发允许多个任务在重叠时间段推进。共享可变状态需要协调；调用图不能单独证明其正确性。"
+      },
+      "terms": [
+        "并发",
+        "thread",
+        "task",
+        "mutex"
+      ],
+      "prerequisites": [
+        "function",
+        "async"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/book/ch16-00-concurrency.html"
+        ]
+      }
+    },
+    {
+      "id": "synchronization",
+      "label": {
+        "en": "Synchronization",
+        "zh": "同步协调"
+      },
+      "description": {
+        "en": "Synchronization constrains when tasks access resources or observe results. Lock syntax reveals a mechanism, while deadlock freedom needs stronger analysis.",
+        "zh": "同步协调约束任务何时访问资源或观察结果。锁语法展示机制；无死锁需要更强分析。"
+      },
+      "terms": [
+        "同步",
+        "lock",
+        "semaphore"
+      ],
+      "prerequisites": [
+        "concurrency"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/book/ch16-03-shared-state.html"
+        ]
+      }
+    },
+    {
+      "id": "recursion",
+      "label": {
+        "en": "Recursion",
+        "zh": "递归"
+      },
+      "description": {
+        "en": "Recursion occurs when a callable reaches itself directly or through other calls. Termination depends on conditions and input, not merely graph cycles.",
+        "zh": "可调用对象直接或间接调用自身时形成递归。是否终止依赖条件与输入，而不只取决于图中的环。"
+      },
+      "terms": [
+        "递归",
+        "recursive"
+      ],
+      "prerequisites": [
+        "call-chain",
+        "condition"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/reference/compound_stmts.html"
+        ]
+      }
+    },
+    {
+      "id": "testing",
+      "label": {
+        "en": "Testing",
+        "zh": "测试"
+      },
+      "description": {
+        "en": "A test checks selected behavior under selected conditions. A passing test supports those checks and does not verify every relationship in a graph.",
+        "zh": "测试在选定条件下检查选定行为。通过测试支持这些检查，不能验证图中的全部关系。"
+      },
+      "terms": [
+        "测试",
+        "test",
+        "assert"
+      ],
+      "prerequisites": [
+        "function",
+        "condition"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/book/ch11-00-testing.html"
+        ]
+      }
+    },
+    {
+      "id": "component",
+      "label": {
+        "en": "Component boundary",
+        "zh": "组件边界"
+      },
+      "description": {
+        "en": "A component groups elements around an explicit responsibility or interface. Structural communities and business components are separate hypotheses with separate evidence.",
+        "zh": "组件围绕明确职责或接口组织元素。结构社区与业务组件是不同假设，应分别记录证据。"
+      },
+      "terms": [
+        "组件",
+        "boundary"
+      ],
+      "prerequisites": [
+        "module",
+        "interface",
+        "dependency"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html"
+        ]
+      }
+    },
+    {
+      "id": "architecture",
+      "label": {
+        "en": "Software architecture",
+        "zh": "软件架构"
+      },
+      "description": {
+        "en": "Architecture describes major elements, boundaries and their relationships. A useful model states its evidence and the details it leaves unresolved.",
+        "zh": "架构描述主要元素、边界及其关系。有用的模型需要说明证据和仍未解析的细节。"
+      },
+      "terms": [
+        "架构",
+        "domain"
+      ],
+      "prerequisites": [
+        "component"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://www.iso.org/standard/74393.html"
+        ]
+      }
+    },
+    {
+      "id": "strategy",
+      "label": {
+        "en": "Strategy pattern",
+        "zh": "策略模式"
+      },
+      "description": {
+        "en": "A strategy design separates a choice of behavior from the caller that uses it. Similar syntax is a candidate pattern until responsibilities are confirmed.",
+        "zh": "策略设计把行为选择与使用行为的调用方分开。相似语法只能提示候选模式，职责仍需确认。"
+      },
+      "terms": [
+        "策略模式",
+        "strategy"
+      ],
+      "prerequisites": [
+        "interface",
+        "component"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/library/abc.html"
+        ]
+      }
+    },
+    {
+      "id": "observer",
+      "label": {
+        "en": "Observer pattern",
+        "zh": "观察者模式"
+      },
+      "description": {
+        "en": "An observer design notifies registered listeners about changes. A callback registration is evidence of a mechanism, not proof of every delivery guarantee.",
+        "zh": "观察者设计向已注册监听者通知变化。回调注册提供机制证据，但不能证明所有交付保证。"
+      },
+      "terms": [
+        "观察者模式",
+        "observer",
+        "event",
+        "listener"
+      ],
+      "prerequisites": [
+        "function",
+        "component"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget"
+        ]
+      }
+    },
+    {
+      "id": "factory",
+      "label": {
+        "en": "Factory pattern",
+        "zh": "工厂模式"
+      },
+      "description": {
+        "en": "A factory centralizes object creation behind an operation. A function named create is not sufficient evidence that the design pattern is present.",
+        "zh": "工厂把对象创建集中到某个操作后方。名为 create 的函数不足以证明存在该设计模式。"
+      },
+      "terms": [
+        "工厂模式",
+        "factory"
+      ],
+      "prerequisites": [
+        "class",
+        "interface"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/reference/datamodel.html"
+        ]
+      }
+    },
+    {
+      "id": "state",
+      "label": {
+        "en": "State and mutation",
+        "zh": "状态与修改"
+      },
+      "description": {
+        "en": "State is information retained across operations. An assignment shows a potential change; determining all later values may require runtime information.",
+        "zh": "状态是在操作之间保留的信息。赋值表明潜在变化；确定后续所有值可能需要运行时信息。"
+      },
+      "terms": [
+        "状态",
+        "mutation",
+        "assignment"
+      ],
+      "prerequisites": [
+        "variable",
+        "scope"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/reference/simple_stmts.html"
+        ]
+      }
+    },
+    {
+      "id": "cycle",
+      "label": {
+        "en": "Dependency cycle",
+        "zh": "循环依赖"
+      },
+      "description": {
+        "en": "A dependency cycle lets a directed path return to its starting node. It can complicate initialization or boundaries, but is not itself proof of a runtime failure.",
+        "zh": "循环依赖让有向路径回到起点。它可能增加初始化或边界复杂度，但本身不能证明运行时故障。"
+      },
+      "terms": [
+        "循环依赖",
+        "cycle"
+      ],
+      "prerequisites": [
+        "dependency"
+      ],
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original text may be redistributed under MPL-2.0; reference pages are linked only and are not included.",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/faq/programming.html"
+        ]
+      }
+    }
+  ],
+  "patterns": [
+    {
+      "id": "conditional",
+      "syntax_kinds": [
+        "if_statement",
+        "if_expression",
+        "conditional_expression"
+      ],
+      "concepts": [
+        "condition",
+        "expression"
+      ],
+      "description": {
+        "en": "A syntax node selects between paths; no claim is made about which path runs.",
+        "zh": "语法节点在路径之间选择；不声称某次运行经过哪条路径。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/reference/expressions.html",
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else"
+        ]
+      }
+    },
+    {
+      "id": "iteration",
+      "syntax_kinds": [
+        "for_statement",
+        "for_expression",
+        "for_in_statement",
+        "while_statement",
+        "while_expression",
+        "loop_expression"
+      ],
+      "concepts": [
+        "loop",
+        "condition"
+      ],
+      "description": {
+        "en": "Iteration syntax provides a repeated region; iteration counts remain unknown.",
+        "zh": "迭代语法提供重复区域；迭代次数保持未知。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else",
+          "https://docs.python.org/3/tutorial/controlflow.html"
+        ]
+      }
+    },
+    {
+      "id": "error-handling",
+      "syntax_kinds": [
+        "try_statement",
+        "try_expression",
+        "except_clause",
+        "catch_clause",
+        "throw_statement"
+      ],
+      "concepts": [
+        "error"
+      ],
+      "description": {
+        "en": "Error-handling syntax identifies an exceptional path or a propagation operation.",
+        "zh": "错误处理语法识别异常路径或传播操作。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/book/ch09-00-error-handling.html"
+        ]
+      }
+    },
+    {
+      "id": "function",
+      "syntax_kinds": [
+        "function_definition",
+        "function_item",
+        "function_declaration",
+        "method_definition",
+        "arrow_function",
+        "closure_expression"
+      ],
+      "concepts": [
+        "function",
+        "parameter",
+        "return"
+      ],
+      "description": {
+        "en": "Callable declarations supply names, parameters and syntactic return sites.",
+        "zh": "可调用声明提供名称、参数与语法返回位置。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/tutorial/controlflow.html",
+          "https://developer.mozilla.org/en-US/docs/Glossary/Parameter",
+          "https://docs.python.org/3/reference/simple_stmts.html"
+        ]
+      }
+    },
+    {
+      "id": "binding",
+      "syntax_kinds": [
+        "assignment",
+        "assignment_expression",
+        "let_declaration",
+        "variable_declarator",
+        "augmented_assignment"
+      ],
+      "concepts": [
+        "variable",
+        "state",
+        "scope"
+      ],
+      "description": {
+        "en": "Binding or assignment syntax indicates where state may be introduced or changed.",
+        "zh": "绑定或赋值语法指出可能引入或修改状态的位置。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Glossary/Variable",
+          "https://docs.python.org/3/reference/executionmodel.html",
+          "https://docs.python.org/3/reference/simple_stmts.html"
+        ]
+      }
+    },
+    {
+      "id": "call",
+      "syntax_kinds": [
+        "call",
+        "call_expression"
+      ],
+      "concepts": [
+        "call-chain"
+      ],
+      "description": {
+        "en": "A call expression is syntactic evidence; target resolution is a separate step.",
+        "zh": "调用表达式属于语法证据；解析目标是独立步骤。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/reference/expressions.html"
+        ]
+      }
+    },
+    {
+      "id": "module",
+      "syntax_kinds": [
+        "import_statement",
+        "import_from_statement",
+        "use_declaration",
+        "export_statement",
+        "mod_item"
+      ],
+      "concepts": [
+        "module",
+        "dependency"
+      ],
+      "description": {
+        "en": "Module syntax records a declared boundary or import, without executing it.",
+        "zh": "模块语法记录声明边界或导入，不执行代码。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://docs.python.org/3/tutorial/modules.html",
+          "https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html"
+        ]
+      }
+    },
+    {
+      "id": "class",
+      "syntax_kinds": [
+        "class_definition",
+        "class_declaration",
+        "struct_item",
+        "enum_item"
+      ],
+      "concepts": [
+        "class",
+        "type"
+      ],
+      "description": {
+        "en": "A type declaration groups data or members; runtime behavior remains unproven.",
+        "zh": "类型声明组织数据或成员；运行时行为仍未验证。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://doc.rust-lang.org/book/ch03-02-data-types.html",
+          "https://docs.python.org/3/tutorial/classes.html"
+        ]
+      }
+    },
+    {
+      "id": "interface",
+      "syntax_kinds": [
+        "trait_item",
+        "interface_declaration",
+        "impl_item"
+      ],
+      "concepts": [
+        "interface"
+      ],
+      "description": {
+        "en": "Contract or implementation syntax is evidence of declared relationships.",
+        "zh": "约定或实现语法提供已声明关系的证据。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://www.typescriptlang.org/docs/handbook/2/objects.html"
+        ]
+      }
+    },
+    {
+      "id": "await",
+      "syntax_kinds": [
+        "await",
+        "await_expression"
+      ],
+      "concepts": [
+        "async"
+      ],
+      "description": {
+        "en": "An await site can suspend an operation; parallel execution is not implied.",
+        "zh": "await 位置可暂停操作；不代表并行执行。"
+      },
+      "evidence": "syntax_pattern_only",
+      "attribution": {
+        "author": "Glyphibe contributors",
+        "license": "MPL-2.0",
+        "redistribution": "Original prose; redistributable under MPL-2.0",
+        "original": true,
+        "references": [
+          "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS"
+        ]
+      }
+    }
+  ]
+}

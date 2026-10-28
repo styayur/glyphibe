@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-explain-node"
+description = "Enables the explain_node command without any pre-configured scope."
+commands.allow = ["explain_node"]
+
+[[permission]]
+identifier = "deny-explain-node"
+description = "Denies the explain_node command without any pre-configured scope."
+commands.deny = ["explain_node"]

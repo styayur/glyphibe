@@ -1,0 +1,121 @@
+name: CI
+on:
+  push:
+    branches: [main, 'feat/**', 'fix/**']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  rust:
+    name: Rust (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec
+        with:
+          toolchain: '1.98.1'
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0
+      - run: cargo fmt --all -- --check
+      - run: cargo clippy --locked --workspace --exclude glyphibe-desktop --all-targets -- -D warnings
+      - run: cargo test --locked --workspace --exclude glyphibe-desktop
+      - run: cargo build --locked -p glyphibe-cli --release
+      - name: Headless offline smoke
+        shell: bash
+        run: |
+          cargo run --locked -p glyphibe-cli -- doctor
+          cargo run --locked -p glyphibe-cli -- analyze tests/fixtures/python --index "${RUNNER_TEMP}/glyphibe.sqlite"
+          cargo run --locked -p glyphibe-cli -- --repo tests/fixtures/python --index "${RUNNER_TEMP}/glyphibe.sqlite" search run
+  frontend:
+    name: Frontend and graph E2E
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: apps/desktop/package-lock.json
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec
+        with:
+          toolchain: '1.98.1'
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0
+      - run: npm ci
+        working-directory: apps/desktop
+      - run: npm run typecheck && npm run lint && npm test && npm run build
+        working-directory: apps/desktop
+      - name: Export a real analyzed fixture
+        shell: bash
+        run: |
+          cargo run --locked -p glyphibe-cli -- analyze tests/fixtures --index "${RUNNER_TEMP}/fixture.sqlite"
+          cargo run --locked -p glyphibe-cli -- --repo tests/fixtures --index "${RUNNER_TEMP}/fixture.sqlite" export --output "${RUNNER_TEMP}/fixture-graph.json"
+      - run: npx playwright install --with-deps chromium
+        working-directory: apps/desktop
+      - run: npm run test:e2e
+        working-directory: apps/desktop
+        env:
+          GLYPHIBE_TEST_GRAPH: ${{ runner.temp }}/fixture-graph.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: failure()
+        with:
+          name: graph-e2e-diagnostics
+          path: |
+            apps/desktop/playwright-report
+            apps/desktop/test-results
+          retention-days: 7
+  dependencies:
+    name: Dependency and license audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec
+        with:
+          toolchain: '1.98.1'
+      - run: cargo install cargo-audit --version 0.22.2 --locked
+      - name: Audit complete workspace, including unsupported platform warnings
+        run: cargo audit --json > all-target-audit.json
+      - name: Audit shipping Windows desktop dependency closure
+        run: python scripts/audit-target-dependencies.py --package glyphibe-desktop --target x86_64-pc-windows-msvc --output desktop-windows-audit.json --no-fetch
+      - name: Audit headless Linux dependency closure
+        run: python scripts/audit-target-dependencies.py --package glyphibe-cli --target x86_64-unknown-linux-gnu --output cli-linux-audit.json --no-fetch
+      - run: npm audit --audit-level=low
+        working-directory: apps/desktop
+      - run: python scripts/audit-dependencies.py --check
+      - run: python -m unittest discover -s tests -p 'test_*.py'
+  desktop:
+    name: Windows desktop build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec
+        with:
+          toolchain: '1.98.1'
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0
+      - run: npm ci
+        working-directory: apps/desktop
+      - run: npm run build
+        working-directory: apps/desktop
+      - run: cargo clippy --locked -p glyphibe-desktop --all-targets -- -D warnings
+      - run: cargo test --locked -p glyphibe-desktop
+      - run: npm run tauri -- build --bundles nsis
+        working-directory: apps/desktop
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: windows-development-installer
+          path: target/release/bundle/nsis/*.exe
+          if-no-files-found: error
+          retention-days: 14

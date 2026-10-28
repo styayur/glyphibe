@@ -1,0 +1,466 @@
+{
+  "measured_at": "2026-10-27T22:05:12.202178+08:00",
+  "binary_version": "glyphibe 0.1.0-dev",
+  "binary_sha256": "9951241d7014aa25a2e1e2814c1becdb96aba3464e64b6cb354ca277fd7363f6",
+  "build_profile": "release; workspace opt-level default3, thin LTO, strip",
+  "hardware": {
+    "cpu": "AMD Ryzen 7 H 255 w/ Radeon 780M Graphics",
+    "logical_processors": 16,
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.7",
+    "system_memory_bytes": 24445165568,
+    "memory_metadata_method": "Windows GlobalMemoryStatusEx; sampled after run"
+  },
+  "method": {
+    "cold": "New external SQLite index; OS filesystem cache not flushed",
+    "hot": "Five fresh CLI processes; unchanged file cache; relationships, clusters and mappings rebuilt",
+    "incremental": "One source file literal edited, parse cache retained; whole relation/derived graph rebuilt",
+    "peak_memory": "Windows GetProcessMemoryInfo PeakWorkingSetSize polled; excludes harness and short-lived Git metadata subprocess",
+    "query": "Five CLI subprocess searches including startup, SQLite graph deserialization and query",
+    "safety": "180 seconds and 2GiB maximum per measured subprocess"
+  },
+  "synthetic": [
+    {
+      "functions": 1000,
+      "source_bytes": 50868,
+      "source_files": 10,
+      "cold": {
+        "elapsed_ms": 1696.42,
+        "peak_working_set_bytes": 95531008,
+        "stats": {
+          "cached_files": 0,
+          "discovered_files": 10,
+          "elapsed_ms": 859,
+          "parsed_files": 10,
+          "skipped_files": 0,
+          "source_bytes": 50868
+        }
+      },
+      "hot": [
+        {
+          "elapsed_ms": 1569.498,
+          "peak_working_set_bytes": 96915456,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 241,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        },
+        {
+          "elapsed_ms": 1555.027,
+          "peak_working_set_bytes": 97226752,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 250,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        },
+        {
+          "elapsed_ms": 1947.656,
+          "peak_working_set_bytes": 96821248,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 244,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        },
+        {
+          "elapsed_ms": 2171.847,
+          "peak_working_set_bytes": 97751040,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 828,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        },
+        {
+          "elapsed_ms": 2898.333,
+          "peak_working_set_bytes": 97411072,
+          "stats": {
+            "cached_files": 10,
+            "discovered_files": 10,
+            "elapsed_ms": 257,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 50868
+          }
+        }
+      ],
+      "hot_node_counts": [
+        8093,
+        8093,
+        8093,
+        8093,
+        8093,
+        8093
+      ],
+      "hot_graph_size_stable": true,
+      "incremental": {
+        "elapsed_ms": 1553.704,
+        "peak_working_set_bytes": 98488320,
+        "stats": {
+          "cached_files": 9,
+          "discovered_files": 10,
+          "elapsed_ms": 279,
+          "parsed_files": 1,
+          "skipped_files": 0,
+          "source_bytes": 50872
+        }
+      },
+      "index_bytes": 48799744,
+      "query": {
+        "samples_ms": [
+          181.3,
+          189.499,
+          543.095,
+          179.112,
+          663.613
+        ],
+        "median_ms": 189.499,
+        "includes_process_start_and_graph_load": true
+      },
+      "ui_export": {
+        "file": "graph-1000.json",
+        "functions": 1000,
+        "calls": 999,
+        "bytes": 1413226,
+        "sha256": "d55c0cf23b92d586627961baaa075117d7eac72e45c2f21933198244d94cfbd9",
+        "export_ms": 213.759
+      }
+    },
+    {
+      "functions": 5000,
+      "source_bytes": 263426,
+      "source_files": 50,
+      "cold": {
+        "elapsed_ms": 5451.865,
+        "peak_working_set_bytes": 418844672,
+        "stats": {
+          "cached_files": 0,
+          "discovered_files": 50,
+          "elapsed_ms": 1242,
+          "parsed_files": 50,
+          "skipped_files": 0,
+          "source_bytes": 263426
+        }
+      },
+      "hot": [
+        {
+          "elapsed_ms": 8821.943,
+          "peak_working_set_bytes": 428711936,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 1159,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        },
+        {
+          "elapsed_ms": 8666.978,
+          "peak_working_set_bytes": 428023808,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 1281,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        },
+        {
+          "elapsed_ms": 8022.636,
+          "peak_working_set_bytes": 428302336,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 1298,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        },
+        {
+          "elapsed_ms": 7455.194,
+          "peak_working_set_bytes": 427606016,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 985,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        },
+        {
+          "elapsed_ms": 7808.746,
+          "peak_working_set_bytes": 427724800,
+          "stats": {
+            "cached_files": 50,
+            "discovered_files": 50,
+            "elapsed_ms": 975,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 263426
+          }
+        }
+      ],
+      "hot_node_counts": [
+        40261,
+        40261,
+        40261,
+        40261,
+        40261,
+        40261
+      ],
+      "hot_graph_size_stable": true,
+      "incremental": {
+        "elapsed_ms": 10080.392,
+        "peak_working_set_bytes": 427593728,
+        "stats": {
+          "cached_files": 49,
+          "discovered_files": 50,
+          "elapsed_ms": 2312,
+          "parsed_files": 1,
+          "skipped_files": 0,
+          "source_bytes": 263430
+        }
+      },
+      "index_bytes": 243281920,
+      "query": {
+        "samples_ms": [
+          812.715,
+          823.774,
+          925.254,
+          1147.706,
+          893.885
+        ],
+        "median_ms": 893.885,
+        "includes_process_start_and_graph_load": true
+      },
+      "ui_export": {
+        "file": "graph-5000.json",
+        "functions": 5000,
+        "calls": 4999,
+        "bytes": 7080908,
+        "sha256": "747ca0feff0f627aa161b00a7f8d5807ed3323d085f2083bcf7bae26a4ccff16",
+        "export_ms": 981.681
+      }
+    },
+    {
+      "functions": 10000,
+      "source_bytes": 529126,
+      "source_files": 100,
+      "cold": {
+        "elapsed_ms": 10624.556,
+        "peak_working_set_bytes": 824291328,
+        "stats": {
+          "cached_files": 0,
+          "discovered_files": 100,
+          "elapsed_ms": 2374,
+          "parsed_files": 100,
+          "skipped_files": 0,
+          "source_bytes": 529126
+        }
+      },
+      "hot": [
+        {
+          "elapsed_ms": 16895.958,
+          "peak_working_set_bytes": 854953984,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 2516,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        },
+        {
+          "elapsed_ms": 17471.949,
+          "peak_working_set_bytes": 855404544,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 2355,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        },
+        {
+          "elapsed_ms": 17076.444,
+          "peak_working_set_bytes": 855273472,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 2535,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        },
+        {
+          "elapsed_ms": 15259.187,
+          "peak_working_set_bytes": 855265280,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 2019,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        },
+        {
+          "elapsed_ms": 16002.812,
+          "peak_working_set_bytes": 855261184,
+          "stats": {
+            "cached_files": 100,
+            "discovered_files": 100,
+            "elapsed_ms": 1965,
+            "parsed_files": 0,
+            "skipped_files": 0,
+            "source_bytes": 529126
+          }
+        }
+      ],
+      "hot_node_counts": [
+        80401,
+        80401,
+        80401,
+        80401,
+        80401,
+        80401
+      ],
+      "hot_graph_size_stable": true,
+      "incremental": {
+        "elapsed_ms": 16100.386,
+        "peak_working_set_bytes": 856084480,
+        "stats": {
+          "cached_files": 99,
+          "discovered_files": 100,
+          "elapsed_ms": 2090,
+          "parsed_files": 1,
+          "skipped_files": 0,
+          "source_bytes": 529130
+        }
+      },
+      "index_bytes": 484663296,
+      "query": {
+        "samples_ms": [
+          1724.505,
+          1707.215,
+          1716.147,
+          1783.516,
+          1727.608
+        ],
+        "median_ms": 1724.505,
+        "includes_process_start_and_graph_load": true
+      },
+      "ui_export": {
+        "file": "graph-10000.json",
+        "functions": 10000,
+        "calls": 9999,
+        "bytes": 14165509,
+        "sha256": "bd8cff903307129f8e4332273feaaa85b2ba54962873e2b0af75e41e901ae5ca",
+        "export_ms": 2102.288
+      }
+    }
+  ],
+  "real": [
+    {
+      "case": 1,
+      "mode": "read-only source analysis; project code and dependencies never executed",
+      "elapsed_ms": 4303.233,
+      "peak_working_set_bytes": 243638272,
+      "nodes": 21509,
+      "edges": 76186,
+      "stats": {
+        "cached_files": 0,
+        "discovered_files": 87,
+        "elapsed_ms": 2417,
+        "parsed_files": 87,
+        "skipped_files": 0,
+        "source_bytes": 483153
+      },
+      "diagnostic_counts": {
+        "syntax_error": 2,
+        "unresolved_import": 295,
+        "unresolved_call": 4697,
+        "unresolved_type_relation": 18,
+        "dependency_cycle": 21
+      },
+      "index_bytes": 94642176,
+      "privacy": "Source names, labels, paths and diagnostic messages intentionally omitted"
+    },
+    {
+      "case": 2,
+      "mode": "read-only source analysis; project code and dependencies never executed",
+      "elapsed_ms": 7001.047,
+      "peak_working_set_bytes": 405209088,
+      "nodes": 38765,
+      "edges": 128075,
+      "stats": {
+        "cached_files": 0,
+        "discovered_files": 142,
+        "elapsed_ms": 3754,
+        "parsed_files": 142,
+        "skipped_files": 0,
+        "source_bytes": 590359
+      },
+      "diagnostic_counts": {
+        "syntax_error": 3,
+        "unresolved_import": 574,
+        "unresolved_call": 5933,
+        "unresolved_type_relation": 54
+      },
+      "index_bytes": 160473088,
+      "privacy": "Source names, labels, paths and diagnostic messages intentionally omitted"
+    }
+  ],
+  "failures": [],
+  "accuracy": {
+    "python": {
+      "true_positive": 11,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "rust": {
+      "true_positive": 11,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "javascript": {
+      "true_positive": 12,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "typescript": {
+      "true_positive": 13,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    "total": {
+      "true_positive": 47,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "limitation": "47 distinct caller/callee pairs manually annotated in small authored fixtures. Not an estimate of real-world precision or recall. Dynamic callback calls are deliberately unresolved."
+  }
+}

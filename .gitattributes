@@ -4,3 +4,4 @@
 *.exe binary
 *.msi binary
 *.zip binary
+/third-party/licenses/* -text
