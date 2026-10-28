@@ -10,6 +10,53 @@ test.beforeAll(async () => {
   await access(graphPath);
 });
 
+test("Galaxy sphere clicks select a canonical node without a preselected entity", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByLabel("Import graph JSON").setInputFiles(graphPath);
+  await page.getByRole("button", { name: "Galaxy", exact: true }).click();
+  await expect(
+    page.getByTestId("graph-canvas").locator("canvas").first(),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Focus", exact: true }).click();
+  let point: { x: number; y: number } | undefined;
+  await expect
+    .poll(async () => {
+      const png = PNG.sync.read(await page.screenshot());
+      const teal = (x: number, y: number) => {
+        const i = (y * png.width + x) * 4;
+        const [r, g, b] = png.data.subarray(i, i + 3);
+        return g > 65 && b > 65 && g > r * 1.2 && b > r * 1.2;
+      };
+      for (let y = 80; y < png.height - 80; y += 2)
+        for (let x = 80; x < png.width - 80; x += 2)
+          if (
+            teal(x, y) &&
+            teal(x - 5, y) &&
+            teal(x + 5, y) &&
+            teal(x, y - 5) &&
+            teal(x, y + 5)
+          ) {
+            point = { x, y };
+            return true;
+          }
+      return false;
+    })
+    .toBe(true);
+  await page.mouse.move(point!.x, point!.y);
+  await page.mouse.down();
+  // A normal click may include sub-threshold pointer jitter, including WebView2
+  // input injection. It must remain a click rather than an orbit gesture.
+  await page.mouse.move(point!.x + 1, point!.y);
+  await page.mouse.up();
+  await page.keyboard.press("Escape");
+  await expect(page.getByLabel("Node details", { exact: true })).toBeVisible();
+  await expect(
+    page.getByLabel("Node details", { exact: true }).locator("h2"),
+  ).not.toBeEmpty();
+});
+
 test("Cluster grain changes the real projection through all six levels", async ({
   page,
 }) => {
@@ -24,7 +71,8 @@ test("Cluster grain changes the real projection through all six levels", async (
   for (let level = 1; level <= 6; level++) {
     await page.getByLabel("Architecture level").focus();
     await page.keyboard.press("Home");
-    for(let step=1;step<level;step++) await page.keyboard.press("ArrowRight");
+    for (let step = 1; step < level; step++)
+      await page.keyboard.press("ArrowRight");
     const expected = Object.values(fixture.nodes).filter(
       (n) =>
         n.plane === "architecture" &&
@@ -171,6 +219,10 @@ test("real canvas supports pixel-picked selection, pan, zoom and 3D orbit", asyn
   await page.mouse.click(point!.x, point!.y);
   await page.keyboard.press("Escape");
   await expect(page.getByLabel("Node details", { exact: true })).toBeVisible();
+  const selectedBeforeOrbit = await page
+    .getByLabel("Node details", { exact: true })
+    .locator("h2")
+    .innerText();
   await page.getByRole("button", { name: "Focus", exact: true }).click();
   const before = await page.screenshot();
   await page.mouse.move(700, 450);
@@ -195,6 +247,10 @@ test("real canvas supports pixel-picked selection, pan, zoom and 3D orbit", asyn
   await expect
     .poll(async () => !(await page.screenshot()).equals(galaxyBefore))
     .toBe(true);
+  await page.keyboard.press("Escape");
+  await expect(
+    page.getByLabel("Node details", { exact: true }).locator("h2"),
+  ).toHaveText(selectedBeforeOrbit);
 });
 test("plane mappings, hierarchy and all floating islands are operable", async ({
   page,

@@ -53,6 +53,16 @@ export default function GraphCanvas({
 }: Props) {
   const host = useRef<HTMLDivElement>(null);
   const galaxy = useRef<ForceGraphMethods | undefined>(undefined);
+  const pickSphere = useRef<((x: number, y: number) => string | null) | null>(
+    null,
+  );
+  const pointerGesture = useRef<{
+    id: number;
+    x: number;
+    y: number;
+    moved: number;
+  } | null>(null);
+  const handledPointer = useRef(-1);
   const renderer2D = useRef<Sigma | null>(null);
   const graph2D = useRef<MultiDirectedGraph | null>(null);
   const selectHandler = useRef(onSelect);
@@ -118,6 +128,24 @@ export default function GraphCanvas({
     }),
     [nodeKey, edgeKey, layoutKey],
   );
+  useEffect(() => {
+    if (!isGalaxy) return;
+    let active = true;
+    // Keep Three.js lazy for 2D-only sessions.
+    void import("./picking").then(({ createSpherePicker }) => {
+      if (active)
+        pickSphere.current = createSpherePicker(
+          () => galaxy.current,
+          data3D.nodes,
+          5,
+        );
+    });
+    return () => {
+      active = false;
+      pickSphere.current = null;
+      pointerGesture.current = null;
+    };
+  }, [isGalaxy, data3D]);
   useEffect(() => {
     selectHandler.current = onSelect;
   }, [onSelect]);
@@ -301,6 +329,47 @@ export default function GraphCanvas({
       data-cap={state.galaxyCap}
       data-level={state.level}
       data-layout={state.mode === "Cluster" ? "community" : "radial"}
+      onPointerDownCapture={(event) => {
+        if (
+          !isGalaxy ||
+          event.button !== 0 ||
+          !(event.target instanceof HTMLCanvasElement)
+        )
+          return;
+        pointerGesture.current = {
+          id: event.pointerId,
+          x: event.clientX,
+          y: event.clientY,
+          moved: 0,
+        };
+      }}
+      onPointerMoveCapture={(event) => {
+        const gesture = pointerGesture.current;
+        if (gesture?.id === event.pointerId)
+          gesture.moved = Math.max(
+            gesture.moved,
+            Math.hypot(event.clientX - gesture.x, event.clientY - gesture.y),
+          );
+      }}
+      onPointerCancelCapture={() => {
+        pointerGesture.current = null;
+      }}
+      onPointerUpCapture={(event) => {
+        const gesture = pointerGesture.current;
+        pointerGesture.current = null;
+        if (!gesture || gesture.id !== event.pointerId || event.button !== 0)
+          return;
+        const moved = Math.max(
+          gesture.moved,
+          Math.hypot(event.clientX - gesture.x, event.clientY - gesture.y),
+        );
+        if (moved > 4) return; // Orbit/pan gestures must never select a sphere.
+        const id = pickSphere.current?.(event.clientX, event.clientY);
+        if (id) {
+          handledPointer.current = event.timeStamp;
+          selectHandler.current(id);
+        }
+      }}
     >
       {state.mode === "Galaxy" ? (
         <GraphicsBoundary>
@@ -325,6 +394,7 @@ export default function GraphCanvas({
                       )
               }
               nodeRelSize={5}
+              nodeVal={1}
               linkColor={() => (state.theme === "dark" ? "#50657b" : "#92a1af")}
               linkOpacity={0.55}
               showNavInfo={false}
@@ -350,7 +420,10 @@ export default function GraphCanvas({
                   );
                 else galaxy.current?.zoomToFit(0, 70);
               }}
-              onNodeClick={(node) => onSelect(String(node.id))}
+              onNodeClick={(node, event) => {
+                if (event.timeStamp !== handledPointer.current)
+                  selectHandler.current(String(node.id));
+              }}
             />
           </Suspense>
         </GraphicsBoundary>
