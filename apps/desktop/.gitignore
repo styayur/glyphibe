@@ -1,0 +1,7 @@
+dist/
+node_modules/
+test-results/
+playwright-report/
+src-tauri/gen/
+src-tauri/target/
+*.tsbuildinfo

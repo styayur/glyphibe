@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-startup-repository"
+description = "Enables the startup_repository command without any pre-configured scope."
+commands.allow = ["startup_repository"]
+
+[[permission]]
+identifier = "deny-startup-repository"
+description = "Denies the startup_repository command without any pre-configured scope."
+commands.deny = ["startup_repository"]

@@ -1,0 +1,8 @@
+# `@humanfs/types`
+
+by [Nicholas C. Zakas](https://humanwhocodes.com)
+
+
+## License
+
+Apache 2.0

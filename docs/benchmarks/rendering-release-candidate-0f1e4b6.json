@@ -1,0 +1,694 @@
+{
+  "schema_version": 1,
+  "measured_at": "2026-10-28T13:00:36.782Z",
+  "environment": {
+    "os": "win32",
+    "os_release": "10.0.26200",
+    "architecture": "x64",
+    "cpu": "AMD Ryzen 7 H 255 w/ Radeon 780M Graphics",
+    "logical_cpus": 16,
+    "system_memory_bytes": 24445165568,
+    "node": "v26.7.0",
+    "browser": "156.0.8078.4",
+    "viewport": {
+      "width": 1440,
+      "height": 960
+    },
+    "device_scale_factor": 1,
+    "renderer_requested": "ANGLE SwiftShader (software)",
+    "production_build": true
+  },
+  "method": {
+    "duration_ms": 4000,
+    "repetitions": 3,
+    "modes": [
+      "Dense",
+      "Galaxy"
+    ],
+    "sizes": [
+      1000,
+      5000,
+      10000
+    ],
+    "panels": [
+      "opaque"
+    ],
+    "interaction": "Repeated pointer pan/orbit and wheel zoom at the canvas center; standard overlays visible with the recorded glass/opaque preference.",
+    "cadence": "requestAnimationFrame callback timestamps and WebGL draw submission activity; neither is a GPU-presented FPS measurement.",
+    "latency": "DOM input/click event to the second subsequent animation callback, including React projection and WebGL renderer reconstruction; not end-to-end GPU presentation.",
+    "graph_source": "Canonical function/call projection of genuinely parsed generated Python source. Function-only benchmark exports have no L4 nodes.",
+    "level_transition": "Function L5 to empty file L4 and back to populated L5.",
+    "limits": "Headless Chromium software rendering differs from installed WebView2 on hardware GPU. Measurements do not verify a native 30 FPS target."
+  },
+  "samples": [
+    {
+      "graph_file": "graph-1000.json",
+      "graph_sha256": "da29b4febdea4105d2d060520214f92aab0af3a5172cd21aa549d59c66496cf5",
+      "canonical_nodes": 1000,
+      "canonical_edges": 999,
+      "mode": "Dense",
+      "panels": "opaque",
+      "actual_panels": "opaque",
+      "rendered_nodes": 1000,
+      "rendering_cap": 10000,
+      "gpu": {
+        "available": true,
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "import_to_second_raf_ms": 2880.96,
+      "repetitions": [
+        {
+          "run": 1,
+          "raf_callbacks": 51,
+          "elapsed_ms": 3566.54,
+          "raf_cadence_hz": 14.02,
+          "frame_interval_median_ms": 16.7,
+          "frame_interval_p95_ms": 249.9,
+          "callbacks_with_webgl_draws": 14,
+          "callbacks_over_50ms": 13,
+          "webgl_draw_calls_total": 52
+        },
+        {
+          "run": 2,
+          "raf_callbacks": 59,
+          "elapsed_ms": 3983.2,
+          "raf_cadence_hz": 14.56,
+          "frame_interval_median_ms": 16.7,
+          "frame_interval_p95_ms": 233.3,
+          "callbacks_with_webgl_draws": 16,
+          "callbacks_over_50ms": 15,
+          "webgl_draw_calls_total": 139
+        },
+        {
+          "run": 3,
+          "raf_callbacks": 41,
+          "elapsed_ms": 3149.83,
+          "raf_cadence_hz": 12.7,
+          "frame_interval_median_ms": 16.7,
+          "frame_interval_p95_ms": 266.6,
+          "callbacks_with_webgl_draws": 12,
+          "callbacks_over_50ms": 11,
+          "webgl_draw_calls_total": 218
+        }
+      ],
+      "selection_to_second_raf_ms": {
+        "samples": [
+          445,
+          241.2,
+          227.2,
+          133.7,
+          89.7,
+          83.8,
+          82.6,
+          177.3,
+          125.6,
+          239.6,
+          120.2,
+          118.7,
+          214.1,
+          300.2,
+          341.9
+        ],
+        "median": 177.3,
+        "p95": 445
+      },
+      "level_to_second_raf_ms": {
+        "samples": [
+          3213.9,
+          364,
+          634.7,
+          321.1,
+          661.9,
+          295.5,
+          612.7,
+          276.2,
+          648.1,
+          286.8
+        ],
+        "median": 612.7,
+        "p95": 3213.9
+      },
+      "js_heap_after_sample_bytes": 8406668,
+      "page_errors": []
+    },
+    {
+      "graph_file": "graph-1000.json",
+      "graph_sha256": "da29b4febdea4105d2d060520214f92aab0af3a5172cd21aa549d59c66496cf5",
+      "canonical_nodes": 1000,
+      "canonical_edges": 999,
+      "mode": "Galaxy",
+      "panels": "opaque",
+      "actual_panels": "opaque",
+      "rendered_nodes": 500,
+      "rendering_cap": 500,
+      "gpu": {
+        "available": true,
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "import_to_second_raf_ms": 3617.99,
+      "repetitions": [
+        {
+          "run": 1,
+          "raf_callbacks": 49,
+          "elapsed_ms": 4066.5,
+          "raf_cadence_hz": 11.8,
+          "frame_interval_median_ms": 66.6,
+          "frame_interval_p95_ms": 183.3,
+          "callbacks_with_webgl_draws": 49,
+          "callbacks_over_50ms": 34,
+          "webgl_draw_calls_total": 56838
+        },
+        {
+          "run": 2,
+          "raf_callbacks": 25,
+          "elapsed_ms": 3916.4,
+          "raf_cadence_hz": 6.13,
+          "frame_interval_median_ms": 166.7,
+          "frame_interval_p95_ms": 183.4,
+          "callbacks_with_webgl_draws": 25,
+          "callbacks_over_50ms": 22,
+          "webgl_draw_calls_total": 89739
+        },
+        {
+          "run": 3,
+          "raf_callbacks": 25,
+          "elapsed_ms": 3816.6,
+          "raf_cadence_hz": 6.29,
+          "frame_interval_median_ms": 166.6,
+          "frame_interval_p95_ms": 316.7,
+          "callbacks_with_webgl_draws": 25,
+          "callbacks_over_50ms": 21,
+          "webgl_draw_calls_total": 127625
+        }
+      ],
+      "selection_to_second_raf_ms": {
+        "samples": [
+          782.6,
+          396.3,
+          807.9,
+          950.8,
+          644.6,
+          875.7,
+          507.5,
+          134.3,
+          491.1,
+          468.4,
+          379.6,
+          538.2,
+          416.3,
+          642.3,
+          441.2
+        ],
+        "median": 507.5,
+        "p95": 950.8
+      },
+      "level_to_second_raf_ms": {
+        "samples": [
+          86.2,
+          277.9,
+          109.9,
+          215.9,
+          42.2,
+          282.7,
+          51.2,
+          670.3,
+          313.9,
+          932.8
+        ],
+        "median": 277.9,
+        "p95": 932.8
+      },
+      "js_heap_after_sample_bytes": 31946868,
+      "page_errors": []
+    },
+    {
+      "graph_file": "graph-5000.json",
+      "graph_sha256": "393293d6bd53e5d9f417a254a41a4af6eed9dd9bd373a1df71af12ce71fe0616",
+      "canonical_nodes": 5000,
+      "canonical_edges": 4999,
+      "mode": "Dense",
+      "panels": "opaque",
+      "actual_panels": "opaque",
+      "rendered_nodes": 5000,
+      "rendering_cap": 10000,
+      "gpu": {
+        "available": true,
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "import_to_second_raf_ms": 3162.27,
+      "repetitions": [
+        {
+          "run": 1,
+          "raf_callbacks": 25,
+          "elapsed_ms": 3699.86,
+          "raf_cadence_hz": 6.49,
+          "frame_interval_median_ms": 16.7,
+          "frame_interval_p95_ms": 833.3,
+          "callbacks_with_webgl_draws": 5,
+          "callbacks_over_50ms": 5,
+          "webgl_draw_calls_total": 34
+        },
+        {
+          "run": 2,
+          "raf_callbacks": 22,
+          "elapsed_ms": 1933.17,
+          "raf_cadence_hz": 10.86,
+          "frame_interval_median_ms": 16.7,
+          "frame_interval_p95_ms": 766.7,
+          "callbacks_with_webgl_draws": 3,
+          "callbacks_over_50ms": 3,
+          "webgl_draw_calls_total": 136
+        },
+        {
+          "run": 3,
+          "raf_callbacks": 23,
+          "elapsed_ms": 3799.8,
+          "raf_cadence_hz": 5.79,
+          "frame_interval_median_ms": 16.7,
+          "frame_interval_p95_ms": 866.7,
+          "callbacks_with_webgl_draws": 5,
+          "callbacks_over_50ms": 5,
+          "webgl_draw_calls_total": 259
+        }
+      ],
+      "selection_to_second_raf_ms": {
+        "samples": [
+          1095.5,
+          611.2,
+          566.6,
+          830.4,
+          701,
+          584.5,
+          648.8,
+          602.3,
+          583.5,
+          576.1,
+          646.8,
+          601.2,
+          510.5,
+          583.3,
+          669.6
+        ],
+        "median": 602.3,
+        "p95": 1095.5
+      },
+      "level_to_second_raf_ms": {
+        "samples": [
+          7870.3,
+          748.8,
+          1285.5,
+          665.6,
+          1284.2,
+          665.3,
+          1315.8,
+          649.6,
+          1321.5,
+          664.2
+        ],
+        "median": 1284.2,
+        "p95": 7870.3
+      },
+      "js_heap_after_sample_bytes": 29155404,
+      "page_errors": []
+    },
+    {
+      "graph_file": "graph-5000.json",
+      "graph_sha256": "393293d6bd53e5d9f417a254a41a4af6eed9dd9bd373a1df71af12ce71fe0616",
+      "canonical_nodes": 5000,
+      "canonical_edges": 4999,
+      "mode": "Galaxy",
+      "panels": "opaque",
+      "actual_panels": "opaque",
+      "rendered_nodes": 500,
+      "rendering_cap": 500,
+      "gpu": {
+        "available": true,
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "import_to_second_raf_ms": 6239.72,
+      "repetitions": [
+        {
+          "run": 1,
+          "raf_callbacks": 50,
+          "elapsed_ms": 3933.2,
+          "raf_cadence_hz": 12.46,
+          "frame_interval_median_ms": 66.7,
+          "frame_interval_p95_ms": 183.3,
+          "callbacks_with_webgl_draws": 50,
+          "callbacks_over_50ms": 29,
+          "webgl_draw_calls_total": 60768
+        },
+        {
+          "run": 2,
+          "raf_callbacks": 24,
+          "elapsed_ms": 3983.2,
+          "raf_cadence_hz": 5.77,
+          "frame_interval_median_ms": 166.6,
+          "frame_interval_p95_ms": 316.6,
+          "callbacks_with_webgl_draws": 24,
+          "callbacks_over_50ms": 21,
+          "webgl_draw_calls_total": 90648
+        },
+        {
+          "run": 3,
+          "raf_callbacks": 26,
+          "elapsed_ms": 3916.4,
+          "raf_cadence_hz": 6.38,
+          "frame_interval_median_ms": 166.6,
+          "frame_interval_p95_ms": 216.7,
+          "callbacks_with_webgl_draws": 26,
+          "callbacks_over_50ms": 23,
+          "webgl_draw_calls_total": 121524
+        }
+      ],
+      "selection_to_second_raf_ms": {
+        "samples": [
+          1577.3,
+          892.3,
+          699,
+          1046.5,
+          565.5,
+          577.9,
+          602.5,
+          651.6,
+          570,
+          595.4,
+          574.3,
+          564.2,
+          505.1,
+          460.9,
+          625.3
+        ],
+        "median": 595.4,
+        "p95": 1577.3
+      },
+      "level_to_second_raf_ms": {
+        "samples": [
+          98.3,
+          331.1,
+          117,
+          320.2,
+          172.9,
+          308.8,
+          62.1,
+          379.2,
+          59.3,
+          475.4
+        ],
+        "median": 308.8,
+        "p95": 475.4
+      },
+      "js_heap_after_sample_bytes": 43833128,
+      "page_errors": []
+    },
+    {
+      "graph_file": "graph-10000.json",
+      "graph_sha256": "62f3ed3883642cdbf3bee0646d5b929999069c7bd126cadd62b5dc00a6edbda9",
+      "canonical_nodes": 10000,
+      "canonical_edges": 9999,
+      "mode": "Dense",
+      "panels": "opaque",
+      "actual_panels": "opaque",
+      "rendered_nodes": 10000,
+      "rendering_cap": 10000,
+      "gpu": {
+        "available": true,
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "import_to_second_raf_ms": 4075.15,
+      "repetitions": [
+        {
+          "run": 1,
+          "raf_callbacks": 14,
+          "elapsed_ms": 3499.81,
+          "raf_cadence_hz": 3.71,
+          "frame_interval_median_ms": 16.7,
+          "frame_interval_p95_ms": 1650,
+          "callbacks_with_webgl_draws": 3,
+          "callbacks_over_50ms": 3,
+          "webgl_draw_calls_total": 26
+        },
+        {
+          "run": 2,
+          "raf_callbacks": 9,
+          "elapsed_ms": 3749.8,
+          "raf_cadence_hz": 2.13,
+          "frame_interval_median_ms": 16.7,
+          "frame_interval_p95_ms": 1816.7,
+          "callbacks_with_webgl_draws": 3,
+          "callbacks_over_50ms": 3,
+          "webgl_draw_calls_total": 147
+        },
+        {
+          "run": 3,
+          "raf_callbacks": 5,
+          "elapsed_ms": 49.98,
+          "raf_cadence_hz": 80.03,
+          "frame_interval_median_ms": 16.6,
+          "frame_interval_p95_ms": 16.8,
+          "callbacks_with_webgl_draws": 1,
+          "callbacks_over_50ms": 0,
+          "webgl_draw_calls_total": 256
+        }
+      ],
+      "selection_to_second_raf_ms": {
+        "samples": [
+          968.4,
+          772.9,
+          651.8,
+          646.8,
+          556.7,
+          632.1,
+          584.5,
+          590.4,
+          627.6,
+          586.9,
+          678.7,
+          1844.9,
+          1817.1,
+          1863.9,
+          1852.1
+        ],
+        "median": 651.8,
+        "p95": 1863.9
+      },
+      "level_to_second_raf_ms": {
+        "samples": [
+          18323.6,
+          1092.8,
+          2195.1,
+          1033.3,
+          2020.1,
+          1013.2,
+          2116,
+          949.1,
+          2016.5,
+          999.5
+        ],
+        "median": 2016.5,
+        "p95": 18323.6
+      },
+      "js_heap_after_sample_bytes": 57275248,
+      "page_errors": []
+    },
+    {
+      "graph_file": "graph-10000.json",
+      "graph_sha256": "62f3ed3883642cdbf3bee0646d5b929999069c7bd126cadd62b5dc00a6edbda9",
+      "canonical_nodes": 10000,
+      "canonical_edges": 9999,
+      "mode": "Galaxy",
+      "panels": "opaque",
+      "actual_panels": "opaque",
+      "rendered_nodes": 500,
+      "rendering_cap": 500,
+      "gpu": {
+        "available": true,
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "import_to_second_raf_ms": 7929.66,
+      "repetitions": [
+        {
+          "run": 1,
+          "raf_callbacks": 53,
+          "elapsed_ms": 4183.1,
+          "raf_cadence_hz": 12.43,
+          "frame_interval_median_ms": 50,
+          "frame_interval_p95_ms": 249.9,
+          "callbacks_with_webgl_draws": 53,
+          "callbacks_over_50ms": 22,
+          "webgl_draw_calls_total": 62760
+        },
+        {
+          "run": 2,
+          "raf_callbacks": 31,
+          "elapsed_ms": 3983.2,
+          "raf_cadence_hz": 7.53,
+          "frame_interval_median_ms": 133.3,
+          "frame_interval_p95_ms": 250,
+          "callbacks_with_webgl_draws": 31,
+          "callbacks_over_50ms": 28,
+          "webgl_draw_calls_total": 116544
+        },
+        {
+          "run": 3,
+          "raf_callbacks": 30,
+          "elapsed_ms": 3983.1,
+          "raf_cadence_hz": 7.28,
+          "frame_interval_median_ms": 133.4,
+          "frame_interval_p95_ms": 166.7,
+          "callbacks_with_webgl_draws": 30,
+          "callbacks_over_50ms": 28,
+          "webgl_draw_calls_total": 169332
+        }
+      ],
+      "selection_to_second_raf_ms": {
+        "samples": [
+          1305,
+          929.3,
+          727.9,
+          817.3,
+          685.8,
+          737,
+          638.9,
+          745.7,
+          667.6,
+          764.1,
+          681.4,
+          785,
+          919.9,
+          855.1,
+          915.3
+        ],
+        "median": 764.1,
+        "p95": 1305
+      },
+      "level_to_second_raf_ms": {
+        "samples": [
+          297.5,
+          566.2,
+          198.5,
+          659.4,
+          114.1,
+          492.7,
+          112.5,
+          557.6,
+          74.1,
+          659.3
+        ],
+        "median": 492.7,
+        "p95": 659.4
+      },
+      "js_heap_after_sample_bytes": 50474212,
+      "page_errors": []
+    }
+  ],
+  "provenance": {
+    "source_commit": "0f1e4b64acf46752349029bbba4bf265efb13c6f",
+    "source_ci_run": "https://github.com/styayur/glyphibe/actions/runs/40683111999",
+    "metadata_added_after_collection": true,
+    "graph_generation": {
+      "artifact_filename": "glyphibe-1.0.0-windows-x64.exe",
+      "artifact_sha256": "c85d4b38a785cdf885f5610ea18d40c3573ed80215974b5e285d1ff18fd55386",
+      "source_commit": "0f1e4b64acf46752349029bbba4bf265efb13c6f",
+      "input_directory_name": "release-candidate-0f1e4b6-analysis",
+      "method": "New candidate CLI exports of genuinely parsed generated Python call-chain source; canonical function/calls projection, not UI mock data."
+    },
+    "command": "node scripts/measure-rendering.mjs --graphs CANDIDATE_GRAPH_DIRECTORY --out ../../docs/benchmarks/rendering-release-candidate-0f1e4b6.json --duration 4000 --repetitions 3 --modes Dense,Galaxy --sizes 1000,5000,10000 --panels opaque",
+    "before_collection": {
+      "recorded_at": "2026-10-28T13:00:02.8921666Z",
+      "git_head": "0f1e4b64acf46752349029bbba4bf265efb13c6f",
+      "desktop_runtime_diff": [],
+      "dist_assets": [
+        {
+          "path": "assets/GalaxyCanvas-B83HHnH7.js",
+          "size_bytes": 1022157,
+          "sha256": "2e758014e866c1447d8973e58de8bc1987ecf12c395e4d067496f0d47f91e4ca"
+        },
+        {
+          "path": "assets/index-bBRE2TFQ.js",
+          "size_bytes": 452810,
+          "sha256": "84f32e1f5d64fd9e9a41a8f65d837df037427ad8a791e4aa870d5c54c477f9a2"
+        },
+        {
+          "path": "assets/index-BjgtjD8g.css",
+          "size_bytes": 8485,
+          "sha256": "b15d8c589215a8ae866ca4bb262adc851acdcafd530c284ef37a868225c948a8"
+        },
+        {
+          "path": "assets/picking-RR6gVYQI.js",
+          "size_bytes": 553,
+          "sha256": "8da646e962af9632d4814f509fd03d8145cff1795c7286f821533edc83f30bd0"
+        },
+        {
+          "path": "assets/three.core-BRCyqaka.js",
+          "size_bytes": 218483,
+          "sha256": "4bda4509770e378323be144ae2644d76750d806358ee77ff49dcd0bc026f41be"
+        },
+        {
+          "path": "index.html",
+          "size_bytes": 400,
+          "sha256": "3b18d5de4270e75493decfcf3a3563a243fc3b4215fcd48314c998518b8393dd"
+        }
+      ],
+      "matching_build_or_native_processes": []
+    },
+    "after_collection": {
+      "recorded_at": "2026-10-28T13:09:15.1731031Z",
+      "git_head": "0f1e4b64acf46752349029bbba4bf265efb13c6f",
+      "desktop_runtime_diff": [],
+      "dist_assets": [
+        {
+          "path": "assets/GalaxyCanvas-B83HHnH7.js",
+          "size_bytes": 1022157,
+          "sha256": "2e758014e866c1447d8973e58de8bc1987ecf12c395e4d067496f0d47f91e4ca"
+        },
+        {
+          "path": "assets/index-bBRE2TFQ.js",
+          "size_bytes": 452810,
+          "sha256": "84f32e1f5d64fd9e9a41a8f65d837df037427ad8a791e4aa870d5c54c477f9a2"
+        },
+        {
+          "path": "assets/index-BjgtjD8g.css",
+          "size_bytes": 8485,
+          "sha256": "b15d8c589215a8ae866ca4bb262adc851acdcafd530c284ef37a868225c948a8"
+        },
+        {
+          "path": "assets/picking-RR6gVYQI.js",
+          "size_bytes": 553,
+          "sha256": "8da646e962af9632d4814f509fd03d8145cff1795c7286f821533edc83f30bd0"
+        },
+        {
+          "path": "assets/three.core-BRCyqaka.js",
+          "size_bytes": 218483,
+          "sha256": "4bda4509770e378323be144ae2644d76750d806358ee77ff49dcd0bc026f41be"
+        },
+        {
+          "path": "index.html",
+          "size_bytes": 400,
+          "sha256": "3b18d5de4270e75493decfcf3a3563a243fc3b4215fcd48314c998518b8393dd"
+        }
+      ],
+      "matching_build_or_native_processes": []
+    },
+    "production_assets_unchanged": true,
+    "load_control": {
+      "coordinator_confirmation": "Prior analysis/public-repository/MCP sampling had finished, the native application was closed, and no other planned local heavy workload was started during this run.",
+      "process_observation": "No matching cargo, rustc, glyphibe, glyphibe-desktop, cl, link or lld-link processes were observed in the before/after snapshots.",
+      "limits": "OS and background services were not isolated or continuously profiled. This is not a causal before/after comparison.",
+      "repeat_policy": "One complete six-scenario run; all three repetitions and all latency samples retained. No retiming to select better results."
+    },
+    "timing_caveat": "The 4000ms wall-clock sampling budget begins before the first rAF callback; under stalls the observed rAF timestamp span can be much shorter. Dense 10000 repetition 3 spans only 49.98ms and is not a steady-state cadence estimate; its raw 80.03Hz is retained without claiming displayed FPS. Dense 5000 repetition 2 spans 1933.17ms."
+  }
+}

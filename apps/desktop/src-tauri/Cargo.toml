@@ -1,0 +1,26 @@
+[package]
+name = "glyphibe-desktop"
+version = "1.0.0"
+edition = "2024"
+license = "MPL-2.0"
+publish = false
+
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+glyphibe-core = { path = "../../../crates/glyphibe-core" }
+glyphibe-parser = { path = "../../../crates/glyphibe-parser" }
+glyphibe-analysis = { path = "../../../crates/glyphibe-analysis" }
+glyphibe-explain = { path = "../../../crates/glyphibe-explain" }
+
+[target.'cfg(windows)'.dependencies]
+window-vibrancy = "0.8.1"
+
+[dev-dependencies]
+tempfile = "3.23"

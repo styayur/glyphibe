@@ -1,0 +1,22 @@
+name: Bug report
+description: Report an incorrect graph, analysis failure or application problem.
+body:
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+      description: Include version, OS, reproduction steps and expected behavior. Remove private code and local paths.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Minimal public example
+      description: A small source example and relevant node/relation evidence help reproduce analysis errors.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed secrets and private source from this report.
+          required: true

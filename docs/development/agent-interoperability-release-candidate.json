@@ -1,0 +1,94 @@
+{
+  "forbidden_operation_types": [],
+  "measured_at": "2026-10-28T20:10:41.5654302+08:00",
+  "binary_sha256": "c85d4b38a785cdf885f5610ea18d40c3573ed80215974b5e285d1ff18fd55386",
+  "fixture_unchanged": true,
+  "limitation": "External Agent may require online account access; Glyphibe analysis and SDK protocol tests work independently of this client.",
+  "calls": [
+    {
+      "server": "glyphibe",
+      "status": "completed",
+      "has_result": true,
+      "tool": "architecture",
+      "is_error": false
+    },
+    {
+      "server": "glyphibe",
+      "status": "completed",
+      "has_result": true,
+      "tool": "search",
+      "is_error": false
+    },
+    {
+      "server": "glyphibe",
+      "status": "completed",
+      "has_result": true,
+      "tool": "node",
+      "is_error": false
+    },
+    {
+      "server": "glyphibe",
+      "status": "completed",
+      "has_result": true,
+      "tool": "trace",
+      "is_error": false
+    },
+    {
+      "server": "glyphibe",
+      "status": "completed",
+      "has_result": true,
+      "tool": "impact",
+      "is_error": false
+    },
+    {
+      "server": "glyphibe",
+      "status": "completed",
+      "has_result": true,
+      "tool": "mappings",
+      "is_error": false
+    },
+    {
+      "server": "glyphibe",
+      "status": "completed",
+      "has_result": true,
+      "tool": "explain",
+      "is_error": false
+    },
+    {
+      "server": "glyphibe",
+      "status": "completed",
+      "has_result": true,
+      "tool": "knowledge",
+      "is_error": false
+    }
+  ],
+  "successful_tools": [
+    "architecture",
+    "explain",
+    "impact",
+    "knowledge",
+    "mappings",
+    "node",
+    "search",
+    "trace"
+  ],
+  "required_tools": [
+    "architecture",
+    "search",
+    "node",
+    "trace",
+    "impact",
+    "mappings",
+    "explain",
+    "knowledge"
+  ],
+  "client": "codex-cli 0.159.2",
+  "exit_code": 0,
+  "blocked_reason": null,
+  "fixture": "tests/fixtures/python (original public source)",
+  "official_configuration_reference": "https://learn.chatgpt.com/docs/extend/mcp?surface=cli",
+  "timed_out": false,
+  "missing_tools": [],
+  "passed": true,
+  "method": "Ephemeral Codex CLI stdio MCP configuration; existing auth; read-only sandbox; MCP tools only requested"
+}

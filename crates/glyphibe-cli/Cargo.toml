@@ -1,0 +1,31 @@
+[package]
+name = "glyphibe-cli"
+description = "Local graph-first code comprehension CLI"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "glyphibe"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+serde_json.workspace = true
+clap.workspace = true
+tokio.workspace = true
+glyphibe-core = { path = "../glyphibe-core" }
+glyphibe-parser = { path = "../glyphibe-parser" }
+glyphibe-analysis = { path = "../glyphibe-analysis" }
+glyphibe-knowledge = { path = "../glyphibe-knowledge" }
+glyphibe-explain = { path = "../glyphibe-explain" }
+glyphibe-mcp = { path = "../glyphibe-mcp" }
+
+[dev-dependencies]
+tempfile.workspace = true
+rmcp.workspace = true
+
+[lints]
+workspace = true

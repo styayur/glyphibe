@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Glyphibe",
+  "version": "1.0.0",
+  "identifier": "io.github.styayur.glyphibe",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://127.0.0.1:1420",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Glyphibe",
+        "width": 1440,
+        "height": 960,
+        "minWidth": 850,
+        "minHeight": 620,
+        "transparent": true,
+        "decorations": false,
+        "backgroundColor": "#171d26"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src ipc: http://ipc.localhost; font-src 'self' data:; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-src 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "license": "MPL-2.0",
+    "licenseFile": "../../../LICENSE",
+    "resources": {
+      "../../../LICENSE": "licenses/LICENSE",
+      "../../../THIRD_PARTY_NOTICES": "licenses/THIRD_PARTY_NOTICES",
+      "../../../third-party/licenses": "licenses/third-party/licenses",
+      "../../../third-party/toolchain-licenses": "licenses/third-party/toolchain-licenses",
+      "../../../PLATFORM_NOTICES": "licenses/PLATFORM_NOTICES"
+    },
+    "windows": {
+      "nsis": {
+        "compression": "zlib",
+        "installerIcon": "icons/icon.ico"
+      }
+    },
+    "shortDescription": "Local graph-first code comprehension",
+    "longDescription": "Explore deterministic code relationships and evidence-backed teaching without a language model.",
+    "category": "DeveloperTool"
+  }
+}

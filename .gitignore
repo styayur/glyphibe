@@ -11,6 +11,11 @@
 *.log
 .DS_Store
 Thumbs.db
+**/__pycache__/
+**/test-results/
+**/playwright-report/
+**/*.tsbuildinfo
+**/src-tauri/gen/
 .env
 .env.*
 !.env.example

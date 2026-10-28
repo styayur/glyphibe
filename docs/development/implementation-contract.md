@@ -18,7 +18,7 @@ fingerprint, tags: Vec<String>, knowledge: Vec<String>, change }`.
 
 `SourceSpan { path: String (repository-relative, forward slashes), start_line,
 start_column, end_line, end_column, start_byte, end_byte }`. Lines and columns
-are one-based. Bytes use UTF-8 offsets. `Plane` = `Architecture | Explanation`.
+are one-based. Columns are UTF-8 byte columns, matching Tree-sitter; bytes use UTF-8 offsets. `Plane` = `Architecture | Explanation`.
 `NodeKind` = `Domain | Cluster | Component | File | Class | Function | Block |
 Statement | Expression | Concept | Explanation`.
 

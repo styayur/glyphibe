@@ -1,0 +1,11 @@
+[package]
+name = "glyphibe-analysis"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+glyphibe-core = { path = "../glyphibe-core" }
+
+[dev-dependencies]
+serde_json.workspace = true

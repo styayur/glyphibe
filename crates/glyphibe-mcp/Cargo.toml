@@ -1,0 +1,22 @@
+[package]
+name = "glyphibe-mcp"
+description = "Repository-scoped standard MCP adapter for the shared local graph"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rmcp.workspace = true
+schemars.workspace = true
+tokio.workspace = true
+glyphibe-core = { path = "../glyphibe-core" }
+glyphibe-knowledge = { path = "../glyphibe-knowledge" }
+glyphibe-explain = { path = "../glyphibe-explain" }
+
+[lints]
+workspace = true
