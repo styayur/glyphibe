@@ -767,7 +767,8 @@ mod tests {
     #[test]
     #[ignore = "requires explicit public GitHub network access"]
     fn real_github_import_is_pinned_local_only_and_incremental() {
-        let destination = tempfile::tempdir_in(std::env::temp_dir().canonicalize().unwrap()).unwrap();
+        let destination =
+            tempfile::tempdir_in(std::env::temp_dir().canonicalize().unwrap()).unwrap();
         let first = import_github(
             "https://github.com/tree-sitter/tree-sitter-python",
             destination.path(),
