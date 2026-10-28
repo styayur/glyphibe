@@ -63,7 +63,7 @@ jobs:
         working-directory: apps/desktop
         env:
           GLYPHIBE_TEST_GRAPH: ${{ runner.temp }}/fixture-graph.json
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: failure()
         with:
           name: graph-e2e-diagnostics
@@ -124,7 +124,7 @@ jobs:
       - name: Package provenance-bound release candidates
         shell: pwsh
         run: ./scripts/package-release.ps1 -TargetDirectory "${{ github.workspace }}/target" -OutputDirectory "${{ runner.temp }}/glyphibe-assets"
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: windows-release-candidate-assets
           path: |
