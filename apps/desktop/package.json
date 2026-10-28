@@ -20,7 +20,7 @@
     "react-dom": "^19.2.0",
     "react-force-graph-3d": "^1.29.0",
     "sigma": "3.0.2",
-    "three": "^0.180.0"
+    "three": "^0.186.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
