@@ -97,12 +97,13 @@ jobs:
   desktop:
     name: Windows desktop build
     runs-on: windows-latest
-    env:
-      # Native C diagnostics are outside rustc's path remapping. Keep their
-      # immutable source cache in the hosted runner's generic temporary root.
-      CARGO_HOME: ${{ runner.temp }}/glyphibe-cargo
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Isolate native source cache from private path prefixes
+        shell: pwsh
+        run: |
+          $registryCache = Join-Path $env:RUNNER_TEMP 'glyphibe-cargo'
+          "CARGO_HOME=$registryCache" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '24'
