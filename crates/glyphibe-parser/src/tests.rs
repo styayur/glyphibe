@@ -568,3 +568,159 @@ fn nested_declarations_fail_explicitly_at_scope_budget() {
         .expect("nested declaration scope must be bounded");
     assert!(error.to_string().contains("scope safety budget"));
 }
+
+#[test]
+fn loop_inputs_are_only_extracted_from_real_for_loop_syntax() {
+    let options = AnalyzeOptions::default();
+    let cases = [
+        (
+            "main.py",
+            "def sample(items):\n    x = 1\n    for item in items:\n        x = x + 1\n    return x\n",
+            "for_statement",
+        ),
+        (
+            "lib.rs",
+            "fn sample(items: &[i32]) { let x = 1; for item in items { let y = x + 1; } }",
+            "for_expression",
+        ),
+        (
+            "main.js",
+            "function sample(items) { const x = 1; for (const item of items) { const y = x + 1; } }",
+            "for_in_statement",
+        ),
+        (
+            "main.ts",
+            "function sample(items: number[]) { const x = 1; for (const item of items) { const y = x + 1; } }",
+            "for_in_statement",
+        ),
+    ];
+    for (path, source, syntax) in cases {
+        let parsed = parse_source(path, source, &options).unwrap();
+        assert!(parsed.diagnostics.is_empty());
+        let loops: Vec<_> = parsed
+            .facts
+            .iter()
+            .filter(|f| f.tags.contains(&format!("syntax:{syntax}")))
+            .collect();
+        assert_eq!(loops.len(), 1, "{path}");
+        assert_eq!(loops[0].kind, "block");
+        assert!(loops[0].tags.iter().any(|tag| tag == "iterator:items"));
+        for fact in &parsed.facts {
+            if fact.tags.iter().any(|tag| tag.starts_with("iterator:")) {
+                assert!(
+                    fact.tags.contains(&format!("syntax:{syntax}")),
+                    "non-loop must not acquire iterator meaning: {}",
+                    fact.summary
+                );
+            }
+        }
+        assert!(
+            parsed
+                .facts
+                .iter()
+                .any(|f| f.tags.iter().any(|tag| tag == "binding:x")
+                    && f.tags.iter().any(|tag| tag == "value:1"))
+        );
+    }
+    let parsed = parse_source("main.js", "for (const key in obj) { key; }", &options).unwrap();
+    assert!(
+        parsed
+            .facts
+            .iter()
+            .any(|fact| fact.kind == "block" && fact.tags.contains(&"iterator:obj".into()))
+    );
+}
+
+#[test]
+fn python_receiver_inference_requires_bound_first_parameter_without_rebinding() {
+    let dir = tempdir().unwrap();
+    write(
+        dir.path(),
+        "main.py",
+        r#"class Other:
+    def value(self): return 1
+self = Other()
+cls = Other()
+class Counter:
+    def value(self): return 2
+    def instance(self): return self.value()
+    def alternate(this): return this.value()
+    @classmethod
+    def class_call(cls): return cls.value()
+    def global_self(this): return self.value()
+    def global_cls(this): return cls.value()
+    def rebound(self):
+        self = Other()
+        return self.value()
+    def unpacked(self):
+        self, other = (Other(), Other())
+        return self.value()
+    def loop_bound(self, items):
+        for self in items:
+            self.value()
+    def outer(self):
+        def inner(self): return self.value()
+        return inner
+    @staticmethod
+    def static_call(self): return self.value()
+    def variadic(*self): return self.value()
+"#,
+    );
+    let graph = analyze(dir.path(), &AnalyzeOptions::default()).unwrap();
+    let value_calls: BTreeSet<_> = pairs(&graph)
+        .into_iter()
+        .filter(|(_, target)| target == "value")
+        .collect();
+    assert_eq!(
+        value_calls,
+        BTreeSet::from([
+            ("instance".into(), "value".into()),
+            ("alternate".into(), "value".into()),
+            ("class_call".into(), "value".into())
+        ])
+    );
+    assert!(
+        graph
+            .diagnostics
+            .iter()
+            .filter(|d| d.code == "unresolved_call"
+                && (d.message.contains("self.value") || d.message.contains("cls.value")))
+            .count()
+            >= 8
+    );
+}
+
+#[test]
+fn javascript_global_self_and_rust_self_namespace_are_not_instance_receivers() {
+    let dir = tempdir().unwrap();
+    write(
+        dir.path(),
+        "main.js",
+        "const self = { value() { return 1; } }; class Counter { value() { return 2; } valid() { return this.value(); } invalid() { return self.value(); } }",
+    );
+    let graph = analyze(dir.path(), &AnalyzeOptions::default()).unwrap();
+    let value_calls: BTreeSet<_> = pairs(&graph)
+        .into_iter()
+        .filter(|(_, target)| target == "value")
+        .collect();
+    assert_eq!(
+        value_calls,
+        BTreeSet::from([("valid".into(), "value".into())])
+    );
+    let rust = tempdir().unwrap();
+    write(
+        rust.path(),
+        "lib.rs",
+        "fn target()->i32{1}\nstruct Counter;\nimpl Counter {fn target()->i32{2} fn valid()->i32{Self::target()} fn namespace()->i32{self::target()}}\n",
+    );
+    let graph = analyze(rust.path(), &AnalyzeOptions::default()).unwrap();
+    assert!(pairs(&graph).contains(&("valid".into(), "target".into())));
+    assert!(
+        !graph
+            .edges
+            .iter()
+            .any(|edge| edge.relation == Relation::Calls
+                && graph.nodes[&edge.source].label == "namespace"
+                && graph.nodes[&edge.target].summary.contains("{2}"))
+    );
+}

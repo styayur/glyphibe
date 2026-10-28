@@ -1,6 +1,9 @@
 # Analysis benchmark report
 
 Status: **measured development build; not a v1.0.0 release claim**.
+The final `glyphibe 1.0.0` executable was additionally checked on
+[three pinned public projects](public-projects.md) and against the same 47
+annotated call pairs. [MCP latency](mcp.md) is measured separately.
 Recorded 2026-10-27 on Windows 11 build 26200, AMD Ryzen 7 H 255 with 16 logical
 processors, 24,445,165,568 bytes usable physical memory and Python 3.14.7. See the machine-readable
 [raw report](analysis-results.json) for every sample and measurement method.

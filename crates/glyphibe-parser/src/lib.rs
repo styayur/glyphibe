@@ -21,7 +21,7 @@ use std::{
 };
 use tree_sitter::{Language, Node as Syntax, ParseOptions, Parser};
 
-const CACHE_VERSION: &str = "parser-7";
+const CACHE_VERSION: &str = "parser-9";
 const AST_BUDGET: usize = 150_000;
 const MAX_SCOPE_BYTES: usize = 16 * 1024;
 const MAX_DECLARATION_DEPTH: usize = 256;
@@ -109,6 +109,7 @@ struct ParsedFile {
     references: Vec<Reference>,
     type_relations: Vec<TypeRelation>,
     shadows: BTreeMap<String, BTreeSet<String>>,
+    rebindings: BTreeMap<String, BTreeSet<String>>,
     diagnostics: Vec<Diagnostic>,
     file_span: SourceSpan,
     source_hash: String,
@@ -638,6 +639,7 @@ fn parse_source(path: &str, source: &str, options: &AnalyzeOptions) -> Result<Pa
         references: vec![],
         type_relations: vec![],
         shadows: BTreeMap::new(),
+        rebindings: BTreeMap::new(),
         diagnostics: vec![],
         file_span: span(tree.root_node(), path),
         source_hash: fingerprint(source),
@@ -719,6 +721,7 @@ fn parse_source(path: &str, source: &str, options: &AnalyzeOptions) -> Result<Pa
                 | "if_expression"
                 | "for_statement"
                 | "for_expression"
+                | "for_in_statement"
                 | "while_statement"
                 | "while_expression"
                 | "loop_expression"
@@ -784,6 +787,15 @@ fn parse_source(path: &str, source: &str, options: &AnalyzeOptions) -> Result<Pa
             let body_node = node.child_by_field_name("body").unwrap_or(node);
             let body = hashes.get(&body_node.id()).cloned().unwrap_or_default();
             let mut tags = vec![format!("syntax:{kind}")];
+            if lang == "python" && kind == "function_definition" {
+                tags.extend(python_receiver_tags(node, source));
+            }
+            if declaration.is_some() {
+                out.rebindings
+                    .entry(scope.clone())
+                    .or_default()
+                    .insert(label.clone());
+            }
             if declaration.is_some()
                 && (named_children(node)
                     .iter()
@@ -814,11 +826,23 @@ fn parse_source(path: &str, source: &str, options: &AnalyzeOptions) -> Result<Pa
                 ("parameters", "input"),
                 ("return_type", "output"),
                 ("condition", "condition"),
-                ("right", "iterator"),
                 ("value", "value"),
             ] {
                 if let Some(value) = node.child_by_field_name(field) {
                     tags.push(format!("{tag}:{}", compact(text(value, source))));
+                }
+            }
+            if matches!(
+                kind,
+                "for_statement" | "for_expression" | "for_in_statement"
+            ) {
+                let iterator = if kind == "for_expression" {
+                    node.child_by_field_name("value")
+                } else {
+                    node.child_by_field_name("right")
+                };
+                if let Some(iterator) = iterator {
+                    tags.push(format!("iterator:{}", compact(text(iterator, source))));
                 }
             }
             if matches!(
@@ -935,6 +959,34 @@ fn parse_source(path: &str, source: &str, options: &AnalyzeOptions) -> Result<Pa
         let params = in_parameters || matches!(kind, "parameters" | "formal_parameters");
         if matches!(
             kind,
+            "assignment"
+                | "augmented_assignment"
+                | "named_expression"
+                | "for_statement"
+                | "let_declaration"
+                | "variable_declarator"
+        ) && let Some(target) = node
+            .child_by_field_name("left")
+            .or_else(|| node.child_by_field_name("pattern"))
+            .or_else(|| node.child_by_field_name("name"))
+        {
+            let mut targets = vec![target];
+            while let Some(target) = targets.pop() {
+                if target.kind() == "identifier" {
+                    out.rebindings
+                        .entry(scope.clone())
+                        .or_default()
+                        .insert(text(target, source).into());
+                } else if matches!(
+                    target.kind(),
+                    "pattern_list" | "tuple_pattern" | "list_pattern" | "tuple" | "list"
+                ) {
+                    targets.extend(named_children(target));
+                }
+            }
+        }
+        if matches!(
+            kind,
             "assignment" | "let_declaration" | "variable_declarator"
         ) {
             let left = node
@@ -991,6 +1043,54 @@ fn parse_source(path: &str, source: &str, options: &AnalyzeOptions) -> Result<Pa
 fn named_children(node: Syntax<'_>) -> Vec<Syntax<'_>> {
     let mut c = node.walk();
     node.named_children(&mut c).collect()
+}
+fn python_receiver_tags(node: Syntax<'_>, source: &str) -> Vec<String> {
+    let Some(parameters) = node.child_by_field_name("parameters") else {
+        return vec![];
+    };
+    let Some(first) = named_children(parameters).first().copied() else {
+        return vec![];
+    };
+    if !matches!(
+        first.kind(),
+        "identifier" | "typed_parameter" | "default_parameter" | "typed_default_parameter"
+    ) {
+        return vec![];
+    }
+    let name = if first.kind() == "identifier" {
+        Some(first)
+    } else {
+        first
+            .child_by_field_name("name")
+            .filter(|n| n.kind() == "identifier")
+            .or_else(|| {
+                named_children(first).into_iter().find(|n| {
+                    n.kind() == "identifier" && Some(*n) != first.child_by_field_name("type")
+                })
+            })
+    };
+    let Some(name) = name
+        .map(|n| text(n, source))
+        .filter(|name| matches!(*name, "self" | "cls" | "this"))
+    else {
+        return vec![];
+    };
+    let mut tags = vec![format!("receiver_parameter:{name}")];
+    if let Some(parent) = node.parent().filter(|p| p.kind() == "decorated_definition") {
+        let decorators: Vec<_> = named_children(parent)
+            .into_iter()
+            .filter(|n| n.kind() == "decorator")
+            .collect();
+        if decorators.len() != 1 {
+            return vec![];
+        }
+        let decorator = text(decorators[0], source).trim().trim_start_matches('@');
+        if !matches!(decorator, "classmethod" | "property") {
+            return vec![];
+        }
+        tags.push(format!("receiver_decorator:{decorator}"));
+    }
+    tags
 }
 fn type_name(node: Syntax<'_>, source: &str) -> String {
     let value = if node.kind() == "generic_type" {
@@ -1361,12 +1461,68 @@ impl<'a> Resolver<'a> {
         }
         let parts: Vec<_> = name.split(['.', ':']).filter(|x| !x.is_empty()).collect();
         let first = *parts.first()?;
-        if parts.len() == 2 && matches!(parts[0], "self" | "this" | "Self") {
+        let receiver_syntax = match file.language.as_str() {
+            "python" => matches!(first, "self" | "cls" | "this") && name.contains('.'),
+            "javascript" | "typescript" | "tsx" => first == "this" && name.starts_with("this."),
+            "rust" => {
+                (first == "self" && name.starts_with("self."))
+                    || (first == "Self" && name.starts_with("Self::"))
+            }
+            _ => false,
+        };
+        if parts.len() == 2 && receiver_syntax {
             let class_scope = scope.rsplit_once("::").map(|(s, _)| s)?;
             if self
                 .class_scopes
                 .contains(&(file.path.clone(), class_scope.to_owned()))
             {
+                let method = scope.rsplit_once("::")?.1;
+                let declaration = self.declaration(&file.path, class_scope, method, false)?;
+                if file.language == "python" {
+                    if !declaration
+                        .tags
+                        .contains(&format!("receiver_parameter:{first}"))
+                        || file
+                            .rebindings
+                            .get(scope)
+                            .is_some_and(|names| names.contains(first))
+                        || self
+                            .imports
+                            .contains_key(&(file.path.as_str(), scope, first))
+                    {
+                        return None;
+                    }
+                    for decorator in declaration
+                        .tags
+                        .iter()
+                        .filter_map(|tag| tag.strip_prefix("receiver_decorator:"))
+                    {
+                        if ["", class_scope].into_iter().any(|scope| {
+                            file.shadows
+                                .get(scope)
+                                .is_some_and(|names| names.contains(decorator))
+                                || self.declarations.contains_key(&(
+                                    file.path.as_str(),
+                                    scope,
+                                    decorator,
+                                ))
+                                || self.imports.contains_key(&(
+                                    file.path.as_str(),
+                                    scope,
+                                    decorator,
+                                ))
+                        }) {
+                            return None;
+                        }
+                    }
+                } else if matches!(file.language.as_str(), "javascript" | "typescript" | "tsx")
+                    && !declaration
+                        .tags
+                        .contains(&"syntax:method_definition".into())
+                    && !declaration.tags.contains(&"syntax:arrow_function".into())
+                {
+                    return None;
+                }
                 let target = self.declaration(&file.path, class_scope, parts[1], false)?;
                 return Some((file.path.clone(), target.key.clone()));
             }

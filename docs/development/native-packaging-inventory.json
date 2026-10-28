@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "collected_at": "2026-10-28T06:02:41.180409+00:00",
+  "scope": "Windows installer/runtime supplement; Cargo/npm dependency evidence remains separate. Not a claim that every Windows OS component is redistributed.",
+  "tauri_cli_version": "2.12.4",
+  "rust": {
+    "version": "1.98.1",
+    "commit": "48a229ceaefd4985c50990b14116b6d856af0985",
+    "license": "MIT OR Apache-2.0 with third-party library notices retained",
+    "notice_scope": "Complete upstream library notices, including platform-specific entries; not all listed source components enter the Windows target"
+  },
+  "nsis": {
+    "version": "3.13",
+    "selected_compressor": "zlib",
+    "selected_runtime_license": "Zlib",
+    "source": "https://nsis.sourceforge.io/License",
+    "note": "Original COPYING also describes alternative compression modules; the CPL LZMA module is not selected"
+  },
+  "tauri_nsis_utils": {
+    "version": "0.5.3",
+    "source_commit": "13d9edd27b69310e108d6fbd49f90992f8a05390",
+    "binary_sha256": "5ba143b5db4a87d32d6e7802e033330aae56cbceabe0d1e3ba41948385ad4709",
+    "official_asset": "https://github.com/tauri-apps/nsis-tauri-utils/releases/download/nsis_tauri_utils-v0.5.3/nsis_tauri_utils.dll",
+    "license": "MIT OR Apache-2.0",
+    "source_dependency_families": [
+      "nsis-plugin-api (same repository)",
+      "windows-sys 0.61.2 range",
+      "semver 1.0, no_std",
+      "build-only nsis-fn/proc-macro2/quote/syn"
+    ],
+    "limitation": "Official no_std plugin artifact identity and pinned source checked. An exact transitive-build-version SBOM is not supplied upstream and is not invented here."
+  },
+  "webview2_loader": {
+    "version": "1.0.3800.47",
+    "binding_crate": "webview2-com-sys 0.39.1",
+    "license": "BSD-3-Clause",
+    "nuget_archive_sha256": "56c9f26bdd07916a2d1949fb58a5c7e434dfa1173577dca879206050c4e718db",
+    "nuget_acquisition": "Official HTTPS flat-container package; SHA-512 matched its x-ms-meta-sha512 response header",
+    "compiled_x64_static_library_sha256": "89c6b872783b8f6c3cedbff618adb42082d455c615453ae10cfc753f1e8f25d8",
+    "provenance": "Official package member SHA-256 exactly matches the crate's x64 WebView2LoaderStatic.lib"
+  },
+  "microsoft_platform": {
+    "vc_runtime": "CLI imports VCRUNTIME140.dll; install the Microsoft v14 x64 Runtime separately. Desktop links runtime code through Tauri's static_vcruntime build support.",
+    "terms": [
+      "https://visualstudio.microsoft.com/license-terms/vs2022-ga-diagnosticbuildtools/",
+      "https://visualstudio.microsoft.com/license-terms/vs2022-cruntime/",
+      "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"
+    ],
+    "scope": "Platform/toolchain components keep Microsoft terms and are not relicensed as Glyphibe MPL sources. No standalone Microsoft runtime installer or DLL is added as a release asset."
+  },
+  "notices": [
+    {
+      "component": "Rust standard library",
+      "file": "third-party/toolchain-licenses/rust/COPYRIGHT-library.html",
+      "sha256": "68129500b616d5838629e68f55ff3aed5e096dacf60ce9eb41bbe599a563afa6",
+      "bytes": 1512520,
+      "source": "Official installed Rust 1.98.1 distribution, share/doc/rust/COPYRIGHT-library.html; source https://github.com/rust-lang/rust/tree/48a229ceaefd4985c50990b14116b6d856af0985"
+    },
+    {
+      "component": "Rust standard library",
+      "file": "third-party/toolchain-licenses/rust/licenses/MIT.txt",
+      "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0",
+      "bytes": 1078,
+      "source": "Official installed Rust 1.98.1 distribution, share/doc/rust/licenses/MIT.txt; source https://github.com/rust-lang/rust/tree/48a229ceaefd4985c50990b14116b6d856af0985"
+    },
+    {
+      "component": "Rust standard library",
+      "file": "third-party/toolchain-licenses/rust/licenses/Apache-2.0.txt",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "bytes": 10280,
+      "source": "Official installed Rust 1.98.1 distribution, share/doc/rust/licenses/Apache-2.0.txt; source https://github.com/rust-lang/rust/tree/48a229ceaefd4985c50990b14116b6d856af0985"
+    },
+    {
+      "component": "NSIS installer",
+      "file": "third-party/toolchain-licenses/nsis/COPYING.txt",
+      "sha256": "388357c1215ff403c5ebde3a5ecd273e68f8b79a579996775245d1ee65442aba",
+      "bytes": 15632,
+      "source": "Unmodified NSIS 3.13 distribution: COPYING; https://nsis.sourceforge.io/License"
+    },
+    {
+      "component": "NSIS installer",
+      "file": "third-party/toolchain-licenses/nsis/NSISdl-LICENSE.txt",
+      "sha256": "326e587f36ca58e14bd09cca153f9e69f1c5ed701189aa47d2d0627af7e16280",
+      "bytes": 943,
+      "source": "Unmodified NSIS 3.13 distribution: Docs/NSISdl/License.txt; https://nsis.sourceforge.io/License"
+    },
+    {
+      "component": "NSIS installer",
+      "file": "third-party/toolchain-licenses/nsis/Modern-UI-2-LICENSE.txt",
+      "sha256": "36608f72902ac188e45eab9bf6f673df72dd76f871f61d0c6d60592dfc15461c",
+      "bytes": 840,
+      "source": "Unmodified NSIS 3.13 distribution: Docs/Modern UI 2/License.txt; https://nsis.sourceforge.io/License"
+    },
+    {
+      "component": "Tauri NSIS utilities",
+      "file": "third-party/toolchain-licenses/tauri-nsis-utils/LICENSE_MIT.txt",
+      "sha256": "1c1020fa10a6bf318717e82c911bcc54ebdfb9bb280460ae332bcb2f82f57fbe",
+      "bytes": 1110,
+      "source": "https://raw.githubusercontent.com/tauri-apps/nsis-tauri-utils/13d9edd27b69310e108d6fbd49f90992f8a05390/LICENSE_MIT"
+    },
+    {
+      "component": "Tauri NSIS utilities",
+      "file": "third-party/toolchain-licenses/tauri-nsis-utils/LICENSE_APACHE-2.0.txt",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174,
+      "source": "https://raw.githubusercontent.com/tauri-apps/nsis-tauri-utils/13d9edd27b69310e108d6fbd49f90992f8a05390/LICENSE_APACHE-2.0"
+    },
+    {
+      "component": "Microsoft WebView2 Loader",
+      "file": "third-party/toolchain-licenses/webview2-sdk/LICENSE.txt",
+      "sha256": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55",
+      "bytes": 1487,
+      "source": "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.3800.47/microsoft.web.webview2.1.0.3800.47.nupkg :: LICENSE.txt"
+    },
+    {
+      "component": "Microsoft WebView2 Loader",
+      "file": "third-party/toolchain-licenses/webview2-sdk/NOTICE.txt",
+      "sha256": "106423785c5b7eba0a8e61d1837f2132e9c828e20ad530f565d981c1df60dd90",
+      "bytes": 3894,
+      "source": "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.3800.47/microsoft.web.webview2.1.0.3800.47.nupkg :: NOTICE.txt"
+    }
+  ]
+}

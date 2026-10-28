@@ -53,6 +53,54 @@ The follow-up implementation batches presentation settings and skips the redunda
 
 These adverse latency values are retained in full. They show sensitivity to software rendering and shared CPU load. They do not prove that batching improved level-switch performance, and do not support claiming a native GPU FPS target. Source parsing was not invoked by any measured slider or selection action. No repeated retiming was used to select a favorable result.
 
+## Camera candidate snapshot
+
+[rendering-final-candidate.json](rendering-final-candidate.json) records the
+2026-10-28 14:14 Asia/Singapore camera candidate, using the same three inputs,
+three four-second windows per scenario and the same software renderer. The
+native application was closed; no release LTO ran during this sample. Targeted
+debug parser checks may have overlapped part of the run, and other host load
+was not controlled. These are observations, not a causal optimization comparison.
+
+| Canonical nodes | Mode | Drawn nodes | Median callback Hz | Selection p95 ms | Level-switch p95 ms |
+|---:|---|---:|---:|---:|---:|
+| 1,000 | Dense | 1,000 | 12.56 | 389.0 | 3,293.6 |
+| 1,000 | Galaxy | 500 | 7.18 | 776.2 | 1,394.5 |
+| 5,000 | Dense | 5,000 | 4.70 | 841.0 | 8,881.4 |
+| 5,000 | Galaxy | 500 | 6.44 | 1,014.7 | 611.7 |
+| 10,000 | Dense | 10,000 | 3.40 | 1,818.5 | 12,138.9 |
+| 10,000 | Galaxy | 500 | 6.89 | 1,387.4 | 526.2 |
+
+All six scenarios recorded real WebGL draw submissions and zero page errors.
+The poor software-rendering results are retained. They establish neither a
+fluid 1,000-node software-rendering experience nor the preferred 5,000-node
+30 FPS target. Native GPU-presented FPS remains unverified. The camera change
+has separate geometric, browser and native correctness evidence; these numbers
+do not prove a performance benefit. Lower density, local exploration, opaque
+panels and focus mode remain user controls, not evidence of meeting a target.
+
+## Panel composition check
+
+[rendering-panels-completed.json](rendering-panels-completed.json) records a
+subsequent 1,000-node Dense run with the same visible islands and three windows
+per preference. Glass median callback cadence was 10.89 Hz; opaque was 13.67 Hz.
+Selection p95 was 359.6 / 353.0 ms respectively. The opaque preference modestly
+reduced the observed cost but did not establish a fluid software-rendering
+experience. The sequential comparison has uncontrolled host load and debug
+checks may overlap; it is not a statistical causal estimate.
+
+The [initial partial attempt](rendering-panels.json) is retained: its glass
+sample completed, then the harness looked for the appearance control before
+loading a graph and timed out. That harness-order error was corrected before
+the complete run; it was not a product assertion failure. The reports identify
+the actual production asset hashes. This snapshot precedes the default opaque
+software-rendering policy and native asynchronous-result isolation changes.
+
+The current software-driver fallback enables opaque panels initially; users may
+restore glass explicitly. Hardware drivers retain the glass default. This
+avoids imposing the optional blur cost on a known software path, without claiming
+that the fallback meets an FPS target.
+
 ## Reproduce
 
 Build the real CLI and run the source generator/analyzer harness first; consult `python scripts/benchmark.py --help` for its required binary, work directory and output arguments. Keep generated graphs outside the analyzed source tree.
@@ -65,3 +113,7 @@ npm run benchmark:render -- --graphs PATH-TO-BENCHMARK-GRAPHS --out rendering-re
 ```
 
 The harness starts and closes a local production preview server and headless browser. An existing preview URL can be supplied with `--url`. `--modes Dense --repetitions 1` provides a narrower follow-up run; its sampling configuration is recorded explicitly. Background load, power settings, browser version and hardware can affect results. JavaScript heap after a sample is recorded in the raw data; it is not peak process or GPU memory.
+
+Use `--sizes 1000 --modes Dense --panels glass,opaque` for the panel comparison.
+The preference is changed through the actual appearance control after loading
+the graph; import timing for opaque includes that control interaction.

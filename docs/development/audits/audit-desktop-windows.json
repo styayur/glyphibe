@@ -6,32 +6,32 @@
   "selected_packages": [
     {
       "name": "glyphibe-desktop",
-      "version": "0.1.0-dev",
+      "version": "1.0.0",
       "source": null
     },
     {
       "name": "glyphibe-analysis",
-      "version": "0.1.0-dev",
+      "version": "1.0.0",
       "source": null
     },
     {
       "name": "glyphibe-core",
-      "version": "0.1.0-dev",
+      "version": "1.0.0",
       "source": null
     },
     {
       "name": "glyphibe-explain",
-      "version": "0.1.0-dev",
+      "version": "1.0.0",
       "source": null
     },
     {
       "name": "glyphibe-knowledge",
-      "version": "0.1.0-dev",
+      "version": "1.0.0",
       "source": null
     },
     {
       "name": "glyphibe-parser",
-      "version": "0.1.0-dev",
+      "version": "1.0.0",
       "source": null
     },
     {

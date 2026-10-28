@@ -154,3 +154,13 @@ returned **zero advisories** and exit code 0 again on 2026-10-28. The current np
 report, not this historical observation, determines its gate.
 No vulnerability warning is converted into a successful compatibility statement
 merely because the default audit command returned zero.
+
+The Cargo/npm inventory is supplemented by [PLATFORM_NOTICES](../../PLATFORM_NOTICES)
+and the [native packaging inventory](native-packaging-inventory.json). The latter
+records the actual Rust distribution, NSIS compressor, Tauri installer plugin
+and Microsoft WebView2 loader used by the Windows package. Ten original upstream
+notice files are retained separately under `third-party/toolchain-licenses/`;
+`python scripts/audit-native-notices.py` verifies their exact bytes and reviewed
+configuration without downloading or running analyzed code. See
+[ADR 0003](../adr/0003-native-packaging.md) for scope and the prebuilt plugin's
+explicit build-SBOM limitation. Platform prerequisites retain their own terms.

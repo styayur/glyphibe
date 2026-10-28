@@ -40,6 +40,10 @@ The density slider changes a visible projection, leaving facts intact. Dense is 
 
 The canvas also retains keyboard navigation through the entity list when graphics are unavailable. Reduced motion avoids animated focus transitions. Opaque panels provide a blur-free fallback. `Ctrl+K` focuses search, `Ctrl+O` opens a repository/import chooser, `F` enters focus mode and `Esc` restores controls. Every tool island can be pinned and collapsed.
 
+Detected software renderers start with opaque panels to reduce compositing cost;
+users can manually restore glass. Hardware renderers retain the glass default.
+This policy does not establish the preferred interaction frame-rate target.
+
 See [the rendering report](../../docs/benchmarks/rendering.md) for measured software-rendering limits. Headless Chromium callback cadence is not native GPU-presented FPS.
 
 ## Verification

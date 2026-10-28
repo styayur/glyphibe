@@ -10,6 +10,11 @@ their approval status are listed in [GitHub Releases](https://github.com/styayur
 The [release gates](docs/development/release-gates.md) distinguish completed checks,
 remaining work and performance limits. [中文说明](README.zh-CN.md).
 
+![Installed Windows application reading an original public Python fixture](docs/images/native-source.png)
+
+Captured from the actual installed Windows application; this is source from the
+project's original public test fixture. See the release gates for validation status.
+
 ## Capabilities
 
 - Local Python, Rust, JavaScript and TypeScript/TSX Tree-sitter parsing, with
@@ -31,7 +36,27 @@ The core works without a model, API key or cloud service. It never executes a
 scanned project or installs its dependencies. Explicit GitHub knowledge imports
 use the network and remain untrusted local-only material.
 
-## Build the development version
+## Install published packages
+
+Open [Releases](https://github.com/styayur/glyphibe/releases) and read the
+validation notes for the published version. Windows x64 distributions are:
+
+| File | Use |
+|---|---|
+| `Glyphibe_1.0.0_x64-setup.exe` | Desktop installer; launch Glyphibe after installation |
+| `Glyphibe-1.0.0-windows-x64-portable.zip` | Extract together, then run `glyphibe-desktop.exe` |
+| `Glyphibe-1.0.0-windows-x64-cli.zip` | Extract together; run `glyphibe.exe --help` without a GUI |
+
+Keep the included `licenses` directory. The separate CLI executable should be
+accompanied by `Glyphibe-1.0.0-licenses.zip`. Desktop requires Microsoft WebView2.
+The CLI requires the [Microsoft Visual C++ v14 x64 Runtime](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist).
+Packages are unsigned and Windows may display publisher/SmartScreen warnings.
+Compare `Get-FileHash FILE -Algorithm SHA256` with the published `SHA256SUMS`.
+See the [installation guide](docs/user-guide/installation.md) and release gates
+for platform and lifecycle evidence. A source version alone does not mean a
+download has been approved or published.
+
+## Build from source
 
 Install Rust 1.98.1, Node.js 24 or newer, and the platform
 [Tauri prerequisites](https://v2.tauri.app/start/prerequisites/). Windows needs

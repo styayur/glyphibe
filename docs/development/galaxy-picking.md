@@ -54,3 +54,9 @@ viewport, selected `doubled` by clicking its sphere, and returned to a correctly
 fitted graph after choosing the public Python directory in the actual Windows
 folder dialog and rescanning it. This confirms the owned-layout camera change
 in the native host. Optimized installer lifecycle verification remains separate.
+
+These pointer and camera checks establish functional behavior, not GPU frame
+rate. The recorded Chromium/SwiftShader rendering benchmarks predate the final
+camera/picking corrections and measure callback/submission cadence rather than
+native WebView2 presentation. They must not be presented as a fresh performance
+verification of the rebuilt installer.

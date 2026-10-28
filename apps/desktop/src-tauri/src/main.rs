@@ -15,10 +15,46 @@ use tauri_plugin_dialog::DialogExt;
 
 #[derive(Clone, Default)]
 struct Session {
-    graph: Arc<Mutex<Option<Graph>>>,
-    root: Arc<Mutex<Option<PathBuf>>>,
+    loaded: Arc<Mutex<Option<LoadedGraph>>>,
     cancel: Arc<AtomicBool>,
     running: Arc<AtomicBool>,
+}
+struct LoadedGraph {
+    root: PathBuf,
+    graph: Graph,
+}
+struct ScanGuard {
+    session: Session,
+}
+impl Drop for ScanGuard {
+    fn drop(&mut self) {
+        self.session.cancel.store(true, Ordering::SeqCst);
+        self.session.running.store(false, Ordering::SeqCst);
+    }
+}
+impl Session {
+    fn begin_scan(&self) -> Result<ScanGuard, String> {
+        // Serialize the running transition against reads of the loaded pair.
+        let _loaded = self.loaded.lock().map_err(|e| e.to_string())?;
+        if self.running.swap(true, Ordering::SeqCst) {
+            return Err("Analysis in progress; wait for completion or cancel it.".into());
+        }
+        self.cancel.store(false, Ordering::SeqCst);
+        Ok(ScanGuard {
+            session: self.clone(),
+        })
+    }
+    fn replace(&self, root: PathBuf, graph: Graph) -> Result<(), String> {
+        *self.loaded.lock().map_err(|e| e.to_string())? = Some(LoadedGraph { root, graph });
+        Ok(())
+    }
+    fn query<T>(&self, query: impl FnOnce(&LoadedGraph) -> Result<T, String>) -> Result<T, String> {
+        let loaded = self.loaded.lock().map_err(|e| e.to_string())?;
+        if self.running.load(Ordering::SeqCst) {
+            return Err("Analysis in progress; wait for completion or cancel it.".into());
+        }
+        query(loaded.as_ref().ok_or("Open a repository first.")?)
+    }
 }
 #[derive(Clone, Serialize)]
 struct Progress {
@@ -32,13 +68,9 @@ async fn open_repository(
     app: tauri::AppHandle,
     state: tauri::State<'_, Session>,
 ) -> Result<Option<Graph>, String> {
-    if state.running.swap(true, Ordering::SeqCst) {
-        return Err("An analysis is already running.".into());
-    }
+    let _scan = state.begin_scan()?;
     let session = state.inner().clone();
-    let result = scan(app, session.clone()).await;
-    session.running.store(false, Ordering::SeqCst);
-    result
+    scan(app, session.clone()).await
 }
 async fn scan(app: tauri::AppHandle, session: Session) -> Result<Option<Graph>, String> {
     let chooser = app.clone();
@@ -69,7 +101,9 @@ async fn scan_root(
     let cache_dir = app.path().app_cache_dir().map_err(|e| e.to_string())?;
     std::fs::create_dir_all(&cache_dir).map_err(|e| e.to_string())?;
     let cache = cache_dir.join(format!("{}.sqlite", stable_id(&[&root.to_string_lossy()])));
-    session.cancel.store(false, Ordering::SeqCst);
+    if session.cancel.load(Ordering::SeqCst) {
+        return Err("Analysis cancelled.".into());
+    }
     let cancellation = session.cancel.clone();
     let root_scan = root.clone();
     let progress_app = app.clone();
@@ -122,8 +156,7 @@ async fn scan_root(
         },
     );
     graph.validate().map_err(|e| e.to_string())?;
-    *session.root.lock().map_err(|e| e.to_string())? = Some(root);
-    *session.graph.lock().map_err(|e| e.to_string())? = Some(graph.clone());
+    session.replace(root, graph.clone())?;
     Ok(graph)
 }
 #[tauri::command]
@@ -144,15 +177,11 @@ async fn startup_repository(
     if arguments.len() > 2 {
         return Err("Usage: glyphibe-desktop [--repo PATH]".into());
     }
-    if state.running.swap(true, Ordering::SeqCst) {
-        return Err("An analysis is already running.".into());
-    }
+    let _scan = state.begin_scan()?;
     let session = state.inner().clone();
-    let result = scan_root(app, session.clone(), PathBuf::from(root))
+    scan_root(app, session.clone(), PathBuf::from(root))
         .await
-        .map(Some);
-    session.running.store(false, Ordering::SeqCst);
-    result
+        .map(Some)
 }
 #[tauri::command]
 fn cancel_scan(state: tauri::State<'_, Session>) {
@@ -165,11 +194,12 @@ fn query_impact(
     hops: u8,
     state: tauri::State<'_, Session>,
 ) -> Result<Impact, String> {
-    let guard = state.graph.lock().map_err(|e| e.to_string())?;
-    let graph = guard.as_ref().ok_or("Open a repository first.")?;
-    graph
-        .impact(&id, direction, hops)
-        .map_err(|e| e.to_string())
+    state.query(|loaded| {
+        loaded
+            .graph
+            .impact(&id, direction, hops)
+            .map_err(|e| e.to_string())
+    })
 }
 #[tauri::command]
 fn explain_node(
@@ -178,19 +208,15 @@ fn explain_node(
     language: String,
     state: tauri::State<'_, Session>,
 ) -> Result<serde_json::Value, String> {
-    let guard = state.graph.lock().map_err(|e| e.to_string())?;
-    let graph = guard.as_ref().ok_or("Open a repository first.")?;
-    let explanation =
-        glyphibe_explain::explain(graph, &id, depth, &language).map_err(|e| e.to_string())?;
-    serde_json::to_value(explanation).map_err(|e| e.to_string())
+    state.query(|loaded| {
+        let explanation = glyphibe_explain::explain(&loaded.graph, &id, depth, &language)
+            .map_err(|e| e.to_string())?;
+        serde_json::to_value(explanation).map_err(|e| e.to_string())
+    })
 }
 #[tauri::command]
 fn read_source(id: String, state: tauri::State<'_, Session>) -> Result<String, String> {
-    let guard = state.graph.lock().map_err(|e| e.to_string())?;
-    let graph = guard.as_ref().ok_or("Open a repository first.")?;
-    let root_guard = state.root.lock().map_err(|e| e.to_string())?;
-    let root = root_guard.as_ref().ok_or("Open a repository first.")?;
-    read_node_source(root, graph, &id)
+    state.query(|loaded| read_node_source(&loaded.root, &loaded.graph, &id))
 }
 fn read_node_source(root: &Path, graph: &Graph, id: &str) -> Result<String, String> {
     let node = graph.nodes.get(id).ok_or("Unknown node.")?;
@@ -216,6 +242,59 @@ fn read_node_source(root: &Path, graph: &Graph, id: &str) -> Result<String, Stri
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn scan_gate_rejects_queries_and_duplicates_and_recovers_on_drop() {
+        let session = Session::default();
+        session
+            .replace(PathBuf::from("a"), Graph::new("a", "working"))
+            .unwrap();
+        let scan = session.begin_scan().unwrap();
+        assert!(session.begin_scan().is_err());
+        let called = AtomicBool::new(false);
+        let result = session.query(|_| {
+            called.store(true, Ordering::SeqCst);
+            Ok(())
+        });
+        assert!(result.unwrap_err().contains("Analysis in progress"));
+        assert!(!called.load(Ordering::SeqCst));
+        session
+            .replace(PathBuf::from("b"), Graph::new("b", "working"))
+            .unwrap();
+        assert!(session.query(|_| Ok(())).is_err());
+        drop(scan);
+        assert_eq!(
+            session
+                .query(|loaded| Ok((loaded.root.clone(), loaded.graph.repository.clone())))
+                .unwrap(),
+            (PathBuf::from("b"), "b".into())
+        );
+        assert!(session.begin_scan().is_ok());
+    }
+    #[test]
+    fn concurrent_snapshot_replacement_never_pairs_a_root_with_another_graph() {
+        let session = Session::default();
+        session
+            .replace(PathBuf::from("a"), Graph::new("a", "working"))
+            .unwrap();
+        let writer = session.clone();
+        let thread = std::thread::spawn(move || {
+            for index in 0..1000 {
+                let name = if index % 2 == 0 { "a" } else { "b" };
+                writer
+                    .replace(PathBuf::from(name), Graph::new(name, "working"))
+                    .unwrap();
+            }
+        });
+        for _ in 0..1000 {
+            session
+                .query(|loaded| {
+                    assert_eq!(loaded.root.to_string_lossy(), loaded.graph.repository);
+                    Ok(())
+                })
+                .unwrap();
+        }
+        thread.join().unwrap();
+    }
     #[test]
     fn historical_ranges_are_rejected_and_removed_files_do_not_shadow_active_checks() {
         let workspace = tempfile::tempdir().unwrap();

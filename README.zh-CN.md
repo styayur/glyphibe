@@ -9,6 +9,11 @@
 [发布门禁](docs/development/release-gates.md)区分已验证、待验项目及性能边界。
 [English](README.md)。
 
+![已安装 Windows 应用读取原创公开 Python 夹具](docs/images/native-source.png)
+
+截图来自实际安装运行的 Windows 应用，展示本项目原创公开测试夹具的源码。
+各项验证状态见发布门禁记录。
+
 ## 已实现的能力
 
 - 使用 Tree-sitter 在本地解析 Python、Rust、JavaScript 和 TypeScript/TSX，
@@ -27,7 +32,26 @@
 核心无须模型、API Key 或云服务，不执行被扫描项目，也不安装其依赖。
 用户主动进行的 GitHub 知识导入会联网，结果保持为不可信、仅供本地使用的资料。
 
-## 构建开发版
+## 安装已发布的程序
+
+打开 [Releases](https://github.com/styayur/glyphibe/releases)，先阅读已发布版本的
+验证说明。Windows x64 分发文件如下：
+
+| 文件 | 用途 |
+|---|---|
+| `Glyphibe_1.0.0_x64-setup.exe` | 桌面安装器；安装后启动 Glyphibe |
+| `Glyphibe-1.0.0-windows-x64-portable.zip` | 完整解压后运行 `glyphibe-desktop.exe` |
+| `Glyphibe-1.0.0-windows-x64-cli.zip` | 完整解压后运行 `glyphibe.exe --help`，无需 GUI |
+
+保留随附的 `licenses` 目录。单独的 CLI 可执行文件应同时取得
+`Glyphibe-1.0.0-licenses.zip`。桌面程序需要 Microsoft WebView2。
+CLI 需要 [Microsoft Visual C++ v14 x64 运行库](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist)。
+安装包未签名，Windows 可能显示发布者或 SmartScreen 警告。
+使用 `Get-FileHash 文件 -Algorithm SHA256` 与发布的 `SHA256SUMS` 比对。
+平台和安装生命周期证据见[安装指南](docs/user-guide/installation.md)与发布门禁。
+源码版本号本身不表示下载产物已经获准发布。
+
+## 从源码构建
 
 需要 Rust 1.98.1、Node.js 24 或更新版本，以及对应平台的
 [Tauri 环境](https://v2.tauri.app/start/prerequisites/)。Windows 需要 MSVC

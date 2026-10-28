@@ -1,0 +1,31 @@
+{
+  "client_version": "1.0.0",
+  "fixture": "original public Python fixture",
+  "limitation": "Small authored fixture; not a large-repository latency estimate. Server executable build profile and SHA are recorded with the benchmark report.",
+  "median_ms": 9.24745,
+  "method": "Official rmcp client over real stdio; one initialized server; 20 successful bounded search calls; includes JSON/protocol transport, excludes model latency",
+  "p95_ms": 10.2212,
+  "samples_ms": [
+    14.186499999999999,
+    8.573300000000001,
+    9.2035,
+    8.8544,
+    8.7712,
+    9.6638,
+    9.761199999999999,
+    9.788,
+    8.6538,
+    8.6593,
+    9.511099999999999,
+    9.2914,
+    9.0778,
+    8.246699999999999,
+    8.894,
+    10.2212,
+    8.6049,
+    9.6409,
+    9.871400000000001,
+    9.4215
+  ],
+  "startup_ms": 448.87
+}

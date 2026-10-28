@@ -16,6 +16,8 @@ import {
 } from "./model";
 import type { CodeGraph, ViewState, Mode } from "./model";
 import registry from "../../../knowledge/registry.json";
+import { LoadOperations, SnapshotRequests, visibleSnapshot } from "./snapshots";
+import type { LoadOperation, SnapshotResult } from "./snapshots";
 
 type Explanation = {
   title: string;
@@ -117,6 +119,9 @@ function Island({
 
 export default function App() {
   const [graph, setGraph] = useState<CodeGraph | null>(null);
+  const snapshots = useRef(new SnapshotRequests());
+  const operations = useRef(new LoadOperations());
+  const [graphGeneration, setGraphGeneration] = useState(0);
   const [nativeGraph, setNativeGraph] = useState(false);
   const [view, setView] = useState<ViewState>(initialView);
   const [automaticGalaxyCap, setAutomaticGalaxyCap] = useState(2000);
@@ -154,7 +159,12 @@ export default function App() {
       rendererDescription.current = description;
       const limit = chooseGalaxyLimit(description);
       setAutomaticGalaxyCap(limit);
-      if (limit < 2000) setGraphicsReason("Software rendering");
+      if (limit < 2000) {
+        setGraphicsReason(
+          "Software rendering; opaque panels reduce compositing cost",
+        );
+        setView((current) => ({ ...current, opaque: true }));
+      }
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     } catch {
       /* A renderer error is presented by the graph canvas, with list navigation retained. */
@@ -168,18 +178,21 @@ export default function App() {
   const [tab, setTab] = useState<"Evidence" | "Source" | "Learn" | "Knowledge">(
     "Evidence",
   );
-  const [source, setSource] = useState("");
-  const [explanation, setExplanation] = useState<Explanation | null>(null);
-  const [nativeImpact, setNativeImpact] = useState<{
-    key: string;
-    result: NativeImpact;
-  } | null>(null);
+  const [sourceResult, setSourceResult] =
+    useState<SnapshotResult<string> | null>(null);
+  const [explanationResult, setExplanationResult] =
+    useState<SnapshotResult<Explanation> | null>(null);
+  const [nativeImpact, setNativeImpact] =
+    useState<SnapshotResult<NativeImpact> | null>(null);
   const [step, setStep] = useState(0);
   const [revealed, setRevealed] = useState<"question" | "hint" | "answer">(
     "question",
   );
   const input = useRef<HTMLInputElement>(null);
-  const startup = useRef<Promise<CodeGraph | null> | null>(null);
+  const startup = useRef<{
+    promise: Promise<CodeGraph | null>;
+    operation: LoadOperation;
+  } | null>(null);
   const searchInput = useRef<HTMLInputElement>(null);
   const text = useCallback(
     (en: string, zh: string) => (view.locale === "zh" ? zh : en),
@@ -204,29 +217,50 @@ export default function App() {
     },
     [graph],
   );
-  const load = useCallback((g: CodeGraph, native = false) => {
-    setGraph(g);
-    setNativeGraph(native);
-    setView((s) => ({ ...s, selected: null }));
-    setError("");
+  const invalidateQueries = useCallback(() => {
+    // Invalidate synchronously, before old promise microtasks can commit. Git
+    // revision and stable IDs may both remain unchanged across a working scan.
+    setGraphGeneration(snapshots.current.advance());
+    setNativeImpact(null);
+    setSourceResult(null);
+    setExplanationResult(null);
   }, []);
+  const load = useCallback(
+    (g: CodeGraph, native = false) => {
+      invalidateQueries();
+      setGraph(g);
+      setNativeGraph(native);
+      setView((s) => ({ ...s, selected: null }));
+      setError("");
+    },
+    [invalidateQueries],
+  );
   useEffect(() => {
     if (!isTauri()) return;
     if (!startup.current) {
+      const operation = operations.current.begin("startup");
+      if (!operation) return;
+      invalidateQueries();
       setBusy(true);
       setProgress("Opening selected repository…");
-      startup.current = invoke<CodeGraph | null>("startup_repository");
+      startup.current = {
+        promise: invoke<CodeGraph | null>("startup_repository"),
+        operation,
+      };
     }
+    const { promise, operation } = startup.current;
     let active = true;
-    void startup.current
+    void promise
       .then((result) => {
-        if (active && result) load(parseGraph(result), true);
+        if (active && operations.current.current(operation) && result)
+          load(parseGraph(result), true);
       })
       .catch((e) => {
-        if (active) setError(String(e));
+        if (active && operations.current.current(operation))
+          setError(String(e));
       })
       .finally(() => {
-        if (active) {
+        if (active && operations.current.finish(operation)) {
           setBusy(false);
           setProgress("");
         }
@@ -234,36 +268,58 @@ export default function App() {
     return () => {
       active = false;
     };
-  }, [load]);
+  }, [load, invalidateQueries]);
   const open = useCallback(async () => {
+    if (operations.current.pending()) return;
     if (!isTauri()) {
       input.current?.click();
       return;
     }
+    const operation = operations.current.begin("scan");
+    if (!operation) return;
+    invalidateQueries();
     setBusy(true);
     setError("");
     setProgress(text("Choose a repository folder…", "选择代码仓库目录…"));
     try {
       const result = await invoke<CodeGraph | null>("open_repository");
-      if (result) load(parseGraph(result), true);
+      if (operations.current.current(operation) && result)
+        load(parseGraph(result), true);
     } catch (e) {
-      setError(String(e));
+      if (operations.current.current(operation)) setError(String(e));
     } finally {
-      setBusy(false);
-      setProgress("");
+      if (operations.current.finish(operation)) {
+        setBusy(false);
+        setProgress("");
+      }
     }
-  }, [load, text]);
+  }, [load, text, invalidateQueries]);
+  const chooseImport = useCallback(() => {
+    if (!operations.current.pending()) input.current?.click();
+  }, []);
+  const cancelLoad = useCallback(() => {
+    const operation = operations.current.pending();
+    if (!operation) return;
+    if (operation.kind === "import") {
+      if (operations.current.finish(operation)) {
+        setBusy(false);
+        setProgress("");
+      }
+    } else void invoke("cancel_scan");
+  }, []);
   useEffect(() => {
     if (!isTauri()) return;
     const unlisten = listen<{
       phase: string;
       completed: number;
       total: number;
-    }>("scan-progress", (e) =>
+    }>("scan-progress", (e) => {
+      const operation = operations.current.pending();
+      if (!operation || operation.kind === "import") return;
       setProgress(
         `${e.payload.phase}: ${e.payload.completed} / ${e.payload.total}`,
-      ),
-    );
+      );
+    });
     return () => {
       void unlisten.then((f) => f());
     };
@@ -314,27 +370,47 @@ export default function App() {
       topology,
     ],
   );
-  const impactKey = `${view.selected}:${view.direction}:${view.hops}`;
-  const currentNativeImpact =
-    nativeImpact?.key === impactKey ? nativeImpact.result : null;
+  const impactKey = `${graphGeneration}:${view.selected}:${view.direction}:${view.hops}`;
+  const currentNativeImpact = visibleSnapshot(
+    nativeImpact,
+    graphGeneration,
+    impactKey,
+  );
   useEffect(() => {
-    if (!nativeGraph || !view.selected) return;
-    let active = true;
+    setNativeImpact(null);
+    if (busy || !nativeGraph || !view.selected) return;
+    const token = snapshots.current.start("impact");
     void invoke<NativeImpact>("query_impact", {
       id: view.selected,
       direction: view.direction,
       hops: view.hops,
     })
       .then((result) => {
-        if (active) setNativeImpact({ key: impactKey, result });
+        if (snapshots.current.accepts(token))
+          setNativeImpact({
+            snapshot: token.snapshot,
+            key: impactKey,
+            value: result,
+          });
       })
       .catch((e) => {
-        if (active) setError(String(e));
+        if (snapshots.current.accepts(token)) {
+          setNativeImpact(null);
+          setError(String(e));
+        }
       });
     return () => {
-      active = false;
+      snapshots.current.cancel(token);
     };
-  }, [nativeGraph, view.selected, view.direction, view.hops, impactKey]);
+  }, [
+    nativeGraph,
+    view.selected,
+    view.direction,
+    view.hops,
+    impactKey,
+    graphGeneration,
+    busy,
+  ]);
   const impact = useMemo(
     () =>
       nativeGraph
@@ -416,34 +492,71 @@ export default function App() {
         : [],
     [graph, search, view.plane],
   );
+  const sourceKey = node?.id ?? "";
+  const explanationKey = `${node?.id}:${view.depth}:${view.locale}`;
+  const source =
+    visibleSnapshot(sourceResult, graphGeneration, sourceKey) ?? "";
+  const explanation = visibleSnapshot(
+    explanationResult,
+    graphGeneration,
+    explanationKey,
+  );
   useEffect(() => {
-    setSource("");
-    setExplanation(null);
-    if (!node || !isTauri() || !nativeGraph) return;
-    let active = true;
+    setExplanationResult(null);
+    if (busy || !node || !isTauri() || !nativeGraph) return;
+    const token = snapshots.current.start("explanation");
     void invoke<Explanation>("explain_node", {
       id: node.id,
       depth: view.depth,
       language: view.locale,
     })
       .then((v) => {
-        if (active) setExplanation(v);
+        if (snapshots.current.accepts(token))
+          setExplanationResult({
+            snapshot: token.snapshot,
+            key: explanationKey,
+            value: v,
+          });
       })
       .catch((e) => {
-        if (active) setError(String(e));
+        if (snapshots.current.accepts(token)) {
+          setExplanationResult(null);
+          setError(String(e));
+        }
       });
-    if (node.source)
-      void invoke<string>("read_source", { id: node.id })
-        .then((v) => {
-          if (active) setSource(v);
-        })
-        .catch((e) => {
-          if (active) setSource(String(e));
-        });
-    return () => {
-      active = false;
-    };
-  }, [node, view.depth, view.locale, nativeGraph]);
+    return () => snapshots.current.cancel(token);
+  }, [
+    node,
+    view.depth,
+    view.locale,
+    nativeGraph,
+    graphGeneration,
+    explanationKey,
+    busy,
+  ]);
+  useEffect(() => {
+    setSourceResult(null);
+    if (busy || !node?.source || !isTauri() || !nativeGraph) return;
+    const token = snapshots.current.start("source");
+    void invoke<string>("read_source", { id: node.id })
+      .then((v) => {
+        if (snapshots.current.accepts(token))
+          setSourceResult({
+            snapshot: token.snapshot,
+            key: sourceKey,
+            value: v,
+          });
+      })
+      .catch((e) => {
+        if (snapshots.current.accepts(token))
+          setSourceResult({
+            snapshot: token.snapshot,
+            key: sourceKey,
+            value: String(e),
+          });
+      });
+    return () => snapshots.current.cancel(token);
+  }, [node, nativeGraph, graphGeneration, sourceKey, busy]);
   const lessons = explanation?.steps ?? [];
   const lesson = lessons[step];
   const concepts = useMemo(() => {
@@ -461,10 +574,30 @@ export default function App() {
       setError("Graph file exceeds 64 MiB.");
       return;
     }
+    const operation = operations.current.begin("import");
+    if (!operation) {
+      setError(
+        text(
+          "Wait for the current load to finish or cancel it before importing.",
+          "请等待当前加载完成或取消后再导入。",
+        ),
+      );
+      return;
+    }
+    invalidateQueries();
+    setBusy(true);
+    setProgress(text("Reading graph export…", "正在读取导出图谱…"));
+    setError("");
     try {
-      load(parseGraph(JSON.parse(await file.text())));
+      const graph = parseGraph(JSON.parse(await file.text()));
+      if (operations.current.current(operation)) load(graph);
     } catch (e) {
-      setError(String(e));
+      if (operations.current.current(operation)) setError(String(e));
+    } finally {
+      if (operations.current.finish(operation)) {
+        setBusy(false);
+        setProgress("");
+      }
     }
   }
   return (
@@ -477,7 +610,11 @@ export default function App() {
         accept=".json,application/json"
         aria-label="Import graph JSON"
         className="file-input"
-        onChange={(e) => void importFile(e.target.files?.[0])}
+        onChange={(e) => {
+          const file = e.target.files?.[0];
+          e.target.value = "";
+          void importFile(file);
+        }}
       />
       {graph && (
         <GraphCanvas
@@ -503,7 +640,7 @@ export default function App() {
           <button onClick={() => void open()} disabled={busy}>
             {text("Open folder", "打开目录")}
           </button>
-          <button onClick={() => input.current?.click()}>
+          <button onClick={chooseImport} disabled={busy}>
             {text("Import graph", "导入图谱")}
           </button>
           <button onClick={() => update("focus", true)} title="F">
@@ -562,9 +699,13 @@ export default function App() {
       )}
       {busy && (
         <section className="scan glass" role="status">
-          <h2>{text("Reading repository structure", "正在读取仓库结构")}</h2>
+          <h2>
+            {operations.current.pending()?.kind === "import"
+              ? text("Reading graph export", "正在读取导出图谱")
+              : text("Reading repository structure", "正在读取仓库结构")}
+          </h2>
           <p>{progress}</p>
-          <button onClick={() => void invoke("cancel_scan")}>
+          <button onClick={cancelLoad}>
             {text("Cancel scan", "取消扫描")}
           </button>
         </section>
@@ -808,7 +949,7 @@ export default function App() {
               )}
             </p>
           )}
-          {node && (
+          {node && !busy && (
             <Island className="detail" title={text("Node details", "节点详情")}>
               <div className="panel-heading">
                 <span className={`evidence ${node.evidence.kind}`}>

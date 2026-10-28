@@ -57,6 +57,23 @@ is no HTTP port, shell tool or arbitrary source write operation.
 
 The chosen repository/index are the access boundary. `node` returns bounded,
 freshness-checked source. Architecture pages contain at most 2,000 nodes.
+Their edges are the induced subgraph of that node page: both endpoints must be
+on the page. To inspect relationships across pages, call `node` with the exact
+node ID and independent `edge_offset`/`edge_limit` parameters:
+
+```json
+{"id":"NODE_ID","edge_offset":0,"edge_limit":100}
+```
+
+The result's `adjacency` contains incident edges with their full relation,
+source spans, evidence category and stale flag, plus compact neighbor metadata.
+Its `total`, `offset`, `limit` and `truncated` fields describe the edge page;
+continue at the next offset until `truncated` is false. The default edge limit
+is 100 and the maximum is 1,000. This paging is independent of architecture
+node pages. Historical removed nodes expose metadata and stale edge evidence,
+while their source remains unavailable; old byte ranges are never applied to
+current source. A plain `{"id":"NODE_ID"}` request remains supported.
+
 Static dependency queries omit stale and unaccepted proposed relationships.
 Unresolved calls remain diagnostics. SDK client interoperability tests and
 external Agent verification are recorded separately in the release ledger.

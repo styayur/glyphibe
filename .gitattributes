@@ -5,3 +5,4 @@
 *.msi binary
 *.zip binary
 /third-party/licenses/* -text
+/third-party/toolchain-licenses/** -text

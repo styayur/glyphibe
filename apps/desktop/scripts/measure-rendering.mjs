@@ -24,6 +24,15 @@ const graphRoot = path.resolve(args.get("graphs")),
 const duration = Number(args.get("duration") ?? 4000);
 const repetitionCount = Number(args.get("repetitions") ?? 3);
 const modes = (args.get("modes") ?? "Dense,Galaxy").split(",");
+const sizes = (args.get("sizes") ?? "1000,5000,10000").split(",").map(Number);
+const panelModes = (args.get("panels") ?? "glass").split(",");
+if (
+  sizes.some((n) => ![1000, 5000, 10000].includes(n)) ||
+  panelModes.some((p) => !["glass", "opaque"].includes(p))
+)
+  throw new Error(
+    "Expected sizes from 1000,5000,10000 and panels glass,opaque.",
+  );
 if (
   !Number.isInteger(repetitionCount) ||
   repetitionCount < 1 ||
@@ -91,8 +100,10 @@ const report = {
     duration_ms: duration,
     repetitions: repetitionCount,
     modes,
+    sizes,
+    panels: panelModes,
     interaction:
-      "Repeated pointer pan/orbit and wheel zoom at the canvas center; standard glass overlays visible.",
+      "Repeated pointer pan/orbit and wheel zoom at the canvas center; standard overlays visible with the recorded glass/opaque preference.",
     cadence:
       "requestAnimationFrame callback timestamps and WebGL draw submission activity; neither is a GPU-presented FPS measurement.",
     latency:
@@ -113,7 +124,7 @@ const quantile = (values, q) => {
   );
 };
 try {
-  for (const target of [1000, 5000, 10000]) {
+  for (const target of sizes) {
     const graphFile = path.join(graphRoot, `graph-${target}.json`),
       bytes = await readFile(graphFile),
       graph = JSON.parse(bytes);
@@ -122,7 +133,10 @@ try {
         (n) =>
           n.plane === "architecture" && n.level === 5 && n.change !== "removed",
       ).length;
-    for (const mode of modes) {
+    for (const scenario of modes.flatMap((mode) =>
+      panelModes.map((panels) => ({ mode, panels })),
+    )) {
+      const { mode, panels } = scenario;
       const page = await browser.newPage({
         viewport: report.environment.viewport,
         deviceScaleFactor: 1,
@@ -156,6 +170,20 @@ try {
       const importedAt = performance.now();
       await page.getByLabel("Import graph JSON").setInputFiles(graphFile);
       await page.getByTestId("graph-canvas").waitFor();
+      await page.getByText("Appearance & language", { exact: true }).click();
+      await page
+        .getByLabel("Opaque panels", { exact: true })
+        .setChecked(panels === "opaque");
+      await page.getByText("Appearance & language", { exact: true }).click();
+      const actualPanels = await page
+        .locator("main")
+        .evaluate((main) =>
+          main.classList.contains("opaque") ? "opaque" : "glass",
+        );
+      if (actualPanels !== panels)
+        throw new Error(
+          "Actual panel preference differs from the requested measurement",
+        );
       await page.getByLabel("Graph density").focus();
       await page.keyboard.press("End");
       if (mode === "Galaxy")
@@ -303,6 +331,8 @@ try {
         canonical_nodes: canonicalCount,
         canonical_edges: graph.edges.length,
         mode,
+        panels,
+        actual_panels: actualPanels,
         rendered_nodes: visible,
         rendering_cap: effectiveCap,
         gpu,
@@ -329,6 +359,7 @@ try {
         JSON.stringify({
           target,
           mode,
+          panels,
           rendered_nodes: visible,
           raf_cadence_hz: repetitions.map((r) => r.raf_cadence_hz),
           selection_p95_ms: sample.selection_to_second_raf_ms.p95,

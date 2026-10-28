@@ -92,10 +92,15 @@ jobs:
       - run: npm audit --audit-level=low
         working-directory: apps/desktop
       - run: python scripts/audit-dependencies.py --check
+      - run: python scripts/audit-native-notices.py
       - run: python -m unittest discover -s tests -p 'test_*.py'
   desktop:
     name: Windows desktop build
     runs-on: windows-latest
+    env:
+      # Native C diagnostics are outside rustc's path remapping. Keep their
+      # immutable source cache in the hosted runner's generic temporary root.
+      CARGO_HOME: ${{ runner.temp }}/glyphibe-cargo
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
@@ -112,11 +117,19 @@ jobs:
         working-directory: apps/desktop
       - run: cargo clippy --locked -p glyphibe-desktop --all-targets -- -D warnings
       - run: cargo test --locked -p glyphibe-desktop
-      - run: npm run tauri -- build --bundles nsis
-        working-directory: apps/desktop
+      - name: Build path-remapped Windows release candidates
+        shell: pwsh
+        run: ./scripts/build-windows-release.ps1 -TargetDirectory "${{ github.workspace }}/target"
+      - name: Package provenance-bound release candidates
+        shell: pwsh
+        run: ./scripts/package-release.ps1 -TargetDirectory "${{ github.workspace }}/target" -OutputDirectory "${{ runner.temp }}/glyphibe-assets"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: windows-development-installer
-          path: target/release/bundle/nsis/*.exe
+          name: windows-release-candidate-assets
+          path: |
+            ${{ runner.temp }}/glyphibe-assets/*.exe
+            ${{ runner.temp }}/glyphibe-assets/*.zip
+            ${{ runner.temp }}/glyphibe-assets/*.json
+            ${{ runner.temp }}/glyphibe-assets/SHA256SUMS
           if-no-files-found: error
           retention-days: 14

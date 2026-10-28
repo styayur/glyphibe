@@ -28,19 +28,19 @@
   },
   "bundle": {
     "active": true,
-    "targets": [
-      "msi",
-      "nsis"
-    ],
+    "targets": ["nsis"],
     "license": "MPL-2.0",
     "licenseFile": "../../../LICENSE",
     "resources": {
       "../../../LICENSE": "licenses/LICENSE",
       "../../../THIRD_PARTY_NOTICES": "licenses/THIRD_PARTY_NOTICES",
-      "../../../third-party/licenses": "licenses/third-party/licenses"
+      "../../../third-party/licenses": "licenses/third-party/licenses",
+      "../../../third-party/toolchain-licenses": "licenses/third-party/toolchain-licenses",
+      "../../../PLATFORM_NOTICES": "licenses/PLATFORM_NOTICES"
     },
     "windows": {
       "nsis": {
+        "compression": "zlib",
         "installerIcon": "icons/icon.ico"
       }
     },

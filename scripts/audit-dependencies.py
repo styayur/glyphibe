@@ -594,6 +594,7 @@ def main() -> int:
     (output / "dependencies.spdx.json").write_text(json.dumps(spdx, indent=2) + "\n", encoding="utf-8")
     notices = ["Glyphibe third-party notices", "===========================", "", "Generated from locked Cargo manifests and npm package-lock. Original source license/NOTICE texts are preserved unchanged in third-party/licenses/.",
                "This inventory includes build/dev and inactive platform packages. It does not assert that every listed package is in a released binary.",
+               "Windows installer/toolchain supplement: PLATFORM_NOTICES and third-party/toolchain-licenses/; exact provenance is recorded in docs/development/native-packaging-inventory.json.",
                "Glyphibe source is MPL-2.0: https://github.com/styayur/glyphibe . No third-party source was modified by the notice collection process.", "", f"Policy/text collection failures: {len(failures)}. A nonzero count blocks the audit gate.", ""]
     for record in inventory:
         notices += [record["id"], f"  Declared: {record['license_declared']}; selected: {record['license_selected'] or 'UNRESOLVED'}", "  Source: " + record["source"], "  Scope: " + ", ".join(record["scopes"])]

@@ -39,3 +39,29 @@ invocation and a read-only sandbox. Its only test repository is the authored
 public Python fixture. Raw JSONL and stderr stay in an external local cache;
 public evidence includes sanitized tool names/outcomes and executable hashes.
 Online Agent availability is separate from Glyphibe's offline analysis core.
+
+## Deterministic teaching and receiver audit
+
+A later source-freeze review found two reproducible analysis errors in the
+then-built 1.0.0 development executable. A Python assignment `x = 1` incorrectly
+carried `iterator:1`, causing its lesson to say “Loop input: 1”. Generic right
+operands no longer acquire loop meaning. Python and JavaScript/TypeScript for
+loops use their actual iterable field; Rust for-expressions use their value
+field. JavaScript/TypeScript for-in/of now produces a real loop block. The
+existing knowledge pattern already recognized that syntax kind.
+
+The same review constructed valid Python with a global `self = Other()` and
+`Counter.report(this)` calling `self.value()`. The former convention-only rule
+incorrectly selected `Counter.value`. Python receiver inference now requires
+the actual first positional `self`/`cls`/`this` parameter in the enclosing method,
+with local assignment, unpacking, loop rebinding, import aliases and nested
+parameter shadowing conservatively unresolved. Static or unknown decorators do
+not establish a receiver. Recognized classmethod/property syntax is rejected
+when those decorator names are shadowed. JavaScript's global `self` is distinct
+from its class `this`; Rust module `self::name` is distinct from `self.name`.
+
+Cache format `parser-9` forces extraction refresh. All 28 parser tests passed,
+including the 47 annotated call pairs and the new four-language loop and
+receiver regressions. Strict parser Clippy and formatting passed. These tests
+do not establish complete runtime dispatch or general type inference. A final
+binary/package rebuild and the release gate checks remain separate obligations.
