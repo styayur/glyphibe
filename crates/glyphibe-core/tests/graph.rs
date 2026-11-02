@@ -1,5 +1,17 @@
 // SPDX-License-Identifier: MPL-2.0
 use glyphibe_core::*;
+
+#[test]
+fn stable_identity_preserves_sha256_encoding_across_digest_api_updates() {
+    assert_eq!(
+        stable_id(&[]),
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    );
+    assert_eq!(
+        stable_id(&["a", "bc"]),
+        "9a8acca1b6c6c0befd3fbc756aed625da998c998f7252e738c4ef061906b9b21"
+    );
+}
 fn tempdir() -> tempfile::TempDir {
     tempfile::tempdir_in(std::env::temp_dir().canonicalize().unwrap()).unwrap()
 }

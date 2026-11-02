@@ -2,15 +2,15 @@
   "schema_version": 1,
   "coverage": "Cargo default enabled features with no target filter; both manifests; all npm lock entries including optional platform/build/dev packages. Disabled Cargo features are not claimed shipped.",
   "lock_sha256": {
-    "Cargo.lock": "e61f3638a7948cf37401caeda238111ab25e16401c0f8bfc936227ecc9586619",
-    "apps/desktop/package-lock.json": "2381228b76204edf0488a135e03e722ebfacacf3df271c79e04627fe8c96057a"
+    "Cargo.lock": "47bf63bf390c5bd8d97f298fdb7100d3fa9031441ad79e90e32f7d9f049284bd",
+    "apps/desktop/package-lock.json": "c2b1b55a83f7fe98c042c4f01f688ab9956d56840b4e76ad14471376cb5624bc"
   },
   "input_sha256": {
-    "Cargo.toml": "1c6439331751507c07bf0fbc740e186e5905ceb4f9a8b28dff757e54d6d5692b",
-    "Cargo.lock": "e61f3638a7948cf37401caeda238111ab25e16401c0f8bfc936227ecc9586619",
+    "Cargo.toml": "e4908c8e1369aec451392164bf493e16a05e2b4af1d6c953aa5576fbc53910f1",
+    "Cargo.lock": "47bf63bf390c5bd8d97f298fdb7100d3fa9031441ad79e90e32f7d9f049284bd",
     "apps/desktop/src-tauri/Cargo.toml": "108c47b9ec0f66b0617d1cbe65a7eed2f506a2d2fd0812e29162f91a8761aca7",
-    "apps/desktop/package.json": "4f6d148e7a3314f4108f12ad16973427e662cf25ba4be23ceb74844630472a9f",
-    "apps/desktop/package-lock.json": "2381228b76204edf0488a135e03e722ebfacacf3df271c79e04627fe8c96057a",
+    "apps/desktop/package.json": "777a1abad963d847c5892682ce6d2c954971949f780613312fd5ed14f4ec40de",
+    "apps/desktop/package-lock.json": "c2b1b55a83f7fe98c042c4f01f688ab9956d56840b4e76ad14471376cb5624bc",
     "crates/glyphibe-analysis/Cargo.toml": "cf97edba3bdf5c2cc5003f32d9f471cef9fed6d0ed59db8f0d6b719451aec56c",
     "crates/glyphibe-cli/Cargo.toml": "d3ef7b2585f6f77123388d26fc377957671165f874d63df13fca837ca4428175",
     "crates/glyphibe-core/Cargo.toml": "8d48ac1d570d9eccdb88b2d3d202afdfb419c7bedce9a8b91ef7b098af3d8f32",
@@ -869,6 +869,41 @@
           "source_file": "LICENSE-MIT",
           "file": "third-party/licenses/d5c22aa3118d240e877ad41c5d9fa232f9c77d757d4aac0c2f943afc0a95e0ef.txt",
           "sha256": "d5c22aa3118d240e877ad41c5d9fa232f9c77d757d4aac0c2f943afc0a95e0ef"
+        }
+      ]
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "block-buffer",
+      "version": "0.12.1",
+      "license_declared": "MIT OR Apache-2.0",
+      "source": "https://github.com/RustCrypto/utils",
+      "download": "https://crates.io/api/v1/crates/block-buffer/0.12.1/download",
+      "checksum": {
+        "algorithm": "SHA256",
+        "value": "d2f6c7dbe95a6ed67ad9f18e57daf93a2f034c524b99fd2b76d18fdfeb6660aa"
+      },
+      "scopes": [
+        "normal"
+      ],
+      "origins": [
+        "Cargo.toml",
+        "apps/desktop/src-tauri/Cargo.toml"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "cargo:block-buffer@0.12.1",
+      "notices": [
+        {
+          "source_file": "LICENSE-APACHE",
+          "file": "third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt",
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source_file": "LICENSE-MIT",
+          "file": "third-party/licenses/98181e7249d0c01737645ec982499ce99a0f07eb8f7d625b8840d799d10dbc01.txt",
+          "sha256": "98181e7249d0c01737645ec982499ce99a0f07eb8f7d625b8840d799d10dbc01"
         }
       ]
     },
@@ -1905,6 +1940,41 @@
     },
     {
       "ecosystem": "cargo",
+      "name": "const-oid",
+      "version": "0.10.2",
+      "license_declared": "Apache-2.0 OR MIT",
+      "source": "https://github.com/RustCrypto/formats",
+      "download": "https://crates.io/api/v1/crates/const-oid/0.10.2/download",
+      "checksum": {
+        "algorithm": "SHA256",
+        "value": "a6ef517f0926dd24a1582492c791b6a4818a4d94e789a334894aa15b0d12f55c"
+      },
+      "scopes": [
+        "normal"
+      ],
+      "origins": [
+        "Cargo.toml",
+        "apps/desktop/src-tauri/Cargo.toml"
+      ],
+      "platform_conditions": [],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "cargo:const-oid@0.10.2",
+      "notices": [
+        {
+          "source_file": "LICENSE-APACHE",
+          "file": "third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt",
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source_file": "LICENSE-MIT",
+          "file": "third-party/licenses/73b9dc2e79c7308998dd30296e073aefaefb944a68fb89aa412c23c0edcabcaa.txt",
+          "sha256": "73b9dc2e79c7308998dd30296e073aefaefb944a68fb89aa412c23c0edcabcaa"
+        }
+      ]
+    },
+    {
+      "ecosystem": "cargo",
       "name": "cookie",
       "version": "0.18.2",
       "license_declared": "MIT OR Apache-2.0",
@@ -2147,6 +2217,7 @@
         "apps/desktop/src-tauri/Cargo.toml"
       ],
       "platform_conditions": [
+        "cfg(any(target_arch = \"aarch64\", target_arch = \"x86_64\", target_arch = \"x86\"))",
         "cfg(any(target_arch = \"x86_64\", target_arch = \"x86\"))"
       ],
       "license_selected": "MIT",
@@ -2379,6 +2450,41 @@
           "source_file": "LICENSE-MIT",
           "file": "third-party/licenses/3521672491a3479422d5fe1aca6645dd2984090f85da6e5205abfb18fb7a6897.txt",
           "sha256": "3521672491a3479422d5fe1aca6645dd2984090f85da6e5205abfb18fb7a6897"
+        }
+      ]
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "crypto-common",
+      "version": "0.2.2",
+      "license_declared": "MIT OR Apache-2.0",
+      "source": "https://github.com/RustCrypto/traits",
+      "download": "https://crates.io/api/v1/crates/crypto-common/0.2.2/download",
+      "checksum": {
+        "algorithm": "SHA256",
+        "value": "ce6e4c961d6cd6c9a86db418387425e8bdeaf05b3c8bc1411e6dca4c252f1453"
+      },
+      "scopes": [
+        "normal"
+      ],
+      "origins": [
+        "Cargo.toml",
+        "apps/desktop/src-tauri/Cargo.toml"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "cargo:crypto-common@0.2.2",
+      "notices": [
+        {
+          "source_file": "LICENSE-APACHE",
+          "file": "third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt",
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source_file": "LICENSE-MIT",
+          "file": "third-party/licenses/d2e7ec5355c96eeade56b09187ceb48a6a30299da3ce7531a66d3d11405ab963.txt",
+          "sha256": "d2e7ec5355c96eeade56b09187ceb48a6a30299da3ce7531a66d3d11405ab963"
         }
       ]
     },
@@ -2836,6 +2942,41 @@
           "source_file": "LICENSE-MIT",
           "file": "third-party/licenses/9e0dfd2dd4173a530e238cb6adb37aa78c34c6bc7444e0e10c1ab5d8881f63ba.txt",
           "sha256": "9e0dfd2dd4173a530e238cb6adb37aa78c34c6bc7444e0e10c1ab5d8881f63ba"
+        }
+      ]
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "digest",
+      "version": "0.11.3",
+      "license_declared": "MIT OR Apache-2.0",
+      "source": "https://github.com/RustCrypto/traits",
+      "download": "https://crates.io/api/v1/crates/digest/0.11.3/download",
+      "checksum": {
+        "algorithm": "SHA256",
+        "value": "f1dd6dbb5841937940781866fa1281a1ff7bd3bf827091440879f9994983d5c2"
+      },
+      "scopes": [
+        "normal"
+      ],
+      "origins": [
+        "Cargo.toml",
+        "apps/desktop/src-tauri/Cargo.toml"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "cargo:digest@0.11.3",
+      "notices": [
+        {
+          "source_file": "LICENSE-APACHE",
+          "file": "third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt",
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source_file": "LICENSE-MIT",
+          "file": "third-party/licenses/af59cea35d7f5e2777a713b8d155d65efa2c339eb43f3c14e868c6ac8506edad.txt",
+          "sha256": "af59cea35d7f5e2777a713b8d155d65efa2c339eb43f3c14e868c6ac8506edad"
         }
       ]
     },
@@ -5323,6 +5464,41 @@
           "source_file": "LICENSE-MIT",
           "file": "third-party/licenses/391a5396cec6230bfabd4ef4eb2350eb895bc5efce377a2218f5702ed020d3e3.txt",
           "sha256": "391a5396cec6230bfabd4ef4eb2350eb895bc5efce377a2218f5702ed020d3e3"
+        }
+      ]
+    },
+    {
+      "ecosystem": "cargo",
+      "name": "hybrid-array",
+      "version": "0.4.15",
+      "license_declared": "MIT OR Apache-2.0",
+      "source": "https://github.com/RustCrypto/hybrid-array",
+      "download": "https://crates.io/api/v1/crates/hybrid-array/0.4.15/download",
+      "checksum": {
+        "algorithm": "SHA256",
+        "value": "27f864f10dfb56725ce5ce5472bc52252c8f93a4ab86327122cebf62c5f59a17"
+      },
+      "scopes": [
+        "normal"
+      ],
+      "origins": [
+        "Cargo.toml",
+        "apps/desktop/src-tauri/Cargo.toml"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "cargo:hybrid-array@0.4.15",
+      "notices": [
+        {
+          "source_file": "LICENSE-APACHE",
+          "file": "third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt",
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source_file": "LICENSE-MIT",
+          "file": "third-party/licenses/70c9d40f1f9545c3f133b8a67206e89da850f6468eed072281bb3701514114a9.txt",
+          "sha256": "70c9d40f1f9545c3f133b8a67206e89da850f6468eed072281bb3701514114a9"
         }
       ]
     },
@@ -11814,6 +11990,41 @@
     },
     {
       "ecosystem": "cargo",
+      "name": "sha2",
+      "version": "0.11.1",
+      "license_declared": "MIT OR Apache-2.0",
+      "source": "https://github.com/RustCrypto/hashes",
+      "download": "https://crates.io/api/v1/crates/sha2/0.11.1/download",
+      "checksum": {
+        "algorithm": "SHA256",
+        "value": "47d7069beb7d6ac7b9acd1039986e73443f24234f41074da099d6f994ac9ad19"
+      },
+      "scopes": [
+        "normal"
+      ],
+      "origins": [
+        "Cargo.toml",
+        "apps/desktop/src-tauri/Cargo.toml"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "cargo:sha2@0.11.1",
+      "notices": [
+        {
+          "source_file": "LICENSE-APACHE",
+          "file": "third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt",
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source_file": "LICENSE-MIT",
+          "file": "third-party/licenses/831e0f43ad0bf014c1c4fec5767aae470434c1d66d6e671be2d823e729063e25.txt",
+          "sha256": "831e0f43ad0bf014c1c4fec5767aae470434c1d66d6e671be2d823e729063e25"
+        }
+      ]
+    },
+    {
+      "ecosystem": "cargo",
       "name": "shlex",
       "version": "2.0.1",
       "license_declared": "MIT OR Apache-2.0",
@@ -18163,6 +18374,58 @@
     },
     {
       "ecosystem": "npm",
+      "name": "@cacheable/memory",
+      "version": "2.2.0",
+      "license_declared": "MIT",
+      "source": "https://www.npmjs.com/package/@cacheable/memory/v/2.2.0",
+      "download": "https://registry.npmjs.org/@cacheable/memory/-/memory-2.2.0.tgz",
+      "integrity": "sha512-CTLKqLItRCEixEAewD3/j9DB3/o96gpTPD4eJ1v+DGOlxZRZncRQkGYqqnAGCscYd6RNeXfGeiuCphsPtqyIfQ==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@cacheable/memory@2.2.0",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
+          "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@cacheable/utils",
+      "version": "2.5.0",
+      "license_declared": "MIT",
+      "source": "https://www.npmjs.com/package/@cacheable/utils/v/2.5.0",
+      "download": "https://registry.npmjs.org/@cacheable/utils/-/utils-2.5.0.tgz",
+      "integrity": "sha512-buipgOVDkkPXNR5+xBpDw7Zk2n1EvU7qBJCNUcL7rhQ//kfpOXPAvQ511Os0vpLYJ1pZnvudNytkQt2hst3wqA==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@cacheable/utils@2.5.0",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
+          "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
       "name": "@dimforge/rapier3d-compat",
       "version": "0.12.0",
       "license_declared": "Apache-2.0",
@@ -18242,11 +18505,11 @@
     {
       "ecosystem": "npm",
       "name": "@eslint/config-array",
-      "version": "0.21.2",
+      "version": "0.23.5",
       "license_declared": "Apache-2.0",
-      "source": "https://www.npmjs.com/package/@eslint/config-array/v/0.21.2",
-      "download": "https://registry.npmjs.org/@eslint/config-array/-/config-array-0.21.2.tgz",
-      "integrity": "sha512-nJl2KGTlrf9GjLimgIru+V/mzgSK0ABCDQRvxw5BjURL7WfH5uoWmizbH7QB6MmnMBd8cIC9uceWnezL1VZWWw==",
+      "source": "https://www.npmjs.com/package/@eslint/config-array/v/0.23.5",
+      "download": "https://registry.npmjs.org/@eslint/config-array/-/config-array-0.23.5.tgz",
+      "integrity": "sha512-Y3kKLvC1dvTOT+oGlqNQ1XLqK6D1HU2YXPc52NmAlJZbMMWDzGYXMiPRJ8TYD39muD/OTjlZmNJ4ib7dvSrMBA==",
       "scopes": [
         "dev"
       ],
@@ -18256,7 +18519,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "npm:@eslint/config-array@0.21.2",
+      "id": "npm:@eslint/config-array@0.23.5",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -18268,11 +18531,11 @@
     {
       "ecosystem": "npm",
       "name": "@eslint/config-helpers",
-      "version": "0.4.2",
+      "version": "0.7.0",
       "license_declared": "Apache-2.0",
-      "source": "https://www.npmjs.com/package/@eslint/config-helpers/v/0.4.2",
-      "download": "https://registry.npmjs.org/@eslint/config-helpers/-/config-helpers-0.4.2.tgz",
-      "integrity": "sha512-gBrxN88gOIf3R7ja5K9slwNayVcZgK6SOUORm2uBzTeIEfeVaIhOpCtTox3P6R7o2jLFwLFTLnC7kU/RGcYEgw==",
+      "source": "https://www.npmjs.com/package/@eslint/config-helpers/v/0.7.0",
+      "download": "https://registry.npmjs.org/@eslint/config-helpers/-/config-helpers-0.7.0.tgz",
+      "integrity": "sha512-DObd/KKUsU+FaFv4PLxSRenpXfQWmPXXP3pPZ6/K1PCrMu2vQpMDMuQe/BqYeoLcz8ro0bVDF1RxOJgfVEdhUw==",
       "scopes": [
         "dev"
       ],
@@ -18282,7 +18545,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "npm:@eslint/config-helpers@0.4.2",
+      "id": "npm:@eslint/config-helpers@0.7.0",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -18294,11 +18557,11 @@
     {
       "ecosystem": "npm",
       "name": "@eslint/core",
-      "version": "0.17.0",
+      "version": "1.2.1",
       "license_declared": "Apache-2.0",
-      "source": "https://www.npmjs.com/package/@eslint/core/v/0.17.0",
-      "download": "https://registry.npmjs.org/@eslint/core/-/core-0.17.0.tgz",
-      "integrity": "sha512-yL/sLrpmtDaFEiUj1osRP4TI2MDz1AddJL+jZ7KSqvBuliN4xqYY54IfdN8qD8Toa6g1iloph1fxQNkjOxrrpQ==",
+      "source": "https://www.npmjs.com/package/@eslint/core/v/1.2.1",
+      "download": "https://registry.npmjs.org/@eslint/core/-/core-1.2.1.tgz",
+      "integrity": "sha512-MwcE1P+AZ4C6DWlpin/OmOA54mmIZ/+xZuJiQd4SyB29oAJjN30UW9wkKNptW2ctp4cEsvhlLY/CsQ1uoHDloQ==",
       "scopes": [
         "dev"
       ],
@@ -18308,7 +18571,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "npm:@eslint/core@0.17.0",
+      "id": "npm:@eslint/core@1.2.1",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -18319,38 +18582,12 @@
     },
     {
       "ecosystem": "npm",
-      "name": "@eslint/eslintrc",
-      "version": "3.3.7",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/@eslint/eslintrc/v/3.3.7",
-      "download": "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-3.3.7.tgz",
-      "integrity": "sha512-F42g89Qd5oAWtp0k0nnSrjziAKza7w8SVT4mStc18LZMaRb4J1HQAHLCalEtDCxrTuksx7NU9qsmeLwpOfPqWw==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:@eslint/eslintrc@3.3.7",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c.txt",
-          "sha256": "3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
       "name": "@eslint/js",
-      "version": "9.39.5",
+      "version": "10.0.1",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/@eslint/js/v/9.39.5",
-      "download": "https://registry.npmjs.org/@eslint/js/-/js-9.39.5.tgz",
-      "integrity": "sha512-QywQuszQh77pIXCsq998c8hbhSTI/azTty1Z6N53dmAudKHhy573j3yvRLsX2BSp8YpLtoCEG8E9DJe+8zUh4A==",
+      "source": "https://www.npmjs.com/package/@eslint/js/v/10.0.1",
+      "download": "https://registry.npmjs.org/@eslint/js/-/js-10.0.1.tgz",
+      "integrity": "sha512-zeR9k5pd4gxjZ0abRoIaxdc7I3nDktoXZk2qOv9gCNWx3mVwEn32VRhyLaRsDiJjTs0xq/T8mfPtyuXu7GWBcA==",
       "scopes": [
         "dev"
       ],
@@ -18360,7 +18597,7 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:@eslint/js@9.39.5",
+      "id": "npm:@eslint/js@10.0.1",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -18372,11 +18609,11 @@
     {
       "ecosystem": "npm",
       "name": "@eslint/object-schema",
-      "version": "2.1.7",
+      "version": "3.0.5",
       "license_declared": "Apache-2.0",
-      "source": "https://www.npmjs.com/package/@eslint/object-schema/v/2.1.7",
-      "download": "https://registry.npmjs.org/@eslint/object-schema/-/object-schema-2.1.7.tgz",
-      "integrity": "sha512-VtAOaymWVfZcmZbp6E2mympDIHvyjXs/12LqWYjVw6qjrfF+VK+fyG33kChz3nnK+SU5/NeHOqrTEHS8sXO3OA==",
+      "source": "https://www.npmjs.com/package/@eslint/object-schema/v/3.0.5",
+      "download": "https://registry.npmjs.org/@eslint/object-schema/-/object-schema-3.0.5.tgz",
+      "integrity": "sha512-vqTaUEgxzm+YDSdElad6PiRoX4t8VGDjCtt05zn4nU810UIx/uNEV7/lZJ6KwFThKZOzOxzXy48da+No7HZaMw==",
       "scopes": [
         "dev"
       ],
@@ -18386,7 +18623,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "npm:@eslint/object-schema@2.1.7",
+      "id": "npm:@eslint/object-schema@3.0.5",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -18398,11 +18635,11 @@
     {
       "ecosystem": "npm",
       "name": "@eslint/plugin-kit",
-      "version": "0.4.1",
+      "version": "0.7.3",
       "license_declared": "Apache-2.0",
-      "source": "https://www.npmjs.com/package/@eslint/plugin-kit/v/0.4.1",
-      "download": "https://registry.npmjs.org/@eslint/plugin-kit/-/plugin-kit-0.4.1.tgz",
-      "integrity": "sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==",
+      "source": "https://www.npmjs.com/package/@eslint/plugin-kit/v/0.7.3",
+      "download": "https://registry.npmjs.org/@eslint/plugin-kit/-/plugin-kit-0.7.3.tgz",
+      "integrity": "sha512-IkO+/KEUvwbVpiURZg+P7zF74z5Jxe0UgJxVni+RtoHQ6IZieXaO02kmadomap/q+l6bc/jdPGGqTjhuZnuz1Q==",
       "scopes": [
         "dev"
       ],
@@ -18412,7 +18649,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "npm:@eslint/plugin-kit@0.4.1",
+      "id": "npm:@eslint/plugin-kit@0.7.3",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -18561,6 +18798,32 @@
     },
     {
       "ecosystem": "npm",
+      "name": "@isaacs/nonrecursive-glob-match",
+      "version": "1.0.3",
+      "license_declared": "BlueOak-1.0.0",
+      "source": "https://www.npmjs.com/package/@isaacs/nonrecursive-glob-match/v/1.0.3",
+      "download": "https://registry.npmjs.org/@isaacs/nonrecursive-glob-match/-/nonrecursive-glob-match-1.0.3.tgz",
+      "integrity": "sha512-SI7kyKHq4XXDRozw+r9GlRZkia1ZkFrpLW98r2IC2Bpr8YkFGE3fvjzmxCG0x78A++69HmDNrDvSMYBZmHGpKA==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "BlueOak-1.0.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@isaacs/nonrecursive-glob-match@1.0.3",
+      "notices": [
+        {
+          "source_file": "LICENSE.md",
+          "file": "third-party/licenses/8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004.txt",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
       "name": "@jridgewell/resolve-uri",
       "version": "3.1.2",
       "license_declared": "MIT",
@@ -18634,6 +18897,58 @@
           "source_file": "LICENSE",
           "file": "third-party/licenses/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt",
           "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@keyv/bigmap",
+      "version": "1.3.1",
+      "license_declared": "MIT",
+      "source": "https://www.npmjs.com/package/@keyv/bigmap/v/1.3.1",
+      "download": "https://registry.npmjs.org/@keyv/bigmap/-/bigmap-1.3.1.tgz",
+      "integrity": "sha512-WbzE9sdmQtKy8vrNPa9BRnwZh5UF4s1KTmSK0KUVLo3eff5BlQNNWDnFOouNpKfPKDnms9xynJjsMYjMaT/aFQ==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@keyv/bigmap@1.3.1",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/f18cad8d98d4454ad42c33f1950d642cd3b939f2ccd3c36710fa8f50842cacc0.txt",
+          "sha256": "f18cad8d98d4454ad42c33f1950d642cd3b939f2ccd3c36710fa8f50842cacc0"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@keyv/serialize",
+      "version": "1.1.1",
+      "license_declared": "MIT",
+      "source": "https://www.npmjs.com/package/@keyv/serialize/v/1.1.1",
+      "download": "https://registry.npmjs.org/@keyv/serialize/-/serialize-1.1.1.tgz",
+      "integrity": "sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@keyv/serialize@1.1.1",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959.txt",
+          "sha256": "1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959"
         }
       ]
     },
@@ -19907,6 +20222,32 @@
     },
     {
       "ecosystem": "npm",
+      "name": "@types/esrecurse",
+      "version": "4.3.1",
+      "license_declared": "MIT",
+      "source": "https://www.npmjs.com/package/@types/esrecurse/v/4.3.1",
+      "download": "https://registry.npmjs.org/@types/esrecurse/-/esrecurse-4.3.1.tgz",
+      "integrity": "sha512-xJBAbDifo5hpffDBuHl0Y8ywswbiAp/Wi7Y/GtAgSlZyIABppyurxVueOPE8LUQOxdlgi6Zqce7uoEpqNTeiUw==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@types/esrecurse@4.3.1",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
       "name": "@types/estree",
       "version": "1.0.9",
       "license_declared": "MIT",
@@ -20609,58 +20950,6 @@
     },
     {
       "ecosystem": "npm",
-      "name": "ansi-styles",
-      "version": "4.3.0",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/ansi-styles/v/4.3.0",
-      "download": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
-      "integrity": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:ansi-styles@4.3.0",
-      "notices": [
-        {
-          "source_file": "license",
-          "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
-          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "argparse",
-      "version": "2.0.1",
-      "license_declared": "Python-2.0",
-      "source": "https://www.npmjs.com/package/argparse/v/2.0.1",
-      "download": "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz",
-      "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "Python-2.0",
-      "license_normalization": "SPDX expression",
-      "id": "npm:argparse@2.0.1",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23.txt",
-          "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
       "name": "assertion-error",
       "version": "2.0.1",
       "license_declared": "MIT",
@@ -20682,32 +20971,6 @@
           "source_file": "LICENSE",
           "file": "third-party/licenses/2130216d5ab4c02134f8247f32999feda0abe1eaf028218baeac445c19ce4cea.txt",
           "sha256": "2130216d5ab4c02134f8247f32999feda0abe1eaf028218baeac445c19ce4cea"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "balanced-match",
-      "version": "1.0.2",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/balanced-match/v/1.0.2",
-      "download": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
-      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:balanced-match@1.0.2",
-      "notices": [
-        {
-          "source_file": "LICENSE.md",
-          "file": "third-party/licenses/a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268.txt",
-          "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268"
         }
       ]
     },
@@ -20740,32 +21003,6 @@
     {
       "ecosystem": "npm",
       "name": "brace-expansion",
-      "version": "1.1.21",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/brace-expansion/v/1.1.21",
-      "download": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.21.tgz",
-      "integrity": "sha512-9zeA+KLZNNzglF2TPKRQEDyx6Yby7daAkuy8MiPzpXPsYDWi/DRM8jmwUDxokQjYqBpv5DgPiwD4h4ZZSy1Ujw==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:brace-expansion@1.1.21",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14.txt",
-          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "brace-expansion",
       "version": "5.0.12",
       "license_declared": "MIT",
       "source": "https://www.npmjs.com/package/brace-expansion/v/5.0.12",
@@ -20791,12 +21028,12 @@
     },
     {
       "ecosystem": "npm",
-      "name": "callsites",
-      "version": "3.1.0",
+      "name": "cacheable",
+      "version": "2.5.0",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/callsites/v/3.1.0",
-      "download": "https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz",
-      "integrity": "sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==",
+      "source": "https://www.npmjs.com/package/cacheable/v/2.5.0",
+      "download": "https://registry.npmjs.org/cacheable/-/cacheable-2.5.0.tgz",
+      "integrity": "sha512-60cyAOytib/OzBw1JNSoSV/boK1AtHryDIjvVBk7XbN4ugfkM3+Sry7fEjNgPMGgOjuaZPAp8ruZ0Cxafwyq9g==",
       "scopes": [
         "dev"
       ],
@@ -20806,12 +21043,12 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:callsites@3.1.0",
+      "id": "npm:cacheable@2.5.0",
       "notices": [
         {
-          "source_file": "license",
-          "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
-          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
+          "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
         }
       ]
     },
@@ -20838,110 +21075,6 @@
           "source_file": "LICENSE",
           "file": "third-party/licenses/b181da80336ff9dd1043fc8be1a764d7382363433319aa872e4d2cb5ce2a3066.txt",
           "sha256": "b181da80336ff9dd1043fc8be1a764d7382363433319aa872e4d2cb5ce2a3066"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "chalk",
-      "version": "4.1.2",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/chalk/v/4.1.2",
-      "download": "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz",
-      "integrity": "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:chalk@4.1.2",
-      "notices": [
-        {
-          "source_file": "license",
-          "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
-          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "color-convert",
-      "version": "2.0.1",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/color-convert/v/2.0.1",
-      "download": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
-      "integrity": "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:color-convert@2.0.1",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/693866fc419c6f61c8570438ec00659d156ec2b4d4a4d04091711f5f11a365d4.txt",
-          "sha256": "693866fc419c6f61c8570438ec00659d156ec2b4d4a4d04091711f5f11a365d4"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "color-name",
-      "version": "1.1.4",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/color-name/v/1.1.4",
-      "download": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
-      "integrity": "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:color-name@1.1.4",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/c064f7a3e353bc1bc977f3c897941c75ef763f44f41677e0a15370ca0853d6e2.txt",
-          "sha256": "c064f7a3e353bc1bc977f3c897941c75ef763f44f41677e0a15370ca0853d6e2"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "concat-map",
-      "version": "0.0.1",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/concat-map/v/0.0.1",
-      "download": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
-      "integrity": "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:concat-map@0.0.1",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b.txt",
-          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
         }
       ]
     },
@@ -21546,11 +21679,11 @@
     {
       "ecosystem": "npm",
       "name": "eslint-scope",
-      "version": "8.4.0",
+      "version": "9.1.2",
       "license_declared": "BSD-2-Clause",
-      "source": "https://www.npmjs.com/package/eslint-scope/v/8.4.0",
-      "download": "https://registry.npmjs.org/eslint-scope/-/eslint-scope-8.4.0.tgz",
-      "integrity": "sha512-sNXOfKCn74rt8RICKMvJS7XKV/Xk9kA7DyJr8mJik3S7Cwgy3qlkkmyS2uQB3jiJg6VNdZd/pDBJu0nvG2NlTg==",
+      "source": "https://www.npmjs.com/package/eslint-scope/v/9.1.2",
+      "download": "https://registry.npmjs.org/eslint-scope/-/eslint-scope-9.1.2.tgz",
+      "integrity": "sha512-xS90H51cKw0jltxmvmHy2Iai1LIqrfbw57b79w/J7MfvDfkIkFZ+kj6zC3BjtUwh150HsSSdxXZcsuv72miDFQ==",
       "scopes": [
         "dev"
       ],
@@ -21560,7 +21693,7 @@
       "platform_conditions": [],
       "license_selected": "BSD-2-Clause",
       "license_normalization": "SPDX expression",
-      "id": "npm:eslint-scope@8.4.0",
+      "id": "npm:eslint-scope@9.1.2",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -21598,32 +21731,6 @@
     {
       "ecosystem": "npm",
       "name": "eslint-visitor-keys",
-      "version": "4.2.1",
-      "license_declared": "Apache-2.0",
-      "source": "https://www.npmjs.com/package/eslint-visitor-keys/v/4.2.1",
-      "download": "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-4.2.1.tgz",
-      "integrity": "sha512-Uhdk5sfqcee/9H/rCOJikYz67o0a2Tw2hGRPOG2Y1R2dg7brRe1uG0yaNQDHu+TO/uQPF/5eCapvYSmHUjt7JQ==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "Apache-2.0",
-      "license_normalization": "SPDX expression",
-      "id": "npm:eslint-visitor-keys@4.2.1",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/d8bf34ff6d190640a01e7704ad78253fc181bc128949d71273fbbaa12f33c0b4.txt",
-          "sha256": "d8bf34ff6d190640a01e7704ad78253fc181bc128949d71273fbbaa12f33c0b4"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "eslint-visitor-keys",
       "version": "5.0.1",
       "license_declared": "Apache-2.0",
       "source": "https://www.npmjs.com/package/eslint-visitor-keys/v/5.0.1",
@@ -21650,11 +21757,11 @@
     {
       "ecosystem": "npm",
       "name": "eslint",
-      "version": "9.39.5",
+      "version": "10.14.0",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/eslint/v/9.39.5",
-      "download": "https://registry.npmjs.org/eslint/-/eslint-9.39.5.tgz",
-      "integrity": "sha512-DgZS62aPLXKlnxILS/AYCoRvHaZeXceIzlXPkkGGzJWSow1aEk0lbTlxUSlyjC8jcaKxAdOnTDz+o1JFSBsyjw==",
+      "source": "https://www.npmjs.com/package/eslint/v/10.14.0",
+      "download": "https://registry.npmjs.org/eslint/-/eslint-10.14.0.tgz",
+      "integrity": "sha512-T0pNsxkb9IKmtQjhpK3d7nWOpFv+YHuMbTJnSVMoQblF0onvXfErrtp4V1jHtsQPan7dKaGVD0q1WCXnzMF31A==",
       "scopes": [
         "dev"
       ],
@@ -21664,7 +21771,7 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:eslint@9.39.5",
+      "id": "npm:eslint@10.14.0",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -21676,11 +21783,11 @@
     {
       "ecosystem": "npm",
       "name": "espree",
-      "version": "10.4.0",
+      "version": "11.2.0",
       "license_declared": "BSD-2-Clause",
-      "source": "https://www.npmjs.com/package/espree/v/10.4.0",
-      "download": "https://registry.npmjs.org/espree/-/espree-10.4.0.tgz",
-      "integrity": "sha512-j6PAQ2uUr79PZhBjP5C5fhl8e39FmRnOjsD5lGnWrFU8i2G776tBK7+nP8KuQUTTyAZUwfQqXAgrVH5MbH9CYQ==",
+      "source": "https://www.npmjs.com/package/espree/v/11.2.0",
+      "download": "https://registry.npmjs.org/espree/-/espree-11.2.0.tgz",
+      "integrity": "sha512-7p3DrVEIopW1B1avAGLuCSh1jubc01H2JHc8B4qqGblmg5gI9yumBgACjWo4JlIc04ufug4xJ3SQI8HkS/Rgzw==",
       "scopes": [
         "dev"
       ],
@@ -21690,7 +21797,7 @@
       "platform_conditions": [],
       "license_selected": "BSD-2-Clause",
       "license_normalization": "SPDX expression",
-      "id": "npm:espree@10.4.0",
+      "id": "npm:espree@11.2.0",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -22019,11 +22126,11 @@
     {
       "ecosystem": "npm",
       "name": "file-entry-cache",
-      "version": "8.0.0",
+      "version": "11.1.5",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/file-entry-cache/v/8.0.0",
-      "download": "https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-8.0.0.tgz",
-      "integrity": "sha512-XXTUwCvisa5oacNGRP9SfNtYBNAMi+RPwBFmblZEF7N7swHYQS6/Zfk7SRwx4D5j3CH211YNRco1DEMNVfZCnQ==",
+      "source": "https://www.npmjs.com/package/file-entry-cache/v/11.1.5",
+      "download": "https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-11.1.5.tgz",
+      "integrity": "sha512-+PFTHITI08JIGhnNpGNI8T8inUpgZfk3GNEqfT9R2zZV2iFXg3CvqzSl/uEhs7TSGujYRELEANyDvS8Fj7+S7Q==",
       "scopes": [
         "dev"
       ],
@@ -22033,12 +22140,12 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:file-entry-cache@8.0.0",
+      "id": "npm:file-entry-cache@11.1.5",
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/a0e2f73971f663b49d3c66cc6749fc88de0f475680ccf5b980a9cbcc0c52490f.txt",
-          "sha256": "a0e2f73971f663b49d3c66cc6749fc88de0f475680ccf5b980a9cbcc0c52490f"
+          "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
+          "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
         }
       ]
     },
@@ -22071,11 +22178,11 @@
     {
       "ecosystem": "npm",
       "name": "flat-cache",
-      "version": "4.0.1",
+      "version": "6.1.23",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/flat-cache/v/4.0.1",
-      "download": "https://registry.npmjs.org/flat-cache/-/flat-cache-4.0.1.tgz",
-      "integrity": "sha512-f7ccFPK3SXFHpx15UIGyRJ/FJQctuKZ0zVuN3frBo4HnK3cay9VEW0R6yPYFHC0AgqhukPzKjq22t5DmAyqGyw==",
+      "source": "https://www.npmjs.com/package/flat-cache/v/6.1.23",
+      "download": "https://registry.npmjs.org/flat-cache/-/flat-cache-6.1.23.tgz",
+      "integrity": "sha512-f++BY9pTk+983xK1FLzlLpmM0i0z+jHmx3QESGkURMXujQZz1k5wzwX6hjnQ8goaD0B+sYnDK1yZ6MTyZfUaqA==",
       "scopes": [
         "dev"
       ],
@@ -22085,12 +22192,12 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:flat-cache@4.0.1",
+      "id": "npm:flat-cache@6.1.23",
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/a6a23fb76d91d98669f5ed6eb58213df594ab2d56c9e981ae021b194e3d662a7.txt",
-          "sha256": "a6a23fb76d91d98669f5ed6eb58213df594ab2d56c9e981ae021b194e3d662a7"
+          "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
+          "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
         }
       ]
     },
@@ -22204,11 +22311,11 @@
     {
       "ecosystem": "npm",
       "name": "globals",
-      "version": "14.0.0",
+      "version": "17.14.0",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/globals/v/14.0.0",
-      "download": "https://registry.npmjs.org/globals/-/globals-14.0.0.tgz",
-      "integrity": "sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==",
+      "source": "https://www.npmjs.com/package/globals/v/17.14.0",
+      "download": "https://registry.npmjs.org/globals/-/globals-17.14.0.tgz",
+      "integrity": "sha512-UtdkTVyAJePQv0J2M9Xe4L0ruNSDV314XiIJsADI2Zf40bcdAonE/D/OhAU8AT99oij9mhLByb+NvA3QWZYgCg==",
       "scopes": [
         "dev"
       ],
@@ -22218,33 +22325,7 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:globals@14.0.0",
-      "notices": [
-        {
-          "source_file": "license",
-          "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
-          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "globals",
-      "version": "16.5.0",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/globals/v/16.5.0",
-      "download": "https://registry.npmjs.org/globals/-/globals-16.5.0.tgz",
-      "integrity": "sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:globals@16.5.0",
+      "id": "npm:globals@17.14.0",
       "notices": [
         {
           "source_file": "license",
@@ -22333,12 +22414,12 @@
     },
     {
       "ecosystem": "npm",
-      "name": "has-flag",
-      "version": "4.0.0",
+      "name": "hashery",
+      "version": "1.5.1",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/has-flag/v/4.0.0",
-      "download": "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz",
-      "integrity": "sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==",
+      "source": "https://www.npmjs.com/package/hashery/v/1.5.1",
+      "download": "https://registry.npmjs.org/hashery/-/hashery-1.5.1.tgz",
+      "integrity": "sha512-iZyKG96/JwPz1N55vj2Ie2vXbhu440zfUfJvSwEqEbeLluk7NnapfGqa7LH0mOsnDxTF85Mx8/dyR6HfqcbmbQ==",
       "scopes": [
         "dev"
       ],
@@ -22348,12 +22429,64 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:has-flag@4.0.0",
+      "id": "npm:hashery@1.5.1",
       "notices": [
         {
-          "source_file": "license",
-          "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
-          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/2eef776efe4bae7fcd2d8162ecadf2b0873aae20afac343a936ddb0de3d79253.txt",
+          "sha256": "2eef776efe4bae7fcd2d8162ecadf2b0873aae20afac343a936ddb0de3d79253"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "hookified",
+      "version": "1.15.1",
+      "license_declared": "MIT",
+      "source": "https://www.npmjs.com/package/hookified/v/1.15.1",
+      "download": "https://registry.npmjs.org/hookified/-/hookified-1.15.1.tgz",
+      "integrity": "sha512-MvG/clsADq1GPM2KGo2nyfaWVyn9naPiXrqIe4jYjXNZQt238kWyOGrsyc/DmRAQ+Re6yeo6yX/yoNCG5KAEVg==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "npm:hookified@1.15.1",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe.txt",
+          "sha256": "3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "hookified",
+      "version": "2.2.0",
+      "license_declared": "MIT",
+      "source": "https://www.npmjs.com/package/hookified/v/2.2.0",
+      "download": "https://registry.npmjs.org/hookified/-/hookified-2.2.0.tgz",
+      "integrity": "sha512-p/LgFzRN5FeoD3DLS6bkUapeye6E4SI6yJs6KetENd18S+FBthqYq2amJUWpt5z0EQwwHemidjY5OqJGEKm5uA==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "npm:hookified@2.2.0",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe.txt",
+          "sha256": "3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe"
         }
       ]
     },
@@ -22406,32 +22539,6 @@
           "source_file": "LICENSE-MIT",
           "file": "third-party/licenses/9c94db23dc4b1e9aaee5d195668b916afc71efed54af226b66cf0ccc4389c1c0.txt",
           "sha256": "9c94db23dc4b1e9aaee5d195668b916afc71efed54af226b66cf0ccc4389c1c0"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "import-fresh",
-      "version": "3.3.1",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/import-fresh/v/3.3.1",
-      "download": "https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.1.tgz",
-      "integrity": "sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:import-fresh@3.3.1",
-      "notices": [
-        {
-          "source_file": "license",
-          "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
-          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
         }
       ]
     },
@@ -22619,58 +22726,6 @@
     },
     {
       "ecosystem": "npm",
-      "name": "js-yaml",
-      "version": "4.3.2",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/js-yaml/v/4.3.2",
-      "download": "https://registry.npmjs.org/js-yaml/-/js-yaml-4.3.2.tgz",
-      "integrity": "sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:js-yaml@4.3.2",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550.txt",
-          "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "json-buffer",
-      "version": "3.0.1",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/json-buffer/v/3.0.1",
-      "download": "https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.1.tgz",
-      "integrity": "sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:json-buffer@3.0.1",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/715f1f0f2eb7688e53e4e958acdc7fc9e365ae3eaf26efc2604b93cc65fdc3f5.txt",
-          "sha256": "715f1f0f2eb7688e53e4e958acdc7fc9e365ae3eaf26efc2604b93cc65fdc3f5"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
       "name": "json-schema-traverse",
       "version": "0.4.1",
       "license_declared": "MIT",
@@ -22750,11 +22805,11 @@
     {
       "ecosystem": "npm",
       "name": "keyv",
-      "version": "4.5.4",
+      "version": "5.6.0",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/keyv/v/4.5.4",
-      "download": "https://registry.npmjs.org/keyv/-/keyv-4.5.4.tgz",
-      "integrity": "sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==",
+      "source": "https://www.npmjs.com/package/keyv/v/5.6.0",
+      "download": "https://registry.npmjs.org/keyv/-/keyv-5.6.0.tgz",
+      "integrity": "sha512-CYDD3SOtsHtyXeEORYRx2qBtpDJFjRTGXUtmNEMGyzYOKj1TE3tycdlho7kA1Ufx9OYWZzg52QFBGALTirzDSw==",
       "scopes": [
         "dev"
       ],
@@ -22762,22 +22817,14 @@
         "apps/desktop/package-lock.json"
       ],
       "platform_conditions": [],
-      "notice_recovery": {
-        "method": "original README copyright/license link plus canonical SPDX terms; no fictitious upstream license file"
-      },
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:keyv@4.5.4",
+      "id": "npm:keyv@5.6.0",
       "notices": [
         {
-          "source_file": "README.md#original-copyright-and-license",
-          "file": "third-party/licenses/7e83bf5deee9df0b61e828c620ca31fca98895497579652a38f4399251c47b64.txt",
-          "sha256": "7e83bf5deee9df0b61e828c620ca31fca98895497579652a38f4399251c47b64"
-        },
-        {
-          "source_file": "https://spdx.org/licenses/MIT.html#canonical-terms-with-original-copyright-separate",
-          "file": "third-party/licenses/25c4576db4a90ddaddaf1b5cd83dc1a537e600041009f6ca71ec62d770ea4390.txt",
-          "sha256": "25c4576db4a90ddaddaf1b5cd83dc1a537e600041009f6ca71ec62d770ea4390"
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959.txt",
+          "sha256": "1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959"
         }
       ]
     },
@@ -23041,7 +23088,7 @@
       "id": "npm:lightningcss-linux-x64-gnu@1.33.0",
       "notices": [
         {
-          "source_file": "package/LICENSE",
+          "source_file": "LICENSE",
           "file": "third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt",
           "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
         }
@@ -23131,7 +23178,7 @@
       "id": "npm:lightningcss-win32-x64-msvc@1.33.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt",
           "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
         }
@@ -23207,32 +23254,6 @@
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
       "id": "npm:lodash-es@4.18.1",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc.txt",
-          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "lodash.merge",
-      "version": "4.6.2",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/lodash.merge/v/4.6.2",
-      "download": "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz",
-      "integrity": "sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:lodash.merge@4.6.2",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -23322,11 +23343,11 @@
     {
       "ecosystem": "npm",
       "name": "minimatch",
-      "version": "10.2.6",
+      "version": "11.0.4",
       "license_declared": "BlueOak-1.0.0",
-      "source": "https://www.npmjs.com/package/minimatch/v/10.2.6",
-      "download": "https://registry.npmjs.org/minimatch/-/minimatch-10.2.6.tgz",
-      "integrity": "sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==",
+      "source": "https://www.npmjs.com/package/minimatch/v/11.0.4",
+      "download": "https://registry.npmjs.org/minimatch/-/minimatch-11.0.4.tgz",
+      "integrity": "sha512-/UJ1dEoVQTjPNDh6SGlUo+ueLMmoHTas4q+8yaAR/5t6nLAIiBDJtoYUh20IYleix7ehiQkgczb84PE3uzHkxg==",
       "scopes": [
         "dev"
       ],
@@ -23336,38 +23357,12 @@
       "platform_conditions": [],
       "license_selected": "BlueOak-1.0.0",
       "license_normalization": "SPDX expression",
-      "id": "npm:minimatch@10.2.6",
+      "id": "npm:minimatch@11.0.4",
       "notices": [
         {
           "source_file": "LICENSE.md",
           "file": "third-party/licenses/2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901.txt",
           "sha256": "2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "minimatch",
-      "version": "3.1.5",
-      "license_declared": "ISC",
-      "source": "https://www.npmjs.com/package/minimatch/v/3.1.5",
-      "download": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz",
-      "integrity": "sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "ISC",
-      "license_normalization": "SPDX expression",
-      "id": "npm:minimatch@3.1.5",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
-          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
         }
       ]
     },
@@ -23714,32 +23709,6 @@
           "source_file": "license",
           "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
           "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "parent-module",
-      "version": "1.0.1",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/parent-module/v/1.0.1",
-      "download": "https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz",
-      "integrity": "sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:parent-module@1.0.1",
-      "notices": [
-        {
-          "source_file": "license",
-          "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
-          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
         }
       ]
     },
@@ -24124,6 +24093,32 @@
     },
     {
       "ecosystem": "npm",
+      "name": "qified",
+      "version": "0.10.1",
+      "license_declared": "MIT",
+      "source": "https://www.npmjs.com/package/qified/v/0.10.1",
+      "download": "https://registry.npmjs.org/qified/-/qified-0.10.1.tgz",
+      "integrity": "sha512-+Owyggi9IxT1ePKGafcI87ubSmxol6smwJ+RAHDQlx9+9cPwFWDiKFFCPuWhr9ignlGpZ9vDQLw67N4dcTVFEA==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "MIT",
+      "license_normalization": "SPDX expression",
+      "id": "npm:qified@0.10.1",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe.txt",
+          "sha256": "3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
       "name": "react-dom",
       "version": "19.3.1",
       "license_declared": "MIT",
@@ -24254,32 +24249,6 @@
           "source_file": "LICENSE",
           "file": "third-party/licenses/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt",
           "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "resolve-from",
-      "version": "4.0.0",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/resolve-from/v/4.0.0",
-      "download": "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz",
-      "integrity": "sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:resolve-from@4.0.0",
-      "notices": [
-        {
-          "source_file": "license",
-          "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
-          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
         }
       ]
     },
@@ -24498,58 +24467,6 @@
     },
     {
       "ecosystem": "npm",
-      "name": "strip-json-comments",
-      "version": "3.1.1",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/strip-json-comments/v/3.1.1",
-      "download": "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz",
-      "integrity": "sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:strip-json-comments@3.1.1",
-      "notices": [
-        {
-          "source_file": "license",
-          "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
-          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "supports-color",
-      "version": "7.2.0",
-      "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/supports-color/v/7.2.0",
-      "download": "https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz",
-      "integrity": "sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "npm:supports-color@7.2.0",
-      "notices": [
-        {
-          "source_file": "license",
-          "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
-          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
       "name": "three-forcegraph",
       "version": "1.43.6",
       "license_declared": "MIT",
@@ -24603,11 +24520,11 @@
     {
       "ecosystem": "npm",
       "name": "three",
-      "version": "0.180.0",
+      "version": "0.186.1",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/three/v/0.180.0",
-      "download": "https://registry.npmjs.org/three/-/three-0.180.0.tgz",
-      "integrity": "sha512-o+qycAMZrh+TsE01GqWUxUIKR1AL0S8pq7zDkYOQw8GqfX8b8VoCKYUoHbhiX5j+7hr8XsuHDVU6+gkQJQKg9w==",
+      "source": "https://www.npmjs.com/package/three/v/0.186.1",
+      "download": "https://registry.npmjs.org/three/-/three-0.186.1.tgz",
+      "integrity": "sha512-blFeqb49wRCSGUGj7gtpfnSGHy2lwDk94RhUmS1c/hTby70kvChbWpkJ4Pm1390LqzzvTmzgXKHPEafJwCb8jA==",
       "scopes": [
         "normal"
       ],
@@ -24617,22 +24534,12 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:three@0.180.0",
+      "id": "npm:three@0.186.1",
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601.txt",
-          "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
-        },
-        {
-          "source_file": "examples/fonts/LICENSE",
-          "file": "third-party/licenses/35e8279356d7890871c4fce804d157e3f21456a7311ef2caab5cb4705c71b6bd.txt",
-          "sha256": "35e8279356d7890871c4fce804d157e3f21456a7311ef2caab5cb4705c71b6bd"
-        },
-        {
-          "source_file": "examples/fonts/droid/NOTICE",
-          "file": "third-party/licenses/38751245389e1e23f73e6f5384b5cbe7fa972cc4410c5adc9c04b082a0b9561a.txt",
-          "sha256": "38751245389e1e23f73e6f5384b5cbe7fa972cc4410c5adc9c04b082a0b9561a"
+          "file": "third-party/licenses/8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc.txt",
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
         }
       ]
     },

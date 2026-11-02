@@ -176,6 +176,13 @@ cargo:block-buffer@0.10.4
   Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
   Notice: third-party/licenses/d5c22aa3118d240e877ad41c5d9fa232f9c77d757d4aac0c2f943afc0a95e0ef.txt (upstream LICENSE-MIT)
 
+cargo:block-buffer@0.12.1
+  Declared: MIT OR Apache-2.0; selected: MIT
+  Source: https://github.com/RustCrypto/utils
+  Scope: normal
+  Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
+  Notice: third-party/licenses/98181e7249d0c01737645ec982499ce99a0f07eb8f7d625b8840d799d10dbc01.txt (upstream LICENSE-MIT)
+
 cargo:block2@0.6.2
   Declared: MIT; selected: MIT
   Source: https://github.com/madsmtm/objc2
@@ -378,6 +385,13 @@ cargo:combine@4.6.9
   Scope: normal
   Notice: third-party/licenses/9bbc1b3dc4674a9ebb12c2a62f54fe3c08672539717f8d05828f684b6cc419a3.txt (upstream LICENSE)
 
+cargo:const-oid@0.10.2
+  Declared: Apache-2.0 OR MIT; selected: Apache-2.0
+  Source: https://github.com/RustCrypto/formats
+  Scope: normal
+  Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
+  Notice: third-party/licenses/73b9dc2e79c7308998dd30296e073aefaefb944a68fb89aa412c23c0edcabcaa.txt (upstream LICENSE-MIT)
+
 cargo:cookie@0.18.2
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/SergioBenitez/cookie-rs
@@ -471,6 +485,13 @@ cargo:crypto-common@0.1.7
   Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
   Notice: third-party/licenses/3521672491a3479422d5fe1aca6645dd2984090f85da6e5205abfb18fb7a6897.txt (upstream LICENSE-MIT)
 
+cargo:crypto-common@0.2.2
+  Declared: MIT OR Apache-2.0; selected: MIT
+  Source: https://github.com/RustCrypto/traits
+  Scope: normal
+  Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
+  Notice: third-party/licenses/d2e7ec5355c96eeade56b09187ceb48a6a30299da3ce7531a66d3d11405ab963.txt (upstream LICENSE-MIT)
+
 cargo:cssparser-macros@0.7.1
   Declared: MPL-2.0; selected: MPL-2.0
   Source: https://github.com/servo/rust-cssparser
@@ -561,6 +582,13 @@ cargo:digest@0.10.7
   Scope: normal
   Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
   Notice: third-party/licenses/9e0dfd2dd4173a530e238cb6adb37aa78c34c6bc7444e0e10c1ab5d8881f63ba.txt (upstream LICENSE-MIT)
+
+cargo:digest@0.11.3
+  Declared: MIT OR Apache-2.0; selected: MIT
+  Source: https://github.com/RustCrypto/traits
+  Scope: normal
+  Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
+  Notice: third-party/licenses/af59cea35d7f5e2777a713b8d155d65efa2c339eb43f3c14e868c6ac8506edad.txt (upstream LICENSE-MIT)
 
 cargo:dirs-sys@0.5.0
   Declared: MIT OR Apache-2.0; selected: MIT
@@ -1046,6 +1074,13 @@ cargo:httparse@1.10.1
   Scope: normal
   Notice: third-party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt (upstream LICENSE-APACHE)
   Notice: third-party/licenses/391a5396cec6230bfabd4ef4eb2350eb895bc5efce377a2218f5702ed020d3e3.txt (upstream LICENSE-MIT)
+
+cargo:hybrid-array@0.4.15
+  Declared: MIT OR Apache-2.0; selected: MIT
+  Source: https://github.com/RustCrypto/hybrid-array
+  Scope: normal
+  Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
+  Notice: third-party/licenses/70c9d40f1f9545c3f133b8a67206e89da850f6468eed072281bb3701514114a9.txt (upstream LICENSE-MIT)
 
 cargo:hyper-rustls@0.27.10
   Declared: Apache-2.0 OR ISC OR MIT; selected: Apache-2.0
@@ -2280,6 +2315,13 @@ cargo:sha2@0.10.9
   Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
   Notice: third-party/licenses/b4eb00df6e2a4d22518fcaa6a2b4646f249b3a3c9814509b22bd2091f1392ff1.txt (upstream LICENSE-MIT)
 
+cargo:sha2@0.11.1
+  Declared: MIT OR Apache-2.0; selected: MIT
+  Source: https://github.com/RustCrypto/hashes
+  Scope: normal
+  Notice: third-party/licenses/a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5.txt (upstream LICENSE-APACHE)
+  Notice: third-party/licenses/831e0f43ad0bf014c1c4fec5767aae470434c1d66d6e671be2d823e729063e25.txt (upstream LICENSE-MIT)
+
 cargo:shlex@2.0.1
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/comex/rust-shlex
@@ -3512,6 +3554,18 @@ npm:@babel/runtime@7.29.10
   Scope: normal
   Notice: third-party/licenses/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt (upstream LICENSE)
 
+npm:@cacheable/memory@2.2.0
+  Declared: MIT; selected: MIT
+  Source: https://www.npmjs.com/package/@cacheable/memory/v/2.2.0
+  Scope: dev
+  Notice: third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt (upstream LICENSE)
+
+npm:@cacheable/utils@2.5.0
+  Declared: MIT; selected: MIT
+  Source: https://www.npmjs.com/package/@cacheable/utils/v/2.5.0
+  Scope: dev
+  Notice: third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt (upstream LICENSE)
+
 npm:@dimforge/rapier3d-compat@0.12.0
   Declared: Apache-2.0; selected: Apache-2.0
   Source: https://www.npmjs.com/package/@dimforge/rapier3d-compat/v/0.12.0
@@ -3530,45 +3584,39 @@ npm:@eslint-community/regexpp@4.12.2
   Scope: dev
   Notice: third-party/licenses/fcf6eabf68ca96988a6b506b4fdc6cc32535d80eb2e11c79724af5ac6f50262b.txt (upstream LICENSE)
 
-npm:@eslint/config-array@0.21.2
+npm:@eslint/config-array@0.23.5
   Declared: Apache-2.0; selected: Apache-2.0
-  Source: https://www.npmjs.com/package/@eslint/config-array/v/0.21.2
+  Source: https://www.npmjs.com/package/@eslint/config-array/v/0.23.5
   Scope: dev
   Notice: third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt (upstream LICENSE)
 
-npm:@eslint/config-helpers@0.4.2
+npm:@eslint/config-helpers@0.7.0
   Declared: Apache-2.0; selected: Apache-2.0
-  Source: https://www.npmjs.com/package/@eslint/config-helpers/v/0.4.2
+  Source: https://www.npmjs.com/package/@eslint/config-helpers/v/0.7.0
   Scope: dev
   Notice: third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt (upstream LICENSE)
 
-npm:@eslint/core@0.17.0
+npm:@eslint/core@1.2.1
   Declared: Apache-2.0; selected: Apache-2.0
-  Source: https://www.npmjs.com/package/@eslint/core/v/0.17.0
+  Source: https://www.npmjs.com/package/@eslint/core/v/1.2.1
   Scope: dev
   Notice: third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt (upstream LICENSE)
 
-npm:@eslint/eslintrc@3.3.7
+npm:@eslint/js@10.0.1
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/@eslint/eslintrc/v/3.3.7
+  Source: https://www.npmjs.com/package/@eslint/js/v/10.0.1
   Scope: dev
   Notice: third-party/licenses/3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c.txt (upstream LICENSE)
 
-npm:@eslint/js@9.39.5
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/@eslint/js/v/9.39.5
-  Scope: dev
-  Notice: third-party/licenses/3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c.txt (upstream LICENSE)
-
-npm:@eslint/object-schema@2.1.7
+npm:@eslint/object-schema@3.0.5
   Declared: Apache-2.0; selected: Apache-2.0
-  Source: https://www.npmjs.com/package/@eslint/object-schema/v/2.1.7
+  Source: https://www.npmjs.com/package/@eslint/object-schema/v/3.0.5
   Scope: dev
   Notice: third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt (upstream LICENSE)
 
-npm:@eslint/plugin-kit@0.4.1
+npm:@eslint/plugin-kit@0.7.3
   Declared: Apache-2.0; selected: Apache-2.0
-  Source: https://www.npmjs.com/package/@eslint/plugin-kit/v/0.4.1
+  Source: https://www.npmjs.com/package/@eslint/plugin-kit/v/0.7.3
   Scope: dev
   Notice: third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt (upstream LICENSE)
 
@@ -3603,6 +3651,12 @@ npm:@humanwhocodes/retry@0.4.3
   Scope: dev
   Notice: third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt (upstream LICENSE)
 
+npm:@isaacs/nonrecursive-glob-match@1.0.3
+  Declared: BlueOak-1.0.0; selected: BlueOak-1.0.0
+  Source: https://www.npmjs.com/package/@isaacs/nonrecursive-glob-match/v/1.0.3
+  Scope: dev
+  Notice: third-party/licenses/8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004.txt (upstream LICENSE.md)
+
 npm:@jridgewell/resolve-uri@3.1.2
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/@jridgewell/resolve-uri/v/3.1.2
@@ -3620,6 +3674,18 @@ npm:@jridgewell/trace-mapping@0.3.31
   Source: https://www.npmjs.com/package/@jridgewell/trace-mapping/v/0.3.31
   Scope: dev
   Notice: third-party/licenses/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt (upstream LICENSE)
+
+npm:@keyv/bigmap@1.3.1
+  Declared: MIT; selected: MIT
+  Source: https://www.npmjs.com/package/@keyv/bigmap/v/1.3.1
+  Scope: dev
+  Notice: third-party/licenses/f18cad8d98d4454ad42c33f1950d642cd3b939f2ccd3c36710fa8f50842cacc0.txt (upstream LICENSE)
+
+npm:@keyv/serialize@1.1.1
+  Declared: MIT; selected: MIT
+  Source: https://www.npmjs.com/package/@keyv/serialize/v/1.1.1
+  Scope: dev
+  Notice: third-party/licenses/1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959.txt (upstream LICENSE)
 
 npm:@oxc-project/types@0.155.0
   Declared: MIT; selected: MIT
@@ -3855,6 +3921,12 @@ npm:@types/deep-eql@4.0.2
   Scope: dev
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream LICENSE)
 
+npm:@types/esrecurse@4.3.1
+  Declared: MIT; selected: MIT
+  Source: https://www.npmjs.com/package/@types/esrecurse/v/4.3.1
+  Scope: dev
+  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream LICENSE)
+
 npm:@types/estree@1.0.9
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/@types/estree/v/1.0.9
@@ -4017,29 +4089,11 @@ npm:ajv@6.15.0
   Scope: dev
   Notice: third-party/licenses/e85e131fa4ed25538ff1f4962ced1fb6f68b079bd9164a790597a0f30b8fd030.txt (upstream LICENSE)
 
-npm:ansi-styles@4.3.0
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/ansi-styles/v/4.3.0
-  Scope: dev
-  Notice: third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt (upstream license)
-
-npm:argparse@2.0.1
-  Declared: Python-2.0; selected: Python-2.0
-  Source: https://www.npmjs.com/package/argparse/v/2.0.1
-  Scope: dev
-  Notice: third-party/licenses/de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23.txt (upstream LICENSE)
-
 npm:assertion-error@2.0.1
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/assertion-error/v/2.0.1
   Scope: dev
   Notice: third-party/licenses/2130216d5ab4c02134f8247f32999feda0abe1eaf028218baeac445c19ce4cea.txt (upstream LICENSE)
-
-npm:balanced-match@1.0.2
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/balanced-match/v/1.0.2
-  Scope: dev
-  Notice: third-party/licenses/a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268.txt (upstream LICENSE.md)
 
 npm:balanced-match@4.0.4
   Declared: MIT; selected: MIT
@@ -4047,53 +4101,23 @@ npm:balanced-match@4.0.4
   Scope: dev
   Notice: third-party/licenses/d408f38ffa3355c5faec517153295338892eb0f1ea43f57874bb23c6075979b5.txt (upstream LICENSE.md)
 
-npm:brace-expansion@1.1.21
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/brace-expansion/v/1.1.21
-  Scope: dev
-  Notice: third-party/licenses/68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14.txt (upstream LICENSE)
-
 npm:brace-expansion@5.0.12
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/brace-expansion/v/5.0.12
   Scope: dev
   Notice: third-party/licenses/9c63a23124d68cd30cd316a94a1a0bca34f032786df6df69fc4b5f136bac8d2e.txt (upstream LICENSE)
 
-npm:callsites@3.1.0
+npm:cacheable@2.5.0
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/callsites/v/3.1.0
+  Source: https://www.npmjs.com/package/cacheable/v/2.5.0
   Scope: dev
-  Notice: third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt (upstream license)
+  Notice: third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt (upstream LICENSE)
 
 npm:chai@6.3.0
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/chai/v/6.3.0
   Scope: dev
   Notice: third-party/licenses/b181da80336ff9dd1043fc8be1a764d7382363433319aa872e4d2cb5ce2a3066.txt (upstream LICENSE)
-
-npm:chalk@4.1.2
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/chalk/v/4.1.2
-  Scope: dev
-  Notice: third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt (upstream license)
-
-npm:color-convert@2.0.1
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/color-convert/v/2.0.1
-  Scope: dev
-  Notice: third-party/licenses/693866fc419c6f61c8570438ec00659d156ec2b4d4a4d04091711f5f11a365d4.txt (upstream LICENSE)
-
-npm:color-name@1.1.4
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/color-name/v/1.1.4
-  Scope: dev
-  Notice: third-party/licenses/c064f7a3e353bc1bc977f3c897941c75ef763f44f41677e0a15370ca0853d6e2.txt (upstream LICENSE)
-
-npm:concat-map@0.0.1
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/concat-map/v/0.0.1
-  Scope: dev
-  Notice: third-party/licenses/435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b.txt (upstream LICENSE)
 
 npm:cross-spawn@7.0.6
   Declared: MIT; selected: MIT
@@ -4233,9 +4257,9 @@ npm:escape-string-regexp@4.0.0
   Scope: dev
   Notice: third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt (upstream license)
 
-npm:eslint-scope@8.4.0
+npm:eslint-scope@9.1.2
   Declared: BSD-2-Clause; selected: BSD-2-Clause
-  Source: https://www.npmjs.com/package/eslint-scope/v/8.4.0
+  Source: https://www.npmjs.com/package/eslint-scope/v/9.1.2
   Scope: dev
   Notice: third-party/licenses/d3a724e2ed749f172ff70b62a1d0631b7d4b0ea273782365a3464d4e2d6b6dbd.txt (upstream LICENSE)
 
@@ -4245,27 +4269,21 @@ npm:eslint-visitor-keys@3.4.3
   Scope: dev
   Notice: third-party/licenses/d8bf34ff6d190640a01e7704ad78253fc181bc128949d71273fbbaa12f33c0b4.txt (upstream LICENSE)
 
-npm:eslint-visitor-keys@4.2.1
-  Declared: Apache-2.0; selected: Apache-2.0
-  Source: https://www.npmjs.com/package/eslint-visitor-keys/v/4.2.1
-  Scope: dev
-  Notice: third-party/licenses/d8bf34ff6d190640a01e7704ad78253fc181bc128949d71273fbbaa12f33c0b4.txt (upstream LICENSE)
-
 npm:eslint-visitor-keys@5.0.1
   Declared: Apache-2.0; selected: Apache-2.0
   Source: https://www.npmjs.com/package/eslint-visitor-keys/v/5.0.1
   Scope: dev
   Notice: third-party/licenses/d8bf34ff6d190640a01e7704ad78253fc181bc128949d71273fbbaa12f33c0b4.txt (upstream LICENSE)
 
-npm:eslint@9.39.5
+npm:eslint@10.14.0
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/eslint/v/9.39.5
+  Source: https://www.npmjs.com/package/eslint/v/10.14.0
   Scope: dev
   Notice: third-party/licenses/3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c.txt (upstream LICENSE)
 
-npm:espree@10.4.0
+npm:espree@11.2.0
   Declared: BSD-2-Clause; selected: BSD-2-Clause
-  Source: https://www.npmjs.com/package/espree/v/10.4.0
+  Source: https://www.npmjs.com/package/espree/v/11.2.0
   Scope: dev
   Notice: third-party/licenses/26c95937762a3dc17a3934a0a2773c70259ba4bf28dab713c225e4af8eb9d349.txt (upstream LICENSE)
 
@@ -4342,11 +4360,11 @@ npm:fflate@0.8.3
   Scope: dev
   Notice: third-party/licenses/0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551.txt (upstream LICENSE)
 
-npm:file-entry-cache@8.0.0
+npm:file-entry-cache@11.1.5
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/file-entry-cache/v/8.0.0
+  Source: https://www.npmjs.com/package/file-entry-cache/v/11.1.5
   Scope: dev
-  Notice: third-party/licenses/a0e2f73971f663b49d3c66cc6749fc88de0f475680ccf5b980a9cbcc0c52490f.txt (upstream LICENSE)
+  Notice: third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt (upstream LICENSE)
 
 npm:find-up@5.0.0
   Declared: MIT; selected: MIT
@@ -4354,11 +4372,11 @@ npm:find-up@5.0.0
   Scope: dev
   Notice: third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt (upstream license)
 
-npm:flat-cache@4.0.1
+npm:flat-cache@6.1.23
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/flat-cache/v/4.0.1
+  Source: https://www.npmjs.com/package/flat-cache/v/6.1.23
   Scope: dev
-  Notice: third-party/licenses/a6a23fb76d91d98669f5ed6eb58213df594ab2d56c9e981ae021b194e3d662a7.txt (upstream LICENSE)
+  Notice: third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt (upstream LICENSE)
 
 npm:flatted@3.4.4
   Declared: ISC; selected: ISC
@@ -4384,15 +4402,9 @@ npm:glob-parent@6.0.2
   Scope: dev
   Notice: third-party/licenses/fc68eb8f1c8e1d6b8be50f3c177927e24791cae7dc251e6253a012f37926a30c.txt (upstream LICENSE)
 
-npm:globals@14.0.0
+npm:globals@17.14.0
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/globals/v/14.0.0
-  Scope: dev
-  Notice: third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt (upstream license)
-
-npm:globals@16.5.0
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/globals/v/16.5.0
+  Source: https://www.npmjs.com/package/globals/v/17.14.0
   Scope: dev
   Notice: third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt (upstream license)
 
@@ -4414,11 +4426,23 @@ npm:graphology@0.26.0
   Scope: normal
   Notice: third-party/licenses/9d396b4882c329077f32861c0d6822dcee48f2d0ff6196d8459af70844196275.txt (upstream LICENSE.txt)
 
-npm:has-flag@4.0.0
+npm:hashery@1.5.1
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/has-flag/v/4.0.0
+  Source: https://www.npmjs.com/package/hashery/v/1.5.1
   Scope: dev
-  Notice: third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt (upstream license)
+  Notice: third-party/licenses/2eef776efe4bae7fcd2d8162ecadf2b0873aae20afac343a936ddb0de3d79253.txt (upstream LICENSE)
+
+npm:hookified@1.15.1
+  Declared: MIT; selected: MIT
+  Source: https://www.npmjs.com/package/hookified/v/1.15.1
+  Scope: dev
+  Notice: third-party/licenses/3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe.txt (upstream LICENSE)
+
+npm:hookified@2.2.0
+  Declared: MIT; selected: MIT
+  Source: https://www.npmjs.com/package/hookified/v/2.2.0
+  Scope: dev
+  Notice: third-party/licenses/3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe.txt (upstream LICENSE)
 
 npm:ignore@5.3.2
   Declared: MIT; selected: MIT
@@ -4431,12 +4455,6 @@ npm:ignore@7.0.14
   Source: https://www.npmjs.com/package/ignore/v/7.0.14
   Scope: dev
   Notice: third-party/licenses/9c94db23dc4b1e9aaee5d195668b916afc71efed54af226b66cf0ccc4389c1c0.txt (upstream LICENSE-MIT)
-
-npm:import-fresh@3.3.1
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/import-fresh/v/3.3.1
-  Scope: dev
-  Notice: third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt (upstream license)
 
 npm:imurmurhash@0.1.4
   Declared: MIT; selected: MIT
@@ -4480,18 +4498,6 @@ npm:js-tokens@4.0.0
   Scope: normal
   Notice: third-party/licenses/2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1.txt (upstream LICENSE)
 
-npm:js-yaml@4.3.2
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/js-yaml/v/4.3.2
-  Scope: dev
-  Notice: third-party/licenses/a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550.txt (upstream LICENSE)
-
-npm:json-buffer@3.0.1
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/json-buffer/v/3.0.1
-  Scope: dev
-  Notice: third-party/licenses/715f1f0f2eb7688e53e4e958acdc7fc9e365ae3eaf26efc2604b93cc65fdc3f5.txt (upstream LICENSE)
-
 npm:json-schema-traverse@0.4.1
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/json-schema-traverse/v/0.4.1
@@ -4510,12 +4516,11 @@ npm:kapsule@1.16.3
   Scope: normal
   Notice: third-party/licenses/7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded.txt (upstream LICENSE)
 
-npm:keyv@4.5.4
+npm:keyv@5.6.0
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/keyv/v/4.5.4
+  Source: https://www.npmjs.com/package/keyv/v/5.6.0
   Scope: dev
-  Notice: third-party/licenses/7e83bf5deee9df0b61e828c620ca31fca98895497579652a38f4399251c47b64.txt (upstream README.md#original-copyright-and-license)
-  Notice: third-party/licenses/25c4576db4a90ddaddaf1b5cd83dc1a537e600041009f6ca71ec62d770ea4390.txt (upstream https://spdx.org/licenses/MIT.html#canonical-terms-with-original-copyright-separate)
+  Notice: third-party/licenses/1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959.txt (upstream LICENSE)
 
 npm:levn@0.4.1
   Declared: MIT; selected: MIT
@@ -4569,7 +4574,7 @@ npm:lightningcss-linux-x64-gnu@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
   Source: https://www.npmjs.com/package/lightningcss-linux-x64-gnu/v/1.33.0
   Scope: dev, optional
-  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream LICENSE)
 
 npm:lightningcss-linux-x64-musl@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
@@ -4587,7 +4592,7 @@ npm:lightningcss-win32-x64-msvc@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
   Source: https://www.npmjs.com/package/lightningcss-win32-x64-msvc/v/1.33.0
   Scope: dev, optional
-  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream LICENSE)
+  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream package/LICENSE)
 
 npm:lightningcss@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
@@ -4605,12 +4610,6 @@ npm:lodash-es@4.18.1
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/lodash-es/v/4.18.1
   Scope: normal
-  Notice: third-party/licenses/f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc.txt (upstream LICENSE)
-
-npm:lodash.merge@4.6.2
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/lodash.merge/v/4.6.2
-  Scope: dev
   Notice: third-party/licenses/f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc.txt (upstream LICENSE)
 
 npm:loose-envify@1.4.0
@@ -4631,17 +4630,11 @@ npm:meshoptimizer@0.22.0
   Scope: dev
   Notice: third-party/licenses/d1bc307ff896c7fc65e3ff4823cc478194f7a5bc6436f99534ebede4d9e2017a.txt (upstream LICENSE.md)
 
-npm:minimatch@10.2.6
+npm:minimatch@11.0.4
   Declared: BlueOak-1.0.0; selected: BlueOak-1.0.0
-  Source: https://www.npmjs.com/package/minimatch/v/10.2.6
+  Source: https://www.npmjs.com/package/minimatch/v/11.0.4
   Scope: dev
   Notice: third-party/licenses/2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901.txt (upstream LICENSE.md)
-
-npm:minimatch@3.1.5
-  Declared: ISC; selected: ISC
-  Source: https://www.npmjs.com/package/minimatch/v/3.1.5
-  Scope: dev
-  Notice: third-party/licenses/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt (upstream LICENSE)
 
 npm:ms@2.1.3
   Declared: MIT; selected: MIT
@@ -4721,12 +4714,6 @@ npm:p-locate@5.0.0
   Source: https://www.npmjs.com/package/p-locate/v/5.0.0
   Scope: dev
   Notice: third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt (upstream license)
-
-npm:parent-module@1.0.1
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/parent-module/v/1.0.1
-  Scope: dev
-  Notice: third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt (upstream license)
 
 npm:path-exists@4.0.0
   Declared: MIT; selected: MIT
@@ -4815,6 +4802,12 @@ npm:punycode@2.3.1
   Scope: dev
   Notice: third-party/licenses/483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a.txt (upstream LICENSE-MIT.txt)
 
+npm:qified@0.10.1
+  Declared: MIT; selected: MIT
+  Source: https://www.npmjs.com/package/qified/v/0.10.1
+  Scope: dev
+  Notice: third-party/licenses/3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe.txt (upstream LICENSE)
+
 npm:react-dom@19.3.1
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/react-dom/v/19.3.1
@@ -4844,12 +4837,6 @@ npm:react@19.3.1
   Source: https://www.npmjs.com/package/react/v/19.3.1
   Scope: normal
   Notice: third-party/licenses/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt (upstream LICENSE)
-
-npm:resolve-from@4.0.0
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/resolve-from/v/4.0.0
-  Scope: dev
-  Notice: third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt (upstream license)
 
 npm:rolldown@1.2.15
   Declared: MIT; selected: MIT
@@ -4900,18 +4887,6 @@ npm:std-env@4.3.0
   Scope: dev
   Notice: third-party/licenses/a6f36438e46fb911859f3b9c4cad045ba64e1af3d8f4512c60258fa2d7552d28.txt (upstream LICENCE)
 
-npm:strip-json-comments@3.1.1
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/strip-json-comments/v/3.1.1
-  Scope: dev
-  Notice: third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt (upstream license)
-
-npm:supports-color@7.2.0
-  Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/supports-color/v/7.2.0
-  Scope: dev
-  Notice: third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt (upstream license)
-
 npm:three-forcegraph@1.43.6
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/three-forcegraph/v/1.43.6
@@ -4924,13 +4899,11 @@ npm:three-render-objects@1.43.0
   Scope: normal
   Notice: third-party/licenses/5b6dc9ce44c7b73620b191c567339212bd00537af46fdedaf98304c34214cc9c.txt (upstream LICENSE)
 
-npm:three@0.180.0
+npm:three@0.186.1
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/three/v/0.180.0
+  Source: https://www.npmjs.com/package/three/v/0.186.1
   Scope: normal
-  Notice: third-party/licenses/bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601.txt (upstream LICENSE)
-  Notice: third-party/licenses/35e8279356d7890871c4fce804d157e3f21456a7311ef2caab5cb4705c71b6bd.txt (upstream examples/fonts/LICENSE)
-  Notice: third-party/licenses/38751245389e1e23f73e6f5384b5cbe7fa972cc4410c5adc9c04b082a0b9561a.txt (upstream examples/fonts/droid/NOTICE)
+  Notice: third-party/licenses/8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc.txt (upstream LICENSE)
 
 npm:tinybench@6.2.2
   Declared: MIT; selected: MIT

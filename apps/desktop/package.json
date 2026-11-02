@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "overrides": {
+    "@eslint/config-array": { "minimatch": "11.0.4" },
+    "@typescript-eslint/typescript-estree": { "minimatch": "11.0.4" },
+    "eslint": { "minimatch": "11.0.4" }
+  },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc -b && vite build",
@@ -20,10 +25,10 @@
     "react-dom": "^19.2.0",
     "react-force-graph-3d": "^1.29.0",
     "sigma": "3.0.2",
-    "three": "^0.180.0"
+    "three": "^0.186.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.38.0",
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.56.0",
     "@tauri-apps/cli": "^2.9.0",
     "@types/pngjs": "^6.0.5",
@@ -31,8 +36,8 @@
     "@types/react-dom": "^19.2.0",
     "@types/three": "^0.180.0",
     "@vitejs/plugin-react": "^6.1.2",
-    "eslint": "^9.38.0",
-    "globals": "^16.4.0",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
     "pngjs": "^7.0.0",
     "prettier": "^3.9.10",
     "typescript": "~5.9.3",
