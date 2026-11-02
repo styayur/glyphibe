@@ -582,7 +582,10 @@ pub fn extract_markdown(text: &str, source: &str) -> Vec<ImportedConcept> {
             return;
         }
         let text = body.trim().to_owned();
-        let digest = format!("{:x}", Sha256::digest(text.as_bytes()));
+        let digest = Sha256::digest(text.as_bytes())
+            .iter()
+            .map(|byte| format!("{byte:02x}"))
+            .collect();
         result
             .entry(term.clone())
             .and_modify(|old| {
