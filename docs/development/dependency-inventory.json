@@ -2,15 +2,15 @@
   "schema_version": 1,
   "coverage": "Cargo default enabled features with no target filter; both manifests; all npm lock entries including optional platform/build/dev packages. Disabled Cargo features are not claimed shipped.",
   "lock_sha256": {
-    "Cargo.lock": "47bf63bf390c5bd8d97f298fdb7100d3fa9031441ad79e90e32f7d9f049284bd",
-    "apps/desktop/package-lock.json": "c2b1b55a83f7fe98c042c4f01f688ab9956d56840b4e76ad14471376cb5624bc"
+    "Cargo.lock": "0b75f4028f821c2d0143abeb5602bf878d2df4b28e5afbdf87d5e7b03b6487c8",
+    "apps/desktop/package-lock.json": "dd92856a89af4b2bab77868d1174cd4590575e6d4b3aae232c7dad30ad1026b4"
   },
   "input_sha256": {
     "Cargo.toml": "e4908c8e1369aec451392164bf493e16a05e2b4af1d6c953aa5576fbc53910f1",
-    "Cargo.lock": "47bf63bf390c5bd8d97f298fdb7100d3fa9031441ad79e90e32f7d9f049284bd",
+    "Cargo.lock": "0b75f4028f821c2d0143abeb5602bf878d2df4b28e5afbdf87d5e7b03b6487c8",
     "apps/desktop/src-tauri/Cargo.toml": "108c47b9ec0f66b0617d1cbe65a7eed2f506a2d2fd0812e29162f91a8761aca7",
-    "apps/desktop/package.json": "777a1abad963d847c5892682ce6d2c954971949f780613312fd5ed14f4ec40de",
-    "apps/desktop/package-lock.json": "c2b1b55a83f7fe98c042c4f01f688ab9956d56840b4e76ad14471376cb5624bc",
+    "apps/desktop/package.json": "73d57de8462295bd6c57b1cec78b93b1adf4eba08d3108dfb375cbbfa08719ca",
+    "apps/desktop/package-lock.json": "dd92856a89af4b2bab77868d1174cd4590575e6d4b3aae232c7dad30ad1026b4",
     "crates/glyphibe-analysis/Cargo.toml": "cf97edba3bdf5c2cc5003f32d9f471cef9fed6d0ed59db8f0d6b719451aec56c",
     "crates/glyphibe-cli/Cargo.toml": "d3ef7b2585f6f77123388d26fc377957671165f874d63df13fca837ca4428175",
     "crates/glyphibe-core/Cargo.toml": "8d48ac1d570d9eccdb88b2d3d202afdfb419c7bedce9a8b91ef7b098af3d8f32",
@@ -6025,13 +6025,13 @@
     {
       "ecosystem": "cargo",
       "name": "ignore",
-      "version": "0.4.33",
+      "version": "0.4.34",
       "license_declared": "Unlicense OR MIT",
       "source": "https://github.com/BurntSushi/ripgrep/tree/master/crates/ignore",
-      "download": "https://crates.io/api/v1/crates/ignore/0.4.33/download",
+      "download": "https://crates.io/api/v1/crates/ignore/0.4.34/download",
       "checksum": {
         "algorithm": "SHA256",
-        "value": "00b69833ed729dc5aa7d19541d96d6cf8e9137194207a04916d658e43168402f"
+        "value": "484be5657551d7868d67587df967fb4fcbe9d266a761cc855aaa148fda0b3cc7"
       },
       "scopes": [
         "normal"
@@ -6043,7 +6043,7 @@
       "platform_conditions": [],
       "license_selected": "Unlicense",
       "license_normalization": "SPDX expression",
-      "id": "cargo:ignore@0.4.33",
+      "id": "cargo:ignore@0.4.34",
       "notices": [
         {
           "source_file": "COPYING",
@@ -7057,6 +7057,7 @@
         "cfg(any(target_os = \"dragonfly\", target_os = \"freebsd\", target_os = \"hurd\", target_os = \"illumos\", target_os = \"cygwin\", all(target_os = \"horizon\", target_arch = \"arm\")))",
         "cfg(any(target_os = \"haiku\", target_os = \"redox\", target_os = \"nto\", target_os = \"aix\"))",
         "cfg(any(target_os = \"ios\", target_os = \"visionos\", target_os = \"watchos\", target_os = \"tvos\"))",
+        "cfg(any(target_os = \"linux\", target_os = \"freebsd\", target_os = \"dragonfly\", target_os = \"netbsd\", target_os = \"openbsd\"))",
         "cfg(any(target_os = \"macos\", target_os = \"openbsd\", target_os = \"vita\", target_os = \"emscripten\"))",
         "cfg(any(unix, target_os = \"hermit\", target_os = \"wasi\"))",
         "cfg(any(unix, target_os = \"wasi\"))",
@@ -9027,6 +9028,7 @@
       ],
       "platform_conditions": [
         "cfg(any(target_os = \"linux\", target_os = \"dragonfly\", target_os = \"freebsd\", target_os = \"openbsd\", target_os = \"netbsd\"))",
+        "cfg(any(target_os = \"linux\", target_os = \"freebsd\", target_os = \"dragonfly\", target_os = \"netbsd\", target_os = \"openbsd\"))",
         "cfg(not(all(target_arch = \"wasm32\", any(target_os = \"unknown\", target_os = \"none\"))))",
         "cfg(target_os = \"android\")"
       ],
@@ -10442,13 +10444,13 @@
     {
       "ecosystem": "cargo",
       "name": "rfd",
-      "version": "0.16.1",
+      "version": "0.17.2",
       "license_declared": "MIT",
       "source": "https://github.com/PolyMeilex/rfd",
-      "download": "https://crates.io/api/v1/crates/rfd/0.16.1/download",
+      "download": "https://crates.io/api/v1/crates/rfd/0.17.2/download",
       "checksum": {
         "algorithm": "SHA256",
-        "value": "f4fe518b6db89699d59862e4d1e3a0226316090f4e4ec09f7dd686be25634c7c"
+        "value": "20dafead71c16a34e1ff357ddefc8afc11e7d51d6d2b9fbd07eaa48e3e540220"
       },
       "scopes": [
         "normal"
@@ -10462,12 +10464,17 @@
       ],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "cargo:rfd@0.16.1",
+      "id": "cargo:rfd@0.17.2",
       "notices": [
         {
           "source_file": "LICENSE",
           "file": "third-party/licenses/65fc947f4bac882a2cd104ef73c246b1b037059df9f2b3a58b7f77f0b9e56071.txt",
           "sha256": "65fc947f4bac882a2cd104ef73c246b1b037059df9f2b3a58b7f77f0b9e56071"
+        },
+        {
+          "source_file": "src/backend/xdg_desktop_portal/window_identifier/LICENSE",
+          "file": "third-party/licenses/ae26bc7b1bc91fb8648f6a298decbb1a77090a56c9d04e2c23b8365e5f54acb5.txt",
+          "sha256": "ae26bc7b1bc91fb8648f6a298decbb1a77090a56c9d04e2c23b8365e5f54acb5"
         }
       ]
     },
@@ -10592,13 +10599,13 @@
     {
       "ecosystem": "cargo",
       "name": "rusqlite",
-      "version": "0.41.0",
+      "version": "0.41.1",
       "license_declared": "MIT",
       "source": "https://github.com/rusqlite/rusqlite",
-      "download": "https://crates.io/api/v1/crates/rusqlite/0.41.0/download",
+      "download": "https://crates.io/api/v1/crates/rusqlite/0.41.1/download",
       "checksum": {
         "algorithm": "SHA256",
-        "value": "9c026b4444579e8d754556c6c75d040d69c4a44283cdb648ab8a8d5965c2cfa8"
+        "value": "da9bba6f3506135e120a6586df05be18b48d18896600646a4bec8f993d91a594"
       },
       "scopes": [
         "normal"
@@ -10610,7 +10617,7 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "cargo:rusqlite@0.41.0",
+      "id": "cargo:rusqlite@0.41.1",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -13135,13 +13142,13 @@
     {
       "ecosystem": "cargo",
       "name": "tauri-plugin-dialog",
-      "version": "2.8.3",
+      "version": "2.8.4",
       "license_declared": "Apache-2.0 OR MIT",
       "source": "https://github.com/tauri-apps/plugins-workspace",
-      "download": "https://crates.io/api/v1/crates/tauri-plugin-dialog/2.8.3/download",
+      "download": "https://crates.io/api/v1/crates/tauri-plugin-dialog/2.8.4/download",
       "checksum": {
         "algorithm": "SHA256",
-        "value": "b7461aaacf1901915ea7b9f5cd74f8224a351ed96af0a62c07fce934003cb34b"
+        "value": "ce0fb9c2b6d34a9720627ed930ebc8af26f61e648695aecaeb03d5c33c5896f5"
       },
       "scopes": [
         "normal"
@@ -13153,7 +13160,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "cargo:tauri-plugin-dialog@2.8.3",
+      "id": "cargo:tauri-plugin-dialog@2.8.4",
       "notices": [
         {
           "source_file": "LICENSE.spdx",
@@ -16405,8 +16412,7 @@
         "apps/desktop/src-tauri/Cargo.toml"
       ],
       "platform_conditions": [
-        "cfg(windows)",
-        "cfg(windows_raw_dylib)"
+        "cfg(windows)"
       ],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
@@ -16606,43 +16612,6 @@
     {
       "ecosystem": "cargo",
       "name": "windows-sys",
-      "version": "0.60.2",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows-sys/0.60.2/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "f2f500e4d28234f72040990ec9d39e3a6b950f9f22d3dba18416c35882612bcb"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [
-        "cfg(target_os = \"windows\")"
-      ],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows-sys@0.60.2",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
-      "name": "windows-sys",
       "version": "0.61.2",
       "license_declared": "MIT OR Apache-2.0",
       "source": "https://github.com/microsoft/windows-rs",
@@ -16737,41 +16706,6 @@
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
       "id": "cargo:windows-targets@0.52.6",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
-      "name": "windows-targets",
-      "version": "0.53.5",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows-targets/0.53.5/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "4945f9f551b88e0d65f3db0bc25c33b8acea4d9e41163edf90dcd0b19f9069f3"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows-targets@0.53.5",
       "notices": [
         {
           "source_file": "license-apache-2.0",
@@ -16971,43 +16905,6 @@
     },
     {
       "ecosystem": "cargo",
-      "name": "windows_aarch64_gnullvm",
-      "version": "0.53.1",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows_aarch64_gnullvm/0.53.1/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "a9d8416fa8b42f5c947f8482c43e7d89e73a173cead56d044f6a56104a6d1b53"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [
-        "aarch64-pc-windows-gnullvm"
-      ],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows_aarch64_gnullvm@0.53.1",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
       "name": "windows_aarch64_msvc",
       "version": "0.42.2",
       "license_declared": "MIT OR Apache-2.0",
@@ -17068,43 +16965,6 @@
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
       "id": "cargo:windows_aarch64_msvc@0.52.6",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
-      "name": "windows_aarch64_msvc",
-      "version": "0.53.1",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows_aarch64_msvc/0.53.1/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "b9d782e804c2f632e395708e99a94275910eb9100b2114651e04744e9b125006"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [
-        "cfg(all(target_arch = \"aarch64\", target_env = \"msvc\", not(windows_raw_dylib)))"
-      ],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows_aarch64_msvc@0.53.1",
       "notices": [
         {
           "source_file": "license-apache-2.0",
@@ -17195,43 +17055,6 @@
     },
     {
       "ecosystem": "cargo",
-      "name": "windows_i686_gnu",
-      "version": "0.53.1",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows_i686_gnu/0.53.1/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "960e6da069d81e09becb0ca57a65220ddff016ff2d6af6a223cf372a506593a3"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [
-        "cfg(all(target_arch = \"x86\", target_env = \"gnu\", not(target_abi = \"llvm\"), not(windows_raw_dylib)))"
-      ],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows_i686_gnu@0.53.1",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
       "name": "windows_i686_gnullvm",
       "version": "0.52.6",
       "license_declared": "MIT OR Apache-2.0",
@@ -17254,43 +17077,6 @@
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
       "id": "cargo:windows_i686_gnullvm@0.52.6",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
-      "name": "windows_i686_gnullvm",
-      "version": "0.53.1",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows_i686_gnullvm/0.53.1/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "fa7359d10048f68ab8b09fa71c3daccfb0e9b559aed648a8f95469c27057180c"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [
-        "i686-pc-windows-gnullvm"
-      ],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows_i686_gnullvm@0.53.1",
       "notices": [
         {
           "source_file": "license-apache-2.0",
@@ -17381,43 +17167,6 @@
     },
     {
       "ecosystem": "cargo",
-      "name": "windows_i686_msvc",
-      "version": "0.53.1",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows_i686_msvc/0.53.1/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "1e7ac75179f18232fe9c285163565a57ef8d3c89254a30685b57d83a38d326c2"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [
-        "cfg(all(target_arch = \"x86\", target_env = \"msvc\", not(windows_raw_dylib)))"
-      ],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows_i686_msvc@0.53.1",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
       "name": "windows_x86_64_gnu",
       "version": "0.42.2",
       "license_declared": "MIT OR Apache-2.0",
@@ -17478,43 +17227,6 @@
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
       "id": "cargo:windows_x86_64_gnu@0.52.6",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
-      "name": "windows_x86_64_gnu",
-      "version": "0.53.1",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows_x86_64_gnu/0.53.1/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "9c3842cdd74a865a8066ab39c8a7a473c0778a3f29370b5fd6b4b9aa7df4a499"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [
-        "cfg(all(target_arch = \"x86_64\", target_env = \"gnu\", not(target_abi = \"llvm\"), not(windows_raw_dylib)))"
-      ],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows_x86_64_gnu@0.53.1",
       "notices": [
         {
           "source_file": "license-apache-2.0",
@@ -17604,43 +17316,6 @@
     },
     {
       "ecosystem": "cargo",
-      "name": "windows_x86_64_gnullvm",
-      "version": "0.53.1",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows_x86_64_gnullvm/0.53.1/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "0ffa179e2d07eee8ad8f57493436566c7cc30ac536a3379fdf008f47f6bb7ae1"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [
-        "x86_64-pc-windows-gnullvm"
-      ],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows_x86_64_gnullvm@0.53.1",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
       "name": "windows_x86_64_msvc",
       "version": "0.42.2",
       "license_declared": "MIT OR Apache-2.0",
@@ -17701,43 +17376,6 @@
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
       "id": "cargo:windows_x86_64_msvc@0.52.6",
-      "notices": [
-        {
-          "source_file": "license-apache-2.0",
-          "file": "third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt",
-          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
-        },
-        {
-          "source_file": "license-mit",
-          "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
-          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
-        }
-      ]
-    },
-    {
-      "ecosystem": "cargo",
-      "name": "windows_x86_64_msvc",
-      "version": "0.53.1",
-      "license_declared": "MIT OR Apache-2.0",
-      "source": "https://github.com/microsoft/windows-rs",
-      "download": "https://crates.io/api/v1/crates/windows_x86_64_msvc/0.53.1/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "d6bbff5f0aada427a1e5a6da5f1f98158182f26556f345ac9e04d36d0ebed650"
-      },
-      "scopes": [
-        "normal"
-      ],
-      "origins": [
-        "Cargo.toml",
-        "apps/desktop/src-tauri/Cargo.toml"
-      ],
-      "platform_conditions": [
-        "cfg(all(any(target_arch = \"x86_64\", target_arch = \"arm64ec\"), target_env = \"msvc\", not(windows_raw_dylib)))"
-      ],
-      "license_selected": "MIT",
-      "license_normalization": "SPDX expression",
-      "id": "cargo:windows_x86_64_msvc@0.53.1",
       "notices": [
         {
           "source_file": "license-apache-2.0",
@@ -20431,11 +20069,11 @@
     {
       "ecosystem": "npm",
       "name": "@types/three",
-      "version": "0.180.0",
+      "version": "0.187.0",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/@types/three/v/0.180.0",
-      "download": "https://registry.npmjs.org/@types/three/-/three-0.180.0.tgz",
-      "integrity": "sha512-ykFtgCqNnY0IPvDro7h+9ZeLY+qjgUWv+qEvUt84grhenO60Hqd4hScHE7VTB9nOQ/3QM8lkbNE+4vKjEpUxKg==",
+      "source": "https://www.npmjs.com/package/@types/three/v/0.187.0",
+      "download": "https://registry.npmjs.org/@types/three/-/three-0.187.0.tgz",
+      "integrity": "sha512-v+vKNarUtk4n2QRZ4+CN5ygMM0ARUjXjIQl0R/unMUfmStFeVqGbgqarbrpoGTXRZoulSH16ePrVJVxPJEbMUA==",
       "scopes": [
         "dev"
       ],
@@ -20445,7 +20083,7 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:@types/three@0.180.0",
+      "id": "npm:@types/three@0.187.0",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -20742,6 +20380,732 @@
     },
     {
       "ecosystem": "npm",
+      "name": "@typescript/typescript-aix-ppc64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-aix-ppc64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-aix-ppc64/-/typescript-aix-ppc64-7.0.2.tgz",
+      "integrity": "sha512-MTKKkWB7p/0E9xi1d1tHtZ5PiLkGEMIq88pK2CubZjOsLtYTLqhgIgi6zepFa+9GHZ6h05NMCkQxGKiPXMxXtQ==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=ppc64",
+        "os=aix"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-aix-ppc64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-darwin-arm64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-darwin-arm64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-darwin-arm64/-/typescript-darwin-arm64-7.0.2.tgz",
+      "integrity": "sha512-gowzar9MwS/aRWp6f3a4KUqzRjAZjOsmGNCM6LcTgXum+dBfgsBVMN+AgvOCCbguXyick6LJhpBszxMebJ8syA==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=arm64",
+        "os=darwin"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-darwin-arm64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-darwin-x64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-darwin-x64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-darwin-x64/-/typescript-darwin-x64-7.0.2.tgz",
+      "integrity": "sha512-SZ9xZInqApNlNGc9s0W1VSsktYSOe9cFqNOIqmN1Gs8SmkjKZYFt017G4VwPxASInODuAdbTW7sXiFUf893RgA==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=x64",
+        "os=darwin"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-darwin-x64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-freebsd-arm64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-freebsd-arm64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-freebsd-arm64/-/typescript-freebsd-arm64-7.0.2.tgz",
+      "integrity": "sha512-W5NH4y/J0plIIS5b2xvTEkU7JFxyqdMAOgf+Ilhl0vHQXKO5dZoxd+C/jEtq56c4F3wk71RB4BMRQ2XdI+bwYQ==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=arm64",
+        "os=freebsd"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-freebsd-arm64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-freebsd-x64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-freebsd-x64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-freebsd-x64/-/typescript-freebsd-x64-7.0.2.tgz",
+      "integrity": "sha512-UMGDx5sTpzNw3WiPebH7l90IWfJggEd+egHt/q6p7/Cm3zqoV7VxkGXt+3DxPIw8CcmvAB0j3sVVfbhX+M4Tpw==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=x64",
+        "os=freebsd"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-freebsd-x64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-linux-arm64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-linux-arm64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-linux-arm64/-/typescript-linux-arm64-7.0.2.tgz",
+      "integrity": "sha512-Qh4eU4/y3yDjnfjjyPYihMj5/ODIlmt+Bzu17OI+fiSRDW57QmU5SiN63exPRNJPKUzcc1INa1NXdrJ+MqHjUQ==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=arm64",
+        "os=linux"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-linux-arm64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-linux-arm",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-linux-arm/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-linux-arm/-/typescript-linux-arm-7.0.2.tgz",
+      "integrity": "sha512-gffT3xPz9sR7j/YJExkyPntrI0P2EP9XbOyWzth2/Gs0RstK+90RBcO0ncXoXy/beYll1SXw846Nf2zdnEz0QQ==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=arm",
+        "os=linux"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-linux-arm@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-linux-loong64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-linux-loong64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-linux-loong64/-/typescript-linux-loong64-7.0.2.tgz",
+      "integrity": "sha512-uEHck9i8hoAzXPiYRib1O7miOnz23SxIeVl6F4LXox+qov1K35jHcEW6VHKvZI+pyvl7fZEP4MCU5LYvIq1GuQ==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=loong64",
+        "os=linux"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-linux-loong64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-linux-mips64el",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-linux-mips64el/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-linux-mips64el/-/typescript-linux-mips64el-7.0.2.tgz",
+      "integrity": "sha512-R4KvAMnE43W5Qeqb0Ly56O3mWMWIAgsMyz36DCaycd5nbg/9kzm0liw3JocfRqyJY0KPmzFjbswozXyW0DnIYA==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=mips64el",
+        "os=linux"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-linux-mips64el@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-linux-ppc64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-linux-ppc64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-linux-ppc64/-/typescript-linux-ppc64-7.0.2.tgz",
+      "integrity": "sha512-DORx5b3sd/4S7eayxm4FQv+A7CrkUIGRaHiwI8oiHTAI1fAPWhF4J0vAlkC8biAlHSVVwxMQ3tjZ2/DVbnQiiA==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=ppc64",
+        "os=linux"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-linux-ppc64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-linux-riscv64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-linux-riscv64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-linux-riscv64/-/typescript-linux-riscv64-7.0.2.tgz",
+      "integrity": "sha512-wf0jqEDOjrPRnKwYRyyJDRo11KMbvMFrU+q4zqKyChODBzvlkbhNQfKvLxQCcwTpdDaXSHZTVuh0JoCrKCUMHQ==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=riscv64",
+        "os=linux"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-linux-riscv64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-linux-s390x",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-linux-s390x/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-linux-s390x/-/typescript-linux-s390x-7.0.2.tgz",
+      "integrity": "sha512-IkwJc3L7yhytWd/ewjyxNDfOmswCm9GWMJT/ue/dU4aZNbwZeYAetq42VyLmsmSjvoX7z74X6ZaYCtzAr0EuGw==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=s390x",
+        "os=linux"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-linux-s390x@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-linux-x64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-linux-x64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-linux-x64/-/typescript-linux-x64-7.0.2.tgz",
+      "integrity": "sha512-EYdf2cNg7rgCWJnxCdJ+F3V39O8ihb37eHAu1LK8oAFizgTQbPOK7zHHXbPt8rX24COqODXeI3sIf0fCXG7H/A==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=x64",
+        "os=linux"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-linux-x64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-netbsd-arm64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-netbsd-arm64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-netbsd-arm64/-/typescript-netbsd-arm64-7.0.2.tgz",
+      "integrity": "sha512-+polYF4MF04aPpO5FTkHran9yUQDSXqy5GiSDKpsll5jy3l3+g9QLhpf39T+ePtefhXLOGrLl0QIjkQP6VnelA==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=arm64",
+        "os=netbsd"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-netbsd-arm64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-netbsd-x64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-netbsd-x64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-netbsd-x64/-/typescript-netbsd-x64-7.0.2.tgz",
+      "integrity": "sha512-8YIT0EHM/3dq10ZOVF/A7pc/YSMtbcecct4rWtexrnSCHOPcpC2KTLXfTCR6vDpnSiY12heNb1GiN/wu+T/FyA==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=x64",
+        "os=netbsd"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-netbsd-x64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-openbsd-arm64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-openbsd-arm64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-openbsd-arm64/-/typescript-openbsd-arm64-7.0.2.tgz",
+      "integrity": "sha512-APT8+ClYnuYm1u9+kgGXoMj2VzWzcymwh2gNSQVySHfkRDGOTVkoWLjCmOQSaO+PoqQ57B0flRp9SA+7GnnkzQ==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=arm64",
+        "os=openbsd"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-openbsd-arm64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-openbsd-x64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-openbsd-x64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-openbsd-x64/-/typescript-openbsd-x64-7.0.2.tgz",
+      "integrity": "sha512-yX7s+Q0Dln0Dt9tEzZsAjXXR/+ytBM7AlglaqyeMPxQszJ1JhlJdZ6jLA+IzldHtflX81em7lDao1xXu+aRRkg==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=x64",
+        "os=openbsd"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-openbsd-x64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-sunos-x64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-sunos-x64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-sunos-x64/-/typescript-sunos-x64-7.0.2.tgz",
+      "integrity": "sha512-dLJDGaLZ1D4HPQn62u1n8mBDkJREwMsAkCdkwd4Ieqw+x3TUyTsqY0YiBCtE6H6OzzgGk3iuZ3vFWRS+E8/d1g==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=x64",
+        "os=sunos"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-sunos-x64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-win32-arm64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-win32-arm64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-win32-arm64/-/typescript-win32-arm64-7.0.2.tgz",
+      "integrity": "sha512-Gyl1Vy6OsWesLzmq+EP0Fb7b4Nid5232AvcA2SFcdYreldpNtYFFofPjnt62y9hQy7VTaZp65ICJjuAQRaVcIQ==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=arm64",
+        "os=win32"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-win32-arm64@7.0.2",
+      "notices": [
+        {
+          "source_file": "package/LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "package/NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript-win32-x64",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript-win32-x64/v/7.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript-win32-x64/-/typescript-win32-x64-7.0.2.tgz",
+      "integrity": "sha512-0BQ3HkAHHlKLSp1qRvf3SUhGpGsDuhB/jgFw75guyqbxJqEaS0Cw/VFO8i2nHglJUzQCRtMMR/IBAKE3ETMC4g==",
+      "scopes": [
+        "dev",
+        "optional"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [
+        "cpu=x64",
+        "os=win32"
+      ],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript-win32-x64@7.0.2",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript/typescript6",
+      "version": "6.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/@typescript/typescript6/v/6.0.2",
+      "download": "https://registry.npmjs.org/@typescript/typescript6/-/typescript6-6.0.2.tgz",
+      "integrity": "sha512-mbCddXd+jm7hfx7w2YU64/Av4/NqqeG3GoRZgxPcgoTxYjhrcfJRw9ULch71SS4G+Q3bOXFhRvPqjguN0Hyp5w==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:@typescript/typescript6@6.0.2",
+      "notices": [
+        {
+          "source_file": "LICENSE.txt",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
       "name": "@vitejs/plugin-react",
       "version": "6.1.2",
       "license_declared": "MIT",
@@ -20815,32 +21179,6 @@
           "source_file": "LICENSE",
           "file": "third-party/licenses/04575fc5bfae19a9b63100f8691f901a2e15a399011ac02db435a9ef27295551.txt",
           "sha256": "04575fc5bfae19a9b63100f8691f901a2e15a399011ac02db435a9ef27295551"
-        }
-      ]
-    },
-    {
-      "ecosystem": "npm",
-      "name": "@webgpu/types",
-      "version": "0.1.74",
-      "license_declared": "BSD-3-Clause",
-      "source": "https://www.npmjs.com/package/@webgpu/types/v/0.1.74",
-      "download": "https://registry.npmjs.org/@webgpu/types/-/types-0.1.74.tgz",
-      "integrity": "sha512-lgiI4hbuLcI9unnm2cL/tvCaQU45dp0xcLWJh5uB/9MBGvIA4F8XIk7nSiBeg+K4xWGYwgZKn80LmERI5CxoTA==",
-      "scopes": [
-        "dev"
-      ],
-      "origins": [
-        "apps/desktop/package-lock.json"
-      ],
-      "platform_conditions": [],
-      "license_selected": "BSD-3-Clause",
-      "license_normalization": "SPDX expression",
-      "id": "npm:@webgpu/types@0.1.74",
-      "notices": [
-        {
-          "source_file": "LICENSE",
-          "file": "third-party/licenses/ad88400fc55c2871ba2ed33930dc13001ef01907c2ddcbfa3caa8656e9142f05.txt",
-          "sha256": "ad88400fc55c2871ba2ed33930dc13001ef01907c2ddcbfa3caa8656e9142f05"
         }
       ]
     },
@@ -23088,7 +23426,7 @@
       "id": "npm:lightningcss-linux-x64-gnu@1.33.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt",
           "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
         }
@@ -23178,7 +23516,7 @@
       "id": "npm:lightningcss-win32-x64-msvc@1.33.0",
       "notices": [
         {
-          "source_file": "package/LICENSE",
+          "source_file": "LICENSE",
           "file": "third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt",
           "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
         }
@@ -23317,11 +23655,11 @@
     {
       "ecosystem": "npm",
       "name": "meshoptimizer",
-      "version": "0.22.0",
+      "version": "1.1.1",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/meshoptimizer/v/0.22.0",
-      "download": "https://registry.npmjs.org/meshoptimizer/-/meshoptimizer-0.22.0.tgz",
-      "integrity": "sha512-IebiK79sqIy+E4EgOr+CAw+Ke8hAspXKzBd0JdgEmPHiAwmvEj2S4h1rfvo+o/BnfEYd/jAOg5IeeIjzlzSnDg==",
+      "source": "https://www.npmjs.com/package/meshoptimizer/v/1.1.1",
+      "download": "https://registry.npmjs.org/meshoptimizer/-/meshoptimizer-1.1.1.tgz",
+      "integrity": "sha512-oRFNWJRDA/WTrVj7NWvqa5HqE1t9MYDj2VaWirQCzCCrAd2GHrqR/sQezCxiWATPNlKTcRaPRHPJwIRoPBAp5g==",
       "scopes": [
         "dev"
       ],
@@ -23331,12 +23669,12 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:meshoptimizer@0.22.0",
+      "id": "npm:meshoptimizer@1.1.1",
       "notices": [
         {
           "source_file": "LICENSE.md",
-          "file": "third-party/licenses/d1bc307ff896c7fc65e3ff4823cc478194f7a5bc6436f99534ebede4d9e2017a.txt",
-          "sha256": "d1bc307ff896c7fc65e3ff4823cc478194f7a5bc6436f99534ebede4d9e2017a"
+          "file": "third-party/licenses/f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26.txt",
+          "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26"
         }
       ]
     },
@@ -24390,11 +24728,11 @@
     {
       "ecosystem": "npm",
       "name": "sigma",
-      "version": "3.0.2",
+      "version": "4.0.4",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/sigma/v/3.0.2",
-      "download": "https://registry.npmjs.org/sigma/-/sigma-3.0.2.tgz",
-      "integrity": "sha512-/BUbeOwPGruiBOm0YQQ6ZMcLIZ6tf/W+Jcm7dxZyAX0tK3WP9/sq7/NAWBxPIxVahdGjCJoGwej0Gdrv0DxlQQ==",
+      "source": "https://www.npmjs.com/package/sigma/v/4.0.4",
+      "download": "https://registry.npmjs.org/sigma/-/sigma-4.0.4.tgz",
+      "integrity": "sha512-qVZJ0WHhtOngpIpai7xfopkiTkwb92+Cl7zqcJBJos5juwH6FnkUfOM08mjgZ6Urd5WUAIsSbYNY41SL7BydYw==",
       "scopes": [
         "normal"
       ],
@@ -24404,12 +24742,12 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:sigma@3.0.2",
+      "id": "npm:sigma@4.0.4",
       "notices": [
         {
           "source_file": "LICENSE.txt",
-          "file": "third-party/licenses/2d6beb4435a5186414986ef25facdea68619d0f3e1043b9a795f5c6233914013.txt",
-          "sha256": "2d6beb4435a5186414986ef25facdea68619d0f3e1043b9a795f5c6233914013"
+          "file": "third-party/licenses/7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1.txt",
+          "sha256": "7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1"
         }
       ]
     },
@@ -24520,11 +24858,11 @@
     {
       "ecosystem": "npm",
       "name": "three",
-      "version": "0.186.1",
+      "version": "0.187.0",
       "license_declared": "MIT",
-      "source": "https://www.npmjs.com/package/three/v/0.186.1",
-      "download": "https://registry.npmjs.org/three/-/three-0.186.1.tgz",
-      "integrity": "sha512-blFeqb49wRCSGUGj7gtpfnSGHy2lwDk94RhUmS1c/hTby70kvChbWpkJ4Pm1390LqzzvTmzgXKHPEafJwCb8jA==",
+      "source": "https://www.npmjs.com/package/three/v/0.187.0",
+      "download": "https://registry.npmjs.org/three/-/three-0.187.0.tgz",
+      "integrity": "sha512-Qiu7R+Cmh8CstZsY1uJOSWnVlfo7ZtNLV7mF8Jltk3LB3AtDu9cRZlcnRKkAk8Y4z6KKw35z7Y7Urd7jWY8etA==",
       "scopes": [
         "normal"
       ],
@@ -24534,7 +24872,7 @@
       "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
-      "id": "npm:three@0.186.1",
+      "id": "npm:three@0.187.0",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -24728,11 +25066,11 @@
     {
       "ecosystem": "npm",
       "name": "typescript",
-      "version": "5.9.3",
+      "version": "6.0.3",
       "license_declared": "Apache-2.0",
-      "source": "https://www.npmjs.com/package/typescript/v/5.9.3",
-      "download": "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz",
-      "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
+      "source": "https://www.npmjs.com/package/typescript/v/6.0.3",
+      "download": "https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz",
+      "integrity": "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==",
       "scopes": [
         "dev"
       ],
@@ -24742,12 +25080,48 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "npm:typescript@5.9.3",
+      "id": "npm:typescript@6.0.3",
       "notices": [
         {
           "source_file": "LICENSE.txt",
           "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
           "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "name": "typescript",
+      "version": "7.0.2",
+      "license_declared": "Apache-2.0",
+      "source": "https://www.npmjs.com/package/typescript/v/7.0.2",
+      "download": "https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz",
+      "integrity": "sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==",
+      "scopes": [
+        "dev"
+      ],
+      "origins": [
+        "apps/desktop/package-lock.json"
+      ],
+      "platform_conditions": [],
+      "license_selected": "Apache-2.0",
+      "license_normalization": "SPDX expression",
+      "id": "npm:typescript@7.0.2",
+      "notices": [
+        {
+          "source_file": "LICENSE",
+          "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        },
+        {
+          "source_file": "NOTICE.txt",
+          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
+          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
+        },
+        {
+          "source_file": "vendor/vscode-jsonrpc/License.txt",
+          "file": "third-party/licenses/ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0.txt",
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
         }
       ]
     },

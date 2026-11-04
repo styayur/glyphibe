@@ -3,12 +3,12 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "Glyphibe locked dependency inventory",
-  "documentNamespace": "https://github.com/styayur/glyphibe/spdx/b8f940959ff5c9e8592e4d88f99c9f4c3ccca0c8f95e0e643adc469ea7e0135b",
+  "documentNamespace": "https://github.com/styayur/glyphibe/spdx/daaf6c1ce83f4cab09628a140c2161901df93463224fcdd9f2b378c672211eef",
   "creationInfo": {
     "creators": [
       "Tool: glyphibe-audit-dependencies-1"
     ],
-    "created": "2026-11-02T16:52:40Z"
+    "created": "2026-11-04T17:29:27Z"
   },
   "packages": [
     {
@@ -4188,10 +4188,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-171c8701e7940ecec18df04c",
+      "SPDXID": "SPDXRef-1a40ff85449782f3e14ccdf8",
       "name": "ignore",
-      "versionInfo": "0.4.33",
-      "downloadLocation": "https://crates.io/api/v1/crates/ignore/0.4.33/download",
+      "versionInfo": "0.4.34",
+      "downloadLocation": "https://crates.io/api/v1/crates/ignore/0.4.34/download",
       "filesAnalyzed": false,
       "licenseDeclared": "Unlicense OR MIT",
       "licenseConcluded": "Unlicense",
@@ -4200,14 +4200,14 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/ignore@0.4.33"
+          "referenceLocator": "pkg:cargo/ignore@0.4.34"
         }
       ],
       "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "00b69833ed729dc5aa7d19541d96d6cf8e9137194207a04916d658e43168402f"
+          "checksumValue": "484be5657551d7868d67587df967fb4fcbe9d266a761cc855aaa148fda0b3cc7"
         }
       ]
     },
@@ -7092,10 +7092,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "SPDXID": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "name": "rfd",
-      "versionInfo": "0.16.1",
-      "downloadLocation": "https://crates.io/api/v1/crates/rfd/0.16.1/download",
+      "versionInfo": "0.17.2",
+      "downloadLocation": "https://crates.io/api/v1/crates/rfd/0.17.2/download",
       "filesAnalyzed": false,
       "licenseDeclared": "MIT",
       "licenseConcluded": "MIT",
@@ -7104,14 +7104,14 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/rfd@0.16.1"
+          "referenceLocator": "pkg:cargo/rfd@0.17.2"
         }
       ],
       "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f4fe518b6db89699d59862e4d1e3a0226316090f4e4ec09f7dd686be25634c7c"
+          "checksumValue": "20dafead71c16a34e1ff357ddefc8afc11e7d51d6d2b9fbd07eaa48e3e540220"
         }
       ]
     },
@@ -7188,10 +7188,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-222ec2c3b3195c3cedbdd09c",
+      "SPDXID": "SPDXRef-50d787f49847425c53567075",
       "name": "rusqlite",
-      "versionInfo": "0.41.0",
-      "downloadLocation": "https://crates.io/api/v1/crates/rusqlite/0.41.0/download",
+      "versionInfo": "0.41.1",
+      "downloadLocation": "https://crates.io/api/v1/crates/rusqlite/0.41.1/download",
       "filesAnalyzed": false,
       "licenseDeclared": "MIT",
       "licenseConcluded": "MIT",
@@ -7200,14 +7200,14 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/rusqlite@0.41.0"
+          "referenceLocator": "pkg:cargo/rusqlite@0.41.1"
         }
       ],
       "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9c026b4444579e8d754556c6c75d040d69c4a44283cdb648ab8a8d5965c2cfa8"
+          "checksumValue": "da9bba6f3506135e120a6586df05be18b48d18896600646a4bec8f993d91a594"
         }
       ]
     },
@@ -8916,10 +8916,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-f460103fd7242c235c0a4413",
+      "SPDXID": "SPDXRef-917f34ad8254173a2b4f520d",
       "name": "tauri-plugin-dialog",
-      "versionInfo": "2.8.3",
-      "downloadLocation": "https://crates.io/api/v1/crates/tauri-plugin-dialog/2.8.3/download",
+      "versionInfo": "2.8.4",
+      "downloadLocation": "https://crates.io/api/v1/crates/tauri-plugin-dialog/2.8.4/download",
       "filesAnalyzed": false,
       "licenseDeclared": "Apache-2.0 OR MIT",
       "licenseConcluded": "Apache-2.0",
@@ -8928,14 +8928,14 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/tauri-plugin-dialog@2.8.3"
+          "referenceLocator": "pkg:cargo/tauri-plugin-dialog@2.8.4"
         }
       ],
       "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b7461aaacf1901915ea7b9f5cd74f8224a351ed96af0a62c07fce934003cb34b"
+          "checksumValue": "ce0fb9c2b6d34a9720627ed930ebc8af26f61e648695aecaeb03d5c33c5896f5"
         }
       ]
     },
@@ -11268,30 +11268,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-586b24dc7a146eed59ee60ce",
-      "name": "windows-sys",
-      "versionInfo": "0.60.2",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows-sys/0.60.2/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows-sys@0.60.2"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f2f500e4d28234f72040990ec9d39e3a6b950f9f22d3dba18416c35882612bcb"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-7b39f8292cbba829d69be81f",
       "name": "windows-sys",
       "versionInfo": "0.61.2",
@@ -11360,30 +11336,6 @@
         {
           "algorithm": "SHA256",
           "checksumValue": "9b724f72796e036ab90c1021d4780d4d3d648aca59e491e6b98e725b84e99973"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-24a6332dc248e354cda01495",
-      "name": "windows-targets",
-      "versionInfo": "0.53.5",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows-targets/0.53.5/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows-targets@0.53.5"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "4945f9f551b88e0d65f3db0bc25c33b8acea4d9e41163edf90dcd0b19f9069f3"
         }
       ]
     },
@@ -11508,30 +11460,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-0f542ec76df46439369dc4f9",
-      "name": "windows_aarch64_gnullvm",
-      "versionInfo": "0.53.1",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows_aarch64_gnullvm/0.53.1/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows_aarch64_gnullvm@0.53.1"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "a9d8416fa8b42f5c947f8482c43e7d89e73a173cead56d044f6a56104a6d1b53"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-596e8bc912f60d55da4d2619",
       "name": "windows_aarch64_msvc",
       "versionInfo": "0.42.2",
@@ -11576,30 +11504,6 @@
         {
           "algorithm": "SHA256",
           "checksumValue": "09ec2a7bb152e2252b53fa7803150007879548bc709c039df7627cabbd05d469"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-2ba972f834e279e041b1af75",
-      "name": "windows_aarch64_msvc",
-      "versionInfo": "0.53.1",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows_aarch64_msvc/0.53.1/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows_aarch64_msvc@0.53.1"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b9d782e804c2f632e395708e99a94275910eb9100b2114651e04744e9b125006"
         }
       ]
     },
@@ -11652,30 +11556,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-7b706fb70635276ce19078d7",
-      "name": "windows_i686_gnu",
-      "versionInfo": "0.53.1",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows_i686_gnu/0.53.1/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows_i686_gnu@0.53.1"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "960e6da069d81e09becb0ca57a65220ddff016ff2d6af6a223cf372a506593a3"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-c7766609196c93b29192f5d9",
       "name": "windows_i686_gnullvm",
       "versionInfo": "0.52.6",
@@ -11696,30 +11576,6 @@
         {
           "algorithm": "SHA256",
           "checksumValue": "0eee52d38c090b3caa76c563b86c3a4bd71ef1a819287c19d586d7334ae8ed66"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-6438ea68b21a9827a12836b0",
-      "name": "windows_i686_gnullvm",
-      "versionInfo": "0.53.1",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows_i686_gnullvm/0.53.1/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows_i686_gnullvm@0.53.1"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "fa7359d10048f68ab8b09fa71c3daccfb0e9b559aed648a8f95469c27057180c"
         }
       ]
     },
@@ -11772,30 +11628,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-0f46d942bc4a21d085e4fc77",
-      "name": "windows_i686_msvc",
-      "versionInfo": "0.53.1",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows_i686_msvc/0.53.1/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows_i686_msvc@0.53.1"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1e7ac75179f18232fe9c285163565a57ef8d3c89254a30685b57d83a38d326c2"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-8accf7390ed4c6a5d0315787",
       "name": "windows_x86_64_gnu",
       "versionInfo": "0.42.2",
@@ -11840,30 +11672,6 @@
         {
           "algorithm": "SHA256",
           "checksumValue": "147a5c80aabfbf0c7d901cb5895d1de30ef2907eb21fbbab29ca94c5b08b1a78"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-0aa3c16079509fbcea093b4c",
-      "name": "windows_x86_64_gnu",
-      "versionInfo": "0.53.1",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows_x86_64_gnu/0.53.1/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows_x86_64_gnu@0.53.1"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9c3842cdd74a865a8066ab39c8a7a473c0778a3f29370b5fd6b4b9aa7df4a499"
         }
       ]
     },
@@ -11916,30 +11724,6 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-e0d8069931c9b9e9a5375e51",
-      "name": "windows_x86_64_gnullvm",
-      "versionInfo": "0.53.1",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows_x86_64_gnullvm/0.53.1/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows_x86_64_gnullvm@0.53.1"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0ffa179e2d07eee8ad8f57493436566c7cc30ac536a3379fdf008f47f6bb7ae1"
-        }
-      ]
-    },
-    {
       "SPDXID": "SPDXRef-6d70a339b7f800691f78f319",
       "name": "windows_x86_64_msvc",
       "versionInfo": "0.42.2",
@@ -11984,30 +11768,6 @@
         {
           "algorithm": "SHA256",
           "checksumValue": "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-db686cbbe74acb16a96d82c3",
-      "name": "windows_x86_64_msvc",
-      "versionInfo": "0.53.1",
-      "downloadLocation": "https://crates.io/api/v1/crates/windows_x86_64_msvc/0.53.1/download",
-      "filesAnalyzed": false,
-      "licenseDeclared": "MIT OR Apache-2.0",
-      "licenseConcluded": "MIT",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/windows_x86_64_msvc@0.53.1"
-        }
-      ],
-      "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d6bbff5f0aada427a1e5a6da5f1f98158182f26556f345ac9e04d36d0ebed650"
         }
       ]
     },
@@ -14028,10 +13788,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-b9573b80b23d24bcf40755ae",
+      "SPDXID": "SPDXRef-64a9fe1124887397e84cf924",
       "name": "@types/three",
-      "versionInfo": "0.180.0",
-      "downloadLocation": "https://registry.npmjs.org/@types/three/-/three-0.180.0.tgz",
+      "versionInfo": "0.187.0",
+      "downloadLocation": "https://registry.npmjs.org/@types/three/-/three-0.187.0.tgz",
       "filesAnalyzed": false,
       "licenseDeclared": "MIT",
       "licenseConcluded": "MIT",
@@ -14040,14 +13800,14 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40types/three@0.180.0"
+          "referenceLocator": "pkg:npm/%40types/three@0.187.0"
         }
       ],
       "comment": "Scope=dev; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "ca416d802a8d9d8d083ef0eba3b87ef5978b63eaa38145affaa12f52df3882b85e9ceeb41ea77885270713b55307d9ce43fdd033c9646cd13ee2f2a31295312a"
+          "checksumValue": "bfebca35aad4b64e27d90459e3e08de7280c3340115235e321097447fba73147e64ad15e56a19b82a6ab6eba681935d1668ba5487d7a78fad5255c4f2446cc50"
         }
       ]
     },
@@ -14316,6 +14076,510 @@
       ]
     },
     {
+      "SPDXID": "SPDXRef-7ea209b2edc953fa69b1ce1e",
+      "name": "@typescript/typescript-aix-ppc64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-aix-ppc64/-/typescript-aix-ppc64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-aix-ppc64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "31328a91607ba7fd04f718b5775b47b59e4f88b90610c22af3ca4ad82b9b6633ac2ed6132ea8602208bacdea456bef461d9ea1d3934c0a443118a88f5ccc57b5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-cf9e44e8e2fff4bce3e785ca",
+      "name": "@typescript/typescript-darwin-arm64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-darwin-arm64/-/typescript-darwin-arm64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-darwin-arm64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "828c336abf4cc12fda456a7a7f76b8294ab34630198ceb2618d08ce8b713817ba6f9d05f82c05530df8082f38209b82e5f289c93a2c986906ccf131e6c9f2cc8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-8b8c400e7a423d15484b8434",
+      "name": "@typescript/typescript-darwin-x64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-darwin-x64/-/typescript-darwin-x64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-darwin-x64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "499f716489ea02936534673db345b5552b24b5848e7bd705a8d388aa63751acf129a48ca65816dd35ec6e15c0fc404889ce0ee01d6d35bbb1788551ff3ddd180"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-8b4f13c0d092978d2d1f10c8",
+      "name": "@typescript/typescript-freebsd-arm64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-freebsd-arm64/-/typescript-freebsd-arm64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-freebsd-arm64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "5b9347e32fc9d29948212e5bdb1bd312453b245c72a9d3003a07fe225865d2f1d05ca3b9759a3177e0bf8c4b6ae7a738177c24ef5441e013114365dd23e6f061"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-c95db9af64211017f8fcb816",
+      "name": "@typescript/typescript-freebsd-x64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-freebsd-x64/-/typescript-freebsd-x64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-freebsd-x64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "50c183c79b13a73370dd688f79b1fb97dd0859f26080477e7a01edfeaea9eff0a6df3aa857b5719065edfb70f13c8c3c09c9af001d23dec5557db857f8ce13a7"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-725d960583c23c172e4f0f12",
+      "name": "@typescript/typescript-linux-arm64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-linux-arm64/-/typescript-linux-arm64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-linux-arm64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "421e1e538ff2df20e39df8e3c8f62284c8f9fce0c8966b7e073bb5ece23e7e24910d6e7b4265394a237addec4f44d24f294cdc73520d6b535776b27e32a1e351"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-f149956167f66539819febff",
+      "name": "@typescript/typescript-linux-arm",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-linux-arm/-/typescript-linux-arm-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-linux-arm@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "81f7d3df13f3f6c47b8ff6091319323e7b6b2343f610ff576cec96ced876fc6b3446cb4afbdd1105c3b49dc5e85f2fdb798965d525f0f38e8d7f6cdd9c4cf441"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-6766f3030ce963b2ffed27ee",
+      "name": "@typescript/typescript-linux-loong64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-linux-loong64/-/typescript-linux-loong64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-linux-loong64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "b841dc93d8bc8680335cf8984626f53bb9a23a7cf6dd2c4879597a1782d7a31faaa2fd4adf98c77045ba5472af648fa9caf97b7d910fe0c094e4b62f22ad46b9"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-a9e5d4a04686c5b917db11b9",
+      "name": "@typescript/typescript-linux-mips64el",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-linux-mips64el/-/typescript-linux-mips64el-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-linux-mips64el@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "4782af00c9c4e375b941ea9bd0bcb9e8ede658c588020b0ccb3dfa0c26b271de676e0ffd9339b4962c3726871f46ac8963428f9b31636ecc28cd7c96d039c860"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-5feb07e3d303378e57b81360",
+      "name": "@typescript/typescript-linux-ppc64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-linux-ppc64/-/typescript-linux-ppc64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-linux-ppc64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "0ce471e5bdec77fe12ede6b2c66e0542ff80ec2ae45081916878b023ca221d3008d5f00f5a1178274bc09640bc6e20251d2555c31310ded8d9dbf0d56e742288"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-162a0de9cdcc0b6ac73850a3",
+      "name": "@typescript/typescript-linux-riscv64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-linux-riscv64/-/typescript-linux-riscv64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-linux-riscv64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "c1fd23a840ce8eb3d19cac18472c890d1a35d4a31bbcc16b53eab8cea2b20a1383073be591b84d41f2af2f14027304e974369748765356e8742680ab28250c1d"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-6c374afeabb469a2538590fb",
+      "name": "@typescript/typescript-linux-s390x",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-linux-s390x/-/typescript-linux-s390x-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-linux-s390x@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "224c097372fbca1cad59dfdec23cb13437ce9acc029bd1963094ffb9efdd53869935bc1979801eb6ae365722e6b264a3be85fbcfbe17e996980adcc0af412e1b"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-29dc513653a17c5eedbe47be",
+      "name": "@typescript/typescript-linux-x64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-linux-x64/-/typescript-linux-x64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-linux-x64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "11875fd9c360eeb8025899f109d27e177577f4ef2285bdfb78702ed4b2bca00162ce04d06cf38aef31c75db3edf2b5f6e023aa3835de237b087f47c25c6ec7fc"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-232b1d2d431cbab4febb276d",
+      "name": "@typescript/typescript-netbsd-arm64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-netbsd-arm64/-/typescript-netbsd-arm64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-netbsd-arm64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "fa9a25605e0c174e1a3e93b9153907ada9fdc94403497ab2e468920caa6c965e63cb7977fa0f502e1a5fdfd4fe78fb5e7e15cb386acb9744088e440fe959de94"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-8ede3b17d41fa84057ad91a6",
+      "name": "@typescript/typescript-netbsd-x64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-netbsd-x64/-/typescript-netbsd-x64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-netbsd-x64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "f18213d041ccff776ad7464e545fc0ee973f61232d6dc79c72de2b5ad7b1ae74821ce3dca42d8a4cb5df4c247abc3a674a2635da178d6f51a237fc2ef93fc5c8"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-35fcde7583fe0a6b6c1885f1",
+      "name": "@typescript/typescript-openbsd-arm64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-openbsd-arm64/-/typescript-openbsd-arm64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-openbsd-arm64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "00f4fcf829589ee626d6ef7e920197a0c8f65735b37329b087680d4905724877e444318e4d592858b8c298e41268ef8fa2a439ec1d1f951a7d480fbb1a79e4cd"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-6ce7f9aacdaa873fe67adb31",
+      "name": "@typescript/typescript-openbsd-x64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-openbsd-x64/-/typescript-openbsd-x64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-openbsd-x64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "c97eecf90d03967d03b7db44cd9b008d75d1ffecad04cec096095aab278c3f142ccc9d4986525d67a8cb03e23395d1ed7e55fcd5e9bb9436a8d715eef9a45192"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-57a55c0786f9411d15c7b30d",
+      "name": "@typescript/typescript-sunos-x64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-sunos-x64/-/typescript-sunos-x64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-sunos-x64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "74b24319a2d9d43e073d09fadaed67f26043909444c0cb00902764c1de087aac3ec774d4c93b2a634622042b44e87e8ecf38069378ae677bc55914be13cfddd6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-fa2cf9964c10691e157155d8",
+      "name": "@typescript/typescript-win32-arm64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-win32-arm64/-/typescript-win32-arm64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-win32-arm64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "1b2975572e8eb167ac2f39aaf843f415bedbe0d89de76df602f700d9215c758ade95da4db58145a1f3e39edeb6cbd850cbb553699a7ae480898ee01045a55c21"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-ee8228e1e7eb77b911f3e2a0",
+      "name": "@typescript/typescript-win32-x64",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript-win32-x64/-/typescript-win32-x64-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript-win32-x64@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev,optional; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "d014371e40071e528b4a9d6a46f7f7494846a46b03ba107f8e0170ef982ecaa6f126a11a4b40b0fd514ef22da71e094953340246d30c47f20100a137113302e2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-2a3d2daa7af5b58e604420c2",
+      "name": "@typescript/typescript6",
+      "versionInfo": "6.0.2",
+      "downloadLocation": "https://registry.npmjs.org/@typescript/typescript6/-/typescript6-6.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript/typescript6@6.0.2"
+        }
+      ],
+      "comment": "Scope=dev; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "99b09d75777e8e6ee17f1ef0d9853ae3f02fe3f36aa9e1b71a84598313dc8284f162386b71f251c3d50b721ef5492e06f90ddb39716146f3ea8e0b8dd07ca9e7"
+        }
+      ]
+    },
+    {
       "SPDXID": "SPDXRef-76a9567d53f8f08aba59b0d5",
       "name": "@vitejs/plugin-react",
       "versionInfo": "6.1.2",
@@ -14384,30 +14648,6 @@
         {
           "algorithm": "SHA512",
           "checksumValue": "970251131b87e35ef6e7b439c2ff5062e80df48309928c5cacaad8c463d0901ce5ef094da535310ffe72357e0448a55421284a3e090672160f14c58e3a4d30cf"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-0b12395e8446ee3de43e15f4",
-      "name": "@webgpu/types",
-      "versionInfo": "0.1.74",
-      "downloadLocation": "https://registry.npmjs.org/@webgpu/types/-/types-0.1.74.tgz",
-      "filesAnalyzed": false,
-      "licenseDeclared": "BSD-3-Clause",
-      "licenseConcluded": "BSD-3-Clause",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceType": "purl",
-          "referenceLocator": "pkg:npm/%40webgpu/types@0.1.74"
-        }
-      ],
-      "comment": "Scope=dev; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA512",
-          "checksumValue": "960888e216ee2dc23dba79e6d9c2ffb6f09a414e39769d3170b589879b81ffd3011af200e05f17224ee74a205e83e2b8c56198c2064a9fcd0b984448e42c684c"
         }
       ]
     },
@@ -16644,10 +16884,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-0d850d663bc03cc4616e5f48",
+      "SPDXID": "SPDXRef-f84c10f5f36c6b41ac6eb9a1",
       "name": "meshoptimizer",
-      "versionInfo": "0.22.0",
-      "downloadLocation": "https://registry.npmjs.org/meshoptimizer/-/meshoptimizer-0.22.0.tgz",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://registry.npmjs.org/meshoptimizer/-/meshoptimizer-1.1.1.tgz",
       "filesAnalyzed": false,
       "licenseDeclared": "MIT",
       "licenseConcluded": "MIT",
@@ -16656,14 +16896,14 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/meshoptimizer@0.22.0"
+          "referenceLocator": "pkg:npm/meshoptimizer@1.1.1"
         }
       ],
       "comment": "Scope=dev; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "21e6e22bbf6ca88cbe1381203abf82030f8a7bc840b295cacc177425d80498f1e20309af123d92e21d6b7efa3ea3f0677c461dfe300e83921e7888f39734a70e"
+          "checksumValue": "a1114d58944303f593ad58fb356bea6b91ea135b7d3180e3d956968ab402cc20ab01dd861eba91fec41ecc2c625804cf36529371168f4473c9c084683c1029e6"
         }
       ]
     },
@@ -17604,10 +17844,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-e7b53665704659fb56a41b52",
+      "SPDXID": "SPDXRef-47a15c00d230c5c16abb78a0",
       "name": "sigma",
-      "versionInfo": "3.0.2",
-      "downloadLocation": "https://registry.npmjs.org/sigma/-/sigma-3.0.2.tgz",
+      "versionInfo": "4.0.4",
+      "downloadLocation": "https://registry.npmjs.org/sigma/-/sigma-4.0.4.tgz",
       "filesAnalyzed": false,
       "licenseDeclared": "MIT",
       "licenseConcluded": "MIT",
@@ -17616,14 +17856,14 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/sigma@3.0.2"
+          "referenceLocator": "pkg:npm/sigma@4.0.4"
         }
       ],
       "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "fc151b78ec0f1abba204e9b461043a64c70b219ead7ff5be25c9bb771672017d2d2b758ff7fb2aeff340581c4f23155a85d1a3089a06c1e8f419daefd03c6541"
+          "checksumValue": "a95649d161e1b4e9e0a48a5a8bbc5fa299224e4c1bf76f8297bcea709049a2ce63bb01fa1679147ce334f268e067a52b779594008b126d8358e3548bec1c9d63"
         }
       ]
     },
@@ -17724,10 +17964,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-b58f9c7037a7af9173b8466b",
+      "SPDXID": "SPDXRef-34a937579afd48e715c924a6",
       "name": "three",
-      "versionInfo": "0.186.1",
-      "downloadLocation": "https://registry.npmjs.org/three/-/three-0.186.1.tgz",
+      "versionInfo": "0.187.0",
+      "downloadLocation": "https://registry.npmjs.org/three/-/three-0.187.0.tgz",
       "filesAnalyzed": false,
       "licenseDeclared": "MIT",
       "licenseConcluded": "MIT",
@@ -17736,14 +17976,14 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/three@0.186.1"
+          "referenceLocator": "pkg:npm/three@0.187.0"
         }
       ],
       "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "6e515ea9be3dc110921941a3ee0b697e74861f2da5c0393de11854992d5cfe14dbcbbd24bc285b5a9909e0f9b5dfdd0bab3cef4e6ce05ca1cf11a7c9c026fc8c"
+          "checksumValue": "422bbb47e0a687c0acb59b18d6e24e4969d595fa3b66d34b57b985f0996d9372c1dc0b43bbd71166572744a90093c638cfa28ac37e73ed8ed4addee3598f1eb4"
         }
       ]
     },
@@ -17916,10 +18156,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-74e91896d39ff243e8b4f30a",
+      "SPDXID": "SPDXRef-79b1d3a30c4a468f5572127a",
       "name": "typescript",
-      "versionInfo": "5.9.3",
-      "downloadLocation": "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz",
+      "versionInfo": "6.0.3",
+      "downloadLocation": "https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz",
       "filesAnalyzed": false,
       "licenseDeclared": "Apache-2.0",
       "licenseConcluded": "Apache-2.0",
@@ -17928,14 +18168,38 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:npm/typescript@5.9.3"
+          "referenceLocator": "pkg:npm/typescript@6.0.3"
         }
       ],
       "comment": "Scope=dev; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "8e5d6f6733c38a72ebf5e52ddc9feded5e8580d130f508ef04f772b33f4a7d00c3e357d0ac2d98e2f290762694a454f86d795bd511e12e9a7cc2d9ba3394e04b"
+          "checksumValue": "cb64efbb14993c3c906a490544f6472859be28a56a222b1d83dfc26709bd7edbca5cb3fc3515a3dfcfce0e335baf8dd2b285ea36e022b047f519d0b1a9671d07"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "name": "typescript",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@7.0.2"
+        }
+      ],
+      "comment": "Scope=dev; original notice text paths are in dependency-inventory.json",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "f0561abbdea8dcd28e85b8ca8bfa8dbc6fd6e63873c646dd9b9b23f406d9ff94f9b16aa7de12602df1b1dbbb11299593bf2cc23fc74b4414dfe6d05349155434"
         }
       ]
     },
@@ -19006,7 +19270,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-171c8701e7940ecec18df04c"
+      "relatedSpdxElement": "SPDXRef-1a40ff85449782f3e14ccdf8"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -19611,7 +19875,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-f005ec4dcdcc685ccedb3a06"
+      "relatedSpdxElement": "SPDXRef-64fda0aa0e7b1d08c7cbbf03"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -19631,7 +19895,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-222ec2c3b3195c3cedbdd09c"
+      "relatedSpdxElement": "SPDXRef-50d787f49847425c53567075"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -19991,7 +20255,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-f460103fd7242c235c0a4413"
+      "relatedSpdxElement": "SPDXRef-917f34ad8254173a2b4f520d"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -20481,11 +20745,6 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-586b24dc7a146eed59ee60ce"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-7b39f8292cbba829d69be81f"
     },
     {
@@ -20497,11 +20756,6 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-d3699a7c211de934b20fb76f"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-24a6332dc248e354cda01495"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -20531,22 +20785,12 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-0f542ec76df46439369dc4f9"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-596e8bc912f60d55da4d2619"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-a00ac529955379d4a89f131b"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-2ba972f834e279e041b1af75"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -20561,17 +20805,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-7b706fb70635276ce19078d7"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-c7766609196c93b29192f5d9"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-6438ea68b21a9827a12836b0"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -20586,22 +20820,12 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-0f46d942bc4a21d085e4fc77"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-8accf7390ed4c6a5d0315787"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-c8f119b552f1320dab22413e"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-0aa3c16079509fbcea093b4c"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -20616,22 +20840,12 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-e0d8069931c9b9e9a5375e51"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-6d70a339b7f800691f78f319"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-b9d1ac33f177a819527df458"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-db686cbbe74acb16a96d82c3"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -21056,7 +21270,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-b9573b80b23d24bcf40755ae"
+      "relatedSpdxElement": "SPDXRef-64a9fe1124887397e84cf924"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -21116,6 +21330,111 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-7ea209b2edc953fa69b1ce1e"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-cf9e44e8e2fff4bce3e785ca"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-8b8c400e7a423d15484b8434"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-8b4f13c0d092978d2d1f10c8"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-c95db9af64211017f8fcb816"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-725d960583c23c172e4f0f12"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-f149956167f66539819febff"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-6766f3030ce963b2ffed27ee"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-a9e5d4a04686c5b917db11b9"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-5feb07e3d303378e57b81360"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-162a0de9cdcc0b6ac73850a3"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-6c374afeabb469a2538590fb"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-29dc513653a17c5eedbe47be"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-232b1d2d431cbab4febb276d"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-8ede3b17d41fa84057ad91a6"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-35fcde7583fe0a6b6c1885f1"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-6ce7f9aacdaa873fe67adb31"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-57a55c0786f9411d15c7b30d"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-fa2cf9964c10691e157155d8"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ee8228e1e7eb77b911f3e2a0"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-2a3d2daa7af5b58e604420c2"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-76a9567d53f8f08aba59b0d5"
     },
     {
@@ -21127,11 +21446,6 @@
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-9754dc6ecf2fdf9048288496"
-    },
-    {
-      "spdxElementId": "SPDXRef-DOCUMENT",
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-0b12395e8446ee3de43e15f4"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -21601,7 +21915,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-0d850d663bc03cc4616e5f48"
+      "relatedSpdxElement": "SPDXRef-f84c10f5f36c6b41ac6eb9a1"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -21801,7 +22115,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-e7b53665704659fb56a41b52"
+      "relatedSpdxElement": "SPDXRef-47a15c00d230c5c16abb78a0"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -21826,7 +22140,7 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-b58f9c7037a7af9173b8466b"
+      "relatedSpdxElement": "SPDXRef-34a937579afd48e715c924a6"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -21866,7 +22180,12 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-74e91896d39ff243e8b4f30a"
+      "relatedSpdxElement": "SPDXRef-79b1d3a30c4a468f5572127a"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-a8decdc9b6ad6fa1905d0422"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -24179,42 +24498,42 @@
       "relatedSpdxElement": "SPDXRef-09132be4e35b36127858666d"
     },
     {
-      "spdxElementId": "SPDXRef-171c8701e7940ecec18df04c",
+      "spdxElementId": "SPDXRef-1a40ff85449782f3e14ccdf8",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-3ccd7acb5c94eaf619b8406a"
     },
     {
-      "spdxElementId": "SPDXRef-171c8701e7940ecec18df04c",
+      "spdxElementId": "SPDXRef-1a40ff85449782f3e14ccdf8",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-8e95b1e934fd4f2389fe2833"
     },
     {
-      "spdxElementId": "SPDXRef-171c8701e7940ecec18df04c",
+      "spdxElementId": "SPDXRef-1a40ff85449782f3e14ccdf8",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-a54cc080f4eaffe67885412c"
     },
     {
-      "spdxElementId": "SPDXRef-171c8701e7940ecec18df04c",
+      "spdxElementId": "SPDXRef-1a40ff85449782f3e14ccdf8",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-108ce2cc57feb757cd3ec6c4"
     },
     {
-      "spdxElementId": "SPDXRef-171c8701e7940ecec18df04c",
+      "spdxElementId": "SPDXRef-1a40ff85449782f3e14ccdf8",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-24cefb161ca3ea718cb33059"
     },
     {
-      "spdxElementId": "SPDXRef-171c8701e7940ecec18df04c",
+      "spdxElementId": "SPDXRef-1a40ff85449782f3e14ccdf8",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-c087c33bd9fb846f7d629a0b"
     },
     {
-      "spdxElementId": "SPDXRef-171c8701e7940ecec18df04c",
+      "spdxElementId": "SPDXRef-1a40ff85449782f3e14ccdf8",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-7a67d610792ebe1af91302db"
     },
     {
-      "spdxElementId": "SPDXRef-171c8701e7940ecec18df04c",
+      "spdxElementId": "SPDXRef-1a40ff85449782f3e14ccdf8",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-59dea2196439c45d11b0cd74"
     },
@@ -25914,84 +26233,94 @@
       "relatedSpdxElement": "SPDXRef-dc74cbf585c403f13e977f30"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-eadefba0bbfcaab5356fc509"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-9f827c25d76519f58516aeb0"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-3b4555b500d379c7bcde9e6e"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-224b80d6206ac6de0674ea6c"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-c30e767aabd0ccf19be7b22a"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-88e2bf77153405a7b3da89ec"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-933f836951dbd7caa0b79757"
+    },
+    {
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-a54cc080f4eaffe67885412c"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-fcfd5f0e0357c10b3ebee9da"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-32f419640b3f109a169da2a4"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-50fcfcc5e55669a6272dea2d"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-c2f1ee08f6873f6c7aa4fd4d"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6c26c9a00ec6c7eefd3fcdb2"
+    },
+    {
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-ad099e999a94440de8e52ab9"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-d906307c179c0964d13fab1d"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-a0b4725581312079c35118b6"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-dc74cbf585c403f13e977f30"
     },
     {
-      "spdxElementId": "SPDXRef-f005ec4dcdcc685ccedb3a06",
+      "spdxElementId": "SPDXRef-64fda0aa0e7b1d08c7cbbf03",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-586b24dc7a146eed59ee60ce"
+      "relatedSpdxElement": "SPDXRef-7b39f8292cbba829d69be81f"
     },
     {
       "spdxElementId": "SPDXRef-5725863d06373d1982715eda",
@@ -26139,27 +26468,27 @@
       "relatedSpdxElement": "SPDXRef-b2a51a311a3e1d578e83b790"
     },
     {
-      "spdxElementId": "SPDXRef-222ec2c3b3195c3cedbdd09c",
+      "spdxElementId": "SPDXRef-50d787f49847425c53567075",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-ca671449c7f6168ed19741cb"
     },
     {
-      "spdxElementId": "SPDXRef-222ec2c3b3195c3cedbdd09c",
+      "spdxElementId": "SPDXRef-50d787f49847425c53567075",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-ec4df41226e5ac60d389aef2"
     },
     {
-      "spdxElementId": "SPDXRef-222ec2c3b3195c3cedbdd09c",
+      "spdxElementId": "SPDXRef-50d787f49847425c53567075",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-f778077417f71b28489c162b"
     },
     {
-      "spdxElementId": "SPDXRef-222ec2c3b3195c3cedbdd09c",
+      "spdxElementId": "SPDXRef-50d787f49847425c53567075",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-f2f4629107aa1b9ba04cd0ce"
     },
     {
-      "spdxElementId": "SPDXRef-222ec2c3b3195c3cedbdd09c",
+      "spdxElementId": "SPDXRef-50d787f49847425c53567075",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-69bb25e1e5555ceaa11f9be3"
     },
@@ -27529,52 +27858,52 @@
       "relatedSpdxElement": "SPDXRef-71668edaf6c5654223cfd5ef"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-a54cc080f4eaffe67885412c"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-ad099e999a94440de8e52ab9"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-f005ec4dcdcc685ccedb3a06"
+      "relatedSpdxElement": "SPDXRef-64fda0aa0e7b1d08c7cbbf03"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-6c517d3022b0b71b43f57674"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-3f8bbf90c5c2cd6ec09898e0"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-612f40839c51727ad91e21c3"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-820f197ca9fb2443bee0c6e9"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-abce0e7988fe43956cef4546"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-5e0a5c228f91579dd4f389b2"
     },
     {
-      "spdxElementId": "SPDXRef-f460103fd7242c235c0a4413",
+      "spdxElementId": "SPDXRef-917f34ad8254173a2b4f520d",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-0a675f965e54eac21951559d"
     },
@@ -29469,11 +29798,6 @@
       "relatedSpdxElement": "SPDXRef-d3699a7c211de934b20fb76f"
     },
     {
-      "spdxElementId": "SPDXRef-586b24dc7a146eed59ee60ce",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-24a6332dc248e354cda01495"
-    },
-    {
       "spdxElementId": "SPDXRef-7b39f8292cbba829d69be81f",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-698d35e715c4ceb5f2dbf329"
@@ -29552,51 +29876,6 @@
       "spdxElementId": "SPDXRef-d3699a7c211de934b20fb76f",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-b9d1ac33f177a819527df458"
-    },
-    {
-      "spdxElementId": "SPDXRef-24a6332dc248e354cda01495",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-698d35e715c4ceb5f2dbf329"
-    },
-    {
-      "spdxElementId": "SPDXRef-24a6332dc248e354cda01495",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-0f542ec76df46439369dc4f9"
-    },
-    {
-      "spdxElementId": "SPDXRef-24a6332dc248e354cda01495",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-2ba972f834e279e041b1af75"
-    },
-    {
-      "spdxElementId": "SPDXRef-24a6332dc248e354cda01495",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-7b706fb70635276ce19078d7"
-    },
-    {
-      "spdxElementId": "SPDXRef-24a6332dc248e354cda01495",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-6438ea68b21a9827a12836b0"
-    },
-    {
-      "spdxElementId": "SPDXRef-24a6332dc248e354cda01495",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-0f46d942bc4a21d085e4fc77"
-    },
-    {
-      "spdxElementId": "SPDXRef-24a6332dc248e354cda01495",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-0aa3c16079509fbcea093b4c"
-    },
-    {
-      "spdxElementId": "SPDXRef-24a6332dc248e354cda01495",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-e0d8069931c9b9e9a5375e51"
-    },
-    {
-      "spdxElementId": "SPDXRef-24a6332dc248e354cda01495",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-db686cbbe74acb16a96d82c3"
     },
     {
       "spdxElementId": "SPDXRef-f5f8e38b68a1c6f0fce06504",
@@ -29976,7 +30255,7 @@
     {
       "spdxElementId": "SPDXRef-69ace21162067a1b386710d4",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-b58f9c7037a7af9173b8466b"
+      "relatedSpdxElement": "SPDXRef-34a937579afd48e715c924a6"
     },
     {
       "spdxElementId": "SPDXRef-9d035b5389aaa4dab1fb2bda",
@@ -30174,39 +30453,34 @@
       "relatedSpdxElement": "SPDXRef-b05903de4c965507bd39f2e4"
     },
     {
-      "spdxElementId": "SPDXRef-b9573b80b23d24bcf40755ae",
+      "spdxElementId": "SPDXRef-64a9fe1124887397e84cf924",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-7714fdeb36827ae4ed029c2c"
     },
     {
-      "spdxElementId": "SPDXRef-b9573b80b23d24bcf40755ae",
+      "spdxElementId": "SPDXRef-64a9fe1124887397e84cf924",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-bbd68595a81c2de75179b8e7"
     },
     {
-      "spdxElementId": "SPDXRef-b9573b80b23d24bcf40755ae",
+      "spdxElementId": "SPDXRef-64a9fe1124887397e84cf924",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-9b481d923ff701f092d3db38"
     },
     {
-      "spdxElementId": "SPDXRef-b9573b80b23d24bcf40755ae",
+      "spdxElementId": "SPDXRef-64a9fe1124887397e84cf924",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-af876b6586751491c2d05e72"
     },
     {
-      "spdxElementId": "SPDXRef-b9573b80b23d24bcf40755ae",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-0b12395e8446ee3de43e15f4"
-    },
-    {
-      "spdxElementId": "SPDXRef-b9573b80b23d24bcf40755ae",
+      "spdxElementId": "SPDXRef-64a9fe1124887397e84cf924",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-4628e822f5683428ae0f299f"
     },
     {
-      "spdxElementId": "SPDXRef-b9573b80b23d24bcf40755ae",
+      "spdxElementId": "SPDXRef-64a9fe1124887397e84cf924",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-0d850d663bc03cc4616e5f48"
+      "relatedSpdxElement": "SPDXRef-f84c10f5f36c6b41ac6eb9a1"
     },
     {
       "spdxElementId": "SPDXRef-cff8d59e8b7188cb877dfc8e",
@@ -30397,6 +30671,11 @@
       "spdxElementId": "SPDXRef-2a5b18eeb1d25684908f134b",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-bcb607886cc076b908f496aa"
+    },
+    {
+      "spdxElementId": "SPDXRef-2a3d2daa7af5b58e604420c2",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-79b1d3a30c4a468f5572127a"
     },
     {
       "spdxElementId": "SPDXRef-76a9567d53f8f08aba59b0d5",
@@ -31169,12 +31448,12 @@
       "relatedSpdxElement": "SPDXRef-7b5cb5a9b698c67ffc78d5b3"
     },
     {
-      "spdxElementId": "SPDXRef-e7b53665704659fb56a41b52",
+      "spdxElementId": "SPDXRef-47a15c00d230c5c16abb78a0",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-8047a3e9dc23f01bba88a85e"
     },
     {
-      "spdxElementId": "SPDXRef-e7b53665704659fb56a41b52",
+      "spdxElementId": "SPDXRef-47a15c00d230c5c16abb78a0",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-d704b25bcde822dd7ca976d4"
     },
@@ -31287,6 +31566,106 @@
       "spdxElementId": "SPDXRef-cb37a32f3823facc74456378",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-b1eb91e63a1878b5e2b7d0eb"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-7ea209b2edc953fa69b1ce1e"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-cf9e44e8e2fff4bce3e785ca"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-8b8c400e7a423d15484b8434"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-8b4f13c0d092978d2d1f10c8"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-c95db9af64211017f8fcb816"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-725d960583c23c172e4f0f12"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-f149956167f66539819febff"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6766f3030ce963b2ffed27ee"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-a9e5d4a04686c5b917db11b9"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-5feb07e3d303378e57b81360"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-162a0de9cdcc0b6ac73850a3"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6c374afeabb469a2538590fb"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-29dc513653a17c5eedbe47be"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-232b1d2d431cbab4febb276d"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-8ede3b17d41fa84057ad91a6"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-35fcde7583fe0a6b6c1885f1"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-6ce7f9aacdaa873fe67adb31"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-57a55c0786f9411d15c7b30d"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-fa2cf9964c10691e157155d8"
+    },
+    {
+      "spdxElementId": "SPDXRef-a8decdc9b6ad6fa1905d0422",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ee8228e1e7eb77b911f3e2a0"
     },
     {
       "spdxElementId": "SPDXRef-86b9d1cd1856870a5d4a8e63",
