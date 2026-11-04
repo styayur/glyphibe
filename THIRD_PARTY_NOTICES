@@ -1184,7 +1184,7 @@ cargo:idna_adapter@1.2.2
   Notice: third-party/licenses/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt (upstream LICENSE-APACHE)
   Notice: third-party/licenses/8b43ce8accd61e9d370b5ca9e9c4f953279b5c239926c62315b40e24df51b726.txt (upstream LICENSE-MIT)
 
-cargo:ignore@0.4.33
+cargo:ignore@0.4.34
   Declared: Unlicense OR MIT; selected: Unlicense
   Source: https://github.com/BurntSushi/ripgrep/tree/master/crates/ignore
   Scope: normal
@@ -2015,11 +2015,12 @@ cargo:reqwest@0.13.5
   Notice: third-party/licenses/751963a8b88c0e3a9f27e98933079fbcf09b9998b2c13ac49c2e4d58444520d6.txt (upstream LICENSE-APACHE)
   Notice: third-party/licenses/dd87e27dfbaa888cb77ea34592648a7743636b8dce07e49543bddda0fcfc73bc.txt (upstream LICENSE-MIT)
 
-cargo:rfd@0.16.1
+cargo:rfd@0.17.2
   Declared: MIT; selected: MIT
   Source: https://github.com/PolyMeilex/rfd
   Scope: normal
   Notice: third-party/licenses/65fc947f4bac882a2cd104ef73c246b1b037059df9f2b3a58b7f77f0b9e56071.txt (upstream LICENSE)
+  Notice: third-party/licenses/ae26bc7b1bc91fb8648f6a298decbb1a77090a56c9d04e2c23b8365e5f54acb5.txt (upstream src/backend/xdg_desktop_portal/window_identifier/LICENSE)
 
 cargo:ring@0.17.14
   Declared: Apache-2.0 AND ISC; selected: (Apache-2.0 AND ISC)
@@ -2044,7 +2045,7 @@ cargo:rmcp@3.8.0
   Scope: dev, normal
   Notice: third-party/licenses/0382b0057770ca05e9c350a50aa3b1c1fea84da0bc81d723bf00b9aa841be58a.txt (upstream LICENSE)
 
-cargo:rusqlite@0.41.0
+cargo:rusqlite@0.41.1
   Declared: MIT; selected: MIT
   Source: https://github.com/rusqlite/rusqlite
   Scope: normal
@@ -2541,7 +2542,7 @@ cargo:tauri-macros@2.7.4
   Notice: third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt (upstream LICENSE-APACHE-2.0)
   Notice: third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt (upstream LICENSE-MIT)
 
-cargo:tauri-plugin-dialog@2.8.3
+cargo:tauri-plugin-dialog@2.8.4
   Declared: Apache-2.0 OR MIT; selected: Apache-2.0
   Source: https://github.com/tauri-apps/plugins-workspace
   Scope: normal
@@ -3212,13 +3213,6 @@ cargo:windows-sys@0.52.0
   Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
 
-cargo:windows-sys@0.60.2
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
 cargo:windows-sys@0.61.2
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/microsoft/windows-rs
@@ -3234,13 +3228,6 @@ cargo:windows-targets@0.42.2
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
 
 cargo:windows-targets@0.52.6
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
-cargo:windows-targets@0.53.5
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/microsoft/windows-rs
   Scope: normal
@@ -3282,13 +3269,6 @@ cargo:windows_aarch64_gnullvm@0.52.6
   Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
 
-cargo:windows_aarch64_gnullvm@0.53.1
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
 cargo:windows_aarch64_msvc@0.42.2
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/microsoft/windows-rs
@@ -3297,13 +3277,6 @@ cargo:windows_aarch64_msvc@0.42.2
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
 
 cargo:windows_aarch64_msvc@0.52.6
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
-cargo:windows_aarch64_msvc@0.53.1
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/microsoft/windows-rs
   Scope: normal
@@ -3324,21 +3297,7 @@ cargo:windows_i686_gnu@0.52.6
   Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
 
-cargo:windows_i686_gnu@0.53.1
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
 cargo:windows_i686_gnullvm@0.52.6
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
-cargo:windows_i686_gnullvm@0.53.1
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/microsoft/windows-rs
   Scope: normal
@@ -3359,13 +3318,6 @@ cargo:windows_i686_msvc@0.52.6
   Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
 
-cargo:windows_i686_msvc@0.53.1
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
 cargo:windows_x86_64_gnu@0.42.2
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/microsoft/windows-rs
@@ -3374,13 +3326,6 @@ cargo:windows_x86_64_gnu@0.42.2
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
 
 cargo:windows_x86_64_gnu@0.52.6
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
-cargo:windows_x86_64_gnu@0.53.1
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/microsoft/windows-rs
   Scope: normal
@@ -3401,13 +3346,6 @@ cargo:windows_x86_64_gnullvm@0.52.6
   Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
 
-cargo:windows_x86_64_gnullvm@0.53.1
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
 cargo:windows_x86_64_msvc@0.42.2
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/microsoft/windows-rs
@@ -3416,13 +3354,6 @@ cargo:windows_x86_64_msvc@0.42.2
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
 
 cargo:windows_x86_64_msvc@0.52.6
-  Declared: MIT OR Apache-2.0; selected: MIT
-  Source: https://github.com/microsoft/windows-rs
-  Scope: normal
-  Notice: third-party/licenses/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt (upstream license-apache-2.0)
-  Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream license-mit)
-
-cargo:windows_x86_64_msvc@0.53.1
   Declared: MIT OR Apache-2.0; selected: MIT
   Source: https://github.com/microsoft/windows-rs
   Scope: normal
@@ -3969,9 +3900,9 @@ npm:@types/stats.js@0.17.4
   Scope: dev
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream LICENSE)
 
-npm:@types/three@0.180.0
+npm:@types/three@0.187.0
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/@types/three/v/0.180.0
+  Source: https://www.npmjs.com/package/@types/three/v/0.187.0
   Scope: dev
   Notice: third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt (upstream LICENSE)
 
@@ -4041,6 +3972,152 @@ npm:@typescript-eslint/visitor-keys@8.72.1
   Scope: dev
   Notice: third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt (upstream LICENSE)
 
+npm:@typescript/typescript-aix-ppc64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-aix-ppc64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-darwin-arm64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-darwin-arm64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-darwin-x64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-darwin-x64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-freebsd-arm64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-freebsd-arm64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-freebsd-x64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-freebsd-x64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-linux-arm64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-linux-arm64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-linux-arm@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-linux-arm/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-linux-loong64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-linux-loong64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-linux-mips64el@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-linux-mips64el/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-linux-ppc64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-linux-ppc64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-linux-riscv64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-linux-riscv64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-linux-s390x@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-linux-s390x/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-linux-x64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-linux-x64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-netbsd-arm64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-netbsd-arm64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-netbsd-x64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-netbsd-x64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-openbsd-arm64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-openbsd-arm64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-openbsd-x64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-openbsd-x64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-sunos-x64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-sunos-x64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-win32-arm64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-win32-arm64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+
+npm:@typescript/typescript-win32-x64@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript-win32-x64/v/7.0.2
+  Scope: dev, optional
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream NOTICE.txt)
+
+npm:@typescript/typescript6@6.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/@typescript/typescript6/v/6.0.2
+  Scope: dev
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream LICENSE.txt)
+
 npm:@vitejs/plugin-react@6.1.2
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/@vitejs/plugin-react/v/6.1.2
@@ -4058,12 +4135,6 @@ npm:@vitest/spy@5.0.5
   Source: https://www.npmjs.com/package/@vitest/spy/v/5.0.5
   Scope: dev
   Notice: third-party/licenses/04575fc5bfae19a9b63100f8691f901a2e15a399011ac02db435a9ef27295551.txt (upstream LICENSE)
-
-npm:@webgpu/types@0.1.74
-  Declared: BSD-3-Clause; selected: BSD-3-Clause
-  Source: https://www.npmjs.com/package/@webgpu/types/v/0.1.74
-  Scope: dev
-  Notice: third-party/licenses/ad88400fc55c2871ba2ed33930dc13001ef01907c2ddcbfa3caa8656e9142f05.txt (upstream LICENSE)
 
 npm:accessor-fn@1.5.3
   Declared: MIT; selected: MIT
@@ -4574,7 +4645,7 @@ npm:lightningcss-linux-x64-gnu@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
   Source: https://www.npmjs.com/package/lightningcss-linux-x64-gnu/v/1.33.0
   Scope: dev, optional
-  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream LICENSE)
+  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream package/LICENSE)
 
 npm:lightningcss-linux-x64-musl@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
@@ -4592,7 +4663,7 @@ npm:lightningcss-win32-x64-msvc@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
   Source: https://www.npmjs.com/package/lightningcss-win32-x64-msvc/v/1.33.0
   Scope: dev, optional
-  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream LICENSE)
 
 npm:lightningcss@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
@@ -4624,11 +4695,11 @@ npm:magic-string@1.4.5
   Scope: dev
   Notice: third-party/licenses/1cbe51b907662f6cb1492b16c359384a595180bf0e4d101603ed525e75c4e484.txt (upstream LICENSE)
 
-npm:meshoptimizer@0.22.0
+npm:meshoptimizer@1.1.1
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/meshoptimizer/v/0.22.0
+  Source: https://www.npmjs.com/package/meshoptimizer/v/1.1.1
   Scope: dev
-  Notice: third-party/licenses/d1bc307ff896c7fc65e3ff4823cc478194f7a5bc6436f99534ebede4d9e2017a.txt (upstream LICENSE.md)
+  Notice: third-party/licenses/f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26.txt (upstream LICENSE.md)
 
 npm:minimatch@11.0.4
   Declared: BlueOak-1.0.0; selected: BlueOak-1.0.0
@@ -4869,11 +4940,11 @@ npm:shebang-regex@3.0.0
   Scope: dev
   Notice: third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt (upstream license)
 
-npm:sigma@3.0.2
+npm:sigma@4.0.4
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/sigma/v/3.0.2
+  Source: https://www.npmjs.com/package/sigma/v/4.0.4
   Scope: normal
-  Notice: third-party/licenses/2d6beb4435a5186414986ef25facdea68619d0f3e1043b9a795f5c6233914013.txt (upstream LICENSE.txt)
+  Notice: third-party/licenses/7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1.txt (upstream LICENSE.txt)
 
 npm:source-map-js@1.2.2
   Declared: BSD-3-Clause; selected: BSD-3-Clause
@@ -4899,9 +4970,9 @@ npm:three-render-objects@1.43.0
   Scope: normal
   Notice: third-party/licenses/5b6dc9ce44c7b73620b191c567339212bd00537af46fdedaf98304c34214cc9c.txt (upstream LICENSE)
 
-npm:three@0.186.1
+npm:three@0.187.0
   Declared: MIT; selected: MIT
-  Source: https://www.npmjs.com/package/three/v/0.186.1
+  Source: https://www.npmjs.com/package/three/v/0.187.0
   Scope: normal
   Notice: third-party/licenses/8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc.txt (upstream LICENSE)
 
@@ -4947,11 +5018,19 @@ npm:typescript-eslint@8.72.1
   Scope: dev
   Notice: third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt (upstream LICENSE)
 
-npm:typescript@5.9.3
+npm:typescript@6.0.3
   Declared: Apache-2.0; selected: Apache-2.0
-  Source: https://www.npmjs.com/package/typescript/v/5.9.3
+  Source: https://www.npmjs.com/package/typescript/v/6.0.3
   Scope: dev
   Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream LICENSE.txt)
+
+npm:typescript@7.0.2
+  Declared: Apache-2.0; selected: Apache-2.0
+  Source: https://www.npmjs.com/package/typescript/v/7.0.2
+  Scope: dev
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream NOTICE.txt)
+  Notice: third-party/licenses/ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0.txt (upstream vendor/vscode-jsonrpc/License.txt)
 
 npm:undici-types@8.9.0
   Declared: MIT; selected: MIT

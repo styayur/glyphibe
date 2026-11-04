@@ -89,6 +89,14 @@ export default function GraphCanvas({
     density: number;
     impact: Set<string>;
   } | null>(null);
+  const nodeById = useMemo(() => new Map(nodes.map((node) => [node.id, node])), [nodes]);
+  const edgeById = useMemo(() => new Map(edges.map((edge) => [edge.id, edge])), [edges]);
+  const nodeByIdRef = useRef(nodeById);
+  const edgeByIdRef = useRef(edgeById);
+  const presentation = useRef({ state, impact, nodeCount: nodes.length });
+  nodeByIdRef.current = nodeById;
+  edgeByIdRef.current = edgeById;
+  presentation.current = { state, impact, nodeCount: nodes.length };
   const camera = useRef<{
     x: number;
     y: number;
@@ -232,7 +240,11 @@ export default function GraphCanvas({
             : impact.has(n.id)
               ? "#df9b6c"
               : colour(n, state.theme),
-        forceLabel: n.id === state.selected || nodes.length <= 24,
+        labelColor: state.theme === "dark" ? "#e4edf4" : "#1c3142",
+        labelSize: 12,
+        labelFont: "Segoe UI",
+        labelVisibility:
+          n.id === state.selected || nodes.length <= 24 ? "visible" : "auto",
       });
     for (const e of edges)
       graph.addDirectedEdgeWithKey(e.id, e.source, e.target, {
@@ -247,13 +259,52 @@ export default function GraphCanvas({
     let renderer: Sigma | undefined;
     try {
       renderer = new Sigma(graph, host.current, {
-        renderEdgeLabels: false,
-        labelDensity: nodes.length <= 24 || state.density < 500 ? 1 : 0.15,
-        labelRenderedSizeThreshold: nodes.length <= 24 ? 0 : 6,
-        labelColor: { color: state.theme === "dark" ? "#e4edf4" : "#1c3142" },
-        labelSize: 12,
-        labelFont: "Segoe UI",
-        allowInvalidContainer: true,
+        settings: {
+          renderEdgeLabels: false,
+          labelDensity:
+            nodes.length <= 24 || state.density < 500 ? 1 : 0.15,
+          labelRenderedSizeThreshold: nodes.length <= 24 ? 0 : 6,
+          allowInvalidContainer: true,
+        },
+        nodeReducer: (id, attributes) => {
+          const current = presentation.current;
+          const node = nodeByIdRef.current.get(id);
+          if (!node) return attributes;
+          return {
+            ...attributes,
+            label: displayNodeLabel(node.label),
+            size:
+              id === current.state.selected
+                ? 10
+                : node.kind === "cluster"
+                  ? 8
+                  : 5,
+            color:
+              id === current.state.selected
+                ? "#f4d58e"
+                : current.impact.has(id)
+                  ? "#df9b6c"
+                  : colour(node, current.state.theme),
+            labelColor:
+              current.state.theme === "dark" ? "#e4edf4" : "#1c3142",
+            labelVisibility:
+              id === current.state.selected || current.nodeCount <= 24
+                ? "visible"
+                : "auto",
+          };
+        },
+        edgeReducer: (id, attributes) => {
+          const current = presentation.current;
+          return {
+            ...attributes,
+            color:
+              edgeByIdRef.current.get(id)?.evidence.kind === "inferred"
+                ? "#8b7952"
+                : current.state.theme === "dark"
+                  ? "#415366"
+                  : "#8b9ba9",
+          };
+        },
       });
       renderer.on("clickNode", ({ node }) => selectHandler.current(node));
       if (
@@ -405,41 +456,13 @@ export default function GraphCanvas({
       applied.impact === impact
     )
       return;
-    const byId = new Map(nodes.map((n) => [n.id, n]));
-    const edgeById = new Map(edges.map((e) => [e.id, e]));
     // Batch presentation changes. Canonical graph facts and GPU contexts stay
     // intact; selection/highlighting does not reconstruct a renderer.
     renderer.setSettings({
-      nodeReducer: (id, attributes) => {
-        const node = byId.get(id)!;
-        return {
-          ...attributes,
-          label: displayNodeLabel(node.label),
-          size: id === state.selected ? 10 : node.kind === "cluster" ? 8 : 5,
-          color:
-            id === state.selected
-              ? "#f4d58e"
-              : impact.has(id)
-                ? "#df9b6c"
-                : colour(node, state.theme),
-          forceLabel: id === state.selected || nodes.length <= 24,
-        };
-      },
-      labelColor: {
-        color: state.theme === "dark" ? "#e4edf4" : "#1c3142",
-      },
       labelDensity: nodes.length <= 24 || state.density < 500 ? 1 : 0.15,
       labelRenderedSizeThreshold: nodes.length <= 24 ? 0 : 6,
-      edgeReducer: (id, attributes) => ({
-        ...attributes,
-        color:
-          edgeById.get(id)?.evidence.kind === "inferred"
-            ? "#8b7952"
-            : state.theme === "dark"
-              ? "#415366"
-              : "#8b9ba9",
-      }),
     });
+    renderer.refresh({ skipIndexation: true });
     appliedPresentation.current = {
       renderer,
       selected: state.selected,
