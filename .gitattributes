@@ -6,3 +6,5 @@
 *.zip binary
 /third-party/licenses/* -text
 /third-party/toolchain-licenses/** -text
+
+.github/workflows/*.lock.yml linguist-generated=true
