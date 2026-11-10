@@ -2,12 +2,12 @@
   "schema_version": 1,
   "coverage": "Cargo default enabled features with no target filter; both manifests; all npm lock entries including optional platform/build/dev packages. Disabled Cargo features are not claimed shipped.",
   "lock_sha256": {
-    "Cargo.lock": "0b75f4028f821c2d0143abeb5602bf878d2df4b28e5afbdf87d5e7b03b6487c8",
+    "Cargo.lock": "25e4e0747fc57e1e646d35e371b0b3f22aaaddfc560b58b1a672a2c559e874c4",
     "apps/desktop/package-lock.json": "dd92856a89af4b2bab77868d1174cd4590575e6d4b3aae232c7dad30ad1026b4"
   },
   "input_sha256": {
-    "Cargo.toml": "e4908c8e1369aec451392164bf493e16a05e2b4af1d6c953aa5576fbc53910f1",
-    "Cargo.lock": "0b75f4028f821c2d0143abeb5602bf878d2df4b28e5afbdf87d5e7b03b6487c8",
+    "Cargo.toml": "132a1d0d7f7a365c3c673c3db7c9f0e9a699a43ffb127889be6f86bec304d926",
+    "Cargo.lock": "25e4e0747fc57e1e646d35e371b0b3f22aaaddfc560b58b1a672a2c559e874c4",
     "apps/desktop/src-tauri/Cargo.toml": "108c47b9ec0f66b0617d1cbe65a7eed2f506a2d2fd0812e29162f91a8761aca7",
     "apps/desktop/package.json": "73d57de8462295bd6c57b1cec78b93b1adf4eba08d3108dfb375cbbfa08719ca",
     "apps/desktop/package-lock.json": "dd92856a89af4b2bab77868d1174cd4590575e6d4b3aae232c7dad30ad1026b4",
@@ -7063,7 +7063,6 @@
         "cfg(any(unix, target_os = \"wasi\"))",
         "cfg(target_os = \"android\")",
         "cfg(target_os = \"hermit\")",
-        "cfg(target_os = \"linux\")",
         "cfg(target_os = \"netbsd\")",
         "cfg(target_os = \"solaris\")",
         "cfg(target_os = \"vxworks\")",
@@ -10538,13 +10537,13 @@
     {
       "ecosystem": "cargo",
       "name": "rmcp-macros",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "license_declared": "Apache-2.0",
       "source": "https://github.com/modelcontextprotocol/rust-sdk/",
-      "download": "https://crates.io/api/v1/crates/rmcp-macros/3.8.0/download",
+      "download": "https://crates.io/api/v1/crates/rmcp-macros/3.9.0/download",
       "checksum": {
         "algorithm": "SHA256",
-        "value": "8b0748e054a5f5598b3213cf72099ae6b2745ba4d996c59ccf455150a7dbb839"
+        "value": "b3140f24a766f80f9ec1607bde85680959a69b83d46fa9ce87dadab7e67ab029"
       },
       "scopes": [
         "normal"
@@ -10556,7 +10555,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "cargo:rmcp-macros@3.8.0",
+      "id": "cargo:rmcp-macros@3.9.0",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -10568,13 +10567,13 @@
     {
       "ecosystem": "cargo",
       "name": "rmcp",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "license_declared": "Apache-2.0",
       "source": "https://github.com/modelcontextprotocol/rust-sdk/",
-      "download": "https://crates.io/api/v1/crates/rmcp/3.8.0/download",
+      "download": "https://crates.io/api/v1/crates/rmcp/3.9.0/download",
       "checksum": {
         "algorithm": "SHA256",
-        "value": "f8be15815186873ea063bf005011d16c356804973489e40c39116ae3a2878d1f"
+        "value": "d24a7e92f4bcaa36b97fa93c4fa7ca8f3e669eced949345b3462dba333c7f909"
       },
       "scopes": [
         "dev",
@@ -10587,7 +10586,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "cargo:rmcp@3.8.0",
+      "id": "cargo:rmcp@3.9.0",
       "notices": [
         {
           "source_file": "LICENSE",

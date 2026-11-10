@@ -2033,13 +2033,13 @@ cargo:ring@0.17.14
   Notice: third-party/licenses/6ee2ed6c77710de911761acd5fc1ad1da00f476beb1a7ef27e78c2d1858deafc.txt (upstream src/polyfill/once_cell/LICENSE-MIT)
   Notice: third-party/licenses/9eacbcb81be660840c714a560a9d65ba07913db98dd4baf969f78dd499fdd60f.txt (upstream third_party/fiat/LICENSE)
 
-cargo:rmcp-macros@3.8.0
+cargo:rmcp-macros@3.9.0
   Declared: Apache-2.0; selected: Apache-2.0
   Source: https://github.com/modelcontextprotocol/rust-sdk/
   Scope: normal
   Notice: third-party/licenses/0382b0057770ca05e9c350a50aa3b1c1fea84da0bc81d723bf00b9aa841be58a.txt (upstream LICENSE)
 
-cargo:rmcp@3.8.0
+cargo:rmcp@3.9.0
   Declared: Apache-2.0; selected: Apache-2.0
   Source: https://github.com/modelcontextprotocol/rust-sdk/
   Scope: dev, normal
