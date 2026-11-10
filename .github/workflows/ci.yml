@@ -94,6 +94,17 @@ jobs:
       - run: python scripts/audit-dependencies.py --check
       - run: python scripts/audit-native-notices.py
       - run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Preserve complete dependency audit evidence on failure
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: dependency-audit-evidence
+          path: |
+            all-target-audit.json
+            desktop-windows-audit.json
+            cli-linux-audit.json
+          if-no-files-found: warn
+          retention-days: 14
   desktop:
     name: Windows desktop build
     runs-on: windows-latest
