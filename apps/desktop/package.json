@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@playwright/test": "^1.56.0",
+    "@playwright/test": "^1.65.0",
     "@tauri-apps/cli": "^2.9.0",
     "@types/pngjs": "^6.0.5",
     "@types/react": "^19.2.0",
