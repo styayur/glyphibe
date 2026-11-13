@@ -3,12 +3,12 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "Glyphibe locked dependency inventory",
-  "documentNamespace": "https://github.com/styayur/glyphibe/spdx/daaf6c1ce83f4cab09628a140c2161901df93463224fcdd9f2b378c672211eef",
+  "documentNamespace": "https://github.com/styayur/glyphibe/spdx/b1ce78f5ff0d81e5f28d9e0316d15ae4cf9aa7691fc594fa44e91bdcb561d2bc",
   "creationInfo": {
     "creators": [
       "Tool: glyphibe-audit-dependencies-1"
     ],
-    "created": "2026-11-04T17:29:27Z"
+    "created": "2026-11-13T05:30:47Z"
   },
   "packages": [
     {
@@ -7140,10 +7140,10 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-7a7a04480865465f4f116291",
+      "SPDXID": "SPDXRef-ef1fbef703cb4b55abfb8592",
       "name": "rmcp-macros",
-      "versionInfo": "3.8.0",
-      "downloadLocation": "https://crates.io/api/v1/crates/rmcp-macros/3.8.0/download",
+      "versionInfo": "3.10.0",
+      "downloadLocation": "https://crates.io/api/v1/crates/rmcp-macros/3.10.0/download",
       "filesAnalyzed": false,
       "licenseDeclared": "Apache-2.0",
       "licenseConcluded": "Apache-2.0",
@@ -7152,22 +7152,22 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/rmcp-macros@3.8.0"
+          "referenceLocator": "pkg:cargo/rmcp-macros@3.10.0"
         }
       ],
       "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8b0748e054a5f5598b3213cf72099ae6b2745ba4d996c59ccf455150a7dbb839"
+          "checksumValue": "b98a686693ee91b665c6f89f182fca6e141c8a63dc113b11b38c1bf3491606b7"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "SPDXID": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "name": "rmcp",
-      "versionInfo": "3.8.0",
-      "downloadLocation": "https://crates.io/api/v1/crates/rmcp/3.8.0/download",
+      "versionInfo": "3.9.0",
+      "downloadLocation": "https://crates.io/api/v1/crates/rmcp/3.9.0/download",
       "filesAnalyzed": false,
       "licenseDeclared": "Apache-2.0",
       "licenseConcluded": "Apache-2.0",
@@ -7176,14 +7176,14 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:cargo/rmcp@3.8.0"
+          "referenceLocator": "pkg:cargo/rmcp@3.9.0"
         }
       ],
       "comment": "Scope=dev,normal; original notice text paths are in dependency-inventory.json",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f8be15815186873ea063bf005011d16c356804973489e40c39116ae3a2878d1f"
+          "checksumValue": "d24a7e92f4bcaa36b97fa93c4fa7ca8f3e669eced949345b3462dba333c7f909"
         }
       ]
     },
@@ -19885,12 +19885,12 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-7a7a04480865465f4f116291"
+      "relatedSpdxElement": "SPDXRef-ef1fbef703cb4b55abfb8592"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-fcf03d7ce4929578ac5178c3"
+      "relatedSpdxElement": "SPDXRef-fad7fb02f72fb0d73d93f500"
     },
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
@@ -26353,117 +26353,122 @@
       "relatedSpdxElement": "SPDXRef-c2bf6a44a41341c93a265e9d"
     },
     {
-      "spdxElementId": "SPDXRef-7a7a04480865465f4f116291",
+      "spdxElementId": "SPDXRef-ef1fbef703cb4b55abfb8592",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-a2bead4255448557bbc4db94"
     },
     {
-      "spdxElementId": "SPDXRef-7a7a04480865465f4f116291",
+      "spdxElementId": "SPDXRef-ef1fbef703cb4b55abfb8592",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-d820bc5580bd3aa1477f851b"
     },
     {
-      "spdxElementId": "SPDXRef-7a7a04480865465f4f116291",
+      "spdxElementId": "SPDXRef-ef1fbef703cb4b55abfb8592",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-ab9b38194fc42641bd6ddbf1"
     },
     {
-      "spdxElementId": "SPDXRef-7a7a04480865465f4f116291",
+      "spdxElementId": "SPDXRef-ef1fbef703cb4b55abfb8592",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-3f8bbf90c5c2cd6ec09898e0"
     },
     {
-      "spdxElementId": "SPDXRef-7a7a04480865465f4f116291",
+      "spdxElementId": "SPDXRef-ef1fbef703cb4b55abfb8592",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-a8ff92e7d0b2b60f9de89c15"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-cb2d26ca020540f2d1d0f43c"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-ed90bf70dccef9a660cbd903"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-7b40d21c6d74919e3e7f86ba"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-b56559ed29f0c2328cdb596f"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-933f836951dbd7caa0b79757"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-9347d32eebcfb2d737c8f702"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-a8031210b162f8c70f5eb959"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-03c0fd7232ae4c7a604c15e0"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-7a7a04480865465f4f116291"
+      "relatedSpdxElement": "SPDXRef-ef1fbef703cb4b55abfb8592"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-e1b77c68eca2f32496a55acf"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-6c517d3022b0b71b43f57674"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-3f8bbf90c5c2cd6ec09898e0"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-25d2c2ab690c22ecf2c6c5a0"
+    },
+    {
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-5e0a5c228f91579dd4f389b2"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-6e2829cb597771a7b2df4498"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-36c5c8e3aaa4261a674d1659"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-45a043b2b595c7074fe493b7"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-b9dbe0667f679910dd697cfd"
     },
     {
-      "spdxElementId": "SPDXRef-fcf03d7ce4929578ac5178c3",
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-b2a51a311a3e1d578e83b790"
     },

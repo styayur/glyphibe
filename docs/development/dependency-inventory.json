@@ -2,12 +2,12 @@
   "schema_version": 1,
   "coverage": "Cargo default enabled features with no target filter; both manifests; all npm lock entries including optional platform/build/dev packages. Disabled Cargo features are not claimed shipped.",
   "lock_sha256": {
-    "Cargo.lock": "0b75f4028f821c2d0143abeb5602bf878d2df4b28e5afbdf87d5e7b03b6487c8",
+    "Cargo.lock": "a4d2b600b32e5de34ee230439e6d50d10079725de6b89c2ed88770881b99646c",
     "apps/desktop/package-lock.json": "dd92856a89af4b2bab77868d1174cd4590575e6d4b3aae232c7dad30ad1026b4"
   },
   "input_sha256": {
-    "Cargo.toml": "e4908c8e1369aec451392164bf493e16a05e2b4af1d6c953aa5576fbc53910f1",
-    "Cargo.lock": "0b75f4028f821c2d0143abeb5602bf878d2df4b28e5afbdf87d5e7b03b6487c8",
+    "Cargo.toml": "132a1d0d7f7a365c3c673c3db7c9f0e9a699a43ffb127889be6f86bec304d926",
+    "Cargo.lock": "a4d2b600b32e5de34ee230439e6d50d10079725de6b89c2ed88770881b99646c",
     "apps/desktop/src-tauri/Cargo.toml": "108c47b9ec0f66b0617d1cbe65a7eed2f506a2d2fd0812e29162f91a8761aca7",
     "apps/desktop/package.json": "73d57de8462295bd6c57b1cec78b93b1adf4eba08d3108dfb375cbbfa08719ca",
     "apps/desktop/package-lock.json": "dd92856a89af4b2bab77868d1174cd4590575e6d4b3aae232c7dad30ad1026b4",
@@ -7063,7 +7063,6 @@
         "cfg(any(unix, target_os = \"wasi\"))",
         "cfg(target_os = \"android\")",
         "cfg(target_os = \"hermit\")",
-        "cfg(target_os = \"linux\")",
         "cfg(target_os = \"netbsd\")",
         "cfg(target_os = \"solaris\")",
         "cfg(target_os = \"vxworks\")",
@@ -10538,13 +10537,13 @@
     {
       "ecosystem": "cargo",
       "name": "rmcp-macros",
-      "version": "3.8.0",
+      "version": "3.10.0",
       "license_declared": "Apache-2.0",
       "source": "https://github.com/modelcontextprotocol/rust-sdk/",
-      "download": "https://crates.io/api/v1/crates/rmcp-macros/3.8.0/download",
+      "download": "https://crates.io/api/v1/crates/rmcp-macros/3.10.0/download",
       "checksum": {
         "algorithm": "SHA256",
-        "value": "8b0748e054a5f5598b3213cf72099ae6b2745ba4d996c59ccf455150a7dbb839"
+        "value": "b98a686693ee91b665c6f89f182fca6e141c8a63dc113b11b38c1bf3491606b7"
       },
       "scopes": [
         "normal"
@@ -10556,7 +10555,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "cargo:rmcp-macros@3.8.0",
+      "id": "cargo:rmcp-macros@3.10.0",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -10568,13 +10567,13 @@
     {
       "ecosystem": "cargo",
       "name": "rmcp",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "license_declared": "Apache-2.0",
       "source": "https://github.com/modelcontextprotocol/rust-sdk/",
-      "download": "https://crates.io/api/v1/crates/rmcp/3.8.0/download",
+      "download": "https://crates.io/api/v1/crates/rmcp/3.9.0/download",
       "checksum": {
         "algorithm": "SHA256",
-        "value": "f8be15815186873ea063bf005011d16c356804973489e40c39116ae3a2878d1f"
+        "value": "d24a7e92f4bcaa36b97fa93c4fa7ca8f3e669eced949345b3462dba333c7f909"
       },
       "scopes": [
         "dev",
@@ -10587,7 +10586,7 @@
       "platform_conditions": [],
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
-      "id": "cargo:rmcp@3.8.0",
+      "id": "cargo:rmcp@3.9.0",
       "notices": [
         {
           "source_file": "LICENSE",
@@ -17978,7 +17977,7 @@
       "id": "npm:3d-force-graph@1.80.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded.txt",
           "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
         }
@@ -18004,7 +18003,7 @@
       "id": "npm:@babel/runtime@7.29.10",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
           "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
         }
@@ -18030,7 +18029,7 @@
       "id": "npm:@cacheable/memory@2.2.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
           "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
         }
@@ -18056,7 +18055,7 @@
       "id": "npm:@cacheable/utils@2.5.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
           "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
         }
@@ -18082,7 +18081,7 @@
       "id": "npm:@dimforge/rapier3d-compat@0.12.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519.txt",
           "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
         }
@@ -18108,7 +18107,7 @@
       "id": "npm:@eslint-community/eslint-utils@4.10.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/fcf6eabf68ca96988a6b506b4fdc6cc32535d80eb2e11c79724af5ac6f50262b.txt",
           "sha256": "fcf6eabf68ca96988a6b506b4fdc6cc32535d80eb2e11c79724af5ac6f50262b"
         }
@@ -18134,7 +18133,7 @@
       "id": "npm:@eslint-community/regexpp@4.12.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/fcf6eabf68ca96988a6b506b4fdc6cc32535d80eb2e11c79724af5ac6f50262b.txt",
           "sha256": "fcf6eabf68ca96988a6b506b4fdc6cc32535d80eb2e11c79724af5ac6f50262b"
         }
@@ -18160,7 +18159,7 @@
       "id": "npm:@eslint/config-array@0.23.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
           "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
         }
@@ -18186,7 +18185,7 @@
       "id": "npm:@eslint/config-helpers@0.7.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
           "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
         }
@@ -18212,7 +18211,7 @@
       "id": "npm:@eslint/core@1.2.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
           "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
         }
@@ -18238,7 +18237,7 @@
       "id": "npm:@eslint/js@10.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c.txt",
           "sha256": "3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c"
         }
@@ -18264,7 +18263,7 @@
       "id": "npm:@eslint/object-schema@3.0.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
           "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
         }
@@ -18290,7 +18289,7 @@
       "id": "npm:@eslint/plugin-kit@0.7.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
           "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
         }
@@ -18316,7 +18315,7 @@
       "id": "npm:@humanfs/core@0.19.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
           "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
         }
@@ -18342,7 +18341,7 @@
       "id": "npm:@humanfs/node@0.16.8",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
           "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
         }
@@ -18402,7 +18401,7 @@
       "id": "npm:@humanwhocodes/module-importer@1.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
           "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
         }
@@ -18428,7 +18427,7 @@
       "id": "npm:@humanwhocodes/retry@0.4.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
           "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
         }
@@ -18454,7 +18453,7 @@
       "id": "npm:@isaacs/nonrecursive-glob-match@1.0.3",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004.txt",
           "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004"
         }
@@ -18480,7 +18479,7 @@
       "id": "npm:@jridgewell/resolve-uri@3.1.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/b8778b155bfde5a28b023a558753c0fa058a52bb9de35c343c250be1bbcdedab.txt",
           "sha256": "b8778b155bfde5a28b023a558753c0fa058a52bb9de35c343c250be1bbcdedab"
         }
@@ -18506,7 +18505,7 @@
       "id": "npm:@jridgewell/sourcemap-codec@1.6.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt",
           "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c"
         }
@@ -18532,7 +18531,7 @@
       "id": "npm:@jridgewell/trace-mapping@0.3.31",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt",
           "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c"
         }
@@ -18558,7 +18557,7 @@
       "id": "npm:@keyv/bigmap@1.3.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/f18cad8d98d4454ad42c33f1950d642cd3b939f2ccd3c36710fa8f50842cacc0.txt",
           "sha256": "f18cad8d98d4454ad42c33f1950d642cd3b939f2ccd3c36710fa8f50842cacc0"
         }
@@ -18584,7 +18583,7 @@
       "id": "npm:@keyv/serialize@1.1.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959.txt",
           "sha256": "1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959"
         }
@@ -18610,7 +18609,7 @@
       "id": "npm:@oxc-project/types@0.155.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/95ced5ecf1133fbf41d409b5555c86c344f83f3b019926057ddbc07cfdcc27b3.txt",
           "sha256": "95ced5ecf1133fbf41d409b5555c86c344f83f3b019926057ddbc07cfdcc27b3"
         }
@@ -18636,12 +18635,12 @@
       "id": "npm:@playwright/test@1.64.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb.txt",
           "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb"
         },
         {
-          "source_file": "NOTICE",
+          "source_file": "package/NOTICE",
           "file": "third-party/licenses/6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d.txt",
           "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d"
         }
@@ -18676,12 +18675,12 @@
       "id": "npm:@rolldown/binding-android-arm-eabi@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -18716,12 +18715,12 @@
       "id": "npm:@rolldown/binding-android-arm64@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -18756,12 +18755,12 @@
       "id": "npm:@rolldown/binding-darwin-arm64@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -18796,12 +18795,12 @@
       "id": "npm:@rolldown/binding-darwin-x64@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -18836,12 +18835,12 @@
       "id": "npm:@rolldown/binding-freebsd-x64@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -18876,12 +18875,12 @@
       "id": "npm:@rolldown/binding-linux-arm-gnueabihf@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -18916,12 +18915,12 @@
       "id": "npm:@rolldown/binding-linux-arm64-gnu@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -18956,12 +18955,12 @@
       "id": "npm:@rolldown/binding-linux-arm64-musl@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -18996,12 +18995,12 @@
       "id": "npm:@rolldown/binding-linux-ppc64-gnu@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -19036,12 +19035,12 @@
       "id": "npm:@rolldown/binding-linux-s390x-gnu@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -19076,12 +19075,12 @@
       "id": "npm:@rolldown/binding-linux-x64-gnu@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -19116,12 +19115,12 @@
       "id": "npm:@rolldown/binding-linux-x64-musl@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -19156,12 +19155,12 @@
       "id": "npm:@rolldown/binding-openharmony-arm64@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -19196,12 +19195,12 @@
       "id": "npm:@rolldown/binding-win32-arm64-msvc@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -19236,12 +19235,12 @@
       "id": "npm:@rolldown/binding-win32-x64-msvc@1.2.15",
       "notices": [
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "exact-parent-release:rolldown@1.2.15/THIRD-PARTY-LICENSE",
+          "source_file": "exact-parent-release:rolldown@1.2.15/package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -19267,7 +19266,7 @@
       "id": "npm:@rolldown/pluginutils@1.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e1919b3b98b8bf6c1b99fcc60a0ed46027c97ac947432e1278446c9606f50161.txt",
           "sha256": "e1919b3b98b8bf6c1b99fcc60a0ed46027c97ac947432e1278446c9606f50161"
         }
@@ -19293,17 +19292,17 @@
       "id": "npm:@tauri-apps/api@2.12.4",
       "notices": [
         {
-          "source_file": "LICENSE-APACHE-2.0",
+          "source_file": "package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "LICENSE-MIT",
+          "source_file": "package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         },
         {
-          "source_file": "LICENSE.spdx",
+          "source_file": "package/LICENSE.spdx",
           "file": "third-party/licenses/5e834fe9788c524210deda859c46a550ffa5aa0cba9ea0572f0d81120e97c008.txt",
           "sha256": "5e834fe9788c524210deda859c46a550ffa5aa0cba9ea0572f0d81120e97c008"
         }
@@ -19338,12 +19337,12 @@
       "id": "npm:@tauri-apps/cli-darwin-arm64@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19378,12 +19377,12 @@
       "id": "npm:@tauri-apps/cli-darwin-x64@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19418,12 +19417,12 @@
       "id": "npm:@tauri-apps/cli-linux-arm-gnueabihf@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19458,12 +19457,12 @@
       "id": "npm:@tauri-apps/cli-linux-arm64-gnu@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19498,12 +19497,12 @@
       "id": "npm:@tauri-apps/cli-linux-arm64-musl@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19538,12 +19537,12 @@
       "id": "npm:@tauri-apps/cli-linux-riscv64-gnu@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19578,12 +19577,12 @@
       "id": "npm:@tauri-apps/cli-linux-x64-gnu@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19618,12 +19617,12 @@
       "id": "npm:@tauri-apps/cli-linux-x64-musl@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19658,12 +19657,12 @@
       "id": "npm:@tauri-apps/cli-win32-arm64-msvc@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19698,12 +19697,12 @@
       "id": "npm:@tauri-apps/cli-win32-ia32-msvc@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19738,12 +19737,12 @@
       "id": "npm:@tauri-apps/cli-win32-x64-msvc@2.12.4",
       "notices": [
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-APACHE-2.0",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/LICENSE-MIT",
+          "source_file": "exact-parent-release:@tauri-apps/cli@2.12.4/package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19769,12 +19768,12 @@
       "id": "npm:@tauri-apps/cli@2.12.4",
       "notices": [
         {
-          "source_file": "LICENSE-APACHE-2.0",
+          "source_file": "package/LICENSE-APACHE-2.0",
           "file": "third-party/licenses/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
           "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
         },
         {
-          "source_file": "LICENSE-MIT",
+          "source_file": "package/LICENSE-MIT",
           "file": "third-party/licenses/9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d.txt",
           "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
         }
@@ -19800,7 +19799,7 @@
       "id": "npm:@tweenjs/tween.js@23.1.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c95fecd88f2709bfc34e4d1f1ccc36d17048990e6ba26c283cfecdef0432936b.txt",
           "sha256": "c95fecd88f2709bfc34e4d1f1ccc36d17048990e6ba26c283cfecdef0432936b"
         }
@@ -19826,7 +19825,7 @@
       "id": "npm:@types/chai@5.2.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "chai/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -19852,7 +19851,7 @@
       "id": "npm:@types/deep-eql@4.0.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "deep-eql/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -19878,7 +19877,7 @@
       "id": "npm:@types/esrecurse@4.3.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "esrecurse/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -19904,7 +19903,7 @@
       "id": "npm:@types/estree@1.0.9",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "estree/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -19930,7 +19929,7 @@
       "id": "npm:@types/json-schema@7.0.15",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "json-schema/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -19956,7 +19955,7 @@
       "id": "npm:@types/node@26.6.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "node/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -19982,7 +19981,7 @@
       "id": "npm:@types/pngjs@6.0.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "pngjs/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -20008,7 +20007,7 @@
       "id": "npm:@types/react-dom@19.3.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "react-dom/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -20034,7 +20033,7 @@
       "id": "npm:@types/react@19.3.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "react/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -20060,7 +20059,7 @@
       "id": "npm:@types/stats.js@0.17.4",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "stats.js/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -20086,7 +20085,7 @@
       "id": "npm:@types/three@0.187.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "three/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -20112,7 +20111,7 @@
       "id": "npm:@types/webxr@0.5.24",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "webxr/LICENSE",
           "file": "third-party/licenses/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
           "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
         }
@@ -20138,7 +20137,7 @@
       "id": "npm:@typescript-eslint/eslint-plugin@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt",
           "sha256": "2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0"
         }
@@ -20164,7 +20163,7 @@
       "id": "npm:@typescript-eslint/parser@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt",
           "sha256": "2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0"
         }
@@ -20190,7 +20189,7 @@
       "id": "npm:@typescript-eslint/project-service@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/053a75a14b7508a897466b65e12797201a06b0e9b5066d1223da72cac99601b5.txt",
           "sha256": "053a75a14b7508a897466b65e12797201a06b0e9b5066d1223da72cac99601b5"
         }
@@ -20216,7 +20215,7 @@
       "id": "npm:@typescript-eslint/scope-manager@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt",
           "sha256": "2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0"
         }
@@ -20242,7 +20241,7 @@
       "id": "npm:@typescript-eslint/tsconfig-utils@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/053a75a14b7508a897466b65e12797201a06b0e9b5066d1223da72cac99601b5.txt",
           "sha256": "053a75a14b7508a897466b65e12797201a06b0e9b5066d1223da72cac99601b5"
         }
@@ -20268,7 +20267,7 @@
       "id": "npm:@typescript-eslint/type-utils@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/f3c51ace7f159b21566d72535e84ff354505ae7ffdca835dac81fcdafbf9e879.txt",
           "sha256": "f3c51ace7f159b21566d72535e84ff354505ae7ffdca835dac81fcdafbf9e879"
         }
@@ -20294,7 +20293,7 @@
       "id": "npm:@typescript-eslint/types@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt",
           "sha256": "2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0"
         }
@@ -20320,7 +20319,7 @@
       "id": "npm:@typescript-eslint/typescript-estree@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt",
           "sha256": "2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0"
         }
@@ -20346,7 +20345,7 @@
       "id": "npm:@typescript-eslint/utils@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt",
           "sha256": "2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0"
         }
@@ -20372,7 +20371,7 @@
       "id": "npm:@typescript-eslint/visitor-keys@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt",
           "sha256": "2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0"
         }
@@ -21067,12 +21066,12 @@
       "id": "npm:@typescript/typescript-win32-x64@7.0.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
           "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
         },
         {
-          "source_file": "NOTICE.txt",
+          "source_file": "package/NOTICE.txt",
           "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
           "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
         }
@@ -21098,7 +21097,7 @@
       "id": "npm:@typescript/typescript6@6.0.2",
       "notices": [
         {
-          "source_file": "LICENSE.txt",
+          "source_file": "package/LICENSE.txt",
           "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
           "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
         }
@@ -21124,7 +21123,7 @@
       "id": "npm:@vitejs/plugin-react@6.1.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5.txt",
           "sha256": "29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5"
         }
@@ -21150,7 +21149,7 @@
       "id": "npm:@vitest/mocker@5.0.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/04575fc5bfae19a9b63100f8691f901a2e15a399011ac02db435a9ef27295551.txt",
           "sha256": "04575fc5bfae19a9b63100f8691f901a2e15a399011ac02db435a9ef27295551"
         }
@@ -21176,7 +21175,7 @@
       "id": "npm:@vitest/spy@5.0.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/04575fc5bfae19a9b63100f8691f901a2e15a399011ac02db435a9ef27295551.txt",
           "sha256": "04575fc5bfae19a9b63100f8691f901a2e15a399011ac02db435a9ef27295551"
         }
@@ -21202,7 +21201,7 @@
       "id": "npm:accessor-fn@1.5.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded.txt",
           "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
         }
@@ -21228,7 +21227,7 @@
       "id": "npm:acorn-jsx@5.3.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/cfa72b62b9ae173078823a3796b25c027a9071046a263beddf966df67018ce06.txt",
           "sha256": "cfa72b62b9ae173078823a3796b25c027a9071046a263beddf966df67018ce06"
         }
@@ -21254,7 +21253,7 @@
       "id": "npm:acorn@8.19.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/76a876cf886ff9be2a8b5e2e86514fed06223c8c9f0c1e9ee9606e93841e00b7.txt",
           "sha256": "76a876cf886ff9be2a8b5e2e86514fed06223c8c9f0c1e9ee9606e93841e00b7"
         }
@@ -21280,7 +21279,7 @@
       "id": "npm:ajv@6.15.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e85e131fa4ed25538ff1f4962ced1fb6f68b079bd9164a790597a0f30b8fd030.txt",
           "sha256": "e85e131fa4ed25538ff1f4962ced1fb6f68b079bd9164a790597a0f30b8fd030"
         }
@@ -21306,7 +21305,7 @@
       "id": "npm:assertion-error@2.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2130216d5ab4c02134f8247f32999feda0abe1eaf028218baeac445c19ce4cea.txt",
           "sha256": "2130216d5ab4c02134f8247f32999feda0abe1eaf028218baeac445c19ce4cea"
         }
@@ -21332,7 +21331,7 @@
       "id": "npm:balanced-match@4.0.4",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/d408f38ffa3355c5faec517153295338892eb0f1ea43f57874bb23c6075979b5.txt",
           "sha256": "d408f38ffa3355c5faec517153295338892eb0f1ea43f57874bb23c6075979b5"
         }
@@ -21358,7 +21357,7 @@
       "id": "npm:brace-expansion@5.0.12",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/9c63a23124d68cd30cd316a94a1a0bca34f032786df6df69fc4b5f136bac8d2e.txt",
           "sha256": "9c63a23124d68cd30cd316a94a1a0bca34f032786df6df69fc4b5f136bac8d2e"
         }
@@ -21384,7 +21383,7 @@
       "id": "npm:cacheable@2.5.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
           "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
         }
@@ -21410,7 +21409,7 @@
       "id": "npm:chai@6.3.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/b181da80336ff9dd1043fc8be1a764d7382363433319aa872e4d2cb5ce2a3066.txt",
           "sha256": "b181da80336ff9dd1043fc8be1a764d7382363433319aa872e4d2cb5ce2a3066"
         }
@@ -21436,7 +21435,7 @@
       "id": "npm:cross-spawn@7.0.6",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1.txt",
           "sha256": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1"
         }
@@ -21462,7 +21461,7 @@
       "id": "npm:csstype@3.2.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e.txt",
           "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e"
         }
@@ -21488,7 +21487,7 @@
       "id": "npm:d3-array@3.2.4",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4.txt",
           "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
         }
@@ -21514,7 +21513,7 @@
       "id": "npm:d3-binarytree@1.0.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded.txt",
           "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
         }
@@ -21540,7 +21539,7 @@
       "id": "npm:d3-color@3.1.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884.txt",
           "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
         }
@@ -21566,7 +21565,7 @@
       "id": "npm:d3-dispatch@3.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
           "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
@@ -21592,7 +21591,7 @@
       "id": "npm:d3-force-3d@3.0.6",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded.txt",
           "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
         }
@@ -21618,7 +21617,7 @@
       "id": "npm:d3-format@3.1.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
           "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
         }
@@ -21644,7 +21643,7 @@
       "id": "npm:d3-interpolate@3.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
           "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
@@ -21670,7 +21669,7 @@
       "id": "npm:d3-octree@1.1.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded.txt",
           "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
         }
@@ -21696,7 +21695,7 @@
       "id": "npm:d3-quadtree@3.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
           "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
@@ -21722,7 +21721,7 @@
       "id": "npm:d3-scale-chromatic@3.1.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe.txt",
           "sha256": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe"
         }
@@ -21748,7 +21747,7 @@
       "id": "npm:d3-scale@4.0.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
           "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
@@ -21774,7 +21773,7 @@
       "id": "npm:d3-selection@3.0.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
           "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
@@ -21800,7 +21799,7 @@
       "id": "npm:d3-time-format@4.1.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
           "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
@@ -21826,7 +21825,7 @@
       "id": "npm:d3-time@3.1.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884.txt",
           "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
         }
@@ -21852,7 +21851,7 @@
       "id": "npm:d3-timer@3.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
           "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
@@ -21878,7 +21877,7 @@
       "id": "npm:data-bind-mapper@1.0.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/bbba7cb786b64e6b7f9d7cb6dacae5c78898752f7c60d3fc04c13ca67e4dc7f2.txt",
           "sha256": "bbba7cb786b64e6b7f9d7cb6dacae5c78898752f7c60d3fc04c13ca67e4dc7f2"
         }
@@ -21904,7 +21903,7 @@
       "id": "npm:debug@4.4.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95.txt",
           "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95"
         }
@@ -21930,7 +21929,7 @@
       "id": "npm:deep-is@0.1.4",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/f2042f3634c4136d06b5139c9c6aefb81a3a462b514548bc1845953233dfba98.txt",
           "sha256": "f2042f3634c4136d06b5139c9c6aefb81a3a462b514548bc1845953233dfba98"
         }
@@ -21956,7 +21955,7 @@
       "id": "npm:detect-libc@2.1.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1.txt",
           "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
         }
@@ -21982,7 +21981,7 @@
       "id": "npm:es-module-lexer@2.3.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/8a4b6c44eebfb026d23719a348145a661a555568dbfdc11618ff2d0dd9306b00.txt",
           "sha256": "8a4b6c44eebfb026d23719a348145a661a555568dbfdc11618ff2d0dd9306b00"
         }
@@ -22008,7 +22007,7 @@
       "id": "npm:escape-string-regexp@4.0.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
           "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
         }
@@ -22034,7 +22033,7 @@
       "id": "npm:eslint-scope@9.1.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/d3a724e2ed749f172ff70b62a1d0631b7d4b0ea273782365a3464d4e2d6b6dbd.txt",
           "sha256": "d3a724e2ed749f172ff70b62a1d0631b7d4b0ea273782365a3464d4e2d6b6dbd"
         }
@@ -22060,7 +22059,7 @@
       "id": "npm:eslint-visitor-keys@3.4.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/d8bf34ff6d190640a01e7704ad78253fc181bc128949d71273fbbaa12f33c0b4.txt",
           "sha256": "d8bf34ff6d190640a01e7704ad78253fc181bc128949d71273fbbaa12f33c0b4"
         }
@@ -22086,7 +22085,7 @@
       "id": "npm:eslint-visitor-keys@5.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/d8bf34ff6d190640a01e7704ad78253fc181bc128949d71273fbbaa12f33c0b4.txt",
           "sha256": "d8bf34ff6d190640a01e7704ad78253fc181bc128949d71273fbbaa12f33c0b4"
         }
@@ -22112,7 +22111,7 @@
       "id": "npm:eslint@10.14.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c.txt",
           "sha256": "3b6be04f862a077a4b97929dbf247299360824d9365f8603c263769303ace18c"
         }
@@ -22138,7 +22137,7 @@
       "id": "npm:espree@11.2.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/26c95937762a3dc17a3934a0a2773c70259ba4bf28dab713c225e4af8eb9d349.txt",
           "sha256": "26c95937762a3dc17a3934a0a2773c70259ba4bf28dab713c225e4af8eb9d349"
         }
@@ -22164,7 +22163,7 @@
       "id": "npm:esquery@1.7.0",
       "notices": [
         {
-          "source_file": "license.txt",
+          "source_file": "package/license.txt",
           "file": "third-party/licenses/ac68116ae73740de4190892f334992e449a124600924ec761e64319d3aac9e6e.txt",
           "sha256": "ac68116ae73740de4190892f334992e449a124600924ec761e64319d3aac9e6e"
         }
@@ -22185,6 +22184,11 @@
         "apps/desktop/package-lock.json"
       ],
       "platform_conditions": [],
+      "notice_recovery": {
+        "method": "npm exact version gitHead",
+        "repository": "git+https://github.com/estools/esrecurse.git",
+        "revision": "8ceb63797813d9ac69572a671b95cf58ffdf35b6"
+      },
       "license_selected": "BSD-2-Clause",
       "license_normalization": "SPDX expression",
       "id": "npm:esrecurse@4.3.0",
@@ -22221,7 +22225,7 @@
       "id": "npm:estraverse@5.3.0",
       "notices": [
         {
-          "source_file": "LICENSE.BSD",
+          "source_file": "package/LICENSE.BSD",
           "file": "third-party/licenses/0e74697a68cebdcd61502c30fe80ab7f9e341d995dcd452023654d57133534b1.txt",
           "sha256": "0e74697a68cebdcd61502c30fe80ab7f9e341d995dcd452023654d57133534b1"
         }
@@ -22247,7 +22251,7 @@
       "id": "npm:estree-walker@3.0.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/8a6dcbabe7179f9c8489c08a7d874d0f1e093ae7449e03756ccf87cb9d0e296e.txt",
           "sha256": "8a6dcbabe7179f9c8489c08a7d874d0f1e093ae7449e03756ccf87cb9d0e296e"
         }
@@ -22273,7 +22277,7 @@
       "id": "npm:esutils@2.0.3",
       "notices": [
         {
-          "source_file": "LICENSE.BSD",
+          "source_file": "package/LICENSE.BSD",
           "file": "third-party/licenses/0e74697a68cebdcd61502c30fe80ab7f9e341d995dcd452023654d57133534b1.txt",
           "sha256": "0e74697a68cebdcd61502c30fe80ab7f9e341d995dcd452023654d57133534b1"
         }
@@ -22299,7 +22303,7 @@
       "id": "npm:events@3.3.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/631987b7616a325a5b97566c232418481ddf7dbb5ecadefb991e791876cc2599.txt",
           "sha256": "631987b7616a325a5b97566c232418481ddf7dbb5ecadefb991e791876cc2599"
         }
@@ -22325,7 +22329,7 @@
       "id": "npm:expect-type@1.4.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7c6cc83c84eaa249a85bf12fe3eedd831bb50c696e8890b5248223ae68c7b408.txt",
           "sha256": "7c6cc83c84eaa249a85bf12fe3eedd831bb50c696e8890b5248223ae68c7b408"
         }
@@ -22351,7 +22355,7 @@
       "id": "npm:fast-deep-equal@3.1.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a.txt",
           "sha256": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a"
         }
@@ -22377,7 +22381,7 @@
       "id": "npm:fast-json-stable-stringify@2.1.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/a833d366242c298cf1b10263516572fb8dcbe68eb5072cdcac2b4546e2b4eb36.txt",
           "sha256": "a833d366242c298cf1b10263516572fb8dcbe68eb5072cdcac2b4546e2b4eb36"
         }
@@ -22403,7 +22407,7 @@
       "id": "npm:fast-levenshtein@2.0.6",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/942a98cb8846a6354266193f173c1354615827fbb7d67f68399599dff12c4d6a.txt",
           "sha256": "942a98cb8846a6354266193f173c1354615827fbb7d67f68399599dff12c4d6a"
         }
@@ -22429,7 +22433,7 @@
       "id": "npm:fdir@6.5.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/9a39f2aadab11a3697edd668ff2d8ad885b649737b7ab4d3bf12b34e5ada0c86.txt",
           "sha256": "9a39f2aadab11a3697edd668ff2d8ad885b649737b7ab4d3bf12b34e5ada0c86"
         }
@@ -22455,7 +22459,7 @@
       "id": "npm:fflate@0.8.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551.txt",
           "sha256": "0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551"
         }
@@ -22481,7 +22485,7 @@
       "id": "npm:file-entry-cache@11.1.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
           "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
         }
@@ -22507,7 +22511,7 @@
       "id": "npm:find-up@5.0.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
           "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
         }
@@ -22533,7 +22537,7 @@
       "id": "npm:flat-cache@6.1.23",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad.txt",
           "sha256": "465e8da349d50d8512e4a0e9b26d2bee50392c394f17edaa3be6e0df7c2b27ad"
         }
@@ -22559,7 +22563,7 @@
       "id": "npm:flatted@3.4.4",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/148718606d34f467fd08a2176bb4c1ab275f999576f779368503d8d3e3642861.txt",
           "sha256": "148718606d34f467fd08a2176bb4c1ab275f999576f779368503d8d3e3642861"
         }
@@ -22585,7 +22589,7 @@
       "id": "npm:float-tooltip@1.7.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/07e7bf38169a0e26e088a0a6e6ba7f60704b2d0442c4433044169924c68ba732.txt",
           "sha256": "07e7bf38169a0e26e088a0a6e6ba7f60704b2d0442c4433044169924c68ba732"
         }
@@ -22640,7 +22644,7 @@
       "id": "npm:glob-parent@6.0.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/fc68eb8f1c8e1d6b8be50f3c177927e24791cae7dc251e6253a012f37926a30c.txt",
           "sha256": "fc68eb8f1c8e1d6b8be50f3c177927e24791cae7dc251e6253a012f37926a30c"
         }
@@ -22666,7 +22670,7 @@
       "id": "npm:globals@17.14.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
           "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
         }
@@ -22692,7 +22696,7 @@
       "id": "npm:graphology-types@0.24.8",
       "notices": [
         {
-          "source_file": "LICENSE.txt",
+          "source_file": "package/LICENSE.txt",
           "file": "third-party/licenses/ccd21f75fe569cc7c87f7b5c34c3263bfa123d565bfae1ac475814e0dcbf9f9c.txt",
           "sha256": "ccd21f75fe569cc7c87f7b5c34c3263bfa123d565bfae1ac475814e0dcbf9f9c"
         }
@@ -22718,7 +22722,7 @@
       "id": "npm:graphology-utils@2.5.2",
       "notices": [
         {
-          "source_file": "LICENSE.txt",
+          "source_file": "package/LICENSE.txt",
           "file": "third-party/licenses/597c30078622c20d8e62f9d96b4d2b9f9013b9668b778a55eb00810d093cd08c.txt",
           "sha256": "597c30078622c20d8e62f9d96b4d2b9f9013b9668b778a55eb00810d093cd08c"
         }
@@ -22744,7 +22748,7 @@
       "id": "npm:graphology@0.26.0",
       "notices": [
         {
-          "source_file": "LICENSE.txt",
+          "source_file": "package/LICENSE.txt",
           "file": "third-party/licenses/9d396b4882c329077f32861c0d6822dcee48f2d0ff6196d8459af70844196275.txt",
           "sha256": "9d396b4882c329077f32861c0d6822dcee48f2d0ff6196d8459af70844196275"
         }
@@ -22770,7 +22774,7 @@
       "id": "npm:hashery@1.5.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2eef776efe4bae7fcd2d8162ecadf2b0873aae20afac343a936ddb0de3d79253.txt",
           "sha256": "2eef776efe4bae7fcd2d8162ecadf2b0873aae20afac343a936ddb0de3d79253"
         }
@@ -22796,7 +22800,7 @@
       "id": "npm:hookified@1.15.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe.txt",
           "sha256": "3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe"
         }
@@ -22822,7 +22826,7 @@
       "id": "npm:hookified@2.2.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe.txt",
           "sha256": "3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe"
         }
@@ -22848,7 +22852,7 @@
       "id": "npm:ignore@5.3.2",
       "notices": [
         {
-          "source_file": "LICENSE-MIT",
+          "source_file": "package/LICENSE-MIT",
           "file": "third-party/licenses/9c94db23dc4b1e9aaee5d195668b916afc71efed54af226b66cf0ccc4389c1c0.txt",
           "sha256": "9c94db23dc4b1e9aaee5d195668b916afc71efed54af226b66cf0ccc4389c1c0"
         }
@@ -22874,7 +22878,7 @@
       "id": "npm:ignore@7.0.14",
       "notices": [
         {
-          "source_file": "LICENSE-MIT",
+          "source_file": "package/LICENSE-MIT",
           "file": "third-party/licenses/9c94db23dc4b1e9aaee5d195668b916afc71efed54af226b66cf0ccc4389c1c0.txt",
           "sha256": "9c94db23dc4b1e9aaee5d195668b916afc71efed54af226b66cf0ccc4389c1c0"
         }
@@ -22895,6 +22899,7 @@
         "apps/desktop/package-lock.json"
       ],
       "platform_conditions": [],
+      "notice_error": "ValueError: upstream notice recovery requires GitHub and a full immutable commit",
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
       "id": "npm:imurmurhash@0.1.4",
@@ -22926,7 +22931,7 @@
       "id": "npm:internmap@2.0.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f.txt",
           "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f"
         }
@@ -22952,7 +22957,7 @@
       "id": "npm:is-extglob@2.1.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/73b5283588baa142c5baaef5f56d3e8fdea7a30b214e8c5737e87640f882453a.txt",
           "sha256": "73b5283588baa142c5baaef5f56d3e8fdea7a30b214e8c5737e87640f882453a"
         }
@@ -22978,7 +22983,7 @@
       "id": "npm:is-glob@4.0.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/4cd903859549d4b20b571041f96dfae1136ed079c476126268f9d7cc1b611150.txt",
           "sha256": "4cd903859549d4b20b571041f96dfae1136ed079c476126268f9d7cc1b611150"
         }
@@ -23004,7 +23009,7 @@
       "id": "npm:isexe@2.0.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
           "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
         }
@@ -23030,7 +23035,7 @@
       "id": "npm:jerrypick@1.1.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c633a0da18abe4208665d9faf574f38084bbe38ce5bf743e9ecc06e50b941b59.txt",
           "sha256": "c633a0da18abe4208665d9faf574f38084bbe38ce5bf743e9ecc06e50b941b59"
         }
@@ -23056,7 +23061,7 @@
       "id": "npm:js-tokens@4.0.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1.txt",
           "sha256": "2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1"
         }
@@ -23082,7 +23087,7 @@
       "id": "npm:json-schema-traverse@0.4.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a.txt",
           "sha256": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a"
         }
@@ -23108,7 +23113,7 @@
       "id": "npm:json-stable-stringify-without-jsonify@1.0.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b.txt",
           "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
         }
@@ -23134,7 +23139,7 @@
       "id": "npm:kapsule@1.16.3",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded.txt",
           "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
         }
@@ -23160,7 +23165,7 @@
       "id": "npm:keyv@5.6.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959.txt",
           "sha256": "1f7dca26d2d328c3dbb9b6fe3b15ec3cda08ffe2288e47b73d617454b256f959"
         }
@@ -23186,7 +23191,7 @@
       "id": "npm:levn@0.4.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/b9eb082c39fe245e38793699074c394c43a722c51fce031c3c165cb92a31035c.txt",
           "sha256": "b9eb082c39fe245e38793699074c394c43a722c51fce031c3c165cb92a31035c"
         }
@@ -23516,7 +23521,7 @@
       "id": "npm:lightningcss-win32-x64-msvc@1.33.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt",
           "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
         }
@@ -23542,7 +23547,7 @@
       "id": "npm:lightningcss@1.33.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt",
           "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
         }
@@ -23568,7 +23573,7 @@
       "id": "npm:locate-path@6.0.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
           "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
         }
@@ -23594,7 +23599,7 @@
       "id": "npm:lodash-es@4.18.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc.txt",
           "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
         }
@@ -23620,7 +23625,7 @@
       "id": "npm:loose-envify@1.4.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/4eb7543b08d955a6d23fcc224601d43ff566e775be918805e26210d7f6eb4893.txt",
           "sha256": "4eb7543b08d955a6d23fcc224601d43ff566e775be918805e26210d7f6eb4893"
         }
@@ -23646,7 +23651,7 @@
       "id": "npm:magic-string@1.4.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/1cbe51b907662f6cb1492b16c359384a595180bf0e4d101603ed525e75c4e484.txt",
           "sha256": "1cbe51b907662f6cb1492b16c359384a595180bf0e4d101603ed525e75c4e484"
         }
@@ -23672,7 +23677,7 @@
       "id": "npm:meshoptimizer@1.1.1",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26.txt",
           "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26"
         }
@@ -23698,7 +23703,7 @@
       "id": "npm:minimatch@11.0.4",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901.txt",
           "sha256": "2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901"
         }
@@ -23724,7 +23729,7 @@
       "id": "npm:ms@2.1.3",
       "notices": [
         {
-          "source_file": "license.md",
+          "source_file": "package/license.md",
           "file": "third-party/licenses/1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801.txt",
           "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801"
         }
@@ -23750,7 +23755,7 @@
       "id": "npm:nanoid@3.3.20",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987.txt",
           "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
         }
@@ -23772,7 +23777,9 @@
       ],
       "platform_conditions": [],
       "notice_recovery": {
-        "method": "original README copyright/license link plus canonical SPDX terms; no fictitious upstream license file"
+        "method": "npm exact version gitHead",
+        "repository": "git://github.com/litejs/natural-compare-lite.git",
+        "revision": "eec83eee67cfac84d6db30cdd65363f155673770"
       },
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
@@ -23810,7 +23817,7 @@
       "id": "npm:ngraph.events@1.4.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/a70b73ddfbc2ce8a01e2f66a50fff4c37c052b8602a95842a54cbd1be2c463e6.txt",
           "sha256": "a70b73ddfbc2ce8a01e2f66a50fff4c37c052b8602a95842a54cbd1be2c463e6"
         }
@@ -23836,7 +23843,7 @@
       "id": "npm:ngraph.forcelayout@3.3.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/28b2d0a69b4f870bc9d181ddef39e117e2db3a64816d83db3a67669f65e7083d.txt",
           "sha256": "28b2d0a69b4f870bc9d181ddef39e117e2db3a64816d83db3a67669f65e7083d"
         }
@@ -23862,7 +23869,7 @@
       "id": "npm:ngraph.graph@20.1.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/54dcd2d143f95c33650b436731c6119554f8e825f9efc5d500b6585cd6865719.txt",
           "sha256": "54dcd2d143f95c33650b436731c6119554f8e825f9efc5d500b6585cd6865719"
         }
@@ -23888,7 +23895,7 @@
       "id": "npm:ngraph.merge@1.0.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/e9b1ba0cc96533c469b1c76b2769e8d92a6426d53237f87efa09d599af76a520.txt",
           "sha256": "e9b1ba0cc96533c469b1c76b2769e8d92a6426d53237f87efa09d599af76a520"
         }
@@ -23914,7 +23921,7 @@
       "id": "npm:ngraph.random@1.2.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/3a3f33e4a8dae9e3b64430f4e207435a3169e8f48e54fddc5c9982ca32680977.txt",
           "sha256": "3a3f33e4a8dae9e3b64430f4e207435a3169e8f48e54fddc5c9982ca32680977"
         }
@@ -23940,7 +23947,7 @@
       "id": "npm:object-assign@4.1.1",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c.txt",
           "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c"
         }
@@ -23966,7 +23973,7 @@
       "id": "npm:obug@3.0.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/ee48679d379ca6b4493d5e231094d85f818dd9be40b1a4f234fb7ff657ee35d9.txt",
           "sha256": "ee48679d379ca6b4493d5e231094d85f818dd9be40b1a4f234fb7ff657ee35d9"
         }
@@ -23992,7 +23999,7 @@
       "id": "npm:optionator@0.9.4",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/b9eb082c39fe245e38793699074c394c43a722c51fce031c3c165cb92a31035c.txt",
           "sha256": "b9eb082c39fe245e38793699074c394c43a722c51fce031c3c165cb92a31035c"
         }
@@ -24018,7 +24025,7 @@
       "id": "npm:p-limit@3.1.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
           "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
         }
@@ -24044,7 +24051,7 @@
       "id": "npm:p-locate@5.0.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
           "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
         }
@@ -24070,7 +24077,7 @@
       "id": "npm:path-exists@4.0.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
           "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
         }
@@ -24096,7 +24103,7 @@
       "id": "npm:path-key@3.1.1",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
           "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
         }
@@ -24122,7 +24129,7 @@
       "id": "npm:picocolors@1.1.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750.txt",
           "sha256": "6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750"
         }
@@ -24148,7 +24155,7 @@
       "id": "npm:picomatch@4.0.7",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9.txt",
           "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9"
         }
@@ -24174,12 +24181,12 @@
       "id": "npm:playwright-core@1.64.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb.txt",
           "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb"
         },
         {
-          "source_file": "NOTICE",
+          "source_file": "package/NOTICE",
           "file": "third-party/licenses/6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d.txt",
           "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d"
         }
@@ -24205,12 +24212,12 @@
       "id": "npm:playwright@1.64.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb.txt",
           "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb"
         },
         {
-          "source_file": "NOTICE",
+          "source_file": "package/NOTICE",
           "file": "third-party/licenses/6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d.txt",
           "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d"
         }
@@ -24236,7 +24243,7 @@
       "id": "npm:pngjs@7.0.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/be75ef59c5cf59715588a17a82dff7dd3e83c4dba3c458676bb9311e05fbedc5.txt",
           "sha256": "be75ef59c5cf59715588a17a82dff7dd3e83c4dba3c458676bb9311e05fbedc5"
         }
@@ -24262,12 +24269,12 @@
       "id": "npm:polished@4.3.1",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/671e164460e3edbb93c0e22813d45dd37c1c643c6a7cbddde0f70c8914aab294.txt",
           "sha256": "671e164460e3edbb93c0e22813d45dd37c1c643c6a7cbddde0f70c8914aab294"
         },
         {
-          "source_file": "docs/assets/fonts/LICENSE.txt",
+          "source_file": "package/docs/assets/fonts/LICENSE.txt",
           "file": "third-party/licenses/cb30d3086a8b3ce0b9e3690bf48d6620402b61160bc658076f95180ccd9e9dae.txt",
           "sha256": "cb30d3086a8b3ce0b9e3690bf48d6620402b61160bc658076f95180ccd9e9dae"
         }
@@ -24293,7 +24300,7 @@
       "id": "npm:postcss@8.5.32",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8.txt",
           "sha256": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8"
         }
@@ -24319,7 +24326,7 @@
       "id": "npm:preact@10.29.8",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/1fe6958409c8c257a70c587a18b6f7f412b179b456630790d30b2ec9a8e4b7d4.txt",
           "sha256": "1fe6958409c8c257a70c587a18b6f7f412b179b456630790d30b2ec9a8e4b7d4"
         }
@@ -24345,7 +24352,7 @@
       "id": "npm:prelude-ls@1.2.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/b9eb082c39fe245e38793699074c394c43a722c51fce031c3c165cb92a31035c.txt",
           "sha256": "b9eb082c39fe245e38793699074c394c43a722c51fce031c3c165cb92a31035c"
         }
@@ -24371,7 +24378,7 @@
       "id": "npm:prettier@3.9.10",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/b0f2417199889f1c0d28ec4e0244eacf1a15de5819d61f641dd7d8f45153ac9c.txt",
           "sha256": "b0f2417199889f1c0d28ec4e0244eacf1a15de5819d61f641dd7d8f45153ac9c"
         }
@@ -24397,7 +24404,7 @@
       "id": "npm:prop-types@15.8.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce.txt",
           "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
         }
@@ -24423,7 +24430,7 @@
       "id": "npm:punycode@2.3.1",
       "notices": [
         {
-          "source_file": "LICENSE-MIT.txt",
+          "source_file": "package/LICENSE-MIT.txt",
           "file": "third-party/licenses/483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a.txt",
           "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
         }
@@ -24449,7 +24456,7 @@
       "id": "npm:qified@0.10.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe.txt",
           "sha256": "3902e57e73412bd91ba81a47fa2cef45e1729c152c835114c1692cc5e685ddbe"
         }
@@ -24475,7 +24482,7 @@
       "id": "npm:react-dom@19.3.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt",
           "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
         }
@@ -24532,7 +24539,7 @@
       "id": "npm:react-is@16.13.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85.txt",
           "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
         }
@@ -24558,7 +24565,7 @@
       "id": "npm:react-kapsule@2.6.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded.txt",
           "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
         }
@@ -24584,7 +24591,7 @@
       "id": "npm:react@19.3.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt",
           "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
         }
@@ -24610,12 +24617,12 @@
       "id": "npm:rolldown@1.2.15",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt",
           "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
         },
         {
-          "source_file": "THIRD-PARTY-LICENSE",
+          "source_file": "package/THIRD-PARTY-LICENSE",
           "file": "third-party/licenses/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt",
           "sha256": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c"
         }
@@ -24641,7 +24648,7 @@
       "id": "npm:scheduler@0.28.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt",
           "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
         }
@@ -24667,7 +24674,7 @@
       "id": "npm:semver@7.8.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
           "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
         }
@@ -24693,7 +24700,7 @@
       "id": "npm:shebang-command@2.0.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3.txt",
           "sha256": "69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3"
         }
@@ -24719,7 +24726,7 @@
       "id": "npm:shebang-regex@3.0.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
           "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
         }
@@ -24745,7 +24752,7 @@
       "id": "npm:sigma@4.0.4",
       "notices": [
         {
-          "source_file": "LICENSE.txt",
+          "source_file": "package/LICENSE.txt",
           "file": "third-party/licenses/7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1.txt",
           "sha256": "7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1"
         }
@@ -24771,7 +24778,7 @@
       "id": "npm:source-map-js@1.2.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd.txt",
           "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd"
         }
@@ -24797,7 +24804,7 @@
       "id": "npm:std-env@4.3.0",
       "notices": [
         {
-          "source_file": "LICENCE",
+          "source_file": "package/LICENCE",
           "file": "third-party/licenses/a6f36438e46fb911859f3b9c4cad045ba64e1af3d8f4512c60258fa2d7552d28.txt",
           "sha256": "a6f36438e46fb911859f3b9c4cad045ba64e1af3d8f4512c60258fa2d7552d28"
         }
@@ -24823,7 +24830,7 @@
       "id": "npm:three-forcegraph@1.43.6",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded.txt",
           "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
         }
@@ -24849,7 +24856,7 @@
       "id": "npm:three-render-objects@1.43.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/5b6dc9ce44c7b73620b191c567339212bd00537af46fdedaf98304c34214cc9c.txt",
           "sha256": "5b6dc9ce44c7b73620b191c567339212bd00537af46fdedaf98304c34214cc9c"
         }
@@ -24875,7 +24882,7 @@
       "id": "npm:three@0.187.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc.txt",
           "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
         }
@@ -24901,7 +24908,7 @@
       "id": "npm:tinybench@6.2.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/cebc084d54e6dd99e53292ddb4bc1cdb63d9bfcd9ce438fe3aa6eb106d79e2ea.txt",
           "sha256": "cebc084d54e6dd99e53292ddb4bc1cdb63d9bfcd9ce438fe3aa6eb106d79e2ea"
         }
@@ -24927,7 +24934,7 @@
       "id": "npm:tinycolor2@1.6.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/c6cb470a9ba0a50d57611aeec1f31da609c5aefdbee8eac7f289bcb0e30625fa.txt",
           "sha256": "c6cb470a9ba0a50d57611aeec1f31da609c5aefdbee8eac7f289bcb0e30625fa"
         }
@@ -24953,7 +24960,7 @@
       "id": "npm:tinyexec@1.3.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/f95f668fe64081ddb4153b322e34fdd719b991285ed08177d5ad7133b7988d92.txt",
           "sha256": "f95f668fe64081ddb4153b322e34fdd719b991285ed08177d5ad7133b7988d92"
         }
@@ -24979,7 +24986,7 @@
       "id": "npm:tinyglobby@0.2.17",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/22c68811e174cbbfb3813d4135918df4f540959c14d872e601d9abe83d3cde8f.txt",
           "sha256": "22c68811e174cbbfb3813d4135918df4f540959c14d872e601d9abe83d3cde8f"
         }
@@ -25005,7 +25012,7 @@
       "id": "npm:ts-api-utils@2.5.0",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/76c9d5f5ea942054715c026f33f8717c9e24603196a3737b8899afa216bcbdab.txt",
           "sha256": "76c9d5f5ea942054715c026f33f8717c9e24603196a3737b8899afa216bcbdab"
         }
@@ -25031,7 +25038,7 @@
       "id": "npm:type-check@0.4.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/b9eb082c39fe245e38793699074c394c43a722c51fce031c3c165cb92a31035c.txt",
           "sha256": "b9eb082c39fe245e38793699074c394c43a722c51fce031c3c165cb92a31035c"
         }
@@ -25057,7 +25064,7 @@
       "id": "npm:typescript-eslint@8.72.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0.txt",
           "sha256": "2eb5c7a0bba9deb77a98c81bf6b9d3fb1c67118eebf968b6b1a787b3f8928ee0"
         }
@@ -25083,7 +25090,7 @@
       "id": "npm:typescript@6.0.3",
       "notices": [
         {
-          "source_file": "LICENSE.txt",
+          "source_file": "package/LICENSE.txt",
           "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
           "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
         }
@@ -25109,17 +25116,17 @@
       "id": "npm:typescript@7.0.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
           "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
         },
         {
-          "source_file": "NOTICE.txt",
+          "source_file": "package/NOTICE.txt",
           "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
           "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
         },
         {
-          "source_file": "vendor/vscode-jsonrpc/License.txt",
+          "source_file": "package/vendor/vscode-jsonrpc/License.txt",
           "file": "third-party/licenses/ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0.txt",
           "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
         }
@@ -25145,7 +25152,7 @@
       "id": "npm:undici-types@8.9.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27.txt",
           "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27"
         }
@@ -25171,7 +25178,7 @@
       "id": "npm:uri-js@4.4.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/0af366eff4c01ec147c9c61ea9e8ffad64a4294754c9d79355f3fd1b97cb2fb9.txt",
           "sha256": "0af366eff4c01ec147c9c61ea9e8ffad64a4294754c9d79355f3fd1b97cb2fb9"
         }
@@ -25197,7 +25204,7 @@
       "id": "npm:vite@8.3.5",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/a22152baa1aef74402443008e767e7c689a524c0909d19b0431d97f5ab066a13.txt",
           "sha256": "a22152baa1aef74402443008e767e7c689a524c0909d19b0431d97f5ab066a13"
         }
@@ -25223,7 +25230,7 @@
       "id": "npm:vitest@5.0.5",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/78fbac9e571c2ee260deb2a1941a8a18f0a85e3f39c23d08e2dcee6da4841998.txt",
           "sha256": "78fbac9e571c2ee260deb2a1941a8a18f0a85e3f39c23d08e2dcee6da4841998"
         }
@@ -25249,7 +25256,7 @@
       "id": "npm:which@2.0.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
           "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
         }
@@ -25275,7 +25282,7 @@
       "id": "npm:why-is-node-running@3.2.1",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/6a134e51aa31496c15a741592fc5d782b2dbf8d8b6b8524e15c8520ae0cd6374.txt",
           "sha256": "6a134e51aa31496c15a741592fc5d782b2dbf8d8b6b8524e15c8520ae0cd6374"
         }
@@ -25301,7 +25308,7 @@
       "id": "npm:word-wrap@1.2.5",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/73b5283588baa142c5baaef5f56d3e8fdea7a30b214e8c5737e87640f882453a.txt",
           "sha256": "73b5283588baa142c5baaef5f56d3e8fdea7a30b214e8c5737e87640f882453a"
         }
@@ -25327,7 +25334,7 @@
       "id": "npm:yocto-queue@0.1.0",
       "notices": [
         {
-          "source_file": "license",
+          "source_file": "package/license",
           "file": "third-party/licenses/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
           "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
         }
