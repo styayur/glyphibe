@@ -17,7 +17,7 @@ def main() -> int:
     output.mkdir(parents=True, exist_ok=True)
     commands = [
         ("cargo-audit.json", ["cargo", "audit", "--json"]),
-        ("npm-audit.json", [shutil.which("npm.cmd") or shutil.which("npm") or "npm", "audit", "--prefix", "apps/desktop", "--json"]),
+        ("npm-audit.json", [shutil.which("npm.cmd") or shutil.which("npm") or "npm", "run", "security:audit", "--prefix", "apps/desktop"]),
     ]
     for name, package, target in [
         ("desktop-windows", "glyphibe-desktop", "x86_64-pc-windows-msvc"),
@@ -34,7 +34,7 @@ def main() -> int:
             if filename in {"cargo-audit.json", "npm-audit.json"}:
                 # Require actual JSON; never replace an unavailable audit with an
                 # empty object that could be mistaken for a clean ledger.
-                report = json.loads(result.stdout)
+                report = json.loads((root / "apps/desktop/artifacts/npm-audit.json").read_text(encoding="utf-8")) if filename == "npm-audit.json" else json.loads(result.stdout)
                 (output / filename).write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
             else:
                 json.loads((output / filename).read_text(encoding="utf-8"))
