@@ -25,6 +25,8 @@ jobs:
       - run: npm ci --ignore-scripts --prefix apps/desktop
       - run: python scripts/audit-dependencies.py --fetch-missing-license-texts
       - run: python scripts/audit-dependencies.py --check
+      - run: cargo install cargo-audit --version 0.22.2 --locked
+      - run: python scripts/refresh-security-audits.py
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
@@ -32,6 +34,7 @@ jobs:
           path: |
             docs/development/dependency-inventory.json
             docs/development/dependencies.spdx.json
+            docs/development/audits/
             THIRD_PARTY_NOTICES
             third-party/licenses/
           if-no-files-found: error
