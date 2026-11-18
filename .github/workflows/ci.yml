@@ -4,6 +4,11 @@ on:
     branches: [main, 'feat/**', 'fix/**']
   pull_request:
   workflow_dispatch:
+    inputs:
+      refresh_inventory:
+        description: Generate reviewable inventory and security-ledger artifacts only
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -12,7 +17,7 @@ concurrency:
 jobs:
   inventory-refresh:
     name: Generate dependency inventory candidate
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' && inputs.refresh_inventory
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -40,6 +45,7 @@ jobs:
           if-no-files-found: error
           retention-days: 14
   rust:
+    if: github.event_name != 'workflow_dispatch' || !inputs.refresh_inventory
     name: Rust (${{ matrix.os }})
     strategy:
       fail-fast: false
@@ -64,6 +70,7 @@ jobs:
           cargo run --locked -p glyphibe-cli -- analyze tests/fixtures/python --index "${RUNNER_TEMP}/glyphibe.sqlite"
           cargo run --locked -p glyphibe-cli -- --repo tests/fixtures/python --index "${RUNNER_TEMP}/glyphibe.sqlite" search run
   frontend:
+    if: github.event_name != 'workflow_dispatch' || !inputs.refresh_inventory
     name: Frontend and graph E2E
     runs-on: ubuntu-latest
     steps:
@@ -101,6 +108,7 @@ jobs:
             apps/desktop/test-results
           retention-days: 7
   dependencies:
+    if: github.event_name != 'workflow_dispatch' || !inputs.refresh_inventory
     name: Dependency and license audit
     runs-on: ubuntu-latest
     steps:
@@ -132,6 +140,7 @@ jobs:
           path: apps/desktop/artifacts/npm-audit.json
           if-no-files-found: warn
   desktop:
+    if: github.event_name != 'workflow_dispatch' || !inputs.refresh_inventory
     name: Windows desktop build
     runs-on: windows-latest
     steps:

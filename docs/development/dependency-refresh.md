@@ -22,7 +22,7 @@ the actual exit codes and input hashes, and exits unsuccessfully for any failure
 or unavailable result. A refreshed ledger is not a clean-security claim.
 
 For an environment without all source packages, manually dispatch CI on the
-dependency branch. Its `Generate dependency inventory candidate` job produces
+dependency branch with `refresh_inventory=true`. Its `Generate dependency inventory candidate` job produces
 an artifact with those files for review and commitment. It never writes to the
 repository. The normal dependency audit still checks the committed inventory;
 the candidate job cannot make a stale PR pass that check. All security audit,
