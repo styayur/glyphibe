@@ -970,6 +970,8 @@ cargo:glib@0.18.5
   Scope: normal
   Notice: third-party/licenses/dae402989de65164815b7e2b6bc2b9576285434c3785934c8b6ece0fa055960d.txt (upstream COPYRIGHT)
   Notice: third-party/licenses/8cf56d10131ce201cf69ab74b111d3ebac1acca3833d7efb39ae357224b70edb.txt (upstream LICENSE)
+  Modified upstream source: security/glib-provenance.json
+  Original archive SHA256 (not the modified payload): 233daaf6e83ae6a12a52055f568f9d7cf4671dabb78ff9560ab6da230ce00ee5
 
 cargo:glob@0.3.4
   Declared: MIT OR Apache-2.0; selected: MIT
@@ -2093,6 +2095,8 @@ cargo:rmcp@3.9.0
   Source: https://github.com/modelcontextprotocol/rust-sdk/
   Scope: dev, normal
   Notice: third-party/licenses/0382b0057770ca05e9c350a50aa3b1c1fea84da0bc81d723bf00b9aa841be58a.txt (upstream LICENSE)
+  Modified upstream source: security/rmcp-provenance.json
+  Original archive SHA256 (not the modified payload): d24a7e92f4bcaa36b97fa93c4fa7ca8f3e669eced949345b3462dba333c7f909
 
 cargo:rusqlite@0.41.1
   Declared: MIT; selected: MIT
@@ -4189,8 +4193,8 @@ npm:@typescript/typescript-linux-x64@7.0.2
   Declared: Apache-2.0; selected: Apache-2.0
   Source: https://www.npmjs.com/package/@typescript/typescript-linux-x64/v/7.0.2
   Scope: dev, optional
-  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream LICENSE)
-  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream NOTICE.txt)
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
 
 npm:@typescript/typescript-netbsd-arm64@7.0.2
   Declared: Apache-2.0; selected: Apache-2.0
@@ -4238,8 +4242,7 @@ npm:@typescript/typescript-win32-x64@7.0.2
   Declared: Apache-2.0; selected: Apache-2.0
   Source: https://www.npmjs.com/package/@typescript/typescript-win32-x64/v/7.0.2
   Scope: dev, optional
-  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE)
-  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream package/NOTICE.txt)
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream LICENSE)
 
 npm:@typescript/typescript6@6.0.2
   Declared: Apache-2.0; selected: Apache-2.0
@@ -4335,7 +4338,7 @@ npm:d3-array@3.2.5
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-array/v/3.2.5
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4.txt (upstream LICENSE)
 
 npm:d3-binarytree@1.0.2
   Declared: MIT; selected: MIT
@@ -4347,13 +4350,13 @@ npm:d3-color@3.1.1
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-color/v/3.1.1
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884.txt (upstream LICENSE)
 
 npm:d3-dispatch@3.0.2
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-dispatch/v/3.0.2
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt (upstream LICENSE)
 
 npm:d3-force-3d@3.0.6
   Declared: MIT; selected: MIT
@@ -4371,7 +4374,7 @@ npm:d3-interpolate@3.0.2
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-interpolate/v/3.0.2
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt (upstream LICENSE)
 
 npm:d3-octree@1.1.0
   Declared: MIT; selected: MIT
@@ -4383,43 +4386,43 @@ npm:d3-quadtree@3.0.2
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-quadtree/v/3.0.2
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt (upstream LICENSE)
 
 npm:d3-scale-chromatic@3.1.1
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-scale-chromatic/v/3.1.1
   Scope: normal
-  Notice: third-party/licenses/667e7fd523c85aefbe152167ae59d6cdc0f944720c11d1f17ecef8783d1dcb9b.txt (upstream LICENSE)
+  Notice: third-party/licenses/0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe.txt (upstream LICENSE)
 
 npm:d3-scale@4.0.3
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-scale/v/4.0.3
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt (upstream LICENSE)
 
 npm:d3-selection@3.0.1
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-selection/v/3.0.1
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt (upstream LICENSE)
 
 npm:d3-time-format@4.1.1
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-time-format/v/4.1.1
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt (upstream LICENSE)
 
 npm:d3-time@3.1.1
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-time/v/3.1.1
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884.txt (upstream LICENSE)
 
 npm:d3-timer@3.0.2
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/d3-timer/v/3.0.2
   Scope: normal
-  Notice: third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt (upstream LICENSE)
+  Notice: third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt (upstream LICENSE)
 
 npm:data-bind-mapper@1.0.3
   Declared: MIT; selected: MIT
@@ -4774,7 +4777,7 @@ npm:lightningcss-linux-x64-gnu@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
   Source: https://www.npmjs.com/package/lightningcss-linux-x64-gnu/v/1.33.0
   Scope: dev, optional
-  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream LICENSE)
+  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream package/LICENSE)
 
 npm:lightningcss-linux-x64-musl@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
@@ -4792,7 +4795,7 @@ npm:lightningcss-win32-x64-msvc@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
   Source: https://www.npmjs.com/package/lightningcss-win32-x64-msvc/v/1.33.0
   Scope: dev, optional
-  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream package/LICENSE)
+  Notice: third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt (upstream LICENSE)
 
 npm:lightningcss@1.33.0
   Declared: MPL-2.0; selected: MPL-2.0
@@ -4963,8 +4966,8 @@ npm:polished@4.3.1
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/polished/v/4.3.1
   Scope: normal
-  Notice: third-party/licenses/671e164460e3edbb93c0e22813d45dd37c1c643c6a7cbddde0f70c8914aab294.txt (upstream LICENSE.md)
-  Notice: third-party/licenses/cb30d3086a8b3ce0b9e3690bf48d6620402b61160bc658076f95180ccd9e9dae.txt (upstream docs/assets/fonts/LICENSE.txt)
+  Notice: third-party/licenses/671e164460e3edbb93c0e22813d45dd37c1c643c6a7cbddde0f70c8914aab294.txt (upstream package/LICENSE.md)
+  Notice: third-party/licenses/cb30d3086a8b3ce0b9e3690bf48d6620402b61160bc658076f95180ccd9e9dae.txt (upstream package/docs/assets/fonts/LICENSE.txt)
 
 npm:postcss@8.5.32
   Declared: MIT; selected: MIT
@@ -5055,7 +5058,7 @@ npm:semver@7.8.6
   Declared: ISC; selected: ISC
   Source: https://www.npmjs.com/package/semver/v/7.8.6
   Scope: dev
-  Notice: third-party/licenses/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt (upstream LICENSE)
+  Notice: third-party/licenses/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt (upstream package/LICENSE)
 
 npm:shebang-command@2.0.0
   Declared: MIT; selected: MIT
@@ -5073,7 +5076,7 @@ npm:sigma@4.0.6
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/sigma/v/4.0.6
   Scope: normal
-  Notice: third-party/licenses/7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1.txt (upstream LICENSE.txt)
+  Notice: third-party/licenses/7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1.txt (upstream package/LICENSE.txt)
 
 npm:source-map-js@1.2.2
   Declared: BSD-3-Clause; selected: BSD-3-Clause
@@ -5157,15 +5160,13 @@ npm:typescript@6.0.3
   Declared: Apache-2.0; selected: Apache-2.0
   Source: https://www.npmjs.com/package/typescript/v/6.0.3
   Scope: dev
-  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream LICENSE.txt)
+  Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream package/LICENSE.txt)
 
 npm:typescript@7.0.2
   Declared: Apache-2.0; selected: Apache-2.0
   Source: https://www.npmjs.com/package/typescript/v/7.0.2
   Scope: dev
   Notice: third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt (upstream LICENSE)
-  Notice: third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt (upstream NOTICE.txt)
-  Notice: third-party/licenses/ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0.txt (upstream vendor/vscode-jsonrpc/License.txt)
 
 npm:undici-types@8.9.0
   Declared: MIT; selected: MIT
@@ -5189,7 +5190,7 @@ npm:vitest@5.1.0
   Declared: MIT; selected: MIT
   Source: https://www.npmjs.com/package/vitest/v/5.1.0
   Scope: dev
-  Notice: third-party/licenses/7f3ddf93a2280ef07bddd352939f5a09d345e1ffe619c518c010021344f22312.txt (upstream LICENSE.md)
+  Notice: third-party/licenses/78fbac9e571c2ee260deb2a1941a8a18f0a85e3f39c23d08e2dcee6da4841998.txt (upstream LICENSE.md)
 
 npm:which@2.0.2
   Declared: ISC; selected: ISC

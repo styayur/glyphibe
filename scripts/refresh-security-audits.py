@@ -11,6 +11,14 @@ import subprocess
 import sys
 
 
+def public_diagnostic(text: str, root: Path) -> str:
+    # Preserve warnings/errors while keeping workstation and hosted-runner path
+    # prefixes out of public evidence. Original process logs stay with the run.
+    for path, replacement in [(Path.home(), "/glyphibe-build/home"), (root, "/glyphibe/source")]:
+        text = text.replace(str(path), replacement).replace(path.as_posix(), replacement)
+    return text
+
+
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     output = root / "docs/development/audits"
@@ -38,9 +46,9 @@ def main() -> int:
                 (output / filename).write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
             else:
                 json.loads((output / filename).read_text(encoding="utf-8"))
-            entry = {"file": filename, "exit_code": result.returncode, "stderr": result.stderr, "status": "PASS" if result.returncode == 0 else "FAIL"}
+            entry = {"file": filename, "exit_code": result.returncode, "stderr": public_diagnostic(result.stderr, root), "status": "PASS" if result.returncode == 0 else "FAIL"}
         except (OSError, ValueError, subprocess.SubprocessError) as error:
-            entry = {"file": filename, "exit_code": None, "status": "NOT_VERIFIED", "error": f"{type(error).__name__}: {error}"}
+            entry = {"file": filename, "exit_code": None, "status": "NOT_VERIFIED", "error": public_diagnostic(f"{type(error).__name__}: {error}", root)}
         results.append(entry)
         print(json.dumps(entry))
     # Bind ledgers to exact manifests/locks using the inventory's shared hashing.

@@ -3,12 +3,12 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "Glyphibe locked dependency inventory",
-  "documentNamespace": "https://github.com/styayur/glyphibe/spdx/ce62da6cd58effa24db8f409b1ed5132bd5a73f76aa7ec9ea34fbc49fdda7991",
+  "documentNamespace": "https://github.com/styayur/glyphibe/spdx/160d5415b511fbae3d838bfccca8b10bccf8e93eb404f0935b60fe2033ccc384",
   "creationInfo": {
     "creators": [
       "Tool: glyphibe-audit-dependencies-1"
     ],
-    "created": "2026-11-18T15:35:30Z"
+    "created": "2026-11-19T11:11:01Z"
   },
   "packages": [
     {
@@ -3412,12 +3412,7 @@
         }
       ],
       "comment": "Scope=normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "233daaf6e83ae6a12a52055f568f9d7cf4671dabb78ff9560ab6da230ce00ee5"
-        }
-      ]
+      "sourceInfo": "Modified upstream source; byte inventory, original archive identity and changes: {\"modifications\": [\"Cargo.toml\", \"src/variant_iter.rs\"], \"payload_inventory_sha256\": \"22fcaa462e5e1735d3c3676c62673d2cf1ec2bff9401542e4e0f5edf7dd3d7d2\", \"provenance\": \"security/glib-provenance.json\", \"upstream_archive_sha256\": \"233daaf6e83ae6a12a52055f568f9d7cf4671dabb78ff9560ab6da230ce00ee5\"}"
     },
     {
       "SPDXID": "SPDXRef-fea7f9bf4da92409028e3bab",
@@ -7372,12 +7367,7 @@
         }
       ],
       "comment": "Scope=dev,normal; original notice text paths are in dependency-inventory.json",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d24a7e92f4bcaa36b97fa93c4fa7ca8f3e669eced949345b3462dba333c7f909"
-        }
-      ]
+      "sourceInfo": "Modified upstream source; byte inventory, original archive identity and changes: {\"modifications\": [\"Cargo.toml\", \"src/lib.rs\", \"src/model/annotated.rs\", \"src/model/request_state.rs\", \"src/service.rs\", \"src/task_manager.rs\", \"src/clock.rs\"], \"payload_inventory_sha256\": \"c5085de789a322e3c46b6506351296df0689c94e5d29618107938547cc7a6a48\", \"provenance\": \"security/rmcp-provenance.json\", \"upstream_archive_sha256\": \"d24a7e92f4bcaa36b97fa93c4fa7ca8f3e669eced949345b3462dba333c7f909\"}"
     },
     {
       "SPDXID": "SPDXRef-50d787f49847425c53567075",
@@ -23819,7 +23809,7 @@
     {
       "spdxElementId": "SPDXRef-9411e1a9722905a81973e414",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-c2bf6a44a41341c93a265e9d"
+      "relatedSpdxElement": "SPDXRef-7b39f8292cbba829d69be81f"
     },
     {
       "spdxElementId": "SPDXRef-29f2352804ce144b52cda83e",
@@ -26634,7 +26624,7 @@
     {
       "spdxElementId": "SPDXRef-7fd8078a92760bf81650882e",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-c2bf6a44a41341c93a265e9d"
+      "relatedSpdxElement": "SPDXRef-7b39f8292cbba829d69be81f"
     },
     {
       "spdxElementId": "SPDXRef-e5f9f7821890895f8c966590",
@@ -27109,11 +27099,6 @@
     {
       "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-ed90bf70dccef9a660cbd903"
-    },
-    {
-      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
-      "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-7b40d21c6d74919e3e7f86ba"
     },
     {
@@ -27170,6 +27155,11 @@
       "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-5e0a5c228f91579dd4f389b2"
+    },
+    {
+      "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-aa531f4a9a03ddd58968600a"
     },
     {
       "spdxElementId": "SPDXRef-fad7fb02f72fb0d73d93f500",
@@ -27249,7 +27239,7 @@
     {
       "spdxElementId": "SPDXRef-73dc0a78317d0699b48c9750",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-c2bf6a44a41341c93a265e9d"
+      "relatedSpdxElement": "SPDXRef-7b39f8292cbba829d69be81f"
     },
     {
       "spdxElementId": "SPDXRef-2397232a9bfd4abcd037aab7",
@@ -27344,7 +27334,7 @@
     {
       "spdxElementId": "SPDXRef-f204fbefa3b70d70446ec84d",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-c2bf6a44a41341c93a265e9d"
+      "relatedSpdxElement": "SPDXRef-7b39f8292cbba829d69be81f"
     },
     {
       "spdxElementId": "SPDXRef-d0364410da842227d3c400dd",
@@ -27460,11 +27450,6 @@
       "spdxElementId": "SPDXRef-5824d4705d3739c39ca883a2",
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef-3f8bbf90c5c2cd6ec09898e0"
-    },
-    {
-      "spdxElementId": "SPDXRef-e1b77c68eca2f32496a55acf",
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-ed90bf70dccef9a660cbd903"
     },
     {
       "spdxElementId": "SPDXRef-e1b77c68eca2f32496a55acf",
@@ -29419,7 +29404,7 @@
     {
       "spdxElementId": "SPDXRef-8d726aae34bacf83b60de0fd",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-c2bf6a44a41341c93a265e9d"
+      "relatedSpdxElement": "SPDXRef-7b39f8292cbba829d69be81f"
     },
     {
       "spdxElementId": "SPDXRef-cbc1155271502147777ce2b9",
@@ -30484,7 +30469,7 @@
     {
       "spdxElementId": "SPDXRef-59dea2196439c45d11b0cd74",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-c2bf6a44a41341c93a265e9d"
+      "relatedSpdxElement": "SPDXRef-7b39f8292cbba829d69be81f"
     },
     {
       "spdxElementId": "SPDXRef-8b8c9bfa8cf06c6edbbfb428",

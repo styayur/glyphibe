@@ -1,0 +1,22 @@
+[package]
+name = "rmcp-maintenance-regression"
+version = "0.0.0"
+edition = "2024"
+publish = false
+license = "MPL-2.0"
+
+[workspace]
+
+[features]
+default = ["client", "server", "request-state"]
+client = []
+server = []
+request-state = ["rmcp/request-state"]
+chrono = ["dep:chrono", "rmcp/chrono"]
+
+[dependencies]
+rmcp = { path = "../../vendor/rmcp", default-features = false, features = ["base64", "macros", "server", "client", "transport-io", "transport-child-process"] }
+chrono = { version = "=0.4.45", optional = true }
+time = { version = "=0.3.55", features = ["std", "parsing"] }
+serde_json = "1.0"
+schemars = "1.0"

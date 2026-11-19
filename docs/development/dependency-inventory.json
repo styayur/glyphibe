@@ -2,12 +2,12 @@
   "schema_version": 1,
   "coverage": "Cargo default enabled features with no target filter; both manifests; all npm lock entries including optional platform/build/dev packages. Disabled Cargo features are not claimed shipped.",
   "lock_sha256": {
-    "Cargo.lock": "5ed8c8e57a44299630ae400fa091373c081c6918aff35f92070897b1456f2b20",
+    "Cargo.lock": "ca07ea625a51b6e0039fbe3033f7d3911ba93b4bc4c275cccbcd7ccd87b4a6b9",
     "apps/desktop/package-lock.json": "03865ac9cdc39a42622f64f9b416cca56839c417073955fb85045b1a4198b59e"
   },
   "input_sha256": {
-    "Cargo.toml": "f12280ad7d5a132e7d8d6c804f06a026fa5e7f40dacede3195914f62d10ced40",
-    "Cargo.lock": "5ed8c8e57a44299630ae400fa091373c081c6918aff35f92070897b1456f2b20",
+    "Cargo.toml": "5cb4685071c9c1ef69dab69c7276de2114b86f62b013704780fb4bc3a39b5d41",
+    "Cargo.lock": "ca07ea625a51b6e0039fbe3033f7d3911ba93b4bc4c275cccbcd7ccd87b4a6b9",
     "apps/desktop/src-tauri/Cargo.toml": "108c47b9ec0f66b0617d1cbe65a7eed2f506a2d2fd0812e29162f91a8761aca7",
     "apps/desktop/package.json": "a0a7e32102b0f893f2723b18080ae847fe94c02e9dc8c4c070766a72a3f0f197",
     "apps/desktop/package-lock.json": "03865ac9cdc39a42622f64f9b416cca56839c417073955fb85045b1a4198b59e",
@@ -17,7 +17,13 @@
     "crates/glyphibe-explain/Cargo.toml": "6c9a96103fe024eb055f6f585ec5215ed23ca8b23ecea24e24753c320c99ac0e",
     "crates/glyphibe-knowledge/Cargo.toml": "80906c2577c2a0faff77ad349e706ac778b72a23711e8883e55242166770db27",
     "crates/glyphibe-mcp/Cargo.toml": "af2eda2359370c9ac96cd81da0a5d8cbedce129f776b5d633025ba6e53c363c6",
-    "crates/glyphibe-parser/Cargo.toml": "7991d98b808e60e7ce4b5f16ea57ab780a546728ccc1f653430921e86091e439"
+    "crates/glyphibe-parser/Cargo.toml": "7991d98b808e60e7ce4b5f16ea57ab780a546728ccc1f653430921e86091e439",
+    "security/glib-provenance.json": "9cdd3f70003b264896a1352a9719d6aea3082d15b8c5a0a4eb100e7767bd16db",
+    "security/rmcp-provenance.json": "7686799e827c891cddbe0506c8b96bf7f30de52e0913307b1f60572995ef4865",
+    "security/glib-upstream-inventory.json": "f4a46ac2856dc556650e2570fd85bf8e151b2280f31f4b5736357c4980b05824",
+    "security/rmcp-upstream-inventory.json": "a333394a30eba3ef2779f42e6ad97bf596be278c9bb2fa6856e3a80f5ece51ce",
+    "vendor/glib/Cargo.toml": "07318b66434f7945c716001ea815a034b086de08b48c6172645dd5ac5191785c",
+    "vendor/rmcp/Cargo.toml": "7b4a59d3f05a2c0f1ee80280ab684bb2cceae973fabbd677b67efd193b925c0a"
   },
   "hash_normalization": "UTF-8 manifests/locks normalize CRLF to LF; original notice text hashes are exact bytes",
   "packages": [
@@ -1753,10 +1759,7 @@
         "Cargo.toml",
         "apps/desktop/src-tauri/Cargo.toml"
       ],
-      "platform_conditions": [
-        "cfg(all(target_family = \"wasm\", target_os = \"unknown\"))",
-        "cfg(not(all(target_family = \"wasm\", target_os = \"unknown\")))"
-      ],
+      "platform_conditions": [],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
       "id": "cargo:chrono@0.4.45",
@@ -4907,10 +4910,7 @@
       "license_declared": "MIT",
       "source": "https://github.com/gtk-rs/gtk-rs-core",
       "download": "https://crates.io/api/v1/crates/glib/0.18.5/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "233daaf6e83ae6a12a52055f568f9d7cf4671dabb78ff9560ab6da230ce00ee5"
-      },
+      "checksum": null,
       "scopes": [
         "normal"
       ],
@@ -4919,6 +4919,15 @@
         "apps/desktop/src-tauri/Cargo.toml"
       ],
       "platform_conditions": [],
+      "source_backport": {
+        "provenance": "security/glib-provenance.json",
+        "upstream_archive_sha256": "233daaf6e83ae6a12a52055f568f9d7cf4671dabb78ff9560ab6da230ce00ee5",
+        "payload_inventory_sha256": "22fcaa462e5e1735d3c3676c62673d2cf1ec2bff9401542e4e0f5edf7dd3d7d2",
+        "modifications": [
+          "Cargo.toml",
+          "src/variant_iter.rs"
+        ]
+      },
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
       "id": "cargo:glib@0.18.5",
@@ -10816,10 +10825,7 @@
       "license_declared": "Apache-2.0",
       "source": "https://github.com/modelcontextprotocol/rust-sdk/",
       "download": "https://crates.io/api/v1/crates/rmcp/3.9.0/download",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "d24a7e92f4bcaa36b97fa93c4fa7ca8f3e669eced949345b3462dba333c7f909"
-      },
+      "checksum": null,
       "scopes": [
         "dev",
         "normal"
@@ -10829,6 +10835,20 @@
         "apps/desktop/src-tauri/Cargo.toml"
       ],
       "platform_conditions": [],
+      "source_backport": {
+        "provenance": "security/rmcp-provenance.json",
+        "upstream_archive_sha256": "d24a7e92f4bcaa36b97fa93c4fa7ca8f3e669eced949345b3462dba333c7f909",
+        "payload_inventory_sha256": "c5085de789a322e3c46b6506351296df0689c94e5d29618107938547cc7a6a48",
+        "modifications": [
+          "Cargo.toml",
+          "src/lib.rs",
+          "src/model/annotated.rs",
+          "src/model/request_state.rs",
+          "src/service.rs",
+          "src/task_manager.rs",
+          "src/clock.rs"
+        ]
+      },
       "license_selected": "Apache-2.0",
       "license_normalization": "SPDX expression",
       "id": "cargo:rmcp@3.9.0",
@@ -17053,8 +17073,7 @@
         "apps/desktop/src-tauri/Cargo.toml"
       ],
       "platform_conditions": [
-        "cfg(all(all(target_arch = \"aarch64\", target_endian = \"little\"), target_os = \"windows\"))",
-        "cfg(windows)"
+        "cfg(all(all(target_arch = \"aarch64\", target_endian = \"little\"), target_os = \"windows\"))"
       ],
       "license_selected": "MIT",
       "license_normalization": "SPDX expression",
@@ -21464,12 +21483,12 @@
       "id": "npm:@typescript/typescript-linux-x64@7.0.2",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
           "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
         },
         {
-          "source_file": "NOTICE.txt",
+          "source_file": "package/NOTICE.txt",
           "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
           "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
         }
@@ -21709,14 +21728,9 @@
       "id": "npm:@typescript/typescript-win32-x64@7.0.2",
       "notices": [
         {
-          "source_file": "package/LICENSE",
+          "source_file": "LICENSE",
           "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
           "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
-        },
-        {
-          "source_file": "package/NOTICE.txt",
-          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
-          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
         }
       ]
     },
@@ -22131,8 +22145,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4.txt",
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
         }
       ]
     },
@@ -22183,8 +22197,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884.txt",
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
         }
       ]
     },
@@ -22209,8 +22223,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
       ]
     },
@@ -22287,8 +22301,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
       ]
     },
@@ -22339,8 +22353,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
       ]
     },
@@ -22365,8 +22379,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/667e7fd523c85aefbe152167ae59d6cdc0f944720c11d1f17ecef8783d1dcb9b.txt",
-          "sha256": "667e7fd523c85aefbe152167ae59d6cdc0f944720c11d1f17ecef8783d1dcb9b"
+          "file": "third-party/licenses/0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe.txt",
+          "sha256": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe"
         }
       ]
     },
@@ -22391,8 +22405,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
       ]
     },
@@ -22417,8 +22431,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
       ]
     },
@@ -22443,8 +22457,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
       ]
     },
@@ -22469,8 +22483,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884.txt",
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
         }
       ]
     },
@@ -22495,8 +22509,8 @@
       "notices": [
         {
           "source_file": "LICENSE",
-          "file": "third-party/licenses/2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3.txt",
-          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+          "file": "third-party/licenses/e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee.txt",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
         }
       ]
     },
@@ -24068,7 +24082,7 @@
       "id": "npm:lightningcss-linux-x64-gnu@1.33.0",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt",
           "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
         }
@@ -24158,7 +24172,7 @@
       "id": "npm:lightningcss-win32-x64-msvc@1.33.0",
       "notices": [
         {
-          "source_file": "package/LICENSE",
+          "source_file": "LICENSE",
           "file": "third-party/licenses/5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e.txt",
           "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
         }
@@ -24904,12 +24918,12 @@
       "id": "npm:polished@4.3.1",
       "notices": [
         {
-          "source_file": "LICENSE.md",
+          "source_file": "package/LICENSE.md",
           "file": "third-party/licenses/671e164460e3edbb93c0e22813d45dd37c1c643c6a7cbddde0f70c8914aab294.txt",
           "sha256": "671e164460e3edbb93c0e22813d45dd37c1c643c6a7cbddde0f70c8914aab294"
         },
         {
-          "source_file": "docs/assets/fonts/LICENSE.txt",
+          "source_file": "package/docs/assets/fonts/LICENSE.txt",
           "file": "third-party/licenses/cb30d3086a8b3ce0b9e3690bf48d6620402b61160bc658076f95180ccd9e9dae.txt",
           "sha256": "cb30d3086a8b3ce0b9e3690bf48d6620402b61160bc658076f95180ccd9e9dae"
         }
@@ -25309,7 +25323,7 @@
       "id": "npm:semver@7.8.6",
       "notices": [
         {
-          "source_file": "LICENSE",
+          "source_file": "package/LICENSE",
           "file": "third-party/licenses/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
           "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
         }
@@ -25387,7 +25401,7 @@
       "id": "npm:sigma@4.0.6",
       "notices": [
         {
-          "source_file": "LICENSE.txt",
+          "source_file": "package/LICENSE.txt",
           "file": "third-party/licenses/7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1.txt",
           "sha256": "7036bbeb954c1220102cced5a608198a54f4a19b2d81d96f67997dbb9d7a51f1"
         }
@@ -25752,7 +25766,7 @@
       "id": "npm:typescript@6.0.3",
       "notices": [
         {
-          "source_file": "LICENSE.txt",
+          "source_file": "package/LICENSE.txt",
           "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
           "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
         }
@@ -25781,16 +25795,6 @@
           "source_file": "LICENSE",
           "file": "third-party/licenses/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
           "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
-        },
-        {
-          "source_file": "NOTICE.txt",
-          "file": "third-party/licenses/f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b.txt",
-          "sha256": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b"
-        },
-        {
-          "source_file": "vendor/vscode-jsonrpc/License.txt",
-          "file": "third-party/licenses/ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0.txt",
-          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
         }
       ]
     },
@@ -25893,8 +25897,8 @@
       "notices": [
         {
           "source_file": "LICENSE.md",
-          "file": "third-party/licenses/7f3ddf93a2280ef07bddd352939f5a09d345e1ffe619c518c010021344f22312.txt",
-          "sha256": "7f3ddf93a2280ef07bddd352939f5a09d345e1ffe619c518c010021344f22312"
+          "file": "third-party/licenses/78fbac9e571c2ee260deb2a1941a8a18f0a85e3f39c23d08e2dcee6da4841998.txt",
+          "sha256": "78fbac9e571c2ee260deb2a1941a8a18f0a85e3f39c23d08e2dcee6da4841998"
         }
       ]
     },

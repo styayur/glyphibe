@@ -5,6 +5,7 @@ import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 spec = importlib.util.spec_from_file_location("audit", Path(__file__).with_name("audit-dependencies.py"))
 audit = importlib.util.module_from_spec(spec)
@@ -12,6 +13,44 @@ spec.loader.exec_module(audit)
 
 
 class AuditTests(unittest.TestCase):
+    def test_vendored_dependencies_stay_in_license_inventory(self):
+        root = Path(__file__).resolve().parents[1]
+        packages = []
+        for name, version, license_id in [("rmcp", "3.9.0", "Apache-2.0"), ("glib", "0.18.5", "MIT")]:
+            packages.append({"id": name, "name": name, "version": version, "license": license_id,
+                "source": None, "manifest_path": str(root / "vendor" / name / "Cargo.toml"),
+                "repository": "https://example.invalid/upstream", "license_file": None})
+        metadata = {"workspace_root": str(root), "workspace_members": [], "packages": packages,
+                    "resolve": {"nodes": []}}
+        with patch.object(audit, "cargo_metadata", return_value=metadata):
+            inventory, _ = audit.cargo_inventory(root, True)
+        for package in packages:
+            record = inventory[f"cargo:{package['name']}@{package['version']}"]
+            self.assertTrue(record["notices_raw"])
+            self.assertIsNone(record["checksum"])
+            self.assertIn("payload_inventory_sha256", record["source_backport"])
+
+    def test_unreviewed_local_dependency_is_rejected(self):
+        root = Path(__file__).resolve().parents[1]
+        with self.assertRaises(ValueError):
+            audit.backport_metadata(root, {"source": None, "id": "unknown", "name": "unknown",
+                "manifest_path": str(root / "vendor/unknown/Cargo.toml")}, [])
+
+    def test_vendored_source_tampering_and_missing_notices_fail(self):
+        root = Path(__file__).resolve().parents[1]
+        spec = importlib.util.spec_from_file_location("backport_verifier", root / "scripts/verify-source-backports.py")
+        verifier = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(verifier)
+        original_read = Path.read_bytes
+        for target in ["src/clock.rs", "LICENSE"]:
+            def altered(path):
+                if path == root / "vendor/rmcp" / target:
+                    return b"tampered payload"
+                return original_read(path)
+            with patch.object(Path, "read_bytes", altered):
+                with self.assertRaises(ValueError):
+                    verifier.verify(root, "rmcp")
+
     def test_unknown_restrictive_atoms_are_not_substring_approved(self):
         for expression in [None, "", "MIT-Noncommercial", "MIT AND LicenseRef-Secret", "PolyForm-Noncommercial-1.0.0", "AGPL-3.0-only", "MIT; RunSomething", "MIT OR", "(MIT", "MIT WITH Invented-exception"]:
             self.assertIsNone(audit.expression_choice(expression)[0], expression)

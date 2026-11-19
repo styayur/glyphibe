@@ -1,27 +1,38 @@
-# Current target-audit blocker
+# Chrono audit remediation
 
-RustSec RUSTSEC-2026-0543, issued 2026-11-17, reports chrono as unmaintained,
-with no patched or unaffected version. This is an informational maintenance
-warning, not a claim of a specific exploitable CVE. The shipping-closure audit
-deliberately uses `--deny warnings`, so it blocks publication and merging even
-though the audited target graphs contain zero security vulnerabilities.
+RUSTSEC-2026-0543 reports chrono as unmaintained, without a patched version.
+The original mandatory chain was `glyphibe-cli -> glyphibe-mcp -> rmcp 3.9.0
+-> chrono 0.4.45`, including schemars' `chrono04` feature. Updating to rmcp
+3.11.0 alone is insufficient, but that does not rule out a bounded source fix.
 
-The actual dependency trace is `glyphibe-cli -> glyphibe-mcp -> rmcp 3.9.0 ->
-chrono 0.4.45`, also enabled through rmcp's schemars chrono support. rmcp uses
-chrono in public annotation types, service timeout formatting and task dates.
-It is a required platform dependency, not a removable default feature. Current
-upstream rmcp 3.11.0 still requires chrono and enables `schemars/chrono04`;
-blindly updating that SDK does not remove the warning.
+Exact source inspection found that `Annotations::last_modified` is already
+`Option<String>`. Only two convenience constructors take chrono types; Glyphibe
+does not call them. The [licensed source backport](../../security/rmcp-backport.md)
+keeps those constructors behind a default-on compatibility feature, replaces
+internal clocks with already locked `time`, and preserves std duration/error
+formatting. Glyphibe selects its original functional SDK features explicitly
+while opting out of the unused typed constructors. This preserves public wire
+fields, unmodified upstream JSON schemas, stdio APIs and functionality.
 
-The available paths are an upstream SDK migration to a maintained date library,
-or a separately reviewed SDK fork/migration that preserves public JSON schema,
-RFC3339 dates, timeout behavior and MCP compatibility. Replacing the source
-graph with a hand-filtered lockfile, ignoring the warning, or changing the
-configured target-audit policy is not an implemented remediation. The current
-policy remains intact. See the retained raw ledgers and `audit-refresh.json`
-for actual exit codes, target closures and input hashes.
+The shipping audit uses Cargo's actual normal/build target tree, with exact
+package identities and original lock entries from metadata. Metadata alone can
+retain disabled optional weak dependency edges: serde_with's inactive chrono
+edge was observed even when its enabled features were only alloc/default/macros/
+std and `cargo tree` and compilation showed no chrono. The collector now checks
+the complete metadata/tree closure agreement and rejects missing or ambiguous
+identities. A real Cargo fixture tests both disabled and explicitly enabled weak
+optional dependencies. No package/advisory-specific exclusion is present.
 
-Sources:
+All target audits still invoke `cargo audit --deny warnings`. The complete raw
+lockfile ledger retains inactive optional chrono and unsupported-platform
+proc-macro-error maintenance warnings. Neither warning is ignored or presented
+as an upstream fix. Current results and bindings are in `audits/audit-refresh.json`.
+Hosted product/native/schema/compatibility/GLib checks must pass on the final
+source before merge. Local test success alone is not release acceptance.
+
+References:
 - https://rustsec.org/advisories/RUSTSEC-2026-0543.html
 - https://github.com/chronotope/chrono/issues/1768
 - https://github.com/modelcontextprotocol/rust-sdk/blob/rmcp-v3.11.0/crates/rmcp/Cargo.toml
+- https://github.com/rust-lang/cargo/issues/10801
+- https://doc.rust-lang.org/cargo/commands/cargo-tree.html

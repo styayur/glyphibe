@@ -6,3 +6,6 @@
 *.zip binary
 /third-party/licenses/* -text
 /third-party/toolchain-licenses/** -text
+/vendor/** text eol=lf
+/security/** text eol=lf
+/docs/development/audits/*.json text eol=lf

@@ -1,4 +1,6 @@
 /target/
+/security/*/target/
+/vendor/*/target/
 **/node_modules/
 /apps/desktop/dist/
 /apps/desktop/src-tauri/target/

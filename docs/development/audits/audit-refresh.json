@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-19T03:51:00.314678+00:00",
+  "generated_at": "2026-11-19T11:14:03.727255+00:00",
   "input_sha256": {
-    "Cargo.toml": "f12280ad7d5a132e7d8d6c804f06a026fa5e7f40dacede3195914f62d10ced40",
-    "Cargo.lock": "5ed8c8e57a44299630ae400fa091373c081c6918aff35f92070897b1456f2b20",
+    "Cargo.toml": "5cb4685071c9c1ef69dab69c7276de2114b86f62b013704780fb4bc3a39b5d41",
+    "Cargo.lock": "ca07ea625a51b6e0039fbe3033f7d3911ba93b4bc4c275cccbcd7ccd87b4a6b9",
     "apps/desktop/src-tauri/Cargo.toml": "108c47b9ec0f66b0617d1cbe65a7eed2f506a2d2fd0812e29162f91a8761aca7",
     "apps/desktop/package.json": "a0a7e32102b0f893f2723b18080ae847fe94c02e9dc8c4c070766a72a3f0f197",
     "apps/desktop/package-lock.json": "03865ac9cdc39a42622f64f9b416cca56839c417073955fb85045b1a4198b59e",
@@ -13,7 +13,13 @@
     "crates/glyphibe-explain/Cargo.toml": "6c9a96103fe024eb055f6f585ec5215ed23ca8b23ecea24e24753c320c99ac0e",
     "crates/glyphibe-knowledge/Cargo.toml": "80906c2577c2a0faff77ad349e706ac778b72a23711e8883e55242166770db27",
     "crates/glyphibe-mcp/Cargo.toml": "af2eda2359370c9ac96cd81da0a5d8cbedce129f776b5d633025ba6e53c363c6",
-    "crates/glyphibe-parser/Cargo.toml": "7991d98b808e60e7ce4b5f16ea57ab780a546728ccc1f653430921e86091e439"
+    "crates/glyphibe-parser/Cargo.toml": "7991d98b808e60e7ce4b5f16ea57ab780a546728ccc1f653430921e86091e439",
+    "security/glib-provenance.json": "9cdd3f70003b264896a1352a9719d6aea3082d15b8c5a0a4eb100e7767bd16db",
+    "security/rmcp-provenance.json": "7686799e827c891cddbe0506c8b96bf7f30de52e0913307b1f60572995ef4865",
+    "security/glib-upstream-inventory.json": "f4a46ac2856dc556650e2570fd85bf8e151b2280f31f4b5736357c4980b05824",
+    "security/rmcp-upstream-inventory.json": "a333394a30eba3ef2779f42e6ad97bf596be278c9bb2fa6856e3a80f5ece51ce",
+    "vendor/glib/Cargo.toml": "07318b66434f7945c716001ea815a034b086de08b48c6172645dd5ac5191785c",
+    "vendor/rmcp/Cargo.toml": "7b4a59d3f05a2c0f1ee80280ab684bb2cceae973fabbd677b67efd193b925c0a"
   },
   "results": [
     {
@@ -25,32 +31,32 @@
     {
       "file": "npm-audit.json",
       "exit_code": 0,
-      "stderr": "",
+      "stderr": "(node:31188) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
       "status": "PASS"
     },
     {
       "file": "audit-desktop-windows.json",
-      "exit_code": 1,
+      "exit_code": 0,
       "stderr": "",
-      "status": "FAIL"
+      "status": "PASS"
     },
     {
       "file": "audit-cli-windows.json",
-      "exit_code": 1,
+      "exit_code": 0,
       "stderr": "",
-      "status": "FAIL"
+      "status": "PASS"
     },
     {
       "file": "audit-cli-linux.json",
-      "exit_code": 1,
+      "exit_code": 0,
       "stderr": "",
-      "status": "FAIL"
+      "status": "PASS"
     },
     {
       "file": "audit-cli-macos.json",
-      "exit_code": 1,
+      "exit_code": 0,
       "stderr": "",
-      "status": "FAIL"
+      "status": "PASS"
     }
   ]
 }
