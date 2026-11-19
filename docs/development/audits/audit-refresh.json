@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T15:38:38.659252+00:00",
+  "generated_at": "2026-11-19T03:51:00.314678+00:00",
   "input_sha256": {
     "Cargo.toml": "f12280ad7d5a132e7d8d6c804f06a026fa5e7f40dacede3195914f62d10ced40",
     "Cargo.lock": "5ed8c8e57a44299630ae400fa091373c081c6918aff35f92070897b1456f2b20",
