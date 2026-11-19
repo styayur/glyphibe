@@ -4,13 +4,49 @@ on:
     branches: [main, 'feat/**', 'fix/**']
   pull_request:
   workflow_dispatch:
+    inputs:
+      refresh_inventory:
+        description: Generate reviewable inventory and security-ledger artifacts only
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 jobs:
+  inventory-refresh:
+    name: Generate dependency inventory candidate
+    if: github.event_name == 'workflow_dispatch' && inputs.refresh_inventory
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24'
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec
+        with:
+          toolchain: '1.98.1'
+      - run: npm ci --prefix apps/desktop
+      - run: python scripts/verify-source-backports.py
+      - run: python scripts/audit-dependencies.py --fetch-missing-license-texts
+      - run: python scripts/audit-dependencies.py --check
+      - run: cargo install cargo-audit --version 0.22.2 --locked
+      - run: python scripts/refresh-security-audits.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: dependency-inventory-candidate
+          path: |
+            docs/development/dependency-inventory.json
+            docs/development/dependencies.spdx.json
+            docs/development/audits/
+            THIRD_PARTY_NOTICES
+            third-party/licenses/
+          if-no-files-found: error
+          retention-days: 14
   rust:
+    if: github.event_name != 'workflow_dispatch' || !inputs.refresh_inventory
     name: Rust (${{ matrix.os }})
     strategy:
       fail-fast: false
@@ -25,6 +61,9 @@ jobs:
           components: rustfmt, clippy
       - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0
       - run: cargo fmt --all -- --check
+      - run: python scripts/verify-source-backports.py
+      - run: cargo test --locked --manifest-path security/rmcp-regression/Cargo.toml
+      - run: cargo test --locked --manifest-path security/rmcp-regression/Cargo.toml --features chrono
       - run: cargo clippy --locked --workspace --exclude glyphibe-desktop --all-targets -- -D warnings
       - run: cargo test --locked --workspace --exclude glyphibe-desktop
       - run: cargo build --locked -p glyphibe-cli --release
@@ -35,6 +74,7 @@ jobs:
           cargo run --locked -p glyphibe-cli -- analyze tests/fixtures/python --index "${RUNNER_TEMP}/glyphibe.sqlite"
           cargo run --locked -p glyphibe-cli -- --repo tests/fixtures/python --index "${RUNNER_TEMP}/glyphibe.sqlite" search run
   frontend:
+    if: github.event_name != 'workflow_dispatch' || !inputs.refresh_inventory
     name: Frontend and graph E2E
     runs-on: ubuntu-latest
     steps:
@@ -72,6 +112,7 @@ jobs:
             apps/desktop/test-results
           retention-days: 7
   dependencies:
+    if: github.event_name != 'workflow_dispatch' || !inputs.refresh_inventory
     name: Dependency and license audit
     runs-on: ubuntu-latest
     steps:
@@ -83,18 +124,32 @@ jobs:
         with:
           toolchain: '1.98.1'
       - run: cargo install cargo-audit --version 0.22.2 --locked
+      - run: python scripts/verify-source-backports.py
+      - run: python scripts/audit-dependencies.py --check
+      - run: python scripts/audit-native-notices.py
+      - run: python -m unittest discover -s tests -p 'test_*.py'
+      - run: npm ci
+        working-directory: apps/desktop
+      - run: npm run security:test && npm run security:audit
+        working-directory: apps/desktop
       - name: Audit complete workspace, including unsupported platform warnings
         run: cargo audit --json > all-target-audit.json
       - name: Audit shipping Windows desktop dependency closure
         run: python scripts/audit-target-dependencies.py --package glyphibe-desktop --target x86_64-pc-windows-msvc --output desktop-windows-audit.json --no-fetch
       - name: Audit headless Linux dependency closure
         run: python scripts/audit-target-dependencies.py --package glyphibe-cli --target x86_64-unknown-linux-gnu --output cli-linux-audit.json --no-fetch
-      - run: npm audit --audit-level=low
-        working-directory: apps/desktop
-      - run: python scripts/audit-dependencies.py --check
-      - run: python scripts/audit-native-notices.py
-      - run: python -m unittest discover -s tests -p 'test_*.py'
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: npm-security-audit
+          path: |
+            apps/desktop/artifacts/npm-audit.json
+            all-target-audit.json
+            desktop-windows-audit.json
+            cli-linux-audit.json
+          if-no-files-found: warn
   desktop:
+    if: github.event_name != 'workflow_dispatch' || !inputs.refresh_inventory
     name: Windows desktop build
     runs-on: windows-latest
     steps:
@@ -134,3 +189,18 @@ jobs:
             ${{ runner.temp }}/glyphibe-assets/SHA256SUMS
           if-no-files-found: error
           retention-days: 14
+  glib-backport:
+    if: github.event_name != 'workflow_dispatch' || !inputs.refresh_inventory
+    name: Optimized GLib source regression (Linux)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec
+        with:
+          toolchain: '1.98.1'
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0
+      - run: sudo apt-get update && sudo apt-get install -y libglib2.0-dev
+      - run: python scripts/verify-source-backports.py
+      - run: cargo run --release --locked --manifest-path security/glib-regression/Cargo.toml
+      - run: cargo tree --locked --workspace --all-features --target x86_64-unknown-linux-gnu -i glib
+      - run: cargo tree --locked --workspace --all-features --target x86_64-pc-windows-msvc -i glib

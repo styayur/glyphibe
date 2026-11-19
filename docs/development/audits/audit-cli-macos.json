@@ -2,7 +2,488 @@
   "schema_version": 1,
   "package": "glyphibe-cli",
   "target": "x86_64-apple-darwin",
-  "method": "Cargo filtered normal/build dependency closure; dev-only edges excluded; no advisory ignore list",
+  "method": "Cargo tree normal/build target closure, exact identities and lock entries from metadata; dev-only/disabled edges excluded; no advisory ignore list",
+  "cargo_tree": [
+    "glyphibe-cli v1.0.0 (/glyphibe/source\\crates\\glyphibe-cli)",
+    "anyhow v1.0.104",
+    "clap v4.6.7",
+    "clap_builder v4.6.7",
+    "anstream v1.0.0",
+    "anstyle v1.0.14",
+    "anstyle-parse v1.0.0",
+    "utf8parse v0.2.2",
+    "anstyle-query v1.1.5",
+    "colorchoice v1.0.5",
+    "is_terminal_polyfill v1.70.2",
+    "utf8parse v0.2.2",
+    "anstyle v1.0.14",
+    "clap_lex v1.1.1",
+    "strsim v0.11.1",
+    "clap_derive v4.6.7 (proc-macro)",
+    "heck v0.5.0",
+    "proc-macro2 v1.0.107",
+    "unicode-ident v1.0.27",
+    "quote v1.0.47",
+    "proc-macro2 v1.0.107 (*)",
+    "syn v3.0.9",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "unicode-ident v1.0.27",
+    "glyphibe-analysis v1.0.0 (/glyphibe/source\\crates\\glyphibe-analysis)",
+    "glyphibe-core v1.0.0 (/glyphibe/source\\crates\\glyphibe-core)",
+    "anyhow v1.0.104",
+    "rusqlite v0.41.1",
+    "bitflags v2.13.2",
+    "fallible-iterator v0.3.0",
+    "fallible-streaming-iterator v0.1.9",
+    "libsqlite3-sys v0.39.1",
+    "cc v1.11.2",
+    "find-msvc-tools v0.1.15",
+    "jobserver v0.1.35",
+    "getrandom v0.4.3",
+    "cfg-if v1.0.5",
+    "shlex v2.0.1",
+    "pkg-config v0.3.34",
+    "vcpkg v0.2.15",
+    "smallvec v1.16.5",
+    "serde v1.0.229",
+    "serde_core v1.0.229",
+    "serde_derive v1.0.229 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "serde_json v1.0.154",
+    "itoa v1.0.19",
+    "memchr v2.8.3",
+    "serde_core v1.0.229",
+    "zmij v1.0.23",
+    "sha2 v0.11.1",
+    "cfg-if v1.0.5",
+    "cpufeatures v0.3.1",
+    "digest v0.11.3",
+    "block-buffer v0.12.1",
+    "hybrid-array v0.4.15",
+    "typenum v1.20.1",
+    "const-oid v0.10.3",
+    "crypto-common v0.2.2",
+    "hybrid-array v0.4.15 (*)",
+    "glyphibe-core v1.0.0 (/glyphibe/source\\crates\\glyphibe-core) (*)",
+    "glyphibe-explain v1.0.0 (/glyphibe/source\\crates\\glyphibe-explain)",
+    "anyhow v1.0.104",
+    "glyphibe-core v1.0.0 (/glyphibe/source\\crates\\glyphibe-core) (*)",
+    "glyphibe-knowledge v1.0.0 (/glyphibe/source\\crates\\glyphibe-knowledge)",
+    "anyhow v1.0.104",
+    "reqwest v0.13.5",
+    "base64 v0.23.1",
+    "bytes v1.12.1",
+    "futures-channel v0.3.34",
+    "futures-core v0.3.34",
+    "futures-sink v0.3.34",
+    "futures-core v0.3.34",
+    "futures-util v0.3.34",
+    "futures-channel v0.3.34 (*)",
+    "futures-core v0.3.34",
+    "futures-io v0.3.34",
+    "futures-macro v0.3.34 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "futures-sink v0.3.34",
+    "futures-task v0.3.34",
+    "memchr v2.8.3",
+    "pin-project-lite v0.2.17",
+    "slab v0.4.12",
+    "http v1.5.0",
+    "bytes v1.12.1",
+    "itoa v1.0.19",
+    "http-body v1.1.0",
+    "bytes v1.12.1",
+    "http v1.5.0 (*)",
+    "http-body-util v0.1.5",
+    "bytes v1.12.1",
+    "futures-core v0.3.34",
+    "http v1.5.0 (*)",
+    "http-body v1.1.0 (*)",
+    "pin-project-lite v0.2.17",
+    "hyper v1.12.0",
+    "atomic-waker v1.1.2",
+    "bytes v1.12.1",
+    "futures-core v0.3.34",
+    "http v1.5.0 (*)",
+    "http-body v1.1.0 (*)",
+    "httparse v1.10.1",
+    "itoa v1.0.19",
+    "pin-project-lite v0.2.17",
+    "smallvec v1.16.5",
+    "tokio v1.54.1",
+    "bytes v1.12.1",
+    "libc v0.2.191",
+    "mio v1.2.4",
+    "libc v0.2.191",
+    "pin-project-lite v0.2.17",
+    "signal-hook-registry v1.4.8",
+    "errno v0.3.14",
+    "libc v0.2.191",
+    "libc v0.2.191",
+    "socket2 v0.6.5",
+    "libc v0.2.191",
+    "tokio-macros v2.7.2 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "want v0.3.2",
+    "try-lock v0.2.5",
+    "hyper-rustls v0.27.10",
+    "http v1.5.0 (*)",
+    "hyper v1.12.0 (*)",
+    "hyper-util v0.1.21",
+    "base64 v0.23.1",
+    "bytes v1.12.1",
+    "futures-channel v0.3.34 (*)",
+    "futures-util v0.3.34 (*)",
+    "http v1.5.0 (*)",
+    "http-body v1.1.0 (*)",
+    "httparse v1.10.1",
+    "hyper v1.12.0 (*)",
+    "ipnet v2.12.2",
+    "libc v0.2.191",
+    "percent-encoding v2.3.2",
+    "pin-project-lite v0.2.17",
+    "socket2 v0.6.5 (*)",
+    "tokio v1.54.1 (*)",
+    "tower-service v0.3.3",
+    "tracing v0.1.44",
+    "pin-project-lite v0.2.17",
+    "tracing-attributes v0.1.31 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v2.0.119",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "unicode-ident v1.0.27",
+    "tracing-core v0.1.36",
+    "once_cell v1.21.4",
+    "rustls v0.23.46",
+    "aws-lc-rs v1.19.0",
+    "aws-lc-sys v0.47.0",
+    "cc v1.11.2 (*)",
+    "cmake v0.1.58",
+    "cc v1.11.2 (*)",
+    "dunce v1.0.5",
+    "fs_extra v1.3.0",
+    "zeroize v1.9.1",
+    "once_cell v1.21.4",
+    "rustls-pki-types v1.16.0",
+    "zeroize v1.9.1",
+    "rustls-webpki v0.103.16",
+    "aws-lc-rs v1.19.0 (*)",
+    "rustls-pki-types v1.16.0 (*)",
+    "untrusted v0.9.0",
+    "subtle v2.6.1",
+    "zeroize v1.9.1",
+    "tokio v1.54.1 (*)",
+    "tokio-rustls v0.26.6",
+    "rustls v0.23.46 (*)",
+    "tokio v1.54.1 (*)",
+    "tower-service v0.3.3",
+    "hyper-util v0.1.21 (*)",
+    "log v0.4.35",
+    "percent-encoding v2.3.2",
+    "pin-project-lite v0.2.17",
+    "rustls v0.23.46 (*)",
+    "rustls-pki-types v1.16.0 (*)",
+    "rustls-platform-verifier v0.7.1",
+    "core-foundation v0.10.1",
+    "core-foundation-sys v0.8.7",
+    "libc v0.2.191",
+    "core-foundation-sys v0.8.7",
+    "log v0.4.35",
+    "rustls v0.23.46 (*)",
+    "security-framework v3.7.0",
+    "bitflags v2.13.2",
+    "core-foundation v0.10.1 (*)",
+    "core-foundation-sys v0.8.7",
+    "libc v0.2.191",
+    "security-framework-sys v2.17.0",
+    "core-foundation-sys v0.8.7",
+    "libc v0.2.191",
+    "security-framework-sys v2.17.0 (*)",
+    "serde v1.0.229 (*)",
+    "serde_json v1.0.154 (*)",
+    "sync_wrapper v1.0.2",
+    "futures-core v0.3.34",
+    "tokio v1.54.1 (*)",
+    "tokio-rustls v0.26.6 (*)",
+    "tower v0.5.3",
+    "futures-core v0.3.34",
+    "futures-util v0.3.34 (*)",
+    "pin-project-lite v0.2.17",
+    "sync_wrapper v1.0.2 (*)",
+    "tokio v1.54.1 (*)",
+    "tower-layer v0.3.3",
+    "tower-service v0.3.3",
+    "tower-http v0.6.11",
+    "bitflags v2.13.2",
+    "bytes v1.12.1",
+    "futures-util v0.3.34 (*)",
+    "http v1.5.0 (*)",
+    "http-body v1.1.0 (*)",
+    "pin-project-lite v0.2.17",
+    "tower v0.5.3 (*)",
+    "tower-layer v0.3.3",
+    "tower-service v0.3.3",
+    "url v2.5.8",
+    "form_urlencoded v1.2.2",
+    "percent-encoding v2.3.2",
+    "idna v1.1.0",
+    "idna_adapter v1.2.2",
+    "icu_normalizer v2.4.0",
+    "icu_collections v2.4.0",
+    "displaydoc v0.2.7 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "potential_utf v0.1.6",
+    "zerovec v0.11.9",
+    "yoke v0.8.4",
+    "stable_deref_trait v1.2.1",
+    "yoke-derive v0.8.4 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "synstructure v0.14.0",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "zerofrom v0.1.8",
+    "zerofrom-derive v0.1.8 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "synstructure v0.14.0 (*)",
+    "zerofrom v0.1.8 (*)",
+    "zerovec-derive v0.11.7 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "utf8_iter v1.1.0",
+    "utf_types v1.0.0",
+    "yoke v0.8.4 (*)",
+    "zerofrom v0.1.8 (*)",
+    "zerovec v0.11.9 (*)",
+    "icu_normalizer_data v2.4.0",
+    "icu_provider v2.4.0",
+    "displaydoc v0.2.7 (proc-macro) (*)",
+    "icu_locale_core v2.4.0",
+    "displaydoc v0.2.7 (proc-macro) (*)",
+    "litemap v0.8.3",
+    "tinystr v0.8.5",
+    "displaydoc v0.2.7 (proc-macro) (*)",
+    "zerovec v0.11.9 (*)",
+    "writeable v0.6.4",
+    "zerovec v0.11.9 (*)",
+    "writeable v0.6.4",
+    "yoke v0.8.4 (*)",
+    "zerofrom v0.1.8 (*)",
+    "zerotrie v0.2.5",
+    "displaydoc v0.2.7 (proc-macro) (*)",
+    "yoke v0.8.4 (*)",
+    "zerofrom v0.1.8 (*)",
+    "zerovec v0.11.9 (*)",
+    "smallvec v1.16.5",
+    "zerovec v0.11.9 (*)",
+    "icu_properties v2.4.0",
+    "displaydoc v0.2.7 (proc-macro) (*)",
+    "icu_collections v2.4.0 (*)",
+    "icu_locale_core v2.4.0 (*)",
+    "icu_properties_data v2.4.0",
+    "icu_provider v2.4.0 (*)",
+    "zerotrie v0.2.5 (*)",
+    "zerovec v0.11.9 (*)",
+    "smallvec v1.16.5",
+    "utf8_iter v1.1.0 (*)",
+    "percent-encoding v2.3.2",
+    "tower-service v0.3.3",
+    "url v2.5.8 (*)",
+    "serde v1.0.229 (*)",
+    "serde_json v1.0.154 (*)",
+    "sha2 v0.11.1 (*)",
+    "tempfile v3.27.0",
+    "fastrand v2.5.0",
+    "getrandom v0.3.4",
+    "cfg-if v1.0.5",
+    "libc v0.2.191",
+    "once_cell v1.21.4",
+    "rustix v1.1.6",
+    "bitflags v2.13.2",
+    "errno v0.3.14 (*)",
+    "libc v0.2.191",
+    "url v2.5.8 (*)",
+    "serde v1.0.229 (*)",
+    "serde_json v1.0.154 (*)",
+    "glyphibe-knowledge v1.0.0 (/glyphibe/source\\crates\\glyphibe-knowledge) (*)",
+    "glyphibe-mcp v1.0.0 (/glyphibe/source\\crates\\glyphibe-mcp)",
+    "anyhow v1.0.104",
+    "glyphibe-core v1.0.0 (/glyphibe/source\\crates\\glyphibe-core) (*)",
+    "glyphibe-explain v1.0.0 (/glyphibe/source\\crates\\glyphibe-explain) (*)",
+    "glyphibe-knowledge v1.0.0 (/glyphibe/source\\crates\\glyphibe-knowledge) (*)",
+    "rmcp v3.9.0 (/glyphibe/source\\vendor\\rmcp)",
+    "base64 v0.23.1",
+    "futures v0.3.34",
+    "futures-channel v0.3.34 (*)",
+    "futures-core v0.3.34",
+    "futures-executor v0.3.34",
+    "futures-core v0.3.34",
+    "futures-task v0.3.34",
+    "futures-util v0.3.34 (*)",
+    "futures-io v0.3.34",
+    "futures-sink v0.3.34",
+    "futures-task v0.3.34",
+    "futures-util v0.3.34 (*)",
+    "indexmap v2.14.2",
+    "equivalent v1.0.3",
+    "hashbrown v0.17.1",
+    "serde_core v1.0.229",
+    "libc v0.2.191",
+    "pastey v0.2.3 (proc-macro)",
+    "pin-project-lite v0.2.17",
+    "process-wrap v10.0.1",
+    "futures v0.3.34 (*)",
+    "indexmap v2.14.2 (*)",
+    "nix v0.31.3",
+    "bitflags v2.13.2",
+    "cfg-if v1.0.5",
+    "libc v0.2.191",
+    "cfg_aliases v0.2.2",
+    "tokio v1.54.1 (*)",
+    "tracing v0.1.44 (*)",
+    "rmcp-macros v3.10.0 (proc-macro)",
+    "darling v0.24.1",
+    "darling_core v0.24.1",
+    "ident_case v1.0.1",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "strsim v0.11.1",
+    "syn v3.0.9 (*)",
+    "darling_macro v0.24.1 (proc-macro)",
+    "darling_core v0.24.1 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "serde_json v1.0.154",
+    "foldhash v0.2.0",
+    "indexmap v2.14.2",
+    "equivalent v1.0.3",
+    "hashbrown v0.17.1",
+    "itoa v1.0.19",
+    "memchr v2.8.3",
+    "serde_core v1.0.229",
+    "zmij v1.0.23",
+    "syn v3.0.9 (*)",
+    "schemars v1.2.3",
+    "dyn-clone v1.0.20",
+    "ref-cast v1.0.27",
+    "ref-cast-impl v1.0.27 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "schemars_derive v1.2.3 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "serde_derive_internals v0.30.0",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "syn v3.0.9 (*)",
+    "serde v1.0.229 (*)",
+    "serde_json v1.0.154 (*)",
+    "serde v1.0.229 (*)",
+    "serde_json v1.0.154 (*)",
+    "sha2 v0.11.1 (*)",
+    "thiserror v2.0.21",
+    "thiserror-impl v2.0.21 (proc-macro)",
+    "proc-macro2 v1.0.107 (*)",
+    "quote v1.0.47 (*)",
+    "syn v3.0.9 (*)",
+    "time v0.3.55",
+    "deranged v0.5.9",
+    "num-conv v0.2.2",
+    "powerfmt v0.2.1",
+    "time-core v0.1.9",
+    "tokio v1.54.1 (*)",
+    "tokio-stream v0.1.19",
+    "futures-core v0.3.34",
+    "pin-project-lite v0.2.17",
+    "tokio v1.54.1 (*)",
+    "tokio-util v0.7.20",
+    "bytes v1.12.1",
+    "futures-core v0.3.34",
+    "futures-sink v0.3.34",
+    "libc v0.2.191",
+    "pin-project-lite v0.2.17",
+    "tokio v1.54.1 (*)",
+    "tracing v0.1.44 (*)",
+    "uuid v1.29.2",
+    "getrandom v0.4.3",
+    "cfg-if v1.0.5",
+    "libc v0.2.191",
+    "schemars v1.2.3 (*)",
+    "serde v1.0.229 (*)",
+    "serde_json v1.0.154 (*)",
+    "tokio v1.54.1 (*)",
+    "glyphibe-parser v1.0.0 (/glyphibe/source\\crates\\glyphibe-parser)",
+    "anyhow v1.0.104",
+    "glyphibe-core v1.0.0 (/glyphibe/source\\crates\\glyphibe-core) (*)",
+    "ignore v0.4.34",
+    "crossbeam-deque v0.8.8",
+    "crossbeam-epoch v0.9.21",
+    "crossbeam-utils v0.8.23",
+    "crossbeam-utils v0.8.23",
+    "globset v0.4.21",
+    "aho-corasick v1.1.5",
+    "memchr v2.8.3",
+    "bstr v1.13.1",
+    "memchr v2.8.3",
+    "log v0.4.35",
+    "regex-automata v0.4.18",
+    "aho-corasick v1.1.5 (*)",
+    "memchr v2.8.3",
+    "regex-syntax v0.8.11",
+    "regex-syntax v0.8.11",
+    "log v0.4.35",
+    "memchr v2.8.3",
+    "regex-automata v0.4.18 (*)",
+    "same-file v1.0.6",
+    "walkdir v2.5.0",
+    "same-file v1.0.6",
+    "serde v1.0.229 (*)",
+    "serde_json v1.0.154 (*)",
+    "tree-sitter v0.27.2",
+    "regex v1.13.1",
+    "aho-corasick v1.1.5 (*)",
+    "memchr v2.8.3",
+    "regex-automata v0.4.18 (*)",
+    "regex-syntax v0.8.11",
+    "streaming-iterator v0.1.9",
+    "tree-sitter-language v0.1.9",
+    "cc v1.11.2 (*)",
+    "serde_json v1.0.154 (*)",
+    "tree-sitter-javascript v0.25.0",
+    "tree-sitter-language v0.1.9",
+    "cc v1.11.2 (*)",
+    "tree-sitter-python v0.25.0",
+    "tree-sitter-language v0.1.9",
+    "cc v1.11.2 (*)",
+    "tree-sitter-rust v0.24.2",
+    "tree-sitter-language v0.1.9",
+    "cc v1.11.2 (*)",
+    "tree-sitter-typescript v0.23.2",
+    "tree-sitter-language v0.1.9",
+    "cc v1.11.2 (*)",
+    "serde_json v1.0.154 (*)",
+    "tokio v1.54.1 (*)"
+  ],
   "selected_packages": [
     {
       "name": "glyphibe-analysis",
@@ -37,6 +518,11 @@
     {
       "name": "glyphibe-parser",
       "version": "1.0.0",
+      "source": null
+    },
+    {
+      "name": "rmcp",
+      "version": "3.9.0",
       "source": null
     },
     {
@@ -75,18 +561,13 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
-      "name": "autocfg",
-      "version": "1.5.1",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
       "name": "aws-lc-rs",
-      "version": "1.18.2",
+      "version": "1.19.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
       "name": "aws-lc-sys",
-      "version": "0.46.0",
+      "version": "0.47.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -101,7 +582,7 @@
     },
     {
       "name": "block-buffer",
-      "version": "0.10.4",
+      "version": "0.12.1",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -116,7 +597,7 @@
     },
     {
       "name": "cc",
-      "version": "1.10.0",
+      "version": "1.11.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -127,16 +608,6 @@
     {
       "name": "cfg_aliases",
       "version": "0.2.2",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "chacha20",
-      "version": "0.10.2",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "chrono",
-      "version": "0.4.45",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -170,6 +641,11 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
+      "name": "const-oid",
+      "version": "0.10.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index"
+    },
+    {
       "name": "core-foundation-sys",
       "version": "0.8.7",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
@@ -177,11 +653,6 @@
     {
       "name": "core-foundation",
       "version": "0.10.1",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "cpufeatures",
-      "version": "0.2.17",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -206,7 +677,7 @@
     },
     {
       "name": "crypto-common",
-      "version": "0.1.7",
+      "version": "0.2.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -225,8 +696,13 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
+      "name": "deranged",
+      "version": "0.5.9",
+      "source": "registry+https://github.com/rust-lang/crates.io-index"
+    },
+    {
       "name": "digest",
-      "version": "0.10.7",
+      "version": "0.11.3",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -335,13 +811,8 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
-      "name": "generic-array",
-      "version": "0.14.7",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
       "name": "getrandom",
-      "version": "0.2.17",
+      "version": "0.3.4",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -351,7 +822,7 @@
     },
     {
       "name": "globset",
-      "version": "0.4.20",
+      "version": "0.4.21",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -385,6 +856,11 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
+      "name": "hybrid-array",
+      "version": "0.4.15",
+      "source": "registry+https://github.com/rust-lang/crates.io-index"
+    },
+    {
       "name": "hyper-rustls",
       "version": "0.27.10",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
@@ -397,11 +873,6 @@
     {
       "name": "hyper",
       "version": "1.12.0",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "iana-time-zone",
-      "version": "0.1.65",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -456,7 +927,7 @@
     },
     {
       "name": "ignore",
-      "version": "0.4.33",
+      "version": "0.4.34",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -476,7 +947,7 @@
     },
     {
       "name": "itoa",
-      "version": "1.0.18",
+      "version": "1.0.19",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -501,12 +972,7 @@
     },
     {
       "name": "log",
-      "version": "0.4.34",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "lru-slab",
-      "version": "0.1.3",
+      "version": "0.4.35",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -525,8 +991,8 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
-      "name": "num-traits",
-      "version": "0.2.19",
+      "name": "num-conv",
+      "version": "0.2.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -560,6 +1026,11 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
+      "name": "powerfmt",
+      "version": "0.2.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index"
+    },
+    {
       "name": "proc-macro2",
       "version": "1.0.107",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
@@ -570,38 +1041,8 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
-      "name": "quinn-proto",
-      "version": "0.11.19",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "quinn-udp",
-      "version": "0.5.16",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "quinn",
-      "version": "0.11.12",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
       "name": "quote",
       "version": "1.0.47",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "rand",
-      "version": "0.10.3",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "rand_core",
-      "version": "0.10.1",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "rand_pcg",
-      "version": "0.10.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -635,28 +1076,13 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
-      "name": "ring",
-      "version": "0.17.14",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
       "name": "rmcp-macros",
-      "version": "3.8.0",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "rmcp",
-      "version": "3.8.0",
+      "version": "3.10.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
       "name": "rusqlite",
-      "version": "0.41.0",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "rustc-hash",
-      "version": "2.1.3",
+      "version": "0.41.1",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -666,7 +1092,7 @@
     },
     {
       "name": "rustls-pki-types",
-      "version": "1.15.1",
+      "version": "1.16.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -736,7 +1162,7 @@
     },
     {
       "name": "sha2",
-      "version": "0.10.9",
+      "version": "0.11.1",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -756,7 +1182,7 @@
     },
     {
       "name": "smallvec",
-      "version": "1.16.4",
+      "version": "1.16.5",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -820,13 +1246,18 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
-      "name": "tinystr",
-      "version": "0.8.5",
+      "name": "time-core",
+      "version": "0.1.9",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
-      "name": "tinyvec",
-      "version": "1.13.3",
+      "name": "time",
+      "version": "0.3.55",
+      "source": "registry+https://github.com/rust-lang/crates.io-index"
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.5",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -916,7 +1347,7 @@
     },
     {
       "name": "tree-sitter",
-      "version": "0.27.1",
+      "version": "0.27.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -946,7 +1377,7 @@
     },
     {
       "name": "utf8_iter",
-      "version": "1.0.4",
+      "version": "1.1.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -955,18 +1386,18 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
+      "name": "utf_types",
+      "version": "1.0.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index"
+    },
+    {
       "name": "uuid",
-      "version": "1.29.0",
+      "version": "1.29.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
       "name": "vcpkg",
       "version": "0.2.15",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "version_check",
-      "version": "0.9.5",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -1033,12 +1464,12 @@
   "audit_exit_code": 0,
   "audit": {
     "database": {
-      "advisory-count": 1380,
+      "advisory-count": 1550,
       "last-commit": null,
       "last-updated": null
     },
     "lockfile": {
-      "dependency-count": 205
+      "dependency-count": 195
     },
     "settings": {
       "target_arch": [],

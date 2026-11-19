@@ -1,11 +1,11 @@
 {
   "database": {
-    "advisory-count": 1380,
-    "last-commit": "99670cfc0bc574433034b75876a4b791ccaa2efb",
-    "last-updated": "2026-10-27T11:02:42+01:00"
+    "advisory-count": 1550,
+    "last-commit": "7133866a6b44d6d3e1994ae6a48a296553c3c3da",
+    "last-updated": "2026-11-19T09:55:47+01:00"
   },
   "lockfile": {
-    "dependency-count": 520
+    "dependency-count": 530
   },
   "settings": {
     "target_arch": [],
@@ -25,6 +25,63 @@
   },
   "warnings": {
     "unmaintained": [
+      {
+        "kind": "unmaintained",
+        "package": {
+          "name": "chrono",
+          "version": "0.4.45",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "checksum": "1aa79e62e7697b8e29b513a68abacf485adcd1fe8284a4316c5ae868e6633327",
+          "dependencies": [
+            {
+              "name": "iana-time-zone",
+              "version": "0.1.65",
+              "source": "registry+https://github.com/rust-lang/crates.io-index"
+            },
+            {
+              "name": "num-traits",
+              "version": "0.2.19",
+              "source": "registry+https://github.com/rust-lang/crates.io-index"
+            },
+            {
+              "name": "serde",
+              "version": "1.0.229",
+              "source": "registry+https://github.com/rust-lang/crates.io-index"
+            },
+            {
+              "name": "windows-link",
+              "version": "0.2.1",
+              "source": "registry+https://github.com/rust-lang/crates.io-index"
+            }
+          ],
+          "replace": null
+        },
+        "advisory": {
+          "id": "RUSTSEC-2026-0543",
+          "package": "chrono",
+          "title": "chrono is unmaintained",
+          "description": "The chrono crate is unmaintained; all versions are affected.\n\nRecommended alternatives:\n\n- [jiff](https://crates.io/crates/jiff)\n- [time](https://crates.io/crates/time)",
+          "date": "2026-09-14",
+          "aliases": [],
+          "related": [],
+          "collection": "crates",
+          "categories": [],
+          "keywords": [],
+          "cvss": null,
+          "informational": "unmaintained",
+          "references": [],
+          "source": null,
+          "url": "https://github.com/chronotope/chrono/issues/1768",
+          "withdrawn": null,
+          "license": "CC0-1.0",
+          "expect-deleted": false
+        },
+        "affected": null,
+        "versions": {
+          "patched": [],
+          "unaffected": []
+        }
+      },
       {
         "kind": "unmaintained",
         "package": {
@@ -85,146 +142,6 @@
         "versions": {
           "patched": [],
           "unaffected": []
-        }
-      }
-    ],
-    "unsound": [
-      {
-        "kind": "unsound",
-        "package": {
-          "name": "glib",
-          "version": "0.18.5",
-          "source": "registry+https://github.com/rust-lang/crates.io-index",
-          "checksum": "233daaf6e83ae6a12a52055f568f9d7cf4671dabb78ff9560ab6da230ce00ee5",
-          "dependencies": [
-            {
-              "name": "bitflags",
-              "version": "2.13.2",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "futures-channel",
-              "version": "0.3.34",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "futures-core",
-              "version": "0.3.34",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "futures-executor",
-              "version": "0.3.34",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "futures-task",
-              "version": "0.3.34",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "futures-util",
-              "version": "0.3.34",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "gio-sys",
-              "version": "0.18.1",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "glib-macros",
-              "version": "0.18.5",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "glib-sys",
-              "version": "0.18.1",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "gobject-sys",
-              "version": "0.18.0",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "libc",
-              "version": "0.2.191",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "memchr",
-              "version": "2.8.3",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "once_cell",
-              "version": "1.21.4",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "smallvec",
-              "version": "1.16.4",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            },
-            {
-              "name": "thiserror",
-              "version": "1.0.69",
-              "source": "registry+https://github.com/rust-lang/crates.io-index"
-            }
-          ],
-          "replace": null
-        },
-        "advisory": {
-          "id": "RUSTSEC-2024-0429",
-          "package": "glib",
-          "title": "Unsoundness in `Iterator` and `DoubleEndedIterator` impls for `glib::VariantStrIter`",
-          "description": "The `VariantStrIter::impl_get` function (called internally by implementations of the `Iterator` and `DoubleEndedIterator` traits for this type) was unsound, resulting in undefined behaviour.\n\nAn immutable reference `&p` to a `*mut libc::c_char` pointer initialized to `NULL` was passed as an argument to a C function that that mutates the pointer behind `&p` in-place (i.e. as an out-argument), which was unsound. After changes in recent versions of the Rust compiler, these unsound writes through `&p` now seem to be completely disregarded when building the `glib` crate with optimizations.\n\nThis subsequently caused all calls of `VariantStrIter::impl_get` to violate the safety requirements of the `std::ffi::CStr::from_ptr` function - which requires its argument to be a valid pointer to a C-style string - resulting in crashes due to `NULL` pointer dereferences.\n\nThis was fixed by passing the out-argument pointer explitly as `&mut p` instead of `&p`.\n\nThis issue has been present since this code was initially added in `glib` v0.15.0. The mismatch in mutability was likely missed (and not raised as an error by the compiler) because the C function wrapped by `VariantStrIter::impl_get` is variadic (`glib_sys::g_variant_get_child`), and the pointer in question is one of the variadic arguments.",
-          "date": "2024-03-30",
-          "aliases": [
-            "GHSA-wrw7-89jp-8q8g"
-          ],
-          "related": [],
-          "collection": "crates",
-          "categories": [],
-          "keywords": [],
-          "cvss": null,
-          "informational": "unsound",
-          "references": [],
-          "source": null,
-          "url": "https://github.com/gtk-rs/gtk-rs-core/pull/1343",
-          "withdrawn": null,
-          "license": "CC0-1.0",
-          "expect-deleted": false
-        },
-        "affected": {
-          "arch": [],
-          "os": [],
-          "functions": {
-            "glib::VariantStrIter::last": [
-              ">=0.15.0, <0.20.0"
-            ],
-            "glib::VariantStrIter::next": [
-              ">=0.15.0, <0.20.0"
-            ],
-            "glib::VariantStrIter::next_back": [
-              ">=0.15.0, <0.20.0"
-            ],
-            "glib::VariantStrIter::nth": [
-              ">=0.15.0, <0.20.0"
-            ],
-            "glib::VariantStrIter::nth_back": [
-              ">=0.15.0, <0.20.0"
-            ]
-          }
-        },
-        "versions": {
-          "patched": [
-            ">=0.20.0"
-          ],
-          "unaffected": [
-            "<0.15.0"
-          ]
         }
       }
     ]

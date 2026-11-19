@@ -14,6 +14,7 @@ import base64
 import datetime as dt
 import hashlib
 import io
+import importlib.util
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -35,6 +36,25 @@ EXCEPTIONS = {"LLVM-exception"}
 NOTICE_NAME = re.compile(r"^(?:(?:third[-_ ]party[-_ ])?(?:licen[cs]e|copying|notice|unlicense|copyright)|authors)(?:[-_.].*)?$", re.I)
 MAX_NOTICE = 2 * 1024 * 1024
 MAX_ARCHIVE = 64 * 1024 * 1024
+
+
+def backport_metadata(root: Path, package: dict, workspace_members: list) -> dict | None:
+    if package["source"] is not None:
+        return None
+    if package["id"] in workspace_members:
+        return None
+    name = package["name"]
+    expected = root / "vendor" / name / "Cargo.toml"
+    if name not in {"rmcp", "glib"} or Path(package["manifest_path"]).resolve() != expected.resolve():
+        raise ValueError("unreviewed local third-party Cargo source")
+    spec = importlib.util.spec_from_file_location("source_backports", root / "scripts/verify-source-backports.py")
+    verifier = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(verifier)
+    binding = verifier.verify(root, name)
+    provenance = json_read(root / binding["provenance"])
+    if package["version"] != provenance["version"] or package["license"] != provenance["license"]:
+        raise ValueError("vendored dependency identity/license mismatch")
+    return binding
 
 
 def json_read(path: Path):
@@ -329,7 +349,8 @@ def cargo_inventory(root: Path, offline: bool, fetch: bool = False, cache: Path 
             for dep in node["deps"]:
                 kinds.setdefault(dep["pkg"], set()).update((k.get("kind") or "normal") for k in dep["dep_kinds"])
         for p in metadata["packages"]:
-            if p["source"] is None:
+            backport = backport_metadata(root, p, metadata["workspace_members"])
+            if p["source"] is None and backport is None:
                 continue
             key = f"cargo:{p['name']}@{p['version']}"
             notice_root = Path(p["manifest_path"]).parent
@@ -342,6 +363,11 @@ def cargo_inventory(root: Path, offline: bool, fetch: bool = False, cache: Path 
                 "notices_raw": notice_files(notice_root, p.get("license_file")),
             })
             record["scopes"].update(kinds.get(p["id"], {"normal"}))
+            if backport:
+                record["source_backport"] = backport
+                # The archive identifies the original source, not these modified
+                # bytes. Keep it separate from the SPDX package checksum.
+                record["checksum"] = None
             record["origins"].add(manifest.relative_to(root).as_posix())
             if not record["notices_raw"]:
                 vcs = vcs_by_package.get(p["id"], {})
@@ -489,6 +515,9 @@ def input_hashes(root: Path) -> dict[str, str]:
     paths = [root / "Cargo.toml", root / "Cargo.lock", root / "apps/desktop/src-tauri/Cargo.toml",
              root / "apps/desktop/package.json", root / "apps/desktop/package-lock.json"]
     paths += sorted((root / "crates").glob("*/Cargo.toml"))
+    paths += sorted((root / "security").glob("*-provenance.json"))
+    paths += sorted((root / "security").glob("*-upstream-inventory.json"))
+    paths += sorted((root / "vendor").glob("*/Cargo.toml"))
     return {path.relative_to(root).as_posix(): source_hash(path) for path in paths}
 
 
@@ -505,12 +534,23 @@ def main() -> int:
     if options.check:
         report = json_read(root / "docs/development/dependency-inventory.json")
         errors = list(report["failures"])
+        for name in ("rmcp", "glib"):
+            records = [p for p in report["packages"] if p["name"] == name and p.get("source_backport")]
+            if len(records) != 1:
+                errors.append({"reason": "missing/duplicate reviewed vendored dependency", "package": name})
         if report.get("input_sha256") != input_hashes(root):
             errors.append({"reason": "inventory stale after manifest or lockfile change"})
         for path, expected in report["lock_sha256"].items():
             if source_hash(root / path) != expected:
                 errors.append({"reason": "inventory stale after lockfile change", "path": path})
         for package in report["packages"]:
+            if package.get("source_backport"):
+                name = package["name"]
+                backport = backport_metadata(root, {"name": name, "version": package["version"],
+                    "license": package["license_declared"], "source": None, "id": package["id"],
+                    "manifest_path": str(root / "vendor" / name / "Cargo.toml")}, [])
+                if backport != package["source_backport"]:
+                    errors.append({"reason": "source backport provenance changed", "package": package["id"]})
             choice = expression_choice(package["license_declared"])[0]
             if choice is None or choice != package["license_selected"]:
                 errors.append({"reason": "license policy changed or unapproved", "package": package["id"]})
@@ -577,6 +617,8 @@ def main() -> int:
                    "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": purl}],
                    "comment": "Scope=" + ",".join(record["scopes"]) + "; original notice text paths are in dependency-inventory.json"}
         checksum = record.get("checksum")
+        if record.get("source_backport"):
+            package["sourceInfo"] = "Modified upstream source; byte inventory, original archive identity and changes: " + json.dumps(record["source_backport"], sort_keys=True)
         if checksum and checksum.get("value"):
             package["checksums"] = [{"algorithm": checksum["algorithm"], "checksumValue": checksum["value"]}]
         elif record.get("integrity"):
@@ -599,6 +641,9 @@ def main() -> int:
     for record in inventory:
         notices += [record["id"], f"  Declared: {record['license_declared']}; selected: {record['license_selected'] or 'UNRESOLVED'}", "  Source: " + record["source"], "  Scope: " + ", ".join(record["scopes"])]
         notices += [f"  Notice: {notice['file']} (upstream {notice['source_file']})" for notice in record["notices"]]
+        if record.get("source_backport"):
+            notices += ["  Modified upstream source: " + record["source_backport"]["provenance"],
+                        "  Original archive SHA256 (not the modified payload): " + record["source_backport"]["upstream_archive_sha256"]]
         notices.append("")
     (root / "THIRD_PARTY_NOTICES").write_text("\n".join(notices).rstrip() + "\n", encoding="utf-8")
     print(json.dumps({"packages": len(inventory), "unique_notice_texts": len(files), "failures": failures}, indent=2))
