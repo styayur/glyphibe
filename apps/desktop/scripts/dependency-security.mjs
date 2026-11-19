@@ -14,7 +14,7 @@ const marker = '  const branches = splitTopLevel(body).map(branch => branch.trim
 const guard = `
   // Locally backported GHSA-fc5q-39xc-vjpf mitigation: repeated wildcard
   // bodies are literalized, retaining upstream's existing risky-pattern policy.
-  const containsWildcard = value => {
+  const containsWildcard = (value, nested = false) => {
     let cursor = 0;
     while (cursor < value.length) {
       const token = value[cursor++];
@@ -31,11 +31,25 @@ const guard = `
           if (member === '\\\\') cursor++;
           else if (member === ']') break;
         }
-      } else if (token === '*' && value[cursor] !== '(') return true;
+      } else if (nested ? token === '(' || '*+?@!'.includes(token) && value[cursor] === '(' : token === '*' && value[cursor] !== '(') return true;
     }
     return false;
   };
-  if (branches.some(containsWildcard)) return { risky: true };
+  if (branches.some(branch => containsWildcard(branch))) return { risky: true };
+  // Nested wrappers can hide nullable or ambiguous repetition from the upstream
+  // recursion counter. Preserve its proven single-character flattening case;
+  // literalize every other non-plain nested extglob inside an outer repeat.
+  if (branches.some(branch => containsWildcard(branch, true) && normalizeSimpleBranch(branch) === undefined)) {
+    const alphabet = branches.map(branch => {
+      const sequence = getStarExtglobSequenceChars(branch);
+      if (sequence) return sequence;
+      const literal = normalizeSimpleBranch(branch);
+      return literal && literal.length === 1 ? [literal] : undefined;
+    });
+    if (alphabet.every(chars => chars !== undefined))
+      return { risky: true, safeOutput: buildCharClassStar([...new Set(alphabet.flat())]) };
+    return { risky: true };
+  }
 `;
 
 function locations() {
@@ -80,8 +94,8 @@ export function verify(directory, apply = false) {
   assert.deepEqual(readdirSync(join(directory, 'lib')).sort(), Object.keys(binding.upstreamSha256).filter(path => path.startsWith('lib/')).map(path => path.slice(4)).sort());
   execFileSync(process.execPath, ['--input-type=commonjs', '-e', `
     const assert = require('node:assert/strict'); const pm = require(process.argv[1]);
-    for (const pattern of ['+(*)','+(*a)','*(*a)','*(a*)','+(*?)','+(*a|b)','+(*(*a))']) {
-      assert.equal(pm.isMatch('a'.repeat(64)+'!', pattern), false, pattern);
+    for (const pattern of ['+(*)','+(*a)','*(*a)','*(a*)','+(*?)','+(*a|b)','+(*(*a))','+(@(*(a)))','+(@(+(a)))','+(@(?(a)))','+(@(a|aa))','*(a@(*(a)))','+((a|aa))','+((a)+)']) {
+      assert.equal(pm.isMatch('a'.repeat(96)+'!', pattern), false, pattern);
       assert.equal(pm.isMatch(pattern, pattern), true, 'literalized '+pattern);
     }
     for (const [input,pattern,result] of [
@@ -91,6 +105,14 @@ export function verify(directory, apply = false) {
       ['test.ts','*.{ts,tsx}',true], ['.hidden','*',false], ['.hidden','*',true]
     ].slice(0,-1)) assert.equal(pm.isMatch(input,pattern),result,pattern);
     assert.equal(pm.isMatch('.hidden','*',{dot:true}),true);
+    const wrapped = ['*(a)','+(a)','?(a)','@(a|aa)','*a'];
+    for (let depth=0; depth<4; depth++) {
+      for (const inner of [...wrapped]) for (const wrapper of ['@','+','*','?','!']) {
+        const pattern = '+('+wrapper+'('+inner+'))';
+        assert.equal(pm.isMatch('a'.repeat(96)+'!', pattern), false, pattern);
+      }
+      wrapped.splice(0, wrapped.length, ...wrapped.map(value=>'@('+value+')'));
+    }
     assert.equal(pm.makeRe('**/*.ts').test('src/test.ts'),true);
     assert.equal(pm.scan('src/**/*.ts').base,'src');
     assert.ok(pm.parse('*.ts').output);

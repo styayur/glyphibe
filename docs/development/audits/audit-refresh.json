@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-18T15:38:38.659252+00:00",
+  "input_sha256": {
+    "Cargo.toml": "f12280ad7d5a132e7d8d6c804f06a026fa5e7f40dacede3195914f62d10ced40",
+    "Cargo.lock": "5ed8c8e57a44299630ae400fa091373c081c6918aff35f92070897b1456f2b20",
+    "apps/desktop/src-tauri/Cargo.toml": "108c47b9ec0f66b0617d1cbe65a7eed2f506a2d2fd0812e29162f91a8761aca7",
+    "apps/desktop/package.json": "a0a7e32102b0f893f2723b18080ae847fe94c02e9dc8c4c070766a72a3f0f197",
+    "apps/desktop/package-lock.json": "03865ac9cdc39a42622f64f9b416cca56839c417073955fb85045b1a4198b59e",
+    "crates/glyphibe-analysis/Cargo.toml": "cf97edba3bdf5c2cc5003f32d9f471cef9fed6d0ed59db8f0d6b719451aec56c",
+    "crates/glyphibe-cli/Cargo.toml": "d3ef7b2585f6f77123388d26fc377957671165f874d63df13fca837ca4428175",
+    "crates/glyphibe-core/Cargo.toml": "8d48ac1d570d9eccdb88b2d3d202afdfb419c7bedce9a8b91ef7b098af3d8f32",
+    "crates/glyphibe-explain/Cargo.toml": "6c9a96103fe024eb055f6f585ec5215ed23ca8b23ecea24e24753c320c99ac0e",
+    "crates/glyphibe-knowledge/Cargo.toml": "80906c2577c2a0faff77ad349e706ac778b72a23711e8883e55242166770db27",
+    "crates/glyphibe-mcp/Cargo.toml": "af2eda2359370c9ac96cd81da0a5d8cbedce129f776b5d633025ba6e53c363c6",
+    "crates/glyphibe-parser/Cargo.toml": "7991d98b808e60e7ce4b5f16ea57ab780a546728ccc1f653430921e86091e439"
+  },
+  "results": [
+    {
+      "file": "cargo-audit.json",
+      "exit_code": 0,
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "file": "npm-audit.json",
+      "exit_code": 0,
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "file": "audit-desktop-windows.json",
+      "exit_code": 1,
+      "stderr": "",
+      "status": "FAIL"
+    },
+    {
+      "file": "audit-cli-windows.json",
+      "exit_code": 1,
+      "stderr": "",
+      "status": "FAIL"
+    },
+    {
+      "file": "audit-cli-linux.json",
+      "exit_code": 1,
+      "stderr": "",
+      "status": "FAIL"
+    },
+    {
+      "file": "audit-cli-macos.json",
+      "exit_code": 1,
+      "stderr": "",
+      "status": "FAIL"
+    }
+  ]
+}

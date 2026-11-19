@@ -15,6 +15,6 @@
     "package.json": "479b70b87aa7b44344d62c8a459ae7e53dd2bca6c61f1396bd55e63e9de73fc6",
     "LICENSE": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9"
   },
-  "patchedParserSha256": "96e3eef5f17187b9b926e793283effe864e009698c9ac21c4a3bc0c4a134a51b",
-  "policy": "Locally literalize repeated extglobs containing an unescaped wildcard; retain raw advisory and unchanged upstream identity."
+  "patchedParserSha256": "8177bbeab0ac3f0b55cdef447134e9d97225c71bff17b0a4a98b5a80091539b4",
+  "policy": "Local repeated-extglob remediation, including nested quantifiers; exact original upstream identity retained. Conservative literalization with upstream safe single-character flattening preserved."
 }

@@ -81,12 +81,12 @@
     },
     {
       "name": "aws-lc-rs",
-      "version": "1.18.2",
+      "version": "1.19.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
       "name": "aws-lc-sys",
-      "version": "0.46.0",
+      "version": "0.47.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -101,7 +101,7 @@
     },
     {
       "name": "block-buffer",
-      "version": "0.10.4",
+      "version": "0.12.1",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -116,7 +116,7 @@
     },
     {
       "name": "cc",
-      "version": "1.10.0",
+      "version": "1.11.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -170,8 +170,8 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
-      "name": "cpufeatures",
-      "version": "0.2.17",
+      "name": "const-oid",
+      "version": "0.10.3",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -196,7 +196,7 @@
     },
     {
       "name": "crypto-common",
-      "version": "0.1.7",
+      "version": "0.2.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -216,7 +216,7 @@
     },
     {
       "name": "digest",
-      "version": "0.10.7",
+      "version": "0.11.3",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -325,13 +325,13 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
-      "name": "generic-array",
-      "version": "0.14.7",
+      "name": "getrandom",
+      "version": "0.2.17",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
       "name": "getrandom",
-      "version": "0.2.17",
+      "version": "0.3.4",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -341,7 +341,7 @@
     },
     {
       "name": "globset",
-      "version": "0.4.20",
+      "version": "0.4.21",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -372,6 +372,11 @@
     {
       "name": "httparse",
       "version": "1.10.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index"
+    },
+    {
+      "name": "hybrid-array",
+      "version": "0.4.15",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -446,7 +451,7 @@
     },
     {
       "name": "ignore",
-      "version": "0.4.33",
+      "version": "0.4.34",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -466,7 +471,7 @@
     },
     {
       "name": "itoa",
-      "version": "1.0.18",
+      "version": "1.0.19",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -496,7 +501,7 @@
     },
     {
       "name": "log",
-      "version": "0.4.34",
+      "version": "0.4.35",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -641,17 +646,17 @@
     },
     {
       "name": "rmcp-macros",
-      "version": "3.8.0",
+      "version": "3.10.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
       "name": "rmcp",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
       "name": "rusqlite",
-      "version": "0.41.0",
+      "version": "0.41.1",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -671,7 +676,7 @@
     },
     {
       "name": "rustls-pki-types",
-      "version": "1.15.1",
+      "version": "1.16.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -731,7 +736,7 @@
     },
     {
       "name": "sha2",
-      "version": "0.10.9",
+      "version": "0.11.1",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -751,7 +756,7 @@
     },
     {
       "name": "smallvec",
-      "version": "1.16.4",
+      "version": "1.16.5",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -911,7 +916,7 @@
     },
     {
       "name": "tree-sitter",
-      "version": "0.27.1",
+      "version": "0.27.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -941,7 +946,7 @@
     },
     {
       "name": "utf8_iter",
-      "version": "1.0.4",
+      "version": "1.1.0",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -950,18 +955,18 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
+      "name": "utf_types",
+      "version": "1.0.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index"
+    },
+    {
       "name": "uuid",
-      "version": "1.29.0",
+      "version": "1.29.2",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
       "name": "vcpkg",
       "version": "0.2.15",
-      "source": "registry+https://github.com/rust-lang/crates.io-index"
-    },
-    {
-      "name": "version_check",
-      "version": "0.9.5",
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     },
     {
@@ -1025,15 +1030,15 @@
       "source": "registry+https://github.com/rust-lang/crates.io-index"
     }
   ],
-  "audit_exit_code": 0,
+  "audit_exit_code": 1,
   "audit": {
     "database": {
-      "advisory-count": 1380,
+      "advisory-count": 1533,
       "last-commit": null,
       "last-updated": null
     },
     "lockfile": {
-      "dependency-count": 204
+      "dependency-count": 205
     },
     "settings": {
       "target_arch": [],
@@ -1051,6 +1056,61 @@
       "count": 0,
       "list": []
     },
-    "warnings": {}
+    "warnings": {
+      "unmaintained": [
+        {
+          "kind": "unmaintained",
+          "package": {
+            "name": "chrono",
+            "version": "0.4.45",
+            "source": "registry+https://github.com/rust-lang/crates.io-index",
+            "checksum": "1aa79e62e7697b8e29b513a68abacf485adcd1fe8284a4316c5ae868e6633327",
+            "dependencies": [
+              {
+                "name": "iana-time-zone",
+                "version": "0.1.65",
+                "source": "registry+https://github.com/rust-lang/crates.io-index"
+              },
+              {
+                "name": "num-traits",
+                "version": "0.2.19",
+                "source": "registry+https://github.com/rust-lang/crates.io-index"
+              },
+              {
+                "name": "serde",
+                "version": "1.0.229",
+                "source": "registry+https://github.com/rust-lang/crates.io-index"
+              }
+            ],
+            "replace": null
+          },
+          "advisory": {
+            "id": "RUSTSEC-2026-0543",
+            "package": "chrono",
+            "title": "chrono is unmaintained",
+            "description": "The chrono crate is unmaintained; all versions are affected.\n\nRecommended alternatives:\n\n- [jiff](https://crates.io/crates/jiff)\n- [time](https://crates.io/crates/time)",
+            "date": "2026-09-14",
+            "aliases": [],
+            "related": [],
+            "collection": "crates",
+            "categories": [],
+            "keywords": [],
+            "cvss": null,
+            "informational": "unmaintained",
+            "references": [],
+            "source": null,
+            "url": "https://github.com/chronotope/chrono/issues/1768",
+            "withdrawn": null,
+            "license": "CC0-1.0",
+            "expect-deleted": false
+          },
+          "affected": null,
+          "versions": {
+            "patched": [],
+            "unaffected": []
+          }
+        }
+      ]
+    }
   }
 }
